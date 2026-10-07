@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Children on AI · IA, niñez y adolescencia</title>
+<meta name="description" content="Recomendaciones, alertas y diagramas interactivos con cita y página de 13 fuentes sobre el uso de IA en niñez y adolescencia, por rol y edad.">
+<meta name="color-scheme" content="light dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Mono:wght@400;500;700&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+<script>
+/* Aplica tema y ajustes guardados antes de pintar, para evitar parpadeo. */
+(function(){try{var p=JSON.parse(localStorage.getItem("coa.a11y")||"{}"),r=document.documentElement;
+if(p.theme&&p.theme!=="auto")r.setAttribute("data-theme",p.theme);
+if(p.size)r.style.setProperty("--fs",p.size/100);
+["font","space","links","focus","motion","text"].forEach(function(k){if(p[k])r.classList.add("a-"+k)});}catch(e){}})();
+</script>
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="skip">Saltar al contenido principal</a>
+<div id="live" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
+
+<div class="app">
+<aside class="side" id="side" aria-label="Menú principal">
+  <a class="brand" href="#inicio" data-nav="inicio"><b>Children<i> on </i>AI</b><span data-i18n="side.tag">IA, niñez y adolescencia</span></a>
+  <div class="ageline" aria-hidden="true"><i></i><i></i><i></i></div>
+  <nav id="sideNav" aria-label="Menú principal"></nav>
+  <div class="side-foot"><span data-i18n="side.foot"></span><br><a href="https://www.ciodd.ucr.ac.cr" rel="noopener" data-i18n="side.site">Sitio del CIOdD</a></div>
+</aside>
+<div class="scrim" id="scrim" aria-hidden="true"></div>
+
+<div class="main">
+<div class="topbar">
+  <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="side"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg><span data-i18n="menu.open">Menú</span></button>
+  <nav class="crumb" id="crumb" aria-label="Ubicación"></nav>
+  <a class="helpbtn" href="#tutorial" data-nav="tutorial" data-i18n="help.btn">Cómo usar el sitio</a>
+</div>
+
+<main id="main" class="content" tabindex="-1">
+
+<section class="view" id="v-inicio" data-view="inicio" aria-labelledby="h1" hidden>
+  <div class="hero">
+    <div class="ageline" aria-hidden="true"><i></i><i></i><i></i></div>
+    <h1 id="h1" data-i18n="hero.h1">¿Qué dicen las fuentes sobre la IA a cada edad?</h1>
+    <p class="sub" data-i18n="hero.sub"></p>
+    <div class="ruler">
+      <div class="scroller gfx"><div id="ruler"></div></div>
+      <details class="alt" id="rulerAlt" style="margin-top:10px;background:var(--surface);color:var(--ink)"></details>
+      <div class="agectl"><label for="age" data-i18n="ruler.age">Edad</label><output id="ageOut" for="age">11</output><input type="range" id="age" min="6" max="18" value="11" step="1"></div>
+      <div class="legend gfx" id="legend"></div>
+      <p class="legend"><a href="#glosario" data-nav="glosario" data-i18n="hero.gloss"></a></p>
+      <div class="rdetail" id="rdetail"></div>
+      <p class="srcline on-hero" data-note="fig:ruler"></p>
+    </div>
+  </div>
+  <div class="home">
+    <h3 data-i18n="home.h"></h3>
+    <p data-i18n="home.sub"></p>
+    <div class="tiles" id="homeTiles"></div>
+  </div>
+</section>
+
+<section class="view" id="v-parati" data-view="parati" aria-labelledby="h-parati" hidden>
+  <header class="vh" id="vh-parati"></header>
+  <div class="pick" id="pick" role="group"></div>
+  <div class="subnav" role="tablist" data-for="parati"></div>
+  <div class="subpanel" id="sp-parati-lectura" data-sub="lectura" role="tabpanel">
+    <div class="stats" id="lstats"></div>
+    <div class="grid2" id="lecturaList"></div>
+    <p class="lead" style="font-size:.9rem" data-i18n="lectura.note"></p>
+    <p class="srcline" data-note="lectura"></p>
+  </div>
+  <div class="subpanel" id="sp-parati-guias" data-sub="guias" role="tabpanel" hidden>
+    <p class="lead" data-i18n="guia.lead"></p>
+    <div id="guiaBody" style="display:grid;gap:14px"></div>
+    <p class="srcline" data-note="lectura"></p>
+  </div>
+  <div class="subpanel" id="sp-parati-escenarios" data-sub="escenarios" role="tabpanel" hidden>
+    <p class="lead" data-i18n="esc.lead"></p>
+    <div class="grid2" id="escList"></div>
+    <p class="srcline" data-note="esc"></p>
+  </div>
+</section>
+
+<section class="view" id="v-alertas" data-view="alertas" aria-labelledby="h-alertas" hidden>
+  <header class="vh" id="vh-alertas"></header>
+  <div class="subnav" role="tablist" data-for="alertas"></div>
+  <div class="subpanel" id="sp-alertas-fuentes" data-sub="fuentes" role="tabpanel"><div id="alFuentes"></div>
+    <p class="srcline" data-note="lectura"></p></div>
+  <div class="subpanel" id="sp-alertas-datos" data-sub="datos" role="tabpanel" hidden><div id="alDatos"></div></div>
+</section>
+
+<section class="view" id="v-diagramas" data-view="diagramas" aria-labelledby="h-diagramas" hidden>
+  <header class="vh" id="vh-diagramas"></header>
+  <p class="lead" data-i18n="dg.lead"></p>
+  <div class="subnav" role="tablist" data-for="diagramas"></div>
+  <div class="subpanel" data-sub="*" id="dgBody" role="tabpanel"></div>
+  <div id="dgDetail" class="grid2" style="margin-top:16px"></div>
+</section>
+
+<section class="view" id="v-evidencia" data-view="evidencia" aria-labelledby="h-evidencia" hidden>
+  <header class="vh" id="vh-evidencia"></header>
+  <div class="subnav" role="tablist" data-for="evidencia"></div>
+  <div class="subpanel" id="sp-evidencia-mapa" data-sub="mapa" role="tabpanel">
+    <p class="lead" data-i18n="ev.lead"></p>
+    <div class="wide"><div class="heat" id="heat" role="group"></div></div>
+    <p class="cite" data-i18n="ev.cite"></p>
+    <p class="srcline" data-note="heat"></p>
+  </div>
+  <div class="subpanel" id="sp-evidencia-explorador" data-sub="explorador" role="tabpanel" hidden>
+    <h3 class="sh" id="explorador" tabindex="-1"></h3>
+    <div class="filters" id="filters"></div>
+    <div class="row"><span class="cite" id="exCount"></span><button class="pill" id="exReset" type="button" data-i18n="ex.reset"></button></div>
+    <div class="grid2" id="exList"></div>
+    <div class="row"><button class="btn" id="more" type="button" data-i18n="ex.more"></button></div>
+    <p class="srcline" data-note="ex"></p>
+  </div>
+</section>
+
+<section class="view" id="v-marco" data-view="marco" aria-labelledby="h-marco" hidden>
+  <header class="vh" id="vh-marco"></header>
+  <div class="note" data-i18n="marco.note"></div>
+  <div class="tw" id="twNorm" role="region" tabindex="0"><table id="tNorm"></table></div>
+  <p class="srcline" data-note="marco"></p>
+</section>
+
+<section class="view" id="v-fuentes" data-view="fuentes" aria-labelledby="h-fuentes" hidden>
+  <header class="vh" id="vh-fuentes"></header>
+  <div class="subnav" role="tablist" data-for="fuentes"></div>
+  <div class="subpanel" id="sp-fuentes-lista" data-sub="lista" role="tabpanel">
+    <div class="filters"><div><label class="lbl" for="q2" data-i18n="fu.q"></label><input type="search" id="q2" data-i18n-attr="placeholder:fu.qph"></div></div>
+    <div class="grid2" id="fuentesList"></div>
+    <p class="srcline" data-note="fu"></p>
+  </div>
+  <div class="subpanel" id="sp-fuentes-refs" data-sub="refs" role="tabpanel" hidden>
+    <h3 class="sh" data-i18n="fu.refs"></h3>
+    <p class="lead" id="refsLead"></p>
+    <div id="refs" style="display:grid;gap:10px;max-width:80ch"></div>
+  </div>
+</section>
+
+<section class="view" id="v-glosario" data-view="glosario" aria-labelledby="h-glosario" hidden>
+  <header class="vh" id="vh-glosario"></header>
+  <p class="lead" data-i18n="gl.lead"></p>
+  <div class="filters">
+    <div><label class="lbl" for="qg" data-i18n="gl.q"></label><input type="search" id="qg" data-i18n-attr="placeholder:gl.qph"></div>
+    <div><label class="lbl" for="cg" data-i18n="gl.cat"></label><select id="cg"></select></div>
+  </div>
+  <p class="cite" id="glCount" aria-live="polite"></p>
+  <dl class="gl" id="gl"></dl>
+  <p class="srcline" data-note="gl"></p>
+</section>
+
+<section class="view" id="v-metodo" data-view="metodo" aria-labelledby="h-metodo" hidden>
+  <header class="vh" id="vh-metodo"></header>
+  <div class="subnav" role="tablist" data-for="metodo"></div>
+  <div class="subpanel" id="sp-metodo-metodologia" data-sub="metodologia" role="tabpanel">
+    <div class="stats" id="mstats"></div>
+    <div class="grid2" id="meCards" style="margin-top:16px"></div>
+  </div>
+  <div class="subpanel" id="sp-metodo-ia" data-sub="ia" role="tabpanel" hidden><div id="iaBody" class="prose"></div></div>
+  <div class="subpanel" id="sp-metodo-licencias" data-sub="licencias" role="tabpanel" hidden><div id="licBody" class="prose"></div></div>
+  <div class="subpanel" id="sp-metodo-auditoria" data-sub="auditoria" role="tabpanel" hidden><div id="audBody" class="prose"></div></div>
+</section>
+
+<section class="view" id="v-tutorial" data-view="tutorial" aria-labelledby="h-tutorial" hidden>
+  <header class="vh" id="vh-tutorial"></header>
+  <div class="subnav" role="tablist" data-for="tutorial"></div>
+  <div class="subpanel" id="sp-tutorial-pasos" data-sub="pasos" role="tabpanel"><div id="tuPasos"></div></div>
+  <div class="subpanel" id="sp-tutorial-etiquetas" data-sub="etiquetas" role="tabpanel" hidden><div id="tuEtq"></div></div>
+  <div class="subpanel" id="sp-tutorial-acc" data-sub="acc" role="tabpanel" hidden><div id="tuAcc"></div></div>
+  <div class="subpanel" id="sp-tutorial-faq" data-sub="faq" role="tabpanel" hidden><div id="tuFaq" class="faq" style="display:grid;gap:10px;max-width:760px"></div></div>
+</section>
+
+<section class="view" id="v-sitio" data-view="sitio" aria-labelledby="h-sitio" hidden>
+  <header class="vh" id="vh-sitio"></header>
+  <ul class="sitemap" id="siteMap"></ul>
+</section>
+
+<noscript><p>Este sitio necesita JavaScript para mostrar las recomendaciones. / This site needs JavaScript to display the recommendations.</p></noscript>
+</main>
+<footer class="foot" data-i18n-html="foot"></footer>
+</div>
+</div>
+
+<!-- Botones flotantes: idioma y accesibilidad -->
+<div class="fab-wrap">
+  <div class="lang" id="langGrp" role="group" aria-label="Idioma / Language">
+    <button type="button" data-lang="es" lang="es" aria-pressed="true" aria-label="Español" title="Español">ES</button>
+    <button type="button" data-lang="en" lang="en" aria-pressed="false" aria-label="English" title="English">EN</button>
+  </div>
+  <button type="button" class="fab" id="a11yBtn" aria-haspopup="dialog" aria-controls="a11yDlg">
+    <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><circle cx="16" cy="16" r="13.5"/><circle class="f" cx="16" cy="8.6" r="2"/><path d="M8.5 12.2c5 1.6 10 1.6 15 0"/><path d="M16 12.6v5.2M16 17.8l-3.6 6.2M16 17.8l3.6 6.2"/></svg>
+    <span class="fl" id="a11yFl">Accesibilidad</span>
+  </button>
+</div>
+
+<!-- Panel de accesibilidad -->
+<dialog id="a11yDlg" aria-labelledby="a11yT" aria-describedby="a11yI">
+  <div class="dh">
+    <h2 id="a11yT" style="font-size:1.35rem" data-i18n="a11y.title"></h2>
+    <button type="button" class="btn ghost" id="a11yClose" data-i18n="a11y.close"></button>
+  </div>
+  <div class="db">
+    <p id="a11yI" data-i18n="a11y.intro"></p>
+    <fieldset id="fsTheme"><legend data-i18n="a11y.contrast"></legend></fieldset>
+    <fieldset><legend data-i18n="a11y.size"></legend>
+      <div class="sizer">
+        <button type="button" id="szDec"></button>
+        <output id="szOut" for="szDec szInc" aria-live="polite"></output>
+        <button type="button" id="szInc"></button>
+        <button type="button" class="btn ghost" id="szReset" data-i18n="a11y.size.reset"></button>
+      </div>
+    </fieldset>
+    <fieldset id="fsOpts"><legend data-i18n="a11y.fab"></legend></fieldset>
+    <p class="cite" data-i18n="a11y.kbd"></p>
+    <details><summary data-i18n="a11y.stmt"></summary>
+      <h3 style="margin:10px 0 6px" data-i18n="dlg.stmtTitle"></h3><p data-i18n="dlg.stmt"></p></details>
+    <div class="dlgfoot"><button type="button" class="btn ghost" id="a11yReset" data-i18n="a11y.reset"></button></div>
+  </div>
+</dialog>
+
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/i18n.nav.js"></script>
+<script src="assets/js/i18n.prov.js"></script>
+<script src="data/data.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

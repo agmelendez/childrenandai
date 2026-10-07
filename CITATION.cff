@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "Si usa este sitio, cítelo así. Autoría, año y URL por confirmar. Contenido generado con asistencia de IA (docs/DECLARACION_IA.md)."
+title: "Children on AI: recomendaciones, alertas y diagramas sobre IA y niñez"
+version: "0.4"
+date-released: "2026-10-07"
+type: software
+authors:
+  - name: "Centro de Investigación Observatorio del Desarrollo, Universidad de Costa Rica (CIOdD-UCR)"
+license: MIT
+repository-code: "https://github.com/POR-COMPLETAR/children-on-ai"
+keywords: [inteligencia artificial, niñez, adolescencia, educación, APA 7]
