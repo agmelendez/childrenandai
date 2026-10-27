@@ -4,12 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Children on AI · IA, niñez y adolescencia</title>
-<meta name="description" content="Recomendaciones, alertas y diagramas interactivos con cita y página de 13 fuentes sobre el uso de IA en niñez y adolescencia, por rol y edad.">
-<meta name="color-scheme" content="light dark">
+<meta name="description" content="Recomendaciones, alertas y diagramas interactivos con cita y página de 26 fuentes sobre el uso de IA en niñez y adolescencia, por rol y edad.">
+<meta name="color-scheme" content="light">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Mono:wght@400;500;700&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/styles.css">
+<link rel="stylesheet" href="assets/css/ucr.css">
 <script>
 /* Aplica tema y ajustes guardados antes de pintar, para evitar parpadeo. */
 (function(){try{var p=JSON.parse(localStorage.getItem("coa.a11y")||"{}"),r=document.documentElement;
@@ -22,6 +23,9 @@ if(p.size)r.style.setProperty("--fs",p.size/100);
 <a class="skip" href="#main" data-i18n="skip">Saltar al contenido principal</a>
 <div id="live" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
 
+<header class="ucr-band" role="banner">
+  <a class="ucr-sig" href="https://www.ucr.ac.cr" rel="noopener"><img src="assets/img/ciodd-ucr-reverso.svg" width="477" height="65" alt="Universidad de Costa Rica · Centro de Investigación Observatorio del Desarrollo (CIOdD)"></a>
+</header>
 <div class="app">
 <aside class="side" id="side" aria-label="Menú principal">
   <a class="brand" href="#inicio" data-nav="inicio"><b>Children<i> on </i>AI</b><span data-i18n="side.tag">IA, niñez y adolescencia</span></a>
@@ -35,7 +39,18 @@ if(p.size)r.style.setProperty("--fs",p.size/100);
 <div class="topbar">
   <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="side"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg><span data-i18n="menu.open">Menú</span></button>
   <nav class="crumb" id="crumb" aria-label="Ubicación"></nav>
-  <a class="helpbtn" href="#tutorial" data-nav="tutorial" data-i18n="help.btn">Cómo usar el sitio</a>
+  <div class="tools" role="group" aria-label="Herramientas">
+  <div class="lang" id="langGrp" role="group" aria-label="Idioma / Language">
+    <button type="button" data-lang="es" lang="es" aria-pressed="true" aria-label="Español" title="Español">ES</button>
+    <button type="button" data-lang="en" lang="en" aria-pressed="false" aria-label="English" title="English">EN</button>
+  </div>
+  <button type="button" class="fab" id="a11yBtn" aria-haspopup="dialog" aria-controls="a11yDlg">
+    <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><circle cx="16" cy="16" r="13.5"/><circle class="f" cx="16" cy="8.6" r="2"/><path d="M8.5 12.2c5 1.6 10 1.6 15 0"/><path d="M16 12.6v5.2M16 17.8l-3.6 6.2M16 17.8l3.6 6.2"/></svg>
+    <span class="fl" id="a11yFl">Accesibilidad</span>
+  </button>
+  <button type="button" class="helpbtn sbtn" id="searchBtn"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg><span class="hl" data-i18n="gs.btn">Buscar</span></button>
+  <a class="helpbtn" href="#tutorial" data-nav="tutorial"><span class="hq" aria-hidden="true">?</span><span class="hl" data-i18n="help.btn">Cómo usar el sitio</span></a>
+  </div>
 </div>
 
 <main id="main" class="content" tabindex="-1">
@@ -45,8 +60,25 @@ if(p.size)r.style.setProperty("--fs",p.size/100);
     <div class="ageline" aria-hidden="true"><i></i><i></i><i></i></div>
     <h1 id="h1" data-i18n="hero.h1">¿Qué dicen las fuentes sobre la IA a cada edad?</h1>
     <p class="sub" data-i18n="hero.sub"></p>
+  <section class="hsec hg-in" id="homeGuide" aria-labelledby="hgH"></section>
+
+    <div class="prof" id="prof" role="region" aria-labelledby="profH">
+      <h2 id="profH" class="prof-h" data-i18n="prof.h">¿Quién eres?</h2>
+      <p class="prof-sub" data-i18n="prof.sub"></p>
+      <div class="prof-qs">
+        <div><span class="lbl" id="profRL" data-i18n="prof.role"></span><div class="seg" id="profRole" role="group" aria-labelledby="profRL"></div></div>
+        <div><span class="lbl" id="profBL" data-i18n="prof.band"></span><div class="seg" id="profBand" role="group" aria-labelledby="profBL"></div></div>
+      </div>
+      <h3 class="prof-t5" id="profState"></h3>
+      <ol class="top5" id="top5" aria-labelledby="profState"></ol>
+      <div class="row"><a class="btn" href="#parati/tips" data-nav="parati/tips" id="profAll"></a><a class="btn ghost" href="#plan" data-nav="plan" id="profPlan"></a></div>
+    </div>
+  </div>
+  <section class="ruler-wrap hsec" id="rulerWrap" aria-labelledby="rgH"><h2 class="hs-h" id="rgH" data-i18n="rg.h"></h2><p class="hs-sub" data-i18n="rg.sub"></p>
     <div class="ruler">
-      <div class="scroller gfx"><div id="ruler"></div></div>
+      <p class="mobnote" id="rulerNote"></p>
+      <button type="button" class="pill rtoggle" id="rulerFull" aria-pressed="false" aria-controls="rulerBox"></button>
+      <div class="scroller gfx" id="rulerBox"><div id="ruler"></div></div>
       <details class="alt" id="rulerAlt" style="margin-top:10px;background:var(--surface);color:var(--ink)"></details>
       <div class="agectl"><label for="age" data-i18n="ruler.age">Edad</label><output id="ageOut" for="age">11</output><input type="range" id="age" min="6" max="18" value="11" step="1"></div>
       <div class="legend gfx" id="legend"></div>
@@ -54,7 +86,8 @@ if(p.size)r.style.setProperty("--fs",p.size/100);
       <div class="rdetail" id="rdetail"></div>
       <p class="srcline on-hero" data-note="fig:ruler"></p>
     </div>
-  </div>
+  </section>
+  <section class="hsec" id="homeMap" aria-labelledby="smH"></section>
   <div class="home">
     <h3 data-i18n="home.h"></h3>
     <p data-i18n="home.sub"></p>
@@ -66,9 +99,19 @@ if(p.size)r.style.setProperty("--fs",p.size/100);
   <header class="vh" id="vh-parati"></header>
   <div class="pick" id="pick" role="group"></div>
   <div class="subnav" role="tablist" data-for="parati"></div>
-  <div class="subpanel" id="sp-parati-lectura" data-sub="lectura" role="tabpanel">
-    <div class="stats" id="lstats"></div>
+  <div class="subpanel" id="sp-parati-tips" data-sub="tips" role="tabpanel">
+    <p class="lead" data-i18n="tips.lead"></p>
+    <div class="tipnote" id="tipNote" role="note"></div>
+    <div class="filters tf2" id="tipFilt2"></div>
+    <div class="row" id="tipFilt" role="group"></div>
+    <p class="lstate" id="tipState" aria-live="polite"></p>
+    <div class="grid2" id="tipList"></div>
+  </div>
+  <div class="subpanel" id="sp-parati-lectura" data-sub="lectura" role="tabpanel" hidden>
+    <div class="stats" id="lstats" role="group" aria-label="Filtros"></div>
+    <p class="lstate" id="lstate" aria-live="polite"></p>
     <div class="grid2" id="lecturaList"></div>
+    <div class="row"><button class="btn" id="lmore" type="button" hidden></button></div>
     <p class="lead" style="font-size:.9rem" data-i18n="lectura.note"></p>
     <p class="srcline" data-note="lectura"></p>
   </div>
@@ -82,6 +125,33 @@ if(p.size)r.style.setProperty("--fs",p.size/100);
     <div class="grid2" id="escList"></div>
     <p class="srcline" data-note="esc"></p>
   </div>
+</section>
+
+<section class="view" id="v-plan" data-view="plan" aria-labelledby="h-plan" hidden>
+  <header class="vh" id="vh-plan"></header>
+  <div id="planShared"></div>
+  <div id="planBody"></div>
+  <div class="printsheet" id="printSheet"></div>
+</section>
+
+<section class="view" id="v-kit" data-view="kit" aria-labelledby="h-kit" hidden>
+  <header class="vh" id="vh-kit"></header>
+  <div class="subnav" role="tablist" data-for="kit"></div>
+  <div class="subpanel" id="sp-kit-familia" data-sub="familia" role="tabpanel"><div id="kit-familia" class="kit"></div></div>
+  <div class="subpanel" id="sp-kit-docente" data-sub="docente" role="tabpanel" hidden><div id="kit-docente" class="kit"></div></div>
+  <div class="subpanel" id="sp-kit-direccion" data-sub="direccion" role="tabpanel" hidden><div id="kit-direccion" class="kit"></div></div>
+</section>
+
+<section class="view" id="v-contexto" data-view="contexto" aria-labelledby="h-contexto" hidden>
+  <header class="vh" id="vh-contexto"></header>
+  <div id="ctxBody"></div>
+</section>
+
+<section class="view" id="v-buscar" data-view="buscar" aria-labelledby="h-buscar" hidden>
+  <header class="vh" id="vh-buscar"></header>
+  <div class="filters"><div style="flex:1 1 320px"><label class="lbl" for="gq" data-i18n="gs.label"></label><input type="search" id="gq" data-i18n-attr="placeholder:gs.ph"></div></div>
+  <p class="lstate" id="gstate" aria-live="polite"></p>
+  <div id="gres"></div>
 </section>
 
 <section class="view" id="v-alertas" data-view="alertas" aria-labelledby="h-alertas" hidden>
@@ -181,21 +251,10 @@ if(p.size)r.style.setProperty("--fs",p.size/100);
 
 <noscript><p>Este sitio necesita JavaScript para mostrar las recomendaciones. / This site needs JavaScript to display the recommendations.</p></noscript>
 </main>
-<footer class="foot" data-i18n-html="foot"></footer>
+<footer class="foot"><a class="foot-logo" href="https://www.ciodd.ucr.ac.cr" rel="noopener"><img src="assets/img/ciodd-ucr-reverso.svg" width="477" height="65" alt="CIOdD · Universidad de Costa Rica" loading="lazy"></a><div data-i18n-html="foot"></div></footer>
 </div>
 </div>
 
-<!-- Botones flotantes: idioma y accesibilidad -->
-<div class="fab-wrap">
-  <div class="lang" id="langGrp" role="group" aria-label="Idioma / Language">
-    <button type="button" data-lang="es" lang="es" aria-pressed="true" aria-label="Español" title="Español">ES</button>
-    <button type="button" data-lang="en" lang="en" aria-pressed="false" aria-label="English" title="English">EN</button>
-  </div>
-  <button type="button" class="fab" id="a11yBtn" aria-haspopup="dialog" aria-controls="a11yDlg">
-    <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><circle cx="16" cy="16" r="13.5"/><circle class="f" cx="16" cy="8.6" r="2"/><path d="M8.5 12.2c5 1.6 10 1.6 15 0"/><path d="M16 12.6v5.2M16 17.8l-3.6 6.2M16 17.8l3.6 6.2"/></svg>
-    <span class="fl" id="a11yFl">Accesibilidad</span>
-  </button>
-</div>
 
 <!-- Panel de accesibilidad -->
 <dialog id="a11yDlg" aria-labelledby="a11yT" aria-describedby="a11yI">
@@ -225,6 +284,7 @@ if(p.size)r.style.setProperty("--fs",p.size/100);
 <script src="assets/js/i18n.js"></script>
 <script src="assets/js/i18n.nav.js"></script>
 <script src="assets/js/i18n.prov.js"></script>
+<script src="assets/js/i18n.plan.js"></script>
 <script src="data/data.js"></script>
 <script src="assets/js/app.js"></script>
 </body>

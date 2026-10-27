@@ -18,8 +18,9 @@ for s in cat:
     a = s["apa7"]; sid = s["id"]
     has_url = bool(re.search(r"https?://", a))
     pend = bool(re.search(r"completar", a, re.I))
-    year = re.search(r"\((\d{4})(?:, [^)]*)?\)\.", a)
-    ital = "*" in a
+    year = re.search(r"\((\d{4}|s\. f\.)(?:, [^)]*)?\)\.", a)  # APA 7 admite (s. f.) sin fecha
+    legal = (s.get("tipo") or "").startswith(("Ley", "Reglamento"))  # APA 7 §11: la legislación no va en cursiva
+    ital = "*" in a or legal
     checks = {
         "año entre paréntesis tras la autoría": bool(year),
         "título en cursiva (*…*)": ital,

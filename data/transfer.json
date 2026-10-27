@@ -1,0 +1,1409 @@
+{
+  "version": "0.8.0",
+  "fecha": "2026-10-26",
+  "_nota": "E3.1 completa (lotes 1–3). Revisor: redacción CIOdD; pendiente validación D5.",
+  "practicas": [
+    {
+      "id": "TR-001",
+      "practica_es": "Mediación parental activa (acompañar, conversar, explicar) por encima de la prohibición como única medida.",
+      "practica_en": "Active parental mediation (accompanying, talking, explaining) over prohibition as the only measure.",
+      "evidence_ids": [
+        "S25-07",
+        "S25-06",
+        "S06-03",
+        "S11-41",
+        "S16-02"
+      ],
+      "jurisdiccion_origen": "Costa Rica + Europa",
+      "ancla_cr": {
+        "tipo": "dato_nacional",
+        "referencia": "Kids Online Costa Rica, 2.ª encuesta (2023; informe 2024)",
+        "evidence_id": "S25-07"
+      },
+      "criterios": {
+        "legal": 2,
+        "institucional": 2,
+        "cultural": 2,
+        "recursos": 2
+      },
+      "brecha": "Evidencia CR solo desde 9 años; 6–8 se infiere de revisión europea.",
+      "condicion_adaptacion": "Para 6–8 apoyarse en S06 (revisión europea).",
+      "nivel": "A",
+      "decision": "adoptar",
+      "revisor": "CIOdD (redacción; pendiente D5)",
+      "fecha": "2026-10-26"
+    },
+    {
+      "id": "TR-002",
+      "practica_es": "Uso de IA generativa en primaria solo mediado por un adulto; sin uso autónomo de chat abierto en los primeros grados.",
+      "practica_en": "Generative AI in primary school only when mediated by an adult; no autonomous open chat use in early grades.",
+      "evidence_ids": [
+        "S06-09",
+        "S13-26",
+        "S13-22",
+        "S13-17"
+      ],
+      "jurisdiccion_origen": "Europa; Noruega; China; UNESCO",
+      "ancla_cr": {
+        "tipo": "ley",
+        "referencia": "Código de la Niñez y la Adolescencia (Ley 7739), art. 5: interés superior según edad y madurez",
+        "evidence_id": "S26-03"
+      },
+      "criterios": {
+        "legal": 2,
+        "institucional": 1,
+        "cultural": 2,
+        "recursos": 2
+      },
+      "brecha": "Ninguna norma CR fija edad mínima ni regula el uso de IA por menores; la guía MEP no distingue por ciclo. Noruega, China y otros casos se citan como ejemplos.",
+      "condicion_adaptacion": "Decidir en función de la exposición y los riesgos, según el interés superior, la edad y la madurez (Código, art. 5); revisar los términos de uso de cada herramienta.",
+      "nivel": "B",
+      "decision": "adaptar",
+      "revisor": "CIOdD (redacción; pendiente D5)",
+      "fecha": "2026-10-26"
+    },
+    {
+      "id": "TR-003",
+      "practica_es": "Respetar la edad mínima de los términos de uso y no crear cuentas con edad falsa; el adulto usa su cuenta y acompaña.",
+      "practica_en": "Respect minimum ages in terms of use and do not create accounts with a false age; the adult uses their own account and accompanies.",
+      "evidence_ids": [
+        "S13-13",
+        "S13-17",
+        "S08-18",
+        "S21-01"
+      ],
+      "jurisdiccion_origen": "EE. UU. (COPPA); UE",
+      "ancla_cr": {
+        "tipo": "ley",
+        "referencia": "Ley 8968 de Protección de la Persona frente al Tratamiento de sus Datos Personales (consentimiento expreso y escrito; art. 5)",
+        "evidence_id": "S21-01"
+      },
+      "criterios": {
+        "legal": 2,
+        "institucional": 2,
+        "cultural": 1,
+        "recursos": 2
+      },
+      "brecha": "La edad de 13 años proviene de COPPA (EE. UU.); CR exige consentimiento escrito de la representación legal.",
+      "condicion_adaptacion": "En CR no existe edad mínima legal; la decisión se toma por exposición y riesgo. La edad de los términos de uso es un dato del proveedor, varía y cambia (E6).",
+      "nivel": "A",
+      "decision": "adaptar",
+      "revisor": "CIOdD (redacción; pendiente D5)",
+      "fecha": "2026-10-26"
+    },
+    {
+      "id": "TR-004",
+      "practica_es": "Explicar que la IA no piensa ni siente y que puede equivocarse aunque suene segura.",
+      "practica_en": "Explain that AI does not think or feel and can be wrong even when it sounds confident.",
+      "evidence_ids": [
+        "S15-10",
+        "S11-47",
+        "S06-07",
+        "S11-10"
+      ],
+      "jurisdiccion_origen": "Argentina (CABA); Europa",
+      "ancla_cr": {
+        "tipo": "lineamiento_mep",
+        "referencia": "Guía MEP–UNESCO–ULACIT «Inteligencia artificial en clase» (2026)",
+        "evidence_id": "S14-11"
+      },
+      "criterios": {
+        "legal": 2,
+        "institucional": 2,
+        "cultural": 2,
+        "recursos": 2
+      },
+      "brecha": "Ninguna relevante.",
+      "condicion_adaptacion": null,
+      "nivel": "A",
+      "decision": "adoptar",
+      "revisor": "CIOdD (redacción; pendiente D5)",
+      "fecha": "2026-10-26"
+    },
+    {
+      "id": "TR-005",
+      "practica_es": "Verificar las respuestas de la IA con fuentes confiables.",
+      "practica_en": "Check AI answers against reliable sources.",
+      "evidence_ids": [
+        "S14-11",
+        "S11-11",
+        "S11-41"
+      ],
+      "jurisdiccion_origen": "Costa Rica (MEP) + Europa",
+      "ancla_cr": {
+        "tipo": "lineamiento_mep",
+        "referencia": "Guía MEP–UNESCO–ULACIT «Inteligencia artificial en clase» (2026)",
+        "evidence_id": "S14-11"
+      },
+      "criterios": {
+        "legal": 2,
+        "institucional": 2,
+        "cultural": 2,
+        "recursos": 2
+      },
+      "brecha": "Ninguna.",
+      "condicion_adaptacion": null,
+      "nivel": "A",
+      "decision": "adoptar",
+      "revisor": "CIOdD (redacción; pendiente D5)",
+      "fecha": "2026-10-26"
+    },
+    {
+      "id": "TR-006",
+      "practica_es": "No compartir con la IA datos personales, fotos ni ubicación de niñas y niños.",
+      "practica_en": "Do not share children's personal data, photos or location with AI.",
+      "evidence_ids": [
+        "S14-03",
+        "S14-04",
+        "S15-09",
+        "S24-01"
+      ],
+      "jurisdiccion_origen": "Costa Rica (MEP, ENIA) + Argentina",
+      "ancla_cr": {
+        "tipo": "ley",
+        "referencia": "Ley 8968 de Protección de la Persona frente al Tratamiento de sus Datos Personales (consentimiento expreso y escrito; art. 5)",
+        "evidence_id": "S21-01"
+      },
+      "criterios": {
+        "legal": 2,
+        "institucional": 2,
+        "cultural": 2,
+        "recursos": 2
+      },
+      "brecha": "Ninguna.",
+      "condicion_adaptacion": null,
+      "nivel": "A",
+      "decision": "adoptar",
+      "revisor": "CIOdD (redacción; pendiente D5)",
+      "fecha": "2026-10-26"
+    },
+    {
+      "id": "TR-007",
+      "practica_es": "Restringir compañeros de IA y chatbots de compañía en menores de 13 años (solo con control de tutores) y recordar que no sustituyen relaciones humanas.",
+      "practica_en": "Restrict AI companions and companion chatbots for under-13s (only with guardian controls) and stress that they do not replace human relationships.",
+      "evidence_ids": [
+        "S08-08",
+        "S08-09",
+        "S08-12",
+        "S06-05",
+        "S06-06",
+        "S13-11",
+        "S05-02"
+      ],
+      "jurisdiccion_origen": "UE (propuesta EU KIDS Act); Europa; Reino Unido",
+      "ancla_cr": null,
+      "criterios": {
+        "legal": 2,
+        "institucional": 1,
+        "cultural": 2,
+        "recursos": 2
+      },
+      "brecha": "NADA de esto está regulado en CR (ni compañeros de IA ni edad mínima); la única fuente normativa es una propuesta UE no vigente. Ejemplos: apps de compañía (Character.AI, Replika), chatbots con personajes infantiles (S13-11), chatbots integrados en juegos y redes (S08-12).",
+      "condicion_adaptacion": "Presentar como recomendación preventiva, no obligación; fundamentar en el interés superior (Código, art. 5).",
+      "nivel": "B",
+      "decision": "adaptar",
+      "revisor": "CIOdD (redacción; pendiente D5)",
+      "fecha": "2026-10-26"
+    },
+    {
+      "id": "TR-008",
+      "practica_es": "Tratar las imágenes sexuales falsas (deepfakes) de menores como delito: no crear, no reenviar, pedir ayuda.",
+      "practica_en": "Treat fake sexual images (deepfakes) of minors as a crime: do not create, do not forward, seek help.",
+      "evidence_ids": [
+        "S23-04",
+        "S07-06",
+        "S07-07",
+        "S26-07",
+        "S23-01"
+      ],
+      "jurisdiccion_origen": "Costa Rica (Ley 10020) + Inglaterra",
+      "ancla_cr": {
+        "tipo": "ley",
+        "referencia": "Ley 10020 (prevención del acoso a personas menores de edad), reforma art. 173 Código Penal: material pornográfico infantil alterado o simulado",
+        "evidence_id": "S23-04"
+      },
+      "criterios": {
+        "legal": 2,
+        "institucional": 2,
+        "cultural": 1,
+        "recursos": 2
+      },
+      "brecha": "Canal definido por el equipo: escuela como canal oficial; PANI u OIJ según el tipo de delito.",
+      "condicion_adaptacion": "Escuela primero; PANI (protección de la persona menor) u OIJ (investigación del delito) según el caso.",
+      "nivel": "A",
+      "decision": "adaptar",
+      "revisor": "CIOdD (redacción; pendiente D5)",
+      "fecha": "2026-10-26"
+    },
+    {
+      "id": "TR-009",
+      "practica_es": "Enseñar a reconocer el grooming, incluso cuando el contacto simula ser un personaje o una IA.",
+      "practica_en": "Teach children to recognise grooming, even when the contact poses as a character or an AI.",
+      "evidence_ids": [
+        "S23-02",
+        "S23-03",
+        "S07-12"
+      ],
+      "jurisdiccion_origen": "Costa Rica (Ley 10020) + Inglaterra",
+      "ancla_cr": {
+        "tipo": "ley",
+        "referencia": "Ley 10020: grooming y comunicaciones sexuales con personas menores de edad",
+        "evidence_id": "S23-02"
+      },
+      "criterios": {
+        "legal": 2,
+        "institucional": 2,
+        "cultural": 2,
+        "recursos": 2
+      },
+      "brecha": "Ninguna.",
+      "condicion_adaptacion": null,
+      "nivel": "A",
+      "decision": "adoptar",
+      "revisor": "CIOdD (redacción; pendiente D5)",
+      "fecha": "2026-10-26"
+    },
+    {
+      "id": "TR-010",
+      "practica_es": "Hablar de la IA sin juzgar para mantener abierto el canal de confianza.",
+      "practica_en": "Talk about AI without judgment to keep the channel of trust open.",
+      "evidence_ids": [
+        "S16-04",
+        "S20-03",
+        "S20-04",
+        "S25-12"
+      ],
+      "jurisdiccion_origen": "Global; Uruguay; Costa Rica",
+      "ancla_cr": {
+        "tipo": "dato_nacional",
+        "referencia": "Kids Online Costa Rica, 2.ª encuesta (2023; informe 2024)",
+        "evidence_id": "S25-12"
+      },
+      "criterios": {
+        "legal": 2,
+        "institucional": 2,
+        "cultural": 2,
+        "recursos": 2
+      },
+      "brecha": "Ninguna.",
+      "condicion_adaptacion": null,
+      "nivel": "A",
+      "decision": "adoptar",
+      "revisor": "CIOdD (redacción; pendiente D5)",
+      "fecha": "2026-10-26"
+    },
+    {
+      "id": "TR-011",
+      "practica_es": "Acompañar las tareas hechas con IA con preguntas de proceso y evitar que la IA haga el trabajo.",
+      "practica_en": "Support AI-assisted homework with process questions and keep AI from doing the work.",
+      "evidence_ids": [
+        "S14-15",
+        "S14-14",
+        "S16-01",
+        "S06-04"
+      ],
+      "jurisdiccion_origen": "Costa Rica (MEP) + global",
+      "ancla_cr": {
+        "tipo": "lineamiento_mep",
+        "referencia": "Guía MEP–UNESCO–ULACIT «Inteligencia artificial en clase» (2026)",
+        "evidence_id": "S14-15"
+      },
+      "criterios": {
+        "legal": 2,
+        "institucional": 2,
+        "cultural": 2,
+        "recursos": 2
+      },
+      "brecha": "Ninguna.",
+      "condicion_adaptacion": null,
+      "nivel": "A",
+      "decision": "adoptar",
+      "revisor": "CIOdD (redacción; pendiente D5)",
+      "fecha": "2026-10-26"
+    },
+    {
+      "id": "TR-012",
+      "practica_es": "Configurar por defecto la privacidad: ubicación, micrófono, cámara y memoria del chat desactivados.",
+      "practica_en": "Privacy by default: location, microphone, camera and chat memory turned off.",
+      "evidence_ids": [
+        "S08-16",
+        "S08-10",
+        "S03-06",
+        "S24-02"
+      ],
+      "jurisdiccion_origen": "UE (propuesta); global; Costa Rica (ENIA)",
+      "ancla_cr": {
+        "tipo": "programa",
+        "referencia": "Estrategia Nacional de IA de Costa Rica 2024–2027 (salvaguardas para la niñez)",
+        "evidence_id": "S24-02"
+      },
+      "criterios": {
+        "legal": 2,
+        "institucional": 1,
+        "cultural": 2,
+        "recursos": 1
+      },
+      "brecha": "En CR no es obligación del proveedor; recae en la familia y depende de cada herramienta.",
+      "condicion_adaptacion": "Indicar que los ajustes varían por herramienta y que la propuesta UE no está vigente.",
+      "nivel": "B",
+      "decision": "adaptar",
+      "revisor": "CIOdD (redacción; pendiente D5)",
+      "fecha": "2026-10-26"
+    },
+    {
+      "id": "TR-013",
+      "practica_es": "Modelado adulto: el uso del celular de las personas cuidadoras influye en el de niñas y niños.",
+      "practica_en": "Adult role-modelling: caregivers' phone use is associated with children's use.",
+      "evidence_ids": [
+        "S25-04"
+      ],
+      "jurisdiccion_origen": "Costa Rica",
+      "ancla_cr": {
+        "tipo": "dato_nacional",
+        "referencia": "Kids Online Costa Rica, 2.ª encuesta (2023; informe 2024)",
+        "evidence_id": "S25-04"
+      },
+      "criterios": {
+        "legal": 2,
+        "institucional": 2,
+        "cultural": 2,
+        "recursos": 2
+      },
+      "brecha": "Correlación (r = 0,28), no causalidad.",
+      "condicion_adaptacion": null,
+      "nivel": "A",
+      "decision": "adoptar",
+      "revisor": "CIOdD (redacción; pendiente D5)",
+      "fecha": "2026-10-26"
+    },
+    {
+      "id": "TR-014",
+      "practica_es": "Proteger sueño, escuela y actividades sin pantalla; equilibrar recursos digitales y analógicos.",
+      "practica_en": "Protect sleep, school time and screen-free activities; balance digital and analogue resources.",
+      "evidence_ids": [
+        "S08-14",
+        "S04-47",
+        "S04-32",
+        "S06-03"
+      ],
+      "jurisdiccion_origen": "UE (propuesta); Suecia; Luxemburgo",
+      "ancla_cr": null,
+      "criterios": {
+        "legal": 2,
+        "institucional": 2,
+        "cultural": 2,
+        "recursos": 2
+      },
+      "brecha": "Sin norma CR; las restricciones europeas de móviles son escolares, no del hogar.",
+      "condicion_adaptacion": "Formular como acuerdo familiar, no como regla legal.",
+      "nivel": "B",
+      "decision": "adaptar",
+      "revisor": "CIOdD (redacción; pendiente D5)",
+      "fecha": "2026-10-26"
+    },
+    {
+      "id": "TR-015",
+      "practica_es": "Desconfiar de mensajes que piden datos de la niña o el niño suplantando a la escuela.",
+      "practica_en": "Distrust messages asking for a child's data while impersonating the school.",
+      "evidence_ids": [
+        "S14-16",
+        "S07-14"
+      ],
+      "jurisdiccion_origen": "Costa Rica (MEP) + Inglaterra",
+      "ancla_cr": {
+        "tipo": "lineamiento_mep",
+        "referencia": "Guía MEP–UNESCO–ULACIT «Inteligencia artificial en clase» (2026)",
+        "evidence_id": "S14-16"
+      },
+      "criterios": {
+        "legal": 2,
+        "institucional": 2,
+        "cultural": 2,
+        "recursos": 2
+      },
+      "brecha": "Ninguna.",
+      "condicion_adaptacion": null,
+      "nivel": "A",
+      "decision": "adoptar",
+      "revisor": "CIOdD (redacción; pendiente D5)",
+      "fecha": "2026-10-26"
+    },
+    {
+      "id": "TR-016",
+      "practica_es": "Ejercer los derechos de acceso, rectificación y supresión de datos y exigir información antes de consentir.",
+      "practica_en": "Exercise rights of access, rectification and erasure, and demand information before consenting.",
+      "evidence_ids": [
+        "S21-04",
+        "S21-02",
+        "S22-01",
+        "S07-25"
+      ],
+      "jurisdiccion_origen": "Costa Rica",
+      "ancla_cr": {
+        "tipo": "ley",
+        "referencia": "Ley 8968, derechos de acceso, rectificación y supresión (art. 7)",
+        "evidence_id": "S21-04"
+      },
+      "criterios": {
+        "legal": 2,
+        "institucional": 2,
+        "cultural": 2,
+        "recursos": 2
+      },
+      "brecha": "La Ley 8968 no regula expresamente a menores: actúa la representación legal.",
+      "condicion_adaptacion": null,
+      "nivel": "A",
+      "decision": "adoptar",
+      "revisor": "CIOdD (redacción; pendiente D5)",
+      "fecha": "2026-10-26"
+    },
+    {
+      "id": "TR-017",
+      "practica_es": "Supervisión transparente (decir qué se revisa y por qué) en lugar de vigilancia encubierta.",
+      "practica_en": "Transparent supervision (saying what is checked and why) instead of covert monitoring.",
+      "evidence_ids": [
+        "S26-06",
+        "S25-07",
+        "S16-04"
+      ],
+      "jurisdiccion_origen": "Costa Rica",
+      "ancla_cr": {
+        "tipo": "ley",
+        "referencia": "Código de la Niñez y la Adolescencia (Ley 7739): derecho a la vida privada",
+        "evidence_id": "S26-06"
+      },
+      "criterios": {
+        "legal": 2,
+        "institucional": 2,
+        "cultural": 1,
+        "recursos": 2
+      },
+      "brecha": "La evidencia CR asocia el monitoreo con protección en adolescentes, no en 9–11.",
+      "condicion_adaptacion": "Graduar según edad y madurez; en 9–11 priorizar acompañamiento sobre monitoreo.",
+      "nivel": "B",
+      "decision": "adaptar",
+      "revisor": "CIOdD (redacción; pendiente D5)",
+      "fecha": "2026-10-26"
+    },
+    {
+      "id": "TR-018",
+      "practica_es": "Prohibición general de la IA generativa hasta los 13 años (Noruega, citada como ejemplo).",
+      "practica_en": "Blanket ban on generative AI until age 13 (Norway, cited as an example).",
+      "evidence_ids": [
+        "S13-26",
+        "S03-07",
+        "S25-06",
+        "S16-08"
+      ],
+      "jurisdiccion_origen": "Noruega (escuela)",
+      "ancla_cr": null,
+      "criterios": {
+        "legal": 2,
+        "institucional": 1,
+        "cultural": 1,
+        "recursos": 2
+      },
+      "brecha": "Ejemplo extranjero, no aplicable a CR: en Costa Rica no hay edad mínima ni regulación; las decisiones se toman por exposición y riesgo. La evidencia CR indica además que la restricción sola no desarrolla habilidades.",
+      "condicion_adaptacion": null,
+      "nivel": "C",
+      "decision": "no_transferir",
+      "revisor": "CIOdD (redacción; pendiente D5)",
+      "fecha": "2026-10-26"
+    },
+    {
+      "id": "TR-019",
+      "practica_es": "Acuerdos familiares de uso negociados con el adolescente y autonomía progresiva.",
+      "practica_en": "Household use agreements negotiated with the adolescent and progressive autonomy.",
+      "evidence_ids": [
+        "S06-09",
+        "S26-03",
+        "S26-05",
+        "S11-17",
+        "S16-02"
+      ],
+      "jurisdiccion_origen": "Europa + Costa Rica",
+      "ancla_cr": {
+        "tipo": "ley",
+        "referencia": "Código de la Niñez y la Adolescencia (Ley 7739), art. 5: interés superior según edad y madurez",
+        "evidence_id": "S26-03"
+      },
+      "criterios": {
+        "legal": 2,
+        "institucional": 2,
+        "cultural": 2,
+        "recursos": 2
+      },
+      "brecha": "Ninguna.",
+      "condicion_adaptacion": null,
+      "nivel": "A",
+      "decision": "adoptar",
+      "revisor": "CIOdD (redacción; pendiente D5)",
+      "fecha": "2026-10-26"
+    },
+    {
+      "id": "TR-020",
+      "practica_es": "Advertir la adulación de los chatbots y su uso como apoyo emocional; no sustituyen ayuda humana ni profesional.",
+      "practica_en": "Warn about chatbot sycophancy and use as emotional support; they do not replace human or professional help.",
+      "evidence_ids": [
+        "S13-12",
+        "S11-23",
+        "S11-33",
+        "S16-03",
+        "S05-01"
+      ],
+      "jurisdiccion_origen": "Europa; Reino Unido; global",
+      "ancla_cr": null,
+      "criterios": {
+        "legal": 2,
+        "institucional": 1,
+        "cultural": 2,
+        "recursos": 2
+      },
+      "brecha": "NO REGULADO en Costa Rica: ninguna norma regula los compañeros de IA ni fija edad mínima. Ejemplos: Character.AI, Replika (de mercado, no evaluados en el corpus).",
+      "condicion_adaptacion": "Recomendación preventiva; verificar ejemplos en E6.",
+      "nivel": "B",
+      "decision": "adaptar",
+      "revisor": "CIOdD (redacción; pendiente D5)",
+      "fecha": "2026-10-26"
+    },
+    {
+      "id": "TR-021",
+      "practica_es": "Imágenes íntimas (reales o hechas con IA) entre adolescentes: ilegales aunque haya consentimiento; violencia, no broma.",
+      "practica_en": "Intimate images (real or AI-made) among adolescents: illegal even with consent; violence, not a joke.",
+      "evidence_ids": [
+        "S07-08",
+        "S20-08",
+        "S25-13",
+        "S09-08",
+        "S23-04"
+      ],
+      "jurisdiccion_origen": "Costa Rica (Ley 10020) + Inglaterra, España, Uruguay",
+      "ancla_cr": {
+        "tipo": "ley",
+        "referencia": "Ley 10020 (prevención del acoso a personas menores de edad), reforma art. 173 Código Penal: material pornográfico infantil alterado o simulado",
+        "evidence_id": "S23-04"
+      },
+      "criterios": {
+        "legal": 2,
+        "institucional": 2,
+        "cultural": 1,
+        "recursos": 2
+      },
+      "brecha": "Ninguna.",
+      "condicion_adaptacion": null,
+      "nivel": "A",
+      "decision": "adoptar",
+      "revisor": "CIOdD (redacción; pendiente D5)",
+      "fecha": "2026-10-26"
+    },
+    {
+      "id": "TR-022",
+      "practica_es": "Acordar no encontrarse con contactos de internet sin avisar a un adulto.",
+      "practica_en": "Agree not to meet online contacts without telling an adult.",
+      "evidence_ids": [
+        "S25-14",
+        "S23-03"
+      ],
+      "jurisdiccion_origen": "Costa Rica",
+      "ancla_cr": {
+        "tipo": "dato_nacional",
+        "referencia": "Kids Online Costa Rica, 2.ª encuesta (2023; informe 2024)",
+        "evidence_id": "S25-14"
+      },
+      "criterios": {
+        "legal": 2,
+        "institucional": 2,
+        "cultural": 2,
+        "recursos": 2
+      },
+      "brecha": "Ninguna.",
+      "condicion_adaptacion": null,
+      "nivel": "A",
+      "decision": "adoptar",
+      "revisor": "CIOdD (redacción; pendiente D5)",
+      "fecha": "2026-10-26"
+    },
+    {
+      "id": "TR-023",
+      "practica_es": "Enseñar cómo funcionan los algoritmos de recomendación y cuidar el tiempo de uso y el sueño.",
+      "practica_en": "Teach how recommendation algorithms work and protect screen time and sleep.",
+      "evidence_ids": [
+        "S15-12",
+        "S20-09",
+        "S08-13",
+        "S08-15",
+        "S08-14"
+      ],
+      "jurisdiccion_origen": "Argentina (CABA); Uruguay; UE (propuesta)",
+      "ancla_cr": null,
+      "criterios": {
+        "legal": 2,
+        "institucional": 2,
+        "cultural": 2,
+        "recursos": 2
+      },
+      "brecha": "No hay norma ni dato CR equivalente en el corpus.",
+      "condicion_adaptacion": "Formular como acuerdo familiar.",
+      "nivel": "B",
+      "decision": "adaptar",
+      "revisor": "CIOdD (redacción; pendiente D5)",
+      "fecha": "2026-10-26"
+    },
+    {
+      "id": "TR-024",
+      "practica_es": "Usar la IA para aprender (explicaciones, ejercicios, tutores con salvaguardas) y no para delegar la tarea.",
+      "practica_en": "Use AI to learn (explanations, exercises, safeguarded tutors), not to offload the task.",
+      "evidence_ids": [
+        "S11-12",
+        "S11-21",
+        "S11-48",
+        "S01-01",
+        "S01-02",
+        "S01-03"
+      ],
+      "jurisdiccion_origen": "Europa; Türkiye",
+      "ancla_cr": {
+        "tipo": "lineamiento_mep",
+        "referencia": "Guía MEP–UNESCO–ULACIT «Inteligencia artificial en clase» (2026)",
+        "evidence_id": "S14-15"
+      },
+      "criterios": {
+        "legal": 2,
+        "institucional": 2,
+        "cultural": 2,
+        "recursos": 1
+      },
+      "brecha": "Sin evaluación de herramientas en CR.",
+      "condicion_adaptacion": null,
+      "nivel": "A",
+      "decision": "adoptar",
+      "revisor": "CIOdD (redacción; pendiente D5)",
+      "fecha": "2026-10-26"
+    },
+    {
+      "id": "TR-025",
+      "practica_es": "Tutor socrático: la IA responde con preguntas, con el material del curso y sin dar la respuesta final; solo 15–18.",
+      "practica_en": "Socratic tutor: AI answers with questions, uses course material and never gives the final answer; ages 15–18 only.",
+      "evidence_ids": [
+        "S19-01",
+        "S19-02",
+        "S19-03",
+        "S01-02"
+      ],
+      "jurisdiccion_origen": "Costa Rica (material de curso) + Türkiye",
+      "ancla_cr": null,
+      "criterios": {
+        "legal": 2,
+        "institucional": 1,
+        "cultural": 2,
+        "recursos": 1
+      },
+      "brecha": "Material didáctico, no lineamiento; requiere herramientas configurables.",
+      "condicion_adaptacion": "Solo 15–18 y en entornos institucionales.",
+      "nivel": "B",
+      "decision": "adaptar",
+      "revisor": "CIOdD (redacción; pendiente D5)",
+      "fecha": "2026-10-26"
+    },
+    {
+      "id": "TR-026",
+      "practica_es": "Evaluación resistente a la IA: proceso visible y decisión humana final.",
+      "practica_en": "AI-resilient assessment: visible process and final human decision.",
+      "evidence_ids": [
+        "S15-07",
+        "S01-15",
+        "S01-10",
+        "S09-02",
+        "S11-13"
+      ],
+      "jurisdiccion_origen": "Argentina (CABA); Türkiye; España; Europa",
+      "ancla_cr": null,
+      "criterios": {
+        "legal": 2,
+        "institucional": 1,
+        "cultural": 2,
+        "recursos": 1
+      },
+      "brecha": "El corpus no contiene reglas MEP de evaluación con IA.",
+      "condicion_adaptacion": "Adaptar a la normativa de evaluación de los aprendizajes vigente en CR (por verificar).",
+      "nivel": "B",
+      "decision": "adaptar",
+      "revisor": "CIOdD (redacción; pendiente D5)",
+      "fecha": "2026-10-26"
+    },
+    {
+      "id": "TR-027",
+      "practica_es": "Aprender junto con el adolescente cuando la persona adulta sabe poco de tecnología.",
+      "practica_en": "Learn together with the adolescent when the adult knows little about technology.",
+      "evidence_ids": [
+        "S25-03",
+        "S25-02",
+        "S11-41",
+        "S11-20"
+      ],
+      "jurisdiccion_origen": "Costa Rica + Europa",
+      "ancla_cr": {
+        "tipo": "dato_nacional",
+        "referencia": "Kids Online Costa Rica, 2.ª encuesta (2023; informe 2024)",
+        "evidence_id": "S25-03"
+      },
+      "criterios": {
+        "legal": 2,
+        "institucional": 2,
+        "cultural": 2,
+        "recursos": 2
+      },
+      "brecha": "Ninguna.",
+      "condicion_adaptacion": null,
+      "nivel": "A",
+      "decision": "adoptar",
+      "revisor": "CIOdD (redacción; pendiente D5)",
+      "fecha": "2026-10-26"
+    },
+    {
+      "id": "TR-028",
+      "practica_es": "No compartir datos sensibles (salud, sexualidad, familia) con chatbots.",
+      "practica_en": "Do not share sensitive data (health, sexuality, family) with chatbots.",
+      "evidence_ids": [
+        "S21-03",
+        "S11-27",
+        "S11-26",
+        "S02-01"
+      ],
+      "jurisdiccion_origen": "Costa Rica + Europa",
+      "ancla_cr": {
+        "tipo": "ley",
+        "referencia": "Ley 8968: datos sensibles (salud, vida sexual, entre otros)",
+        "evidence_id": "S21-03"
+      },
+      "criterios": {
+        "legal": 2,
+        "institucional": 2,
+        "cultural": 2,
+        "recursos": 2
+      },
+      "brecha": "Ninguna.",
+      "condicion_adaptacion": null,
+      "nivel": "A",
+      "decision": "adoptar",
+      "revisor": "CIOdD (redacción; pendiente D5)",
+      "fecha": "2026-10-26"
+    },
+    {
+      "id": "TR-029",
+      "practica_es": "Saber reportar y denunciar suplantaciones de identidad, también con voz o imagen hechas con IA.",
+      "practica_en": "Know how to report impersonation, including AI-made voice or images.",
+      "evidence_ids": [
+        "S15-13",
+        "S20-02",
+        "S14-16"
+      ],
+      "jurisdiccion_origen": "Argentina (CABA); Uruguay; Costa Rica (MEP)",
+      "ancla_cr": {
+        "tipo": "lineamiento_mep",
+        "referencia": "Guía MEP–UNESCO–ULACIT «Inteligencia artificial en clase» (2026)",
+        "evidence_id": "S14-16"
+      },
+      "criterios": {
+        "legal": 2,
+        "institucional": 2,
+        "cultural": 2,
+        "recursos": 2
+      },
+      "brecha": "Ninguna.",
+      "condicion_adaptacion": "Canales CR: escuela; PANI u OIJ según el caso.",
+      "nivel": "A",
+      "decision": "adaptar",
+      "revisor": "CIOdD (redacción; pendiente D5)",
+      "fecha": "2026-10-26"
+    },
+    {
+      "id": "TR-030",
+      "practica_es": "Límite legal de una hora diaria y cuentas limitadas para 13–14 años (propuesta UE, citada como ejemplo).",
+      "practica_en": "Legal one-hour daily cap and limited accounts for ages 13–14 (EU proposal, cited as an example).",
+      "evidence_ids": [
+        "S08-04",
+        "S08-05",
+        "S08-01"
+      ],
+      "jurisdiccion_origen": "Unión Europea (propuesta no vigente)",
+      "ancla_cr": null,
+      "criterios": {
+        "legal": 2,
+        "institucional": 1,
+        "cultural": 1,
+        "recursos": 2
+      },
+      "brecha": "Ejemplo extranjero, no aplicable a CR: no hay edad mínima ni límites legales; se decide por exposición y riesgo.",
+      "condicion_adaptacion": null,
+      "nivel": "C",
+      "decision": "no_transferir",
+      "revisor": "CIOdD (redacción; pendiente D5)",
+      "fecha": "2026-10-26"
+    },
+    {
+      "id": "TR-031",
+      "practica_es": "Progresión por ciclo: aprender sobre la IA en primaria y con la IA en secundaria, con autonomía gradual.",
+      "practica_en": "Progression by cycle: learn about AI in primary and with AI in secondary, with gradual autonomy.",
+      "evidence_ids": [
+        "S15-01",
+        "S15-02",
+        "S13-21",
+        "S13-28",
+        "S12-20",
+        "S06-10"
+      ],
+      "jurisdiccion_origen": "Argentina (CABA); China; Emiratos; Corea; Europa",
+      "ancla_cr": null,
+      "criterios": {
+        "legal": 2,
+        "institucional": 1,
+        "cultural": 2,
+        "recursos": 1
+      },
+      "brecha": "La guía MEP no gradúa la IA por ciclo.",
+      "condicion_adaptacion": "Casos extranjeros citados como ejemplos; ninguna norma CR gradúa la IA por edad: decidir por exposición y riesgo. Alinear a los ciclos MEP (D1).",
+      "nivel": "B",
+      "decision": "adaptar",
+      "revisor": "CIOdD (redacción; pendiente D5)",
+      "fecha": "2026-10-26"
+    },
+    {
+      "id": "TR-032",
+      "practica_es": "Declaración de uso de IA y bitácora del proceso en los trabajos.",
+      "practica_en": "AI-use statement and process log in student work.",
+      "evidence_ids": [
+        "S14-08",
+        "S14-09",
+        "S15-05"
+      ],
+      "jurisdiccion_origen": "Costa Rica (MEP) + Argentina",
+      "ancla_cr": {
+        "tipo": "lineamiento_mep",
+        "referencia": "Guía MEP–UNESCO–ULACIT «Inteligencia artificial en clase» (2026)",
+        "evidence_id": "S14-08"
+      },
+      "criterios": {
+        "legal": 2,
+        "institucional": 2,
+        "cultural": 2,
+        "recursos": 2
+      },
+      "brecha": "Ninguna.",
+      "condicion_adaptacion": null,
+      "nivel": "A",
+      "decision": "adoptar",
+      "revisor": "CIOdD (redacción; pendiente D5)",
+      "fecha": "2026-10-26"
+    },
+    {
+      "id": "TR-033",
+      "practica_es": "No usar detectores de IA como prueba; conversar y valorar el aporte propio.",
+      "practica_en": "Do not use AI detectors as proof; talk and assess the student's own contribution.",
+      "evidence_ids": [
+        "S01-06",
+        "S18-05",
+        "S14-10"
+      ],
+      "jurisdiccion_origen": "Costa Rica (MEP) + global",
+      "ancla_cr": {
+        "tipo": "lineamiento_mep",
+        "referencia": "Guía MEP–UNESCO–ULACIT «Inteligencia artificial en clase» (2026)",
+        "evidence_id": "S14-10"
+      },
+      "criterios": {
+        "legal": 2,
+        "institucional": 2,
+        "cultural": 2,
+        "recursos": 2
+      },
+      "brecha": "Ninguna.",
+      "condicion_adaptacion": null,
+      "nivel": "A",
+      "decision": "adoptar",
+      "revisor": "CIOdD (redacción; pendiente D5)",
+      "fecha": "2026-10-26"
+    },
+    {
+      "id": "TR-034",
+      "practica_es": "Analizar en clase los sesgos y estereotipos de la IA.",
+      "practica_en": "Analyse AI bias and stereotypes in class.",
+      "evidence_ids": [
+        "S14-12",
+        "S18-02",
+        "S12-43",
+        "S10-08"
+      ],
+      "jurisdiccion_origen": "Costa Rica (MEP) + global",
+      "ancla_cr": {
+        "tipo": "lineamiento_mep",
+        "referencia": "Guía MEP–UNESCO–ULACIT «Inteligencia artificial en clase» (2026)",
+        "evidence_id": "S14-12"
+      },
+      "criterios": {
+        "legal": 2,
+        "institucional": 2,
+        "cultural": 2,
+        "recursos": 2
+      },
+      "brecha": "Ninguna.",
+      "condicion_adaptacion": null,
+      "nivel": "A",
+      "decision": "adoptar",
+      "revisor": "CIOdD (redacción; pendiente D5)",
+      "fecha": "2026-10-26"
+    },
+    {
+      "id": "TR-035",
+      "practica_es": "Proteger los datos del estudiantado en herramientas de IA: anonimizar, cuentas institucionales, consentimiento formal.",
+      "practica_en": "Protect student data in AI tools: anonymise, institutional accounts, formal consent.",
+      "evidence_ids": [
+        "S14-02",
+        "S14-05",
+        "S14-06",
+        "S14-07",
+        "S15-09"
+      ],
+      "jurisdiccion_origen": "Costa Rica (MEP, Ley 8968)",
+      "ancla_cr": {
+        "tipo": "lineamiento_mep",
+        "referencia": "Guía MEP–UNESCO–ULACIT «Inteligencia artificial en clase» (2026)",
+        "evidence_id": "S14-02"
+      },
+      "criterios": {
+        "legal": 2,
+        "institucional": 2,
+        "cultural": 2,
+        "recursos": 1
+      },
+      "brecha": "Cuentas institucionales no disponibles en todos los centros.",
+      "condicion_adaptacion": null,
+      "nivel": "A",
+      "decision": "adoptar",
+      "revisor": "CIOdD (redacción; pendiente D5)",
+      "fecha": "2026-10-26"
+    },
+    {
+      "id": "TR-036",
+      "practica_es": "Deber de denunciar sospechas de abuso (también en línea o con IA) y comunicar al MEP; protocolo de incidentes.",
+      "practica_en": "Duty to report suspected abuse (including online or AI-made) and notify the Ministry; incident protocol.",
+      "evidence_ids": [
+        "S26-08",
+        "S26-10",
+        "S07-21",
+        "S07-28"
+      ],
+      "jurisdiccion_origen": "Costa Rica (Código) + Inglaterra",
+      "ancla_cr": {
+        "tipo": "ley",
+        "referencia": "Código de la Niñez y la Adolescencia (Ley 7739): obligación de denunciar ante el Ministerio Público y de comunicar al MEP",
+        "evidence_id": "S26-08"
+      },
+      "criterios": {
+        "legal": 2,
+        "institucional": 2,
+        "cultural": 2,
+        "recursos": 2
+      },
+      "brecha": "Ninguna.",
+      "condicion_adaptacion": null,
+      "nivel": "A",
+      "decision": "adoptar",
+      "revisor": "CIOdD (redacción; pendiente D5)",
+      "fecha": "2026-10-26"
+    },
+    {
+      "id": "TR-037",
+      "practica_es": "Formación anual del personal en seguridad en línea e IA.",
+      "practica_en": "Annual staff training on online safety and AI.",
+      "evidence_ids": [
+        "S07-22",
+        "S07-23",
+        "S24-04",
+        "S04-17",
+        "S25-09"
+      ],
+      "jurisdiccion_origen": "Costa Rica (ENIA) + Inglaterra + Europa",
+      "ancla_cr": {
+        "tipo": "programa",
+        "referencia": "Estrategia Nacional de IA 2024–2027: el MEP lidera la integración de la IA y la capacitación docente",
+        "evidence_id": "S24-04"
+      },
+      "criterios": {
+        "legal": 2,
+        "institucional": 1,
+        "cultural": 2,
+        "recursos": 1
+      },
+      "brecha": "La frecuencia anual proviene de Inglaterra.",
+      "condicion_adaptacion": "Coordinar con la oferta de formación del MEP.",
+      "nivel": "A",
+      "decision": "adaptar",
+      "revisor": "CIOdD (redacción; pendiente D5)",
+      "fecha": "2026-10-26"
+    },
+    {
+      "id": "TR-038",
+      "practica_es": "Compra de plataformas con IA: minimización de datos, cláusulas contractuales, explicabilidad y evaluación de impacto.",
+      "practica_en": "Procurement of AI platforms: data minimisation, contract clauses, explainability and impact assessment.",
+      "evidence_ids": [
+        "S17-01",
+        "S17-02",
+        "S17-04",
+        "S17-05",
+        "S10-11",
+        "S21-05"
+      ],
+      "jurisdiccion_origen": "Global + Costa Rica (Ley 8968)",
+      "ancla_cr": {
+        "tipo": "ley",
+        "referencia": "Ley 8968: el responsable de la base de datos adopta medidas técnicas y organizativas de seguridad",
+        "evidence_id": "S21-05"
+      },
+      "criterios": {
+        "legal": 2,
+        "institucional": 1,
+        "cultural": 2,
+        "recursos": 1
+      },
+      "brecha": "Capacidad técnica desigual entre centros.",
+      "condicion_adaptacion": "Apoyarse en la dirección regional o el MEP para revisar contratos.",
+      "nivel": "A",
+      "decision": "adaptar",
+      "revisor": "CIOdD (redacción; pendiente D5)",
+      "fecha": "2026-10-26"
+    },
+    {
+      "id": "TR-039",
+      "practica_es": "Preguntas previas al despliegue: evidencia independiente, necesidad frente a opciones sin IA, prueba local.",
+      "practica_en": "Pre-deployment questions: independent evidence, need versus non-AI options, local testing.",
+      "evidence_ids": [
+        "S13-31",
+        "S13-32",
+        "S13-33",
+        "S13-34",
+        "S13-35"
+      ],
+      "jurisdiccion_origen": "Global (UNESCO)",
+      "ancla_cr": {
+        "tipo": "ley",
+        "referencia": "Código de la Niñez y la Adolescencia (Ley 7739), art. 5: interés superior en toda acción pública o privada",
+        "evidence_id": "S26-02"
+      },
+      "criterios": {
+        "legal": 2,
+        "institucional": 2,
+        "cultural": 2,
+        "recursos": 1
+      },
+      "brecha": "No hay evaluaciones locales de herramientas.",
+      "condicion_adaptacion": "Aplicar como lista de verificación del centro.",
+      "nivel": "B",
+      "decision": "adaptar",
+      "revisor": "CIOdD (redacción; pendiente D5)",
+      "fecha": "2026-10-26"
+    },
+    {
+      "id": "TR-040",
+      "practica_es": "Equidad: uso guiado en la escuela, acceso y herramientas gratuitas para no ampliar brechas.",
+      "practica_en": "Equity: guided school use, access and free tools so gaps do not widen.",
+      "evidence_ids": [
+        "S25-08",
+        "S25-10",
+        "S16-07",
+        "S18-03",
+        "S12-32",
+        "S16-08"
+      ],
+      "jurisdiccion_origen": "Costa Rica + global",
+      "ancla_cr": {
+        "tipo": "dato_nacional",
+        "referencia": "Kids Online Costa Rica, 2.ª encuesta (2023; informe 2024)",
+        "evidence_id": "S25-10"
+      },
+      "criterios": {
+        "legal": 2,
+        "institucional": 2,
+        "cultural": 2,
+        "recursos": 1
+      },
+      "brecha": "Conectividad desigual.",
+      "condicion_adaptacion": null,
+      "nivel": "A",
+      "decision": "adoptar",
+      "revisor": "CIOdD (redacción; pendiente D5)",
+      "fecha": "2026-10-26"
+    },
+    {
+      "id": "TR-041",
+      "practica_es": "Filtrado de contenidos proporcionado y revisado cada año (modelo inglés).",
+      "practica_en": "Proportionate content filtering reviewed yearly (English model).",
+      "evidence_ids": [
+        "S07-18",
+        "S07-19",
+        "S07-20"
+      ],
+      "jurisdiccion_origen": "Inglaterra",
+      "ancla_cr": null,
+      "criterios": {
+        "legal": 1,
+        "institucional": 1,
+        "cultural": 2,
+        "recursos": 1
+      },
+      "brecha": "En CR el monitoreo de datos de estudiantes requiere base legal (Ley 8968).",
+      "condicion_adaptacion": "Limitar a filtrado de contenidos; no monitorear datos personales sin base legal.",
+      "nivel": "B",
+      "decision": "adaptar",
+      "revisor": "CIOdD (redacción; pendiente D5)",
+      "fecha": "2026-10-26"
+    },
+    {
+      "id": "TR-042",
+      "practica_es": "Política de IA del centro con reglas claras y comunes, comunicada a las familias.",
+      "practica_en": "School AI policy with clear, shared rules, communicated to families.",
+      "evidence_ids": [
+        "S11-13",
+        "S11-15",
+        "S11-40",
+        "S04-45",
+        "S14-10",
+        "S07-25"
+      ],
+      "jurisdiccion_origen": "Europa + Costa Rica (MEP)",
+      "ancla_cr": {
+        "tipo": "lineamiento_mep",
+        "referencia": "Guía MEP–UNESCO–ULACIT «Inteligencia artificial en clase» (2026)",
+        "evidence_id": "S14-10"
+      },
+      "criterios": {
+        "legal": 2,
+        "institucional": 2,
+        "cultural": 2,
+        "recursos": 2
+      },
+      "brecha": "Ninguna.",
+      "condicion_adaptacion": null,
+      "nivel": "A",
+      "decision": "adoptar",
+      "revisor": "CIOdD (redacción; pendiente D5)",
+      "fecha": "2026-10-26"
+    },
+    {
+      "id": "TR-043",
+      "practica_es": "Decisiones apoyadas por IA: responsable humano, información a familias y explicabilidad.",
+      "practica_en": "AI-supported decisions: human accountability, information to families and explainability.",
+      "evidence_ids": [
+        "S03-17",
+        "S10-09",
+        "S10-07",
+        "S01-17",
+        "S01-15"
+      ],
+      "jurisdiccion_origen": "Global; Türkiye",
+      "ancla_cr": null,
+      "criterios": {
+        "legal": 2,
+        "institucional": 1,
+        "cultural": 2,
+        "recursos": 1
+      },
+      "brecha": "Sin norma CR sobre decisiones automatizadas en educación.",
+      "condicion_adaptacion": "Formular como buena práctica institucional.",
+      "nivel": "B",
+      "decision": "adaptar",
+      "revisor": "CIOdD (redacción; pendiente D5)",
+      "fecha": "2026-10-26"
+    },
+    {
+      "id": "TR-044",
+      "practica_es": "Escuelas libres de celulares por defecto (Inglaterra, Islandia, Rumanía, Países Bajos).",
+      "practica_en": "Phone-free schools by default (England, Iceland, Romania, Netherlands).",
+      "evidence_ids": [
+        "S07-27",
+        "S04-28",
+        "S04-31",
+        "S04-33"
+      ],
+      "jurisdiccion_origen": "Europa",
+      "ancla_cr": null,
+      "criterios": {
+        "legal": 1,
+        "institucional": 1,
+        "cultural": 1,
+        "recursos": 1
+      },
+      "brecha": "Ejemplos extranjeros; el corpus no contiene la normativa CR sobre celulares en centros.",
+      "condicion_adaptacion": null,
+      "nivel": "C",
+      "decision": "investigar",
+      "revisor": "CIOdD (redacción; pendiente D5)",
+      "fecha": "2026-10-26"
+    },
+    {
+      "id": "TR-045",
+      "practica_es": "Enseñar deepfakes y manipulación audiovisual, y su ilegalidad con menores.",
+      "practica_en": "Teach deepfakes and audiovisual manipulation, and their illegality involving minors.",
+      "evidence_ids": [
+        "S15-14",
+        "S07-24",
+        "S11-28",
+        "S23-04"
+      ],
+      "jurisdiccion_origen": "Argentina; Inglaterra; Costa Rica (Ley 10020)",
+      "ancla_cr": {
+        "tipo": "ley",
+        "referencia": "Ley 10020 (prevención del acoso a personas menores de edad), reforma art. 173 Código Penal: material pornográfico infantil alterado o simulado",
+        "evidence_id": "S23-04"
+      },
+      "criterios": {
+        "legal": 2,
+        "institucional": 2,
+        "cultural": 2,
+        "recursos": 2
+      },
+      "brecha": "Ninguna.",
+      "condicion_adaptacion": null,
+      "nivel": "A",
+      "decision": "adoptar",
+      "revisor": "CIOdD (redacción; pendiente D5)",
+      "fecha": "2026-10-26"
+    },
+    {
+      "id": "TR-046",
+      "practica_es": "Decidir cuándo usar IA: hacer la tarea sin IA, compararla y valorar si conviene.",
+      "practica_en": "Decide when to use AI: do the task without AI, compare and judge whether it helps.",
+      "evidence_ids": [
+        "S16-06",
+        "S15-06",
+        "S14-13",
+        "S15-08"
+      ],
+      "jurisdiccion_origen": "Costa Rica (MEP) + Argentina + global",
+      "ancla_cr": {
+        "tipo": "lineamiento_mep",
+        "referencia": "Guía MEP–UNESCO–ULACIT «Inteligencia artificial en clase» (2026)",
+        "evidence_id": "S14-13"
+      },
+      "criterios": {
+        "legal": 2,
+        "institucional": 2,
+        "cultural": 2,
+        "recursos": 2
+      },
+      "brecha": "Ninguna.",
+      "condicion_adaptacion": null,
+      "nivel": "A",
+      "decision": "adoptar",
+      "revisor": "CIOdD (redacción; pendiente D5)",
+      "fecha": "2026-10-26"
+    },
+    {
+      "id": "TR-047",
+      "practica_es": "Vías de reporte seguras y con respuesta humana para estudiantes.",
+      "practica_en": "Safe reporting channels with a human response for students.",
+      "evidence_ids": [
+        "S03-18",
+        "S03-14",
+        "S25-12"
+      ],
+      "jurisdiccion_origen": "Global + Costa Rica",
+      "ancla_cr": {
+        "tipo": "dato_nacional",
+        "referencia": "Kids Online Costa Rica, 2.ª encuesta (2023; informe 2024)",
+        "evidence_id": "S25-12"
+      },
+      "criterios": {
+        "legal": 2,
+        "institucional": 1,
+        "cultural": 2,
+        "recursos": 1
+      },
+      "brecha": "Ninguna específica.",
+      "condicion_adaptacion": "Integrar con el protocolo del centro y los canales escuela → PANI/OIJ.",
+      "nivel": "A",
+      "decision": "adaptar",
+      "revisor": "CIOdD (redacción; pendiente D5)",
+      "fecha": "2026-10-26"
+    },
+    {
+      "id": "TR-048",
+      "practica_es": "Coordinación con PANI y programas de concientización de la Ley 10020.",
+      "practica_en": "Coordination with PANI and Law 10020 awareness programmes.",
+      "evidence_ids": [
+        "S23-01",
+        "S24-03",
+        "S23-05"
+      ],
+      "jurisdiccion_origen": "Costa Rica",
+      "ancla_cr": {
+        "tipo": "ley",
+        "referencia": "Ley 10020: comisión interinstitucional (PANI, MEP, MICITT, OIJ…) y programas de concientización en centros educativos",
+        "evidence_id": "S23-01"
+      },
+      "criterios": {
+        "legal": 2,
+        "institucional": 2,
+        "cultural": 2,
+        "recursos": 2
+      },
+      "brecha": "Ninguna.",
+      "condicion_adaptacion": null,
+      "nivel": "A",
+      "decision": "adoptar",
+      "revisor": "CIOdD (redacción; pendiente D5)",
+      "fecha": "2026-10-26"
+    },
+    {
+      "id": "TR-049",
+      "practica_es": "Atención docente a señales emocionales que la IA no detecta.",
+      "practica_en": "Teacher attention to emotional signals AI cannot detect.",
+      "evidence_ids": [
+        "S14-19",
+        "S05-02"
+      ],
+      "jurisdiccion_origen": "Costa Rica (MEP) + Reino Unido",
+      "ancla_cr": {
+        "tipo": "lineamiento_mep",
+        "referencia": "Guía MEP–UNESCO–ULACIT «Inteligencia artificial en clase» (2026)",
+        "evidence_id": "S14-19"
+      },
+      "criterios": {
+        "legal": 2,
+        "institucional": 2,
+        "cultural": 2,
+        "recursos": 2
+      },
+      "brecha": "Ninguna.",
+      "condicion_adaptacion": null,
+      "nivel": "A",
+      "decision": "adoptar",
+      "revisor": "CIOdD (redacción; pendiente D5)",
+      "fecha": "2026-10-26"
+    },
+    {
+      "id": "TR-050",
+      "practica_es": "Herramientas en español y accesibles para estudiantes con discapacidad.",
+      "practica_en": "Tools that work in Spanish and are accessible to students with disabilities.",
+      "evidence_ids": [
+        "S11-49",
+        "S03-19",
+        "S13-35"
+      ],
+      "jurisdiccion_origen": "Europa + global",
+      "ancla_cr": null,
+      "criterios": {
+        "legal": 2,
+        "institucional": 1,
+        "cultural": 2,
+        "recursos": 1
+      },
+      "brecha": "Sin requisito CR específico en el corpus.",
+      "condicion_adaptacion": "Verificar idioma y accesibilidad antes de adoptar.",
+      "nivel": "B",
+      "decision": "adaptar",
+      "revisor": "CIOdD (redacción; pendiente D5)",
+      "fecha": "2026-10-26"
+    }
+  ]
+}

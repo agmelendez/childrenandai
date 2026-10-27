@@ -1,0 +1,155 @@
+/* Children on AI · capa de identidad visual UCR (v0.10)
+   Fuente: Manual de identidad visual UCR (ODI, 2019), «Herramientas electrónicas / Sitios web», pp. 116–118:
+   cintillo celeste/azul/blanco ≥ 56 px con firma enlazada a ucr.ac.cr y línea gris de 4 px; fondo gris claro #e6e6e6;
+   pie gris oscuro #323232 con texto blanco ≥ 12 px; diseño plano (sin gradientes, sombras ni texturas);
+   tipografía web Trueno, sustituible por Arial (p. 25). Paleta: celeste #00c0f3, azul #005da4, verde #6dc067,
+   amarillo #ffe06a, naranja #f99d1c (pp. 28–29). Solo cambia la presentación; no toca contenidos ni datos. */
+
+:root{
+  --ucr-celeste:#00c0f3; --ucr-azul:#005da4; --ucr-azul-osc:#00457a; --ucr-gris-fondo:#e6e6e6; --ucr-pie:#323232;
+  --bg:#e6e6e6; --surface:#FFFFFF; --soft:#F2F2F2; --ink:#1E1E1E; --muted:#4D4D4D; --line:#8A8A8A; --rule:#CFCFCF;
+  --navy:#00457a; --blue:#005da4; --on-blue:#FFFFFF; --link:#005da4; --focus:#005da4;
+  --hero:#FFFFFF; --hero2:#FFFFFF; --hero-ink:#1E1E1E; --hero-muted:#4D4D4D; --hero-line:#CFCFCF; --cur:#005da4; --cur-ink:#FFFFFF;
+  --info-bg:#E5F6FD;
+  /* bandas MEP con colores UCR (franja = color pleno; texto = tono oscuro con contraste AA) */
+  --t1:#00617D; --t1-bg:#E5F6FD; --t1s:#00c0f3;
+  --t2:#2E6B2A; --t2-bg:#EAF6E9; --t2s:#6dc067;
+  --t3:#8A4B00; --t3-bg:#FFF2DF; --t3s:#f99d1c;
+  --t4:#005da4; --t4-bg:#E3EEF7; --t4s:#005da4;
+  --side-bg:#FFFFFF; --side-ink:#1E1E1E; --side-muted:#4D4D4D; --side-line:#D6D6D6;
+  --side-act-bg:#005da4; --side-act-ink:#FFFFFF; --side-hover:#EEF4FA;
+  --f-display:"Trueno",Arial,"Helvetica Neue",sans-serif; --f-body:"Trueno",Arial,"Helvetica Neue",sans-serif;
+  --shadow:none;
+}
+
+/* ---------- 1. Cintillo UCR ---------- */
+.ucr-band{display:flex;align-items:center;gap:14px;min-height:56px;padding:8px clamp(16px,3vw,32px);
+  background:var(--ucr-azul);color:#fff;border-bottom:4px solid #9b9b9b;font-family:Arial,"Helvetica Neue",sans-serif}
+.ucr-sig{display:inline-flex;align-items:center;border-radius:4px}
+.ucr-sig img{display:block;height:44px;width:auto}
+.ucr-sig:focus-visible{outline:3px solid #fff;outline-offset:4px}
+@media(max-width:560px){.ucr-sig img{height:34px}}
+@media(max-width:360px){.ucr-sig img{height:28px}}
+@media print{.ucr-band{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+
+/* ---------- 2. Diseño plano ---------- */
+.hero,.tile,.card,.item,.prof,.panel,.box,.stat,.tipcard,.kit section,.tips .tip{box-shadow:none!important}
+.hero{background:var(--surface)!important;color:var(--ink);border:1px solid var(--rule);border-radius:8px}
+.hero .ageline,.vh .ageline,.side .ageline{display:none}
+.hero h1{color:var(--navy);font-size:clamp(1.6rem,3.2vw,2.3rem)}
+.hero .sub{color:var(--muted)}
+h1,h2,h3,h4{font-weight:700;letter-spacing:0}
+.btn,.pill,.chip,.seg button,.tile,.item,.prof,.filters input,.filters select{border-radius:6px}
+
+/* Perfil: bloque principal de la portada, sin tarjeta dentro de tarjeta */
+.hero .prof{background:transparent;border:0;padding:0;margin-top:18px;color:var(--ink)}
+.hero .prof .prof-h{font-size:1.35rem}
+
+/* Regla de edades: plegada (la evidencia sigue a un clic) */
+.ruler-wrap{margin-top:26px;border-top:1px solid var(--rule);padding-top:14px}
+.ruler-wrap>summary{cursor:pointer;font:700 1rem var(--f-body);color:var(--link);padding:8px 0;list-style-position:outside}
+.ruler-wrap>summary:hover{text-decoration:underline}
+.ruler-wrap .ruler{background:#16305C;color:#fff;border-radius:8px;padding:clamp(14px,2.5vw,24px);margin-top:10px}
+
+/* ---------- 3. Menú lateral claro y corto ---------- */
+.side{border-right:1px solid var(--side-line)}
+.brand b{color:var(--navy)}
+.side .nv{border-radius:6px;font-weight:600}
+.side .nv[aria-current="page"] svg{stroke:currentColor}
+.sg-t{text-transform:uppercase;font-size:.72rem;letter-spacing:.06em}
+.side .more{margin-top:6px;border-top:1px solid var(--side-line);padding-top:6px}
+.side .more>summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:8px;min-height:42px;padding:8px 10px;border-radius:6px;font:600 .9rem var(--f-body);color:var(--side-muted)}
+.side .more>summary::-webkit-details-marker{display:none}
+.side .more>summary::before{content:"";width:8px;height:8px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(-45deg);transition:transform .15s}
+.side .more[open]>summary::before{transform:rotate(45deg)}
+.side .more>summary:hover{background:var(--side-hover);color:var(--side-ink)}
+.side .more-w{list-style:none}
+.side-foot{font-size:.78rem}
+
+/* ---------- 4. Barra superior más sobria ---------- */
+.topbar{background:var(--surface);backdrop-filter:none;border-bottom:1px solid var(--rule)}
+@media(min-width:641px){.topbar #a11yFl{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}}
+
+/* ---------- 5. Portada: menos repetición ---------- */
+/* Los accesos por rol repiten el selector «¿Quién eres?» de arriba: se conserva solo «Primera vez aquí». */
+#homeTiles .tile[data-setrole]{display:none}
+.home>h3,.home>p{display:none}
+.tile::before{display:none}
+
+/* ---------- 6. Pie UCR ---------- */
+footer.foot{background:var(--ucr-pie);color:#fff;border-top:0;padding-bottom:28px;font-size:.85rem;min-height:60px}
+footer.foot a{color:#fff}
+
+/* Los temas oscuros y de alto contraste del panel de accesibilidad conservan sus propios colores. */
+:root[data-theme="dark"] .hero,:root[data-theme^="hc"] .hero{background:var(--surface)!important}
+:root[data-theme^="hc"] footer.foot{background:var(--bg);color:var(--ink);border-top:2px solid var(--line)}
+:root[data-theme^="hc"] footer.foot a{color:var(--link)}
+.hero>.sub{display:none}
+.subnav a,.subnav button,.tabs button,.lang{border-radius:6px}
+.ruler-wrap .ruler{--hero-ink:#FFFFFF;--hero-muted:#C5D5EE;--hero-line:#6C88B8;--cur:#9CC4F0;--cur-ink:#0A1222;color:#fff}
+
+.foot-logo{display:inline-block;margin-bottom:14px}
+.foot-logo img{display:block;height:40px;width:auto}
+:root[data-theme^="hc"] .foot-logo img{filter:none;background:#323232;padding:6px;border-radius:4px}
+
+/* Formato UCR claro por defecto aunque el sistema esté en modo oscuro (manual: fondo #e6e6e6).
+   El modo oscuro sigue disponible eligiéndolo en el panel de Accesibilidad (data-theme="dark"). */
+@media (prefers-color-scheme:dark){:root:not([data-theme]){
+  --ucr-celeste:#00c0f3; --ucr-azul:#005da4; --ucr-azul-osc:#00457a; --ucr-gris-fondo:#e6e6e6; --ucr-pie:#323232;
+  --bg:#e6e6e6; --surface:#FFFFFF; --soft:#F2F2F2; --ink:#1E1E1E; --muted:#4D4D4D; --line:#8A8A8A; --rule:#CFCFCF;
+  --navy:#00457a; --blue:#005da4; --on-blue:#FFFFFF; --link:#005da4; --focus:#005da4;
+  --hero:#FFFFFF; --hero2:#FFFFFF; --hero-ink:#1E1E1E; --hero-muted:#4D4D4D; --hero-line:#CFCFCF; --cur:#005da4; --cur-ink:#FFFFFF;
+  --info-bg:#E5F6FD;
+  /* bandas MEP con colores UCR (franja = color pleno; texto = tono oscuro con contraste AA) */
+  --t1:#00617D; --t1-bg:#E5F6FD; --t1s:#00c0f3;
+  --t2:#2E6B2A; --t2-bg:#EAF6E9; --t2s:#6dc067;
+  --t3:#8A4B00; --t3-bg:#FFF2DF; --t3s:#f99d1c;
+  --t4:#005da4; --t4-bg:#E3EEF7; --t4s:#005da4;
+  --side-bg:#FFFFFF; --side-ink:#1E1E1E; --side-muted:#4D4D4D; --side-line:#D6D6D6;
+  --side-act-bg:#005da4; --side-act-ink:#FFFFFF; --side-hover:#EEF4FA;
+  --f-display:"Trueno",Arial,"Helvetica Neue",sans-serif; --f-body:"Trueno",Arial,"Helvetica Neue",sans-serif;
+  --shadow:none;
+  --ok:#1B6040; --ok-bg:#E1F1E8; --warn:#7A4E00; --warn-bg:#FFF0D2; --bad:#8C2626; --bad-bg:#FBE3E3;
+  --a0:#DDE8F6; --a1:#A9C6E8; --a2:#3F77B5; --a3:#234F8C; --a0i:#1B2230; --a1i:#1B2230; --a2i:#FFFFFF; --a3i:#FFFFFF;
+  color-scheme:light;}
+  :root:not([data-theme]) .ucr-band{border-bottom-color:#9b9b9b}}
+
+/* ---------- 7. Portada: guía de uso, regla de edades y mapa del sitio (v0.10.1) ---------- */
+.home{display:none}
+.hsec{background:var(--surface);border:1px solid var(--rule);border-radius:8px;padding:clamp(18px,3vw,32px);margin-top:22px}
+.hsec.hg-in{border:0;padding:0;margin:14px 0 26px;padding-bottom:24px;border-bottom:1px solid var(--rule);border-radius:0}
+.hs-h{font-size:clamp(1.25rem,2.4vw,1.55rem);color:var(--navy)}
+.hs-sub{color:var(--muted);margin:6px 0 16px;max-width:75ch}
+.hg-steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;counter-reset:none}
+.hg-steps li{position:relative;border:1px solid var(--rule);border-top:4px solid var(--ucr-azul);border-radius:6px;padding:14px 14px 12px;display:flex;flex-direction:column;gap:6px;background:var(--surface)}
+.hg-steps li:nth-child(2){border-top-color:var(--t1s)}.hg-steps li:nth-child(3){border-top-color:var(--t2s)}.hg-steps li:nth-child(4){border-top-color:var(--t3s)}
+.hg-n{width:30px;height:30px;border-radius:50%;background:var(--blue);color:var(--on-blue);display:grid;place-items:center;font-weight:700}
+.hg-steps h3{font-size:1rem;color:var(--ink)}
+.hg-steps p{margin:0;font-size:.9rem;color:var(--muted);flex:1}
+.hg-go{font-weight:700;font-size:.9rem}
+.hg-full{margin:12px 0 0;font-size:.92rem}
+@media(min-width:1100px){.hg-steps li:not(:last-child)::after{content:"";position:absolute;right:-11px;top:24px;width:10px;height:10px;border-top:2px solid var(--line);border-right:2px solid var(--line);transform:rotate(45deg);z-index:1}}
+@media(max-width:1099px){.hg-steps{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}}
+
+/* Regla de edades visible otra vez */
+.ruler-wrap.hsec{border-top:1px solid var(--rule)}
+.ruler-wrap .ruler{margin-top:4px}
+
+/* Mapa del sitio como diagrama de flujo por niveles */
+.sm-flow{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px}
+.sm-col{position:relative;border:1px solid var(--rule);border-radius:6px;padding:14px;background:var(--soft)}
+.sm-col h3{font-size:1rem;color:var(--navy)}
+.sm-col>p{margin:2px 0 10px;font-size:.85rem;color:var(--muted)}
+.sm-col ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.sm-col li a{display:block;padding:7px 10px;border-radius:4px;background:var(--surface);border:1px solid var(--rule);text-decoration:none;font-weight:600;font-size:.92rem}
+.sm-col li a:hover{border-color:var(--blue);background:var(--info-bg)}
+.sm-l1{border-top:4px solid var(--ucr-azul)}.sm-l2{border-top:4px solid var(--t1s)}.sm-l3{border-top:4px solid var(--t2s)}.sm-l4{border-top:4px solid var(--line)}
+@media(min-width:900px){.sm-col:not(:last-child)::after{content:"";position:absolute;right:-17px;top:22px;width:12px;height:12px;border-top:3px solid var(--line);border-right:3px solid var(--line);transform:rotate(45deg)}}
+@media(max-width:899px){.sm-flow{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.sm-flow{grid-template-columns:1fr}}
+.sm-rt-h{margin:24px 0 10px;font-size:1rem}
+.sm-routes{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.sm-route{border:1px solid var(--rule);border-radius:6px;padding:12px 14px}
+.sm-route ol{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px 4px;align-items:center}
+.sm-route li{display:flex;align-items:center;gap:4px;font-size:.9rem}
+.sm-route li:not(:last-child)::after{content:"→";color:var(--muted)}

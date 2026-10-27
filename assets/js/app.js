@@ -13,10 +13,10 @@ const esc=s=>String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",
 const em=s=>esc(s).replace(/\*(.+?)\*/g,"<em>$1</em>");
 const KINDS=["recomendacion","hallazgo","alerta","cifra","definicion","obligacion","competencia"];
 const STRS=["empirica_encuesta","revision_literatura","orientacion","normativa","opinion"];
-const AGES=[["6-11","6–11"],["12-14","12–14"],["15-18","15–18"]];
+const AGES=[["6-8","6–8"],["9-11","9–11"],["12-14","12–14"],["15-18","15–18"]]; /* D1: ciclos MEP (I, II, III, Diversificada) */
 const ROLES=["Familia","Docente","Dirección"];
 const LN={es:{es:"español",en:"inglés"},en:{es:"Spanish",en:"English"}};
-const st={view:"inicio",sub:{},lang:"es",age:11,role:"Familia",ex:{q:"",kind:"",theme:"",src:"",age:"",aud:"",str:""},shown:24,done:{},dg:"mediacion",al:"fuentes",ser:{0:true,1:true,2:true},glq:"",glc:""};
+const st={view:"inicio",sub:{},lang:"es",age:11,role:"Familia",ex:{q:"",kind:"",theme:"",src:"",age:"",aud:"",str:""},shown:24,lf:"",lshown:6,done:{},dg:"mediacion",al:"fuentes",ser:{0:true,1:true,2:true},glq:"",glc:""};
 const THEMES=[...new Set(IT.map(i=>i.theme))];
 
 /* ---------- Preferencias de accesibilidad ---------- */
@@ -34,7 +34,9 @@ const itx=i=>st.lang==="es"?i.es:(i[st.lang]||i.es);
 const th=x=>t("theme."+x);
 const roleL=r=>t("role."+r);
 const agel=k=>(AGES.find(a=>a[0]===k)||[0,k])[1];
-const tramo=a=>a<=11?"6-11":a<=14?"12-14":"15-18";
+/* No aplicable directamente en CR: ítem con estatus legal extranjero/no adoptado, o advertencia que lo declara. */
+const notCR=i=>(i.legal_status?1:0)||(/no (es )?aplica(ble)?( directamente)?/i.test(i.caveat||"")?1:0);
+const tramo=a=>a<=8?"6-8":a<=11?"9-11":a<=14?"12-14":"15-18";
 const bl=o=>o[st.lang]||o.es;
 /* ---------- Procedencia: citas en el texto (APA 7) y notas de fuente ---------- */
 const ckey=s=>loc(s,"autor_corto")+", "+s.anio;
@@ -68,17 +70,19 @@ function card(i,opt){
   const s=SRC[i.source], ages=i.ages||[], ql=s.idioma||"es";
   const agenote=loc(i,"age_note"), cav=loc(i,"caveat")||"", fig=loc(i,"figure"), lvl=loc(i,"levels"), ls=loc(i,"legal_status");
   const ageIdx=a=>AGES.findIndex(x=>x[0]===a)+1;
-  const ac=ages.length===3?`<span class="b">${esc(t("card.allages"))}</span>`:ages.length?ages.map(a=>`<span class="b age${ageIdx(a)}">${agel(a)}</span>`).join(""):`<span class="b" title="${esc(agenote||"")}">${esc(t("card.noage"))}</span>`;
+  const ac=ages.length===AGES.length?`<span class="b">${esc(t("card.allages"))}</span>`:ages.length?ages.map(a=>`<span class="b age${ageIdx(a)}">${agel(a)}</span>`).join(""):`<span class="b" title="${esc(agenote||"")}">${esc(t("card.noage"))}</span>`;
   const lv=lvl&&typeof lvl==="object"?`<details><summary>${esc(t("comp.l1"))} · ${esc(t("comp.l2"))} · ${esc(t("comp.l3"))}</summary><dl class="lv"><dt>${esc(t("comp.l1"))}</dt><dd>${esc(lvl.understand||"")}</dd><dt>${esc(t("comp.l2"))}</dt><dd>${esc(lvl.apply||"")}</dd><dt>${esc(t("comp.l3"))}</dt><dd>${esc(lvl.create||"")}</dd></dl></details>`:"";
-  return `<article class="item k-${i.kind} ab-${ages.length===1?ageIdx(ages[0]):0}" id="c-${i.id}" tabindex="-1" aria-label="${esc(t("kind."+i.kind)+" "+i.id)}"><div class="row"><span class="b ${i.kind}">${esc(t("kind."+i.kind))}</span><span class="b">${esc(th(i.theme))}</span>${ac}</div>
+  return `<article class="item k-${i.kind} ab-${ages.length===1?ageIdx(ages[0]):0}" id="c-${i.id}" tabindex="-1" aria-label="${esc(t("kind."+i.kind)+" "+i.id)}"><div class="row"><span class="b ${i.kind}">${esc(t("kind."+i.kind))}</span><span class="b">${esc(th(i.theme))}</span>${ac}${notCR(i)?`<span class="b na">${esc(t("card.na"))}</span>`:""}</div>
   <p>${esc(itx(i))}</p>
+  ${loc(i,"lectura_cr")?`<p class="lcr"><b>${esc(t("card.lcr"))}</b> ${esc(loc(i,"lectura_cr"))}</p>`:""}
   ${fig?`<div class="fg">${fmtFig(fig)}</div>`:""}
   ${lv}
-  ${cav?(cav.length<=80?`<div class="cv">${esc(cav)}</div>`:`<details><summary>${esc(t("card.limits"))}</summary><div class="cv" style="margin-top:6px">${esc(cav)}</div></details>`):""}
-  ${agenote&&!opt.noage?`<span class="cite">${esc(t("card.agenote",{x:agenote}))}</span>`:""}
+  <details class="prov"><summary>${esc(t("card.prov"))} <span class="pv-src">${esc(ckey(s))}</span></summary><div class="pvb">
+  ${cav?`<div class="cv"><b>${esc(t("card.limits"))}.</b> ${esc(cav)}</div>`:""}
   ${ls?`<span class="cite">${esc(t("fu.state"))}: ${esc(ls)}</span>`:""}
-  <details><summary>${esc(t("card.quote"))} · ${i.source} · ${esc(t("card.pdf",{p:i.page}))}</summary><blockquote lang="${ql}">${esc(i.quote)}</blockquote>${ql!==st.lang?`<span class="cite">${esc(t("card.partial",{l:LN[st.lang][ql]}))}</span>`:""}</details>
-  <span class="cite">${apaLink(i.source,"("+ckey(s)+", "+pageTxt([i.page])+")")} · ${i.id}</span></article>`;
+  ${agenote&&!opt.noage?`<span class="cite">${esc(t("card.agenote",{x:agenote}))}</span>`:""}
+  <span class="lbl">${esc(t("card.quote"))} · ${esc(t("card.pdf",{p:i.page}))}</span><blockquote lang="${ql}">${esc(i.quote)}</blockquote>${ql!==st.lang?`<span class="cite">${esc(t("card.partial",{l:LN[st.lang][ql]}))}</span>`:""}
+  <span class="cite">${apaLink(i.source,"("+ckey(s)+", "+pageTxt([i.page])+")")} · ${esc(t("card.id"))} ${i.id}</span></div></details></article>`;
 }
 function focusCard(box){const a=box&&box.querySelector("article");if(a){try{a.focus({preventScroll:false})}catch(e){a.focus()}}}
 
@@ -126,7 +130,7 @@ function setAge(a,quiet){
   Object.keys(lanes).forEach(k=>lanes[k].forEach(b=>h+=`<button class="pill" data-ref="${b.ref}" type="button"><b>${esc(t("lane."+k))}:</b> ${esc(bl(b))}</button>`));
   h+=`</div><span class="cite">${esc(t("ruler.note",{t:agel(tramo(a))}))}</span><div id="rcard"></div>`;
   $("#rdetail").innerHTML=h;
-  renderLectura();renderGuia();
+  st.lshown=6;renderLectura();renderGuia();
   if(!quiet){clearTimeout(ageT);ageT=setTimeout(()=>announce(t("ruler.live",{n:a,m:cnt})),500)}
 }
 function showRef(id,target){const i=BYID[id];if(!i)return;const tg=$(target||"#rcard");tg.innerHTML=card(i);const art=tg.querySelector("article");if(art){art.scrollIntoView({block:"nearest",behavior:smooth()});art.focus({preventScroll:true})}}
@@ -145,11 +149,206 @@ const strong=i=>(i.strength==="normativa"||i.strength==="empirica_encuesta")?1:0
 const mine=()=>{const tr=tramo(st.age);return IT.filter(i=>(i.ages||[]).includes(tr)&&(i.audiences||[]).includes(st.role))};
 function renderLectura(){
   picker();
-  const m=mine(),top=m.filter(i=>KW[i.kind]).sort((a,b)=>(KW[b.kind]-KW[a.kind])||(strong(b)-strong(a))).slice(0,6);
-  const cnt=k=>m.filter(i=>i.kind===k).length;
-  $("#lstats").innerHTML=`<div class="stat"><b>${m.length}</b><span>${esc(t("stat.items",{r:roleL(st.role).toLowerCase(),t:agel(tramo(st.age))}))}</span></div><div class="stat"><b>${cnt("recomendacion")}</b><span>${esc(t("stat.recs"))}</span></div><div class="stat"><b>${cnt("alerta")}</b><span>${esc(t("stat.alerts"))}</span></div><div class="stat"><b>${cnt("obligacion")}</b><span>${esc(t("stat.oblig"))}</span></div><div class="stat"><b>${new Set(m.map(i=>i.source)).size}</b><span>${esc(t("stat.sources"))}</span></div>`;
-  $("#lecturaList").innerHTML=top.map(i=>card(i)).join("")||`<div class="empty">${esc(t("empty.items"))}</div>`;
-  renderAlertas();
+  const m=mine(),cnt=k=>m.filter(i=>i.kind===k).length,LF=st.lf;
+  /* E1.7: obligaciones y alertas aplicables > recomendaciones > hallazgos/cifras; lo no aplicable a CR, al final. */
+  const rank=i=>({obligacion:0,alerta:0,recomendacion:1,hallazgo:2,cifra:2})[i.kind]??3;
+  const list=(LF?m.filter(i=>i.kind===LF):m.filter(i=>rank(i)<3)).sort((a,b)=>(notCR(a)-notCR(b))||(rank(a)-rank(b))||(strong(b)-strong(a)));
+  const fb=(k,n,lab)=>`<button type="button" class="stat" data-lf="${k}" aria-pressed="${LF===k}"><b>${n}</b><span>${esc(lab)}</span></button>`;
+  $("#lstats").innerHTML=`<button type="button" class="stat" data-lexp="1" title="${esc(t("stat.allx"))}"><b>${m.length}</b><span>${esc(t("stat.items",{r:roleL(st.role).toLowerCase(),t:agel(tramo(st.age))}))}</span><em>${esc(t("stat.allx"))} →</em></button>`+fb("recomendacion",cnt("recomendacion"),t("stat.recs"))+fb("alerta",cnt("alerta"),t("stat.alerts"))+fb("obligacion",cnt("obligacion"),t("stat.oblig"))+`<div class="stat"><b>${new Set(m.map(i=>i.source)).size}</b><span>${esc(t("stat.sources"))}</span></div>`;
+  const nCR=list.filter(i=>!notCR(i)).length;
+  $("#lstate").innerHTML=`<span>${esc(LF?t("lectura.filtered",{n:list.length,k:t({recomendacion:"stat.recs",alerta:"stat.alerts",obligacion:"stat.oblig"}[LF])}):t("lectura.order"))} ${esc(t("lectura.cr",{n:nCR,m:list.length}))}</span>${LF?` <button type="button" class="pill" data-lf="">${esc(t("lectura.clear"))}</button>`:""}`;
+  $("#lecturaList").innerHTML=list.slice(0,st.lshown).map(i=>card(i)).join("")||`<div class="empty">${esc(t("empty.items"))}</div>`;
+  $("#lmore").hidden=list.length<=st.lshown;$("#lmore").textContent=t("lectura.more",{n:list.length-st.lshown});
+  renderAlertas();renderTips();
+}
+
+/* ---------- Tips (E3.5): acción + por qué + semáforo de confianza + pliegue de evidencia ---------- */
+const TIPS=(D.tips&&D.tips.tips)||[];
+const tl=(x,f)=>(st.lang!=="es"&&x[f+"_"+st.lang])?x[f+"_"+st.lang]:x[f+"_es"];
+const URG={alta:0,media:1,baja:2}, CONF={A:0,B:1,C:2};
+function tipCard(x){
+  const ev=x.evidence_ids.map(id=>{const i=BYID[id];if(!i)return"";const s=SRC[i.source];return `<li><p>${esc(itx(i))}</p><span class="cite">${apaLink(i.source,"("+ckey(s)+", "+pageTxt([i.page])+")")} · ${esc(t("card.id"))} ${id}</span></li>`}).join("");
+  const cr=x.ancla_cr?`<p class="tcr ok"><b>${esc(t("tips.cr"))}</b> ${esc(x.ancla_cr.referencia)}</p>`:"";
+  const ad=x.condicion_adaptacion?`<p class="tcr"><b>${esc(t(x.ancla_cr?"tips.cond":"tips.adapt"))}</b> ${esc(x.condicion_adaptacion)}</p>`:"";
+  const age=x.advertencia_edad?`<div class="cv">${esc(t("tips.age"))} ${esc(x.advertencia_edad)}</div>`:"";
+  const ages=x.edad.length===AGES.length?`<span class="b">${esc(t("card.allages"))}</span>`:x.edad.map(a=>`<span class="b age${AGES.findIndex(z=>z[0]===a)+1}">${agel(a)}</span>`).join("");
+  return `<article class="item tip conf-${x.confianza}" id="c-${x.id}" tabindex="-1" aria-label="${esc(t("tips.card")+" "+x.id)}">
+  <div class="row"><span class="b sem sem-${x.confianza}"><span class="dot" aria-hidden="true"></span>${esc(t("conf."+x.confianza))}</span><span class="b">${esc(th(x.tema))}</span>${ages}${x.estado!=="publicado"?`<span class="b na">${esc(t("tips.draft"))}</span>`:""}</div>
+  <p class="tip-a">${esc(tl(x,"texto"))}</p>
+  <p class="tip-w"><b>${esc(t("tips.why"))}</b> ${esc(tl(x,"por_que"))}</p>
+  ${cr}${ad}${age}
+  <div class="row tip-m"><span class="cite">${esc(t("tips.urg"))}: ${esc(t("lvl."+x.urgencia))}</span><span class="cite">${esc(t("tips.eff"))}: ${esc(t("lvl."+x.esfuerzo))}</span><span class="cite">${x.id}${x.transfer_id?" · "+x.transfer_id:""}</span>${saveBtn(x)}</div>
+  <details class="prov"><summary>${esc(t("tips.ev",{n:x.evidence_ids.length}))}</summary><div class="pvb"><ul class="tev">${ev}</ul>${st.lang!=="es"?`<span class="cite">${esc(t("tips.esonly"))}</span>`:""}</div></details></article>`;
+}
+function renderTips(){
+  if(!$("#tipList"))return;
+  const tr=tramo(st.age), f=st.tf||"";
+  let m=TIPS.filter(x=>x.edad.includes(tr)&&x.publico.includes(st.role)&&tipMatch(x));
+  const n=m.length;
+  if(f)m=m.filter(x=>x.confianza===f);
+  m.sort((a,b)=>(URG[a.urgencia]-URG[b.urgencia])||(CONF[a.confianza]-CONF[b.confianza])||a.id.localeCompare(b.id));
+  $("#tipNote").innerHTML=`<b>${esc(t("tips.note.h"))}</b> ${esc(t("tips.note"))}`;
+  $("#tipFilt").innerHTML=["","A","B","C"].map(k=>`<button type="button" class="chip" data-tf="${k}" aria-pressed="${f===k}">${esc(k?t("conf."+k):t("tips.all"))} (${k?TIPS.filter(x=>x.edad.includes(tr)&&x.publico.includes(st.role)&&tipMatch(x)&&x.confianza===k).length:n})</button>`).join("");
+  $("#tipState").textContent=t("tips.state",{n:m.length,r:roleL(st.role).toLowerCase(),t:agel(tr)});
+  $("#tipList").innerHTML=m.map(tipCard).join("")||`<div class="empty">${esc(t("tips.empty"))}</div>`;
+  renderProfile();
+}
+
+/* ---------- E4.1 Portada por perfiles · E4.2 Mi plan · E4.3 Hoja imprimible (v0.9) ---------- */
+/* Solo localStorage de este navegador: IDs de tips, marcas «ya lo hago» y el perfil (rol + banda). Ningún dato personal. */
+const TBY=Object.fromEntries(TIPS.map(x=>[x.id,x]));
+const BANDAGE={"6-8":7,"9-11":10,"12-14":13,"15-18":16};
+const tipSort=(a,b)=>(URG[a.urgencia]-URG[b.urgencia])||(CONF[a.confianza]-CONF[b.confianza])||a.id.localeCompare(b.id);
+let PL={v:1,saved:[],done:{},why:true};
+try{const p=JSON.parse(localStorage.getItem("coa.plan")||"null");if(p&&Array.isArray(p.saved))PL={v:1,saved:p.saved.filter(id=>TBY[id]),done:p.done||{},why:p.why!==false}}catch(e){}
+const savePL=()=>{try{localStorage.setItem("coa.plan",JSON.stringify(PL))}catch(e){}};
+try{const pf=JSON.parse(localStorage.getItem("coa.profile")||"null");if(pf&&ROLES.includes(pf.role))st.role=pf.role;if(pf&&BANDAGE[pf.band])st.age=BANDAGE[pf.band]}catch(e){}
+const saveProf=()=>{try{localStorage.setItem("coa.profile",JSON.stringify({role:st.role,band:tramo(st.age)}))}catch(e){}};
+const inPlan=id=>PL.saved.includes(id);
+const saveBtn=x=>`<button type="button" class="pill save" data-save="${x.id}" aria-pressed="${inPlan(x.id)}" aria-label="${esc(t("plan.save")+" · "+x.id)}">${esc(t("plan.save"))}</button>`;
+let SHARED=[];
+try{const q=new URLSearchParams(location.search).get("plan");if(q)SHARED=[...new Set(q.split(","))].filter(id=>TBY[id]).slice(0,40)}catch(e){}
+
+function renderProfile(){
+  if(!$("#top5"))return;
+  const tr=tramo(st.age);
+  $("#profRole").innerHTML=ROLES.map(r=>`<button type="button" data-prole="${r}" aria-pressed="${r===st.role}">${esc(roleL(r))}</button>`).join("");
+  $("#profBand").innerHTML=AGES.map((a,k)=>`<button type="button" class="bd bd${k+1}" data-pband="${a[0]}" aria-pressed="${a[0]===tr}">${esc(t("prof.years",{t:a[1]}))}<small>${esc(t("prof.cyc"+(k+1)))}</small></button>`).join("");
+  const all=TIPS.filter(x=>x.edad.includes(tr)&&x.publico.includes(st.role)).sort(tipSort),top=all.slice(0,5);
+  $("#profState").textContent=t("prof.top",{n:top.length,r:roleL(st.role).toLowerCase(),t:agel(tr)});
+  $("#top5").innerHTML=top.map((x,k)=>`<li class="t5 conf-${x.confianza}"><span class="t5n" aria-hidden="true">${k+1}</span><div class="t5b"><p class="t5a">${esc(tl(x,"texto"))}</p><p class="t5w">${esc(tl(x,"por_que"))}</p><div class="row"><span class="b sem sem-${x.confianza}"><span class="dot" aria-hidden="true"></span>${esc(t("conf."+x.confianza))}</span><span class="b">${esc(th(x.tema))}</span>${saveBtn(x)}<a href="#parati/tips" class="t5go" data-tipgo="${x.id}">${esc(t("prof.ev"))}<span class="sr-only"> · ${x.id}</span></a></div></div></li>`).join("")||`<li class="empty">${esc(t("tips.empty"))}</li>`;
+  $("#profAll").textContent=t("prof.all",{n:all.length});
+  $("#profPlan").textContent=t("prof.plan",{n:PL.saved.length});
+}
+function syncSave(id){
+  $$(`[data-save="${id}"]`).forEach(b=>b.setAttribute("aria-pressed",inPlan(id)));
+  const pp=$("#profPlan");if(pp)pp.textContent=t("prof.plan",{n:PL.saved.length});
+  renderSide();
+}
+function toggleSave(id){
+  if(inPlan(id)){PL.saved=PL.saved.filter(x=>x!==id);delete PL.done[id]}else PL.saved.push(id);
+  savePL();syncSave(id);
+  announce(t(inPlan(id)?"plan.added":"plan.removed",{id:id,n:PL.saved.length}));
+}
+const planTips=()=>PL.saved.map(id=>TBY[id]).filter(Boolean).sort((a,b)=>(ROLES.indexOf(a.publico[0])-ROLES.indexOf(b.publico[0]))||tipSort(a,b));
+const SITE="https://agmelendez.github.io/childrenandai/";
+const baseURL=()=>/^https?:/.test(location.protocol)?location.origin+location.pathname:SITE;
+const shareURL=()=>baseURL()+"?plan="+PL.saved.join(",")+(st.lang!=="es"?"&lang="+st.lang:"")+"#plan";
+const bandsOf=x=>x.edad.length===AGES.length?t("card.allages"):x.edad.map(agel).join(", ");
+function renderPlan(){
+  if(!$("#planBody"))return;
+  /* Enlace compartido: se ofrece, nunca se importa sin acción de la persona usuaria */
+  const nw=SHARED.filter(id=>!inPlan(id));
+  $("#planShared").innerHTML=SHARED.length?`<div class="note plan-sh" role="region" aria-label="${esc(t("plan.sh.h"))}"><p><b>${esc(t("plan.sh.h"))}</b> ${esc(t("plan.sh.p",{n:SHARED.length,m:nw.length}))}</p><ul>${SHARED.map(id=>`<li>${esc(tl(TBY[id],"texto"))} <span class="cite">${id}</span></li>`).join("")}</ul><div class="row">${nw.length?`<button type="button" class="btn" id="shAdd">${esc(t("plan.sh.add",{n:nw.length}))}</button>`:""}<button type="button" class="btn ghost" id="shDrop">${esc(t("plan.sh.drop"))}</button></div></div>`:"";
+  const L=planTips(),n=L.length,d=L.filter(x=>PL.done[x.id]).length,pc=n?Math.round(100*d/n):0;
+  if(!n){$("#planBody").innerHTML=`<div class="empty plan-empty"><p><b>${esc(t("plan.empty.h"))}</b></p><p>${esc(t("plan.empty"))}</p><p class="row" style="justify-content:center"><a class="btn" href="#inicio" data-nav="inicio">${esc(t("plan.empty.go"))}</a><a class="btn ghost" href="#parati/tips" data-nav="parati/tips">${esc(t("plan.empty.tips"))}</a></p><p class="cite">${esc(t("plan.privacy"))}</p></div>`;$("#printSheet").innerHTML="";return}
+  const prog=`<div class="plan-prog"><div class="row" style="justify-content:space-between"><b id="progL">${esc(t("plan.prog",{d:d,n:n}))}</b><span class="cite">${pc} %</span></div><div class="bar" role="progressbar" aria-labelledby="progL" aria-valuemin="0" aria-valuemax="${n}" aria-valuenow="${d}" aria-valuetext="${esc(t("plan.prog",{d:d,n:n}))}"><i style="width:${pc}%"></i></div></div>`;
+  const act=`<div class="row plan-act"><button type="button" class="btn" id="planPrint">${esc(t("plan.print"))}</button><button type="button" class="btn ghost" id="planShare">${esc(t("plan.share"))}</button><label class="chkl"><input type="checkbox" id="planWhy" ${PL.why?"checked":""}> ${esc(t("plan.why"))}</label><button type="button" class="btn ghost danger" id="planClear">${esc(t("plan.clear"))}</button></div><div id="shareBox"></div>${n>(PL.why?8:14)?`<p class="tipnote">${esc(t("plan.long",{n:n}))}</p>`:""}<p class="cite">${esc(t("plan.privacy"))}</p>`;
+  const by={};L.forEach(x=>(by[x.publico[0]]=by[x.publico[0]]||[]).push(x));
+  const list=Object.keys(by).map(r=>`<h3 class="sh plan-g">${esc(roleL(r))} <span class="cite">(${by[r].length})</span></h3><ul class="plan-l">${by[r].map(x=>`<li class="pi conf-${x.confianza}${PL.done[x.id]?" d":""}"><input type="checkbox" id="dn-${x.id}" data-done="${x.id}" ${PL.done[x.id]?"checked":""}><div class="pib"><label for="dn-${x.id}" class="pia">${esc(tl(x,"texto"))}</label><p class="t5w">${esc(tl(x,"por_que"))}</p><div class="row"><span class="b sem sem-${x.confianza}"><span class="dot" aria-hidden="true"></span>${esc(t("conf."+x.confianza))}</span><span class="b">${esc(bandsOf(x))}</span><span class="b">${esc(th(x.tema))}</span><span class="cite">${esc(t("plan.done"))}${PL.done[x.id]?" ✓":""} · ${x.id}</span><a href="#parati/tips" data-tipgo="${x.id}">${esc(t("prof.ev"))}<span class="sr-only"> · ${x.id}</span></a><button type="button" class="pill" data-save="${x.id}" aria-pressed="true" aria-label="${esc(t("plan.remove")+" · "+x.id)}">${esc(t("plan.remove"))}</button></div></div></li>`).join("")}</ul>`).join("");
+  $("#planBody").innerHTML=prog+act+list;
+  renderSheet(L);
+}
+function renderSheet(L){
+  const dt=new Date().toLocaleDateString(st.lang==="en"?"en-GB":"es-CR",{year:"numeric",month:"long",day:"numeric"});
+  const roles=[...new Set(L.flatMap(x=>x.publico))].map(roleL).join(", ");
+  const srcs=[...new Set(L.flatMap(x=>x.evidence_ids.map(id=>BYID[id]&&BYID[id].source)).filter(Boolean))].sort((a,b)=>ckey(SRC[a]).localeCompare(ckey(SRC[b])));
+  const cites=x=>[...new Set(x.evidence_ids.map(id=>BYID[id]&&ckey(SRC[BYID[id].source])).filter(Boolean))].join("; ");
+  $("#printSheet").innerHTML=`<header class="ps-h"><div><b class="ps-brand">Children on AI</b><span>${esc(t("ps.sub"))}</span></div><div class="ps-meta"><b>${esc(t("ps.title"))}</b><span>${esc(t("ps.for",{r:roles}))} · ${esc(dt)}</span><span>${esc(t("plan.prog",{d:L.filter(x=>PL.done[x.id]).length,n:L.length}))}</span></div></header>
+  <table class="ps-t"><thead><tr><th scope="col" class="c0">✓</th><th scope="col">${esc(t("ps.action"))}</th><th scope="col">${esc(t("ps.ages"))}</th><th scope="col">${esc(t("ps.conf"))}</th><th scope="col">${esc(t("ps.src"))}</th></tr></thead><tbody>${L.map(x=>`<tr><td class="c0"><span class="box">${PL.done[x.id]?"✓":""}</span></td><td><b>${esc(tl(x,"texto"))}</b>${PL.why?`<br><span class="w">${esc(tl(x,"por_que"))}</span>`:""}</td><td>${esc(bandsOf(x))}</td><td>${esc(t("ps.c"+x.confianza))}</td><td class="s">${esc(cites(x))}<br>${x.id}</td></tr>`).join("")}</tbody></table>
+  <div class="ps-notes"><p><b>${esc(t("ps.notes"))}</b></p><div class="lines"><i></i><i></i><i></i></div></div>
+  <footer class="ps-f"><p>${esc(t("ps.draft"))}</p><p>${esc(t("ps.refs"))} ${srcs.map(s=>esc(ckey(SRC[s]))).join("; ")}. ${esc(t("ps.full"))}</p><p>${esc(t("ps.lic"))} · ${esc(baseURL())}</p></footer>`;
+}
+
+/* ---------- E4.4 Búsqueda y filtros · E4.5 Módulos por público · E4.6 Costa Rica en contexto (v0.9) ---------- */
+const norm=s=>String(s||"").normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase();
+const TEMAS=[...new Set(TIPS.map(x=>x.tema))], CTXS=["casa","aula","politica"], EFFS=["bajo","medio","alto"];
+Object.assign(st,{tq:"",tt:"",tc:"",te:""});
+function tipControls(){
+  const box=$("#tipFilt2");if(!box)return;
+  const opt=(v,l,cur)=>`<option value="${esc(v)}" ${v===cur?"selected":""}>${esc(l)}</option>`;
+  box.innerHTML=`<div><label class="lbl" for="tq">${esc(t("tf.q"))}</label><input type="search" id="tq" value="${esc(st.tq)}" placeholder="${esc(t("tf.qph"))}"></div>
+  <div><label class="lbl" for="tt">${esc(t("tf.tema"))}</label><select id="tt">${opt("",t("tf.all"),st.tt)}${TEMAS.slice().sort((a,b)=>th(a).localeCompare(th(b),st.lang)).map(x=>opt(x,th(x),st.tt)).join("")}</select></div>
+  <div><label class="lbl" for="tc">${esc(t("tf.ctx"))}</label><select id="tc">${opt("",t("tf.all"),st.tc)}${CTXS.map(x=>opt(x,t("ctx."+x),st.tc)).join("")}</select></div>
+  <div><label class="lbl" for="te">${esc(t("tf.eff"))}</label><select id="te">${opt("",t("tf.all"),st.te)}${EFFS.map(x=>opt(x,t("lvl."+x),st.te)).join("")}</select></div>
+  <div class="tfr"><button type="button" class="pill" id="tfReset">${esc(t("tf.reset"))}</button></div>`;
+}
+const tipMatch=x=>(!st.tt||x.tema===st.tt)&&(!st.tc||x.contexto.includes(st.tc))&&(!st.te||x.esfuerzo===st.te)&&(!st.tq||norm([x.id,x.texto_es,x.texto_en,x.por_que_es,x.por_que_en,x.tema,th(x.tema)].join(" ")).includes(norm(st.tq)));
+
+/* Búsqueda global */
+let GQ="";
+function renderSearch(){
+  const box=$("#gres");if(!box)return;const q=norm(GQ.trim());
+  if(q.length<2){box.innerHTML=`<p class="cite">${esc(t("gs.min"))}</p>`;$("#gstate").textContent="";return}
+  const has=s=>norm(s).includes(q);
+  const tips=TIPS.filter(x=>has([x.id,x.texto_es,x.texto_en,x.por_que_es,x.por_que_en,th(x.tema)].join(" "))).sort(tipSort);
+  const secs=[];Object.keys(VIEWS).forEach(v=>{if(has(t("v."+v)+" "+t("d."+v)))secs.push([v,"",t("v."+v),t("d."+v)]);VIEWS[v].forEach(sb=>{const l=subLabel(v,sb);if(has(l))secs.push([v,sb,t("v."+v)+" › "+l,""])})});
+  const gl=GLO.filter(g=>has([g.k,g.k_en,g.long,g.long_en,g.def,g.def_en].join(" "))).slice(0,8);
+  const its=IT.filter(i=>has([i.id,i.es,i.en,th(i.theme)].join(" ")));
+  $("#gstate").textContent=t("gs.state",{a:tips.length,b:secs.length,c:gl.length,d:its.length,q:GQ.trim()});
+  const sec=(h,n,body)=>`<section class="gsec" aria-labelledby="gs-${h}"><h3 class="sh" id="gs-${h}">${esc(t("gs."+h))} <span class="cite">(${n})</span></h3>${body}</section>`;
+  box.innerHTML=(tips.length?sec("tips",tips.length,`<ul class="gl-l">${tips.slice(0,20).map(x=>`<li><a href="#parati/tips" data-tipgo="${x.id}">${esc(tl(x,"texto"))}</a> <span class="cite">${x.id} · ${esc(x.publico.map(roleL).join(", "))} · ${esc(bandsOf(x))}</span> ${saveBtn(x)}</li>`).join("")}</ul>${tips.length>20?`<p class="cite">${esc(t("gs.more",{n:tips.length-20}))}</p>`:""}`):"")
+   +(secs.length?sec("secs",secs.length,`<ul class="gl-l">${secs.map(s=>`<li><a href="#${s[0]}${s[1]?"/"+s[1]:""}" data-nav="${s[0]}${s[1]?"/"+s[1]:""}">${esc(s[2])}</a>${s[3]?` <span class="cite">${esc(s[3])}</span>`:""}</li>`).join("")}</ul>`):"")
+   +(gl.length?sec("gl",gl.length,`<dl class="gl">${gl.map(g=>`<dt>${esc(gk(g))}</dt><dd>${esc(loc(g,"long"))}: ${esc(loc(g,"def"))}</dd>`).join("")}</dl>`):"")
+   +(its.length?sec("items",its.length,`<div class="grid2">${its.slice(0,6).map(i=>card(i)).join("")}</div><p><button type="button" class="btn ghost" id="gsEx">${esc(t("gs.ex",{n:its.length}))}</button></p>`):"")
+   ||`<div class="empty">${esc(t("gs.none"))}</div>`;
+}
+
+/* Módulos por público */
+const MOD=D.modules||{}, KITS=["familia","docente","direccion"];
+let KS={};try{KS=JSON.parse(localStorage.getItem("coa.kit")||"{}")}catch(e){}
+const saveKS=()=>{try{localStorage.setItem("coa.kit",JSON.stringify(KS))}catch(e){}};
+st.kb=st.kb||{};
+const ml=(o,f)=>o[f+"_"+st.lang]||o[f+"_es"];
+const bt=b=>b[st.lang]||b.es;
+function refs(b){
+  const tp=b.tips.map(id=>`<a href="#parati/tips" class="kt" data-tipgo="${id}" title="${esc(TBY[id]?tl(TBY[id],"texto"):"")}">${id}</a>`);
+  const it=b.items.map(id=>{const i=BYID[id];return i?`<details class="kref"><summary>${id} · ${esc(ckey(SRC[i.source]))}</summary>${card(i)}</details>`:""});
+  return (tp.length||it.length)?`<div class="krefs"><span class="cite">${esc(t("kit.basis"))}</span> ${tp.join(" ")}${it.join("")}</div>`:"";
+}
+function modBlock(kit,m,k){
+  const key=kit+"."+m.id;let body="";
+  if(m.tipo==="tarjetas"||m.tipo==="escenarios"){
+    const bs=Object.keys(m.bandas),cur=st.kb[key]||(bs.includes(tramo(st.age))?tramo(st.age):bs[0]);
+    body=`<div class="seg kbands" role="group" aria-label="${esc(t("prof.band"))}">${bs.map(b=>`<button type="button" data-kband="${key}|${b}" aria-pressed="${b===cur}">${esc(t("prof.years",{t:agel(b)}))}</button>`).join("")}</div><ul class="kcards ${m.tipo}">${m.bandas[cur].map(b=>`<li class="kcard">${m.tipo==="escenarios"?(()=>{const [s,r]=bt(b).split(" → ");return `<p class="ksit"><b>${esc(t("kit.sit"))}</b> ${esc(s)}</p><p><b>${esc(t("kit.resp"))}</b> ${esc(r||"")}</p>`})():`<p class="kq">${esc(bt(b))}</p>`}${refs(b)}</li>`).join("")}</ul>`;
+  }else if(m.tipo==="acuerdo"){
+    body=m.secciones.map((s,si)=>`<fieldset class="ksec"><legend>${esc(bt(s))}</legend>${s.items.map((b,bi)=>{const id=`k-${key.replace(".","-")}-${si}-${bi}`;return `<div class="kchk"><input type="checkbox" id="${id}" data-kchk="${id}" ${KS[id]?"checked":""}><div><label for="${id}">${esc(bt(b))}</label>${refs(b)}</div></div>`}).join("")}</fieldset>`).join("")
+     +`<div class="knotes"><label class="lbl" for="kn-${m.id}">${esc(t("kit.own"))}</label><textarea id="kn-${m.id}" data-knote="${key}" rows="4">${esc(KS["n:"+key]||"")}</textarea><p class="cite">${esc(t("plan.privacy"))}</p></div><div class="ksign"><span>${esc(t("kit.sign"))}</span><span>${esc(t("kit.date"))}</span></div>`;
+  }else if(m.tipo==="lista"){
+    body=`<ul class="klist">${m.items.map((b,bi)=>{const id=`k-${key.replace(".","-")}-${bi}`;return `<li class="kchk"><input type="checkbox" id="${id}" data-kchk="${id}" ${KS[id]?"checked":""}><div><label for="${id}">${esc(bt(b))}</label>${refs(b)}</div></li>`}).join("")}</ul>`;
+  }else if(m.tipo==="prompts"){
+    body=`<ul class="kprompts">${m.items.map(b=>`<li><p class="kp">${esc(bt(b))}</p><div class="row"><button type="button" class="pill" data-copy="${esc(bt(b).replace(/^[«“]|[»”].*$/g,""))}">${esc(t("kit.copy"))}</button></div>${refs(b)}</li>`).join("")}</ul>`;
+  }else if(m.tipo==="pasos"){
+    body=`<ol class="ksteps">${m.items.map(b=>{const [h,...r]=bt(b).split(": ");return `<li><p><b>${esc(h)}:</b> ${esc(r.join(": "))}</p>${refs(b)}</li>`}).join("")}</ol>`;
+  }
+  return `<article class="kmod" id="km-${m.id}" aria-labelledby="kh-${m.id}"><div class="kmh"><h3 class="sh" id="kh-${m.id}">${esc(ml(m,"titulo"))}</h3><button type="button" class="btn ghost kprint" data-kprint="km-${m.id}">${esc(t("kit.print"))}<span class="sr-only">: ${esc(ml(m,"titulo"))}</span></button></div><p class="lead">${esc(ml(m,"intro"))}</p>${body}<p class="kfoot cite">${esc(t("kit.foot"))}</p></article>`;
+}
+function renderKit(){
+  KITS.forEach(k=>{const el=$("#kit-"+k);if(el)el.innerHTML=`<p class="tipnote">${esc(t("kit.note"))}</p>`+(MOD[k]||[]).map((m,i)=>modBlock(k,m,i)).join("")});
+}
+
+/* Costa Rica en contexto */
+const CTX=D.ctx||{};let CDIM=0;
+function ctxCite(p){const c=((D.ctxsrc||{}).fuentes_contexto||[]).find(x=>x.id==="C01");return `<a href="#contexto" class="ref" data-ctxapa="1">(${esc(t("cx.ilia.c"))}, ${esc(t("prov.p"))} ${esc(p)})</a>`}
+function renderCtx(){
+  const el=$("#ctxBody");if(!el||!CTX.ilia)return;
+  const I=CTX.ilia,dims=st.lang==="en"?I.dims_en:I.dims_es,rows=I.paises.slice().sort((a,b)=>b[CDIM+1]-a[CDIM+1]);
+  const W=640,rh=22,top=8,L=150,H=top+rows.length*rh+24,sx=v=>L+(v/100)*(W-L-50);
+  const bars=rows.map((r,k)=>{const y=top+k*rh,cr=r[0]==="Costa Rica";return `<g class="cxr${cr?" cr":""}"><text x="${L-8}" y="${y+15}" text-anchor="end">${esc(r[0])}</text><rect x="${L}" y="${y+3}" width="${sx(r[CDIM+1])-L}" height="${rh-7}" rx="3"/><text class="v" x="${sx(r[CDIM+1])+6}" y="${y+15}">${String(r[CDIM+1]).replace(".",st.lang==="es"?",":".")}</text></g>`}).join("");
+  const grid=[0,35,60,100].map(v=>`<line x1="${sx(v)}" x2="${sx(v)}" y1="${top}" y2="${H-20}" class="gl${v===35||v===60?" th":""}"/><text x="${sx(v)}" y="${H-6}" text-anchor="middle" class="ax">${v}</text>`).join("");
+  const rk=rows.findIndex(r=>r[0]==="Costa Rica")+1;
+  el.innerHTML=`<div class="stats cxd">${CTX.datos.map(d=>`<div class="stat"><b>${esc(st.lang==="en"?d.v.replace(",","."):d.v)}</b><span>${esc(bt(d))}</span><em class="cite">${ctxCite(d.p)}</em></div>`).join("")}</div>
+  <section class="cxsec" aria-labelledby="cx-h1"><h3 class="sh" id="cx-h1">${esc(t("cx.h1"))}</h3><p class="lead">${esc(t("cx.p1"))}</p>
+  <div class="seg" role="group" aria-label="${esc(t("cx.dim"))}">${dims.map((d,k)=>`<button type="button" data-cdim="${k}" aria-pressed="${k===CDIM}">${esc(d)}</button>`).join("")}</div>
+  <p class="lstate" aria-live="polite">${esc(t("cx.rank",{d:dims[CDIM],n:rk,m:rows.length}))}</p>
+  <div class="scroller gfx"><svg class="cxchart" viewBox="0 0 ${W} ${H}" role="img" aria-labelledby="cx-ct"><title id="cx-ct">${esc(t("cx.chart",{d:dims[CDIM],n:rk,m:rows.length}))}</title>${grid}${bars}</svg></div>
+  <p class="cite">${esc(t("cx.bands"))}</p>
+  ${altTable([t("cx.country"),...dims],I.paises.map(r=>[r[0],...r.slice(1).map(v=>String(v))]),t("cx.h1"))}
+  <p class="srcline"><b>${esc(t("prov.nota"))}</b> ${esc(t("cx.src"))} ${ctxCite("22")}. ${esc(bt({es:I.nota_es,en:I.nota_en}))} ${esc(t("cx.disc"))}</p></section>
+  <section class="cxsec" aria-labelledby="cx-h2"><h3 class="sh" id="cx-h2">${esc(t("cx.h2"))}</h3><p class="lead">${esc(t("cx.p2"))}</p><div class="grid2">${CTX.ninez_items.map(id=>BYID[id]?card(BYID[id]):"").join("")}</div></section>
+  <section class="cxsec" aria-labelledby="cx-h3"><h3 class="sh" id="cx-h3">${esc(t("cx.h3"))}</h3><p class="lead">${esc(t("cx.p3"))}</p><div class="grid2">${CTX.marco_items.map(id=>BYID[id]?card(BYID[id]):"").join("")}</div></section>
+  <section class="cxsec" aria-labelledby="cx-h4"><h3 class="sh" id="cx-h4">${esc(t("cx.h4"))}</h3><ul class="klist cxv">${CTX.vacios.map(b=>`<li><p>${esc(bt(b))}</p>${refs(b)}</li>`).join("")}</ul></section>
+  <details class="alt" id="ctxApa"><summary>${esc(t("cx.apa"))}</summary><p class="hint">${phm(esc((((D.ctxsrc||{}).fuentes_contexto||[]).find(x=>x.id==="C01")||{}).apa7||"").replace(/\*(.+?)\*/g,"<em>$1</em>"))}</p></details>`;
 }
 
 /* ---------- Alertas ---------- */
@@ -301,7 +500,7 @@ function renderMetodo(){
   $("#mstats").innerHTML=`<div class="stat"><b>${CAT.length}</b><span>${esc(t("me.docs"))}</span></div><div class="stat"><b>${pages}</b><span>${esc(t("me.pages"))}</span></div><div class="stat"><b>${IT.length}</b><span>${esc(t("me.items"))}</span></div><div class="stat"><b>${IT.filter(i=>i.kind==="recomendacion").length}</b><span>${esc(t("me.recs"))}</span></div><div class="stat"><b>${IT.filter(i=>i.kind==="alerta").length}</b><span>${esc(t("me.alerts"))}</span></div>`;
   $("#meCards").innerHTML=[1,2,3,4].map(k=>`<div class="item"><h3>${esc(t("me.c"+k+"t"))}</h3><p>${esc(t("me.c"+k))}</p></div>`).join("")+`<div class="item"><h3>${esc(t("me.c5t"))}</h3><p class="apa">${phm(em(t("me.c5")))}</p></div>`;
   const h3=k=>`<h3 class="sh" style="margin:22px 0 8px">${esc(t(k))}</h3>`;
-  $("#iaBody").innerHTML=`<h3 class="sh" style="margin-bottom:8px">${esc(t("ia.h"))}</h3><div class="note">${esc(t("ia.lead"))}</div>${h3("ia.tool.h")}<p>${esc(t("ia.tool"))}</p>${h3("ia.tasks.h")}${table(t("ia.cols").split("|"),rowsOf("ia.t",6).map(r=>r.map(esc)),t("ia.tasks.h"))}${h3("ia.not.h")}<p>${esc(t("ia.not"))}</p>${h3("ia.lim.h")}<p>${esc(t("ia.lim"))}</p>${h3("ia.priv.h")}<p>${esc(t("ia.priv"))}</p>${h3("ia.cite.h")}<p class="apa">${em(t("prov.refs.aiapa"))}</p>${h3("ia.todo.h")}<p>${esc(t("ia.todo"))}</p>`;
+  $("#iaBody").innerHTML=`<h3 class="sh" style="margin-bottom:8px">${esc(t("ia.h"))}</h3><div class="note">${esc(t("ia.lead"))}</div>${h3("ia.tool.h")}<p>${esc(t("ia.tool"))}</p>${h3("ia.tasks.h")}${table(t("ia.cols").split("|"),rowsOf("ia.t",7).map(r=>r.map(esc)),t("ia.tasks.h"))}${h3("ia.not.h")}<p>${esc(t("ia.not"))}</p>${h3("ia.lim.h")}<p>${esc(t("ia.lim"))}</p>${h3("ia.priv.h")}<p>${esc(t("ia.priv"))}</p>${h3("ia.cite.h")}<p class="apa">${em(t("prov.refs.aiapa"))}</p>${h3("ia.todo.h")}<p>${esc(t("ia.todo"))}</p>`;
   $("#licBody").innerHTML=`<h3 class="sh" style="margin-bottom:8px">${esc(t("lic.h"))}</h3><p class="lead">${esc(t("lic.lead"))}</p>${table(t("lic.cols").split("|"),rowsOf("lic.r",6).map(r=>r.map(esc)),t("lic.h"))}${h3("lic.src.h")}<p class="cite" style="margin-bottom:8px">${esc(t("lic.src.note"))}</p>${table([t("au.cols").split("|")[0],t("prov.lic")],CAT.map(s=>[apaLink(s.id,s.id+" · "+ckey(s)),esc(loc(s,"licencia"))]),t("lic.src.h"))}${h3("lic.attr.h")}<p class="apa">${phm(esc(t("lic.attr")))}</p><div class="note" style="margin-top:14px">${esc(t("lic.flag"))}</div>`;
   const ok=CAT.filter(s=>refUrl(s)&&!refPend(s)).length,nu=CAT.filter(s=>!refUrl(s)).length,np=CAT.filter(refPend).length;
   const uniq=new Set(CAT.map(ckey)).size===CAT.length;
@@ -323,7 +522,7 @@ function buildAbbr(){
 }
 const seen=new WeakMap(),SKIP=["SCRIPT","STYLE","SVG","ABBR","SELECT","OPTION","INPUT","TEXTAREA","TITLE","BLOCKQUOTE","DT","BUTTON","SUMMARY","LABEL","A","CAPTION"];
 function markAbbr(root){
-  if(!root||root.nodeType!==1||(root.closest&&root.closest("abbr,svg,#gl,#tip,blockquote,button,summary,a,.fab-wrap,dialog,.skip")))return;
+  if(!root||root.nodeType!==1||(root.closest&&root.closest("abbr,svg,#gl,#tip,blockquote,button,summary,a,.tools,dialog,.skip")))return;
   const w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,{acceptNode(n){let p=n.parentNode;while(p&&p!==root.parentNode){if(p.nodeType===1&&SKIP.includes(p.nodeName.toUpperCase()))return NodeFilter.FILTER_REJECT;p=p.parentNode}ABRX.lastIndex=0;const ok=ABRX.test(n.nodeValue);ABRX.lastIndex=0;return ok?NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_REJECT}});
   const nodes=[];while(w.nextNode())nodes.push(w.currentNode);
   nodes.forEach(n=>{
@@ -392,11 +591,13 @@ function setLang(l,quiet){
 }
 function renderAll(){
   buildAbbr();
-  renderHeads();renderSubnavs();renderHome();renderTutorial();renderMap();
+  renderHeads();renderSubnavs();renderHome();renderTutorial();renderMap();renderHomeGuide();
   $("#ruler").innerHTML=buildRuler();rulerAlt();legend();
   glCats();$("#qg").value=st.glq;
-  filters();renderHeat();renderEx();renderDg();renderEsc();renderNorm();renderFuentes();renderMetodo();renderGl();fillNotes();
+  filters();renderHeat();renderEx();renderDg();renderEsc();renderNorm();renderFuentes();renderPlan();tipControls();renderKit();renderCtx();renderSearch();$("#gq").value=GQ;renderMetodo();renderGl();fillNotes();
   $("#age").setAttribute("aria-label",t("ruler.control"));
+  $("#rulerNote").textContent=t("ruler.mobnote");$("#rulerFull").textContent=t($(".ruler").classList.contains("full")?"ruler.fullOff":"ruler.full");
+  $(".tools").setAttribute("aria-label",t("tools.label"));
   buildPanel();
   setAge(st.age,true);
   go(st.view,st.sub[st.view]||"",{quiet:true,tab:true});
@@ -424,7 +625,31 @@ document.addEventListener("click",e=>{
   if(lk){e.preventDefault();hideTip();st.glq=lk.dataset.g;st.glc="";$("#qg").value=st.glq;glCats();renderGl();go("glosario");return}
   if(e.target.closest("#tipX")){hideTip(true);return}
   const tipEl=$("#tip");if(tipEl&&!tipEl.hidden&&!e.target.closest("#tip"))tipEl.hidden=true;
-  const tg=e.target.closest("[data-nav],[data-go],[data-open-a11y],#menuBtn,#scrim,[data-ref],[data-apa],[data-open],[data-role],[data-heat],[data-src],[data-ser],[data-resp],[data-lang],#more,#exReset,#a11yBtn,#a11yClose,#szDec,#szInc,#szReset,#a11yReset");
+  const sv=e.target.closest("[data-save]");
+  if(sv){const id=sv.dataset.save,wasPlan=st.view==="plan";toggleSave(id);if(wasPlan){renderPlan();const f=$("#planBody .pi [data-done]")||$("#planBody a,#planBody button");if(f)f.focus()}return}
+  const pr=e.target.closest("[data-prole],[data-pband]");
+  if(pr){if(pr.dataset.prole)st.role=pr.dataset.prole;else st.age=BANDAGE[pr.dataset.pband];saveProf();const sel=pr.dataset.prole?`[data-prole="${st.role}"]`:`[data-pband="${tramo(st.age)}"]`;setAge(st.age,true);const b=document.querySelector("#prof "+sel);if(b)b.focus();announce($("#profState").textContent);return}
+  const tgo=e.target.closest("[data-tipgo]");
+  if(tgo){e.preventDefault();const id=tgo.dataset.tipgo,x=TBY[id];if(x&&!x.publico.includes(st.role))st.role=x.publico[0];if(x&&!x.edad.includes(tramo(st.age)))st.age=BANDAGE[x.edad[0]];st.tf="";setAge(st.age,true);go("parati","tips",{quiet:true});const c=document.getElementById("c-"+id);if(c){c.scrollIntoView({block:"start",behavior:smooth()});c.focus({preventScroll:true});const dd=c.querySelector("details.prov");if(dd)dd.open=true}return}
+  const kb=e.target.closest("[data-kband]");
+  if(kb){const [k,b]=kb.dataset.kband.split("|");st.kb[k]=b;renderKit();const n=document.querySelector(`[data-kband="${k}|${b}"]`);if(n)n.focus();announce(t("prof.years",{t:agel(b)}));return}
+  const kp=e.target.closest("[data-kprint]");
+  if(kp){const id=kp.dataset.kprint;document.body.classList.add("pk");const m=document.getElementById(id);if(m)m.classList.add("pon");window.print();return}
+  const cp=e.target.closest("[data-copy]");
+  if(cp){const v=cp.dataset.copy;try{navigator.clipboard.writeText(v).then(()=>announce(t("kit.copied")),()=>announce(v))}catch(er){announce(v)}return}
+  const cd=e.target.closest("[data-cdim]");
+  if(cd){CDIM=+cd.dataset.cdim;renderCtx();const n=document.querySelector(`[data-cdim="${CDIM}"]`);if(n)n.focus();announce($("#ctxBody .lstate").textContent);return}
+  if(e.target.closest("[data-ctxapa]")){e.preventDefault();const d=$("#ctxApa");if(d){d.open=true;d.scrollIntoView({block:"center",behavior:smooth()});d.querySelector("summary").focus()}return}
+  if(e.target.closest("#tfReset")){st.tq=st.tt=st.tc=st.te="";st.tf="";tipControls();renderTips();$("#tq").focus();announce($("#tipState").textContent);return}
+  if(e.target.closest("#gsEx")){st.ex={q:GQ,kind:"",theme:"",src:"",age:"",aud:"",str:""};st.shown=24;filters();$("#q")&&($("#q").value=GQ);renderEx(true);goExplorer();return}
+  if(e.target.closest("#searchBtn")){go("buscar");setTimeout(()=>{const g=$("#gq");if(g)g.focus()},30);return}
+  if(e.target.closest("#planPrint")){renderPlan();window.print();return}
+  if(e.target.closest("#planShare")){const u=shareURL();$("#shareBox").innerHTML=`<label class="lbl" for="shareU">${esc(t("plan.share.l"))}</label><input id="shareU" class="shareu" readonly value="${esc(u)}">`;const inp=$("#shareU");inp.focus();inp.select();const ok=()=>announce(t("plan.copied"));try{navigator.clipboard.writeText(u).then(ok,()=>announce(t("plan.copy.manual")))}catch(er){announce(t("plan.copy.manual"))}return}
+  const cl=e.target.closest("#planClear");
+  if(cl){if(cl.dataset.arm){PL.saved=[];PL.done={};savePL();renderPlan();renderSide();renderProfile();renderTips();announce(t("plan.cleared"));const h=$("#h-plan");if(h)h.focus();return}cl.dataset.arm="1";cl.textContent=t("plan.clear.ok");announce(t("plan.clear.ok"));setTimeout(()=>{if(document.body.contains(cl)){delete cl.dataset.arm;cl.textContent=t("plan.clear")}},5000);return}
+  if(e.target.closest("#shAdd")){SHARED.forEach(id=>{if(!inPlan(id))PL.saved.push(id)});savePL();const k=SHARED.length;SHARED=[];history.replaceState(null,"",location.pathname+"#plan");renderPlan();renderSide();renderProfile();renderTips();announce(t("plan.sh.added",{n:k}));const b=$("#planPrint");if(b)b.focus();return}
+  if(e.target.closest("#shDrop")){SHARED=[];history.replaceState(null,"",location.pathname+"#plan");renderPlan();const h=$("#h-plan");if(h)h.focus();return}
+  const tg=e.target.closest("[data-nav],[data-go],[data-open-a11y],#menuBtn,#scrim,[data-ref],[data-apa],[data-open],[data-role],[data-heat],[data-src],[data-ser],[data-resp],[data-lang],[data-lf],[data-tf],[data-lexp],#lmore,#rulerFull,#more,#exReset,#a11yBtn,#a11yClose,#szDec,#szInc,#szReset,#a11yReset");
   if(!tg)return;
   const d=tg.dataset;
   if(d.nav){e.preventDefault();const [v,sb]=d.nav.split("/");go(v,sb,{tab:tg.getAttribute("role")==="tab"});return}
@@ -439,6 +664,11 @@ document.addEventListener("click",e=>{
   if(tg.id==="szReset"){P.size=100;saveP();applyP();announce(t("a11y.size")+": "+t("a11y.size.value",{n:100}));return}
   if(tg.id==="a11yReset"){P=Object.assign({},DEFP);saveP();applyP();buildPanel();announce(t("a11y.reset"));return}
   if(tg.id==="exReset"){st.ex={q:"",kind:"",theme:"",src:"",age:"",aud:"",str:""};st.shown=24;filters();renderEx(true);markAbbr($("#exList"));return}
+  if("tf" in d){st.tf=d.tf;renderTips();markAbbr($("#tipList"));const b=document.querySelector(`#tipFilt [data-tf="${st.tf}"]`);if(b)b.focus();announce($("#tipState").textContent);return}
+  if("lf" in d){st.lf=(d.lf&&d.lf!==st.lf)?d.lf:"";st.lshown=6;renderLectura();markAbbr($("#lecturaList"));const b=document.querySelector(`#lstats [data-lf="${st.lf}"]`)||document.querySelector("#lstats [data-lexp]");if(b)b.focus();announce($("#lstate").textContent);return}
+  if(d.lexp){st.ex={q:"",kind:"",theme:"",src:"",age:tramo(st.age),aud:st.role,str:""};st.shown=24;filters();renderEx(true);goExplorer();return}
+  if(tg.id==="lmore"){const k=st.lshown;st.lshown+=6;renderLectura();markAbbr($("#lecturaList"));const a=$$("#lecturaList article")[k];if(a)a.focus();return}
+  if(tg.id==="rulerFull"){const r=$(".ruler"),on=!r.classList.contains("full");r.classList.toggle("full",on);tg.setAttribute("aria-pressed",on);tg.textContent=t(on?"ruler.fullOff":"ruler.full");return}
   if(tg.id==="more"){st.shown+=24;renderEx(true);return}
   if(d.apa){e.preventDefault();go("fuentes","refs",{quiet:true});const el=document.getElementById("apa-"+d.apa);if(el){el.scrollIntoView({block:"center",behavior:smooth()});el.focus({preventScroll:true});el.classList.add("hit");setTimeout(()=>el.classList.remove("hit"),2400);announce(el.textContent.slice(0,160))}return}
   if(d.ref)return void showRef(d.ref);
@@ -459,6 +689,10 @@ document.addEventListener("click",e=>{
 document.addEventListener("change",e=>{
   const id=e.target.id,m={fk:"kind",ft:"theme",fs:"src",fa:"age",fu:"aud",fr:"str"};
   if(m[id]){st.ex[m[id]]=e.target.value;st.shown=24;renderEx(true);return}
+  if(e.target.dataset.done){const id=e.target.dataset.done;if(e.target.checked)PL.done[id]=true;else delete PL.done[id];savePL();renderPlan();const c=document.getElementById("dn-"+id);if(c)c.focus();announce($("#progL").textContent);return}
+  if(["tt","tc","te"].includes(id)){st[id]=e.target.value;renderTips();announce($("#tipState").textContent);return}
+  if(e.target.dataset.kchk){const k=e.target.dataset.kchk;if(e.target.checked)KS[k]=1;else delete KS[k];saveKS();return}
+  if(id==="planWhy"){PL.why=e.target.checked;savePL();renderPlan();$("#planWhy").focus();return}
   if(e.target.dataset.chk){st.done[e.target.dataset.chk]=e.target.checked;e.target.closest(".chk").classList.toggle("d",e.target.checked);return}
   if(e.target.name==="theme"){P.theme=e.target.value;saveP();applyP();announce(t("a11y.applied",{x:t("a11y.c."+P.theme)}));return}
   if(e.target.dataset.opt){const k=e.target.dataset.opt;P[k]=e.target.checked;saveP();applyP();announce(t("a11y.applied",{x:t(TOGGLES.find(o=>o[0]===k)[1])+": "+(P[k]?"✓":"✗")}));return}
@@ -470,7 +704,11 @@ document.addEventListener("input",e=>{
   if(id==="q2")renderFuentes();
   if(id==="age")setAge(+e.target.value);
   if(id==="qg"){st.glq=e.target.value;renderGl()}
+  if(id==="tq"){st.tq=e.target.value;clearTimeout(tqT);tqT=setTimeout(()=>{renderTips();announce($("#tipState").textContent)},250)}
+  if(id==="gq"){GQ=e.target.value;clearTimeout(tqT);tqT=setTimeout(()=>{renderSearch();announce($("#gstate").textContent)},250)}
+  if(e.target.dataset.knote){KS["n:"+e.target.dataset.knote]=e.target.value;saveKS()}
 });
+let tqT=0;
 const dlg=$("#a11yDlg");
 function closeDlg(){if(dlg.close)dlg.close();else dlg.removeAttribute("open");$("#a11yBtn").setAttribute("aria-expanded","false")}
 dlg.addEventListener("click",e=>{if(e.target===dlg)closeDlg()});
@@ -481,14 +719,15 @@ new MutationObserver(ms=>{clearTimeout(mt);mt=setTimeout(()=>{ms.forEach(m=>m.ad
 
 
 /* ---------- Navegación: vistas, subsecciones, menú lateral ---------- */
-const VIEWS={inicio:[],parati:["lectura","guias","escenarios"],alertas:["fuentes","datos"],diagramas:DG,evidencia:["mapa","explorador"],marco:[],fuentes:["lista","refs"],glosario:[],metodo:["metodologia","ia","licencias","auditoria"],tutorial:["pasos","etiquetas","acc","faq"],sitio:[]};
-const GROUPS=[["start",["inicio","parati"]],["explore",["alertas","diagramas","evidencia"]],["sources",["marco","fuentes"]],["ref",["glosario","metodo"]],["help",["tutorial","sitio"]]];
-const ALIAS={lectura:["parati","lectura"],guias:["parati","guias"],escenarios:["parati","escenarios"],explorador:["evidencia","explorador"],mapa:["sitio",""]};
-const ICONS={inicio:'<path d="M3 11l9-8 9 8M5 10v10h5v-6h4v6h5V10"/>',parati:'<circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/>',alertas:'<path d="M12 3l10 18H2L12 3zM12 10v5M12 18v.5"/>',diagramas:'<circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8 7l3 9M16 7l-3 9M8.5 6h7"/>',evidencia:'<path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/>',marco:'<path d="M3 21h18M5 21V9M19 21V9M9 21V9M15 21V9M2 9l10-6 10 6"/>',fuentes:'<path d="M4 4h9a4 4 0 014 4v13a3 3 0 00-3-3H4zM4 4v14"/>',glosario:'<path d="M5 19l5-14 5 14M7 14h6M18 8v11M21 12h-6"/>',metodo:'<path d="M9 3h6M10 3v6l-5 9a2 2 0 002 3h10a2 2 0 002-3l-5-9V3"/>',tutorial:'<circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 115 0c0 1.7-2.5 2-2.5 4M12 17v.5"/>',sitio:'<path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3zM9 3v15M15 6v15"/>'};
+const VIEWS={inicio:[],plan:[],kit:["familia","docente","direccion"],contexto:[],buscar:[],parati:["tips","lectura","guias","escenarios"],alertas:["fuentes","datos"],diagramas:DG,evidencia:["mapa","explorador"],marco:[],fuentes:["lista","refs"],glosario:[],metodo:["metodologia","ia","licencias","auditoria"],tutorial:["pasos","etiquetas","acc","faq"],sitio:[]};
+const GROUPS=[["start",["inicio","parati","kit","plan"]],["explore",["alertas","diagramas","evidencia"]],["sources",["contexto","marco","fuentes"]],["ref",["buscar","glosario","metodo"]],["help",["tutorial","sitio"]]];
+const ALIAS={tips:["parati","tips"],lectura:["parati","lectura"],guias:["parati","guias"],escenarios:["parati","escenarios"],explorador:["evidencia","explorador"],mapa:["sitio",""]};
+const ICONS={kit:'<path d="M4 7h16v13H4zM9 7V4h6v3M4 12h16"/>',contexto:'<path d="M12 21s-7-6.2-7-11a7 7 0 0114 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/>',buscar:'<circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/>',plan:'<path d="M6 3h12v18l-6-4-6 4z"/><path d="M9 9l2 2 4-4"/>',inicio:'<path d="M3 11l9-8 9 8M5 10v10h5v-6h4v6h5V10"/>',parati:'<circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/>',alertas:'<path d="M12 3l10 18H2L12 3zM12 10v5M12 18v.5"/>',diagramas:'<circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8 7l3 9M16 7l-3 9M8.5 6h7"/>',evidencia:'<path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/>',marco:'<path d="M3 21h18M5 21V9M19 21V9M9 21V9M15 21V9M2 9l10-6 10 6"/>',fuentes:'<path d="M4 4h9a4 4 0 014 4v13a3 3 0 00-3-3H4zM4 4v14"/>',glosario:'<path d="M5 19l5-14 5 14M7 14h6M18 8v11M21 12h-6"/>',metodo:'<path d="M9 3h6M10 3v6l-5 9a2 2 0 002 3h10a2 2 0 002-3l-5-9V3"/>',tutorial:'<circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 115 0c0 1.7-2.5 2-2.5 4M12 17v.5"/>',sitio:'<path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3zM9 3v15M15 6v15"/>'};
 function subLabel(v,sb){if(v==="alertas")return t(sb==="fuentes"?"alertas.t1":"alertas.t2");if(v==="diagramas")return t("dg."+sb);return t("s."+sb)}
 const panelId=(v,sb)=>v==="diagramas"?"dgBody":`sp-${v}-${sb}`;
 function renderSide(){
-  $("#sideNav").innerHTML="<ul>"+GROUPS.map(g=>`<li><p class="sg-t">${esc(t("grp."+g[0]))}</p><ul>${g[1].map(v=>{const cur=v===st.view,subs=VIEWS[v];return `<li><a class="nv" href="#${v}" data-nav="${v}" ${cur?'aria-current="page"':""}><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">${ICONS[v]}</svg><span>${esc(t("v."+v))}</span></a>${cur&&subs.length?`<ul class="sub">${subs.map(sb=>`<li><a href="#${v}/${sb}" data-nav="${v}/${sb}" ${sb===st.sub[v]?'aria-current="true"':""}>${esc(subLabel(v,sb))}</a></li>`).join("")}</ul>`:""}</li>`}).join("")}</ul></li>`).join("")+"</ul>";
+  const _cur=st.view,_mi=(g)=>g[1].includes(_cur);
+  $("#sideNav").innerHTML="<ul>"+GROUPS.map((g,gi)=>`${gi===1?`<li class="more-w"><details class="more" ${GROUPS.slice(1).some(_mi)?"open":""}><summary>${esc(t("nav.more"))}</summary><ul>`:""}<li><p class="sg-t">${esc(t("grp."+g[0]))}</p><ul>${g[1].map(v=>{const cur=v===st.view,subs=VIEWS[v];return `<li><a class="nv" href="#${v}" data-nav="${v}" ${cur?'aria-current="page"':""}><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">${ICONS[v]}</svg><span>${esc(t("v."+v))}</span>${v==="plan"&&PL.saved.length?`<em class="cnt">${PL.saved.length}<span class="sr-only"> ${esc(t("plan.cnt"))}</span></em>`:""}</a>${cur&&subs.length?`<ul class="sub">${subs.map(sb=>`<li><a href="#${v}/${sb}" data-nav="${v}/${sb}" ${sb===st.sub[v]?'aria-current="true"':""}>${esc(subLabel(v,sb))}</a></li>`).join("")}</ul>`:""}</li>`}).join("")}</ul></li>${gi===GROUPS.length-1?"</ul></details></li>":""}`).join("")+"</ul>";
 }
 function renderCrumb(){
   const g=GROUPS.find(x=>x[1].includes(st.view)),sb=st.sub[st.view],items=[t("grp."+g[0]),t("v."+st.view)];if(sb&&VIEWS[st.view].length>1)items.push(subLabel(st.view,sb));
@@ -502,14 +741,29 @@ function renderSubnavs(){
 }
 function renderHome(){
   const ic={Familia:ICONS.parati,Docente:ICONS.fuentes,"Dirección":ICONS.marco};
-  $("#homeTiles").innerHTML=ROLES.map(r=>`<button type="button" class="tile" data-go="parati/lectura" data-setrole="${r}"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">${ic[r]}</svg><b>${esc(t("home."+r))}</b><span>${esc(t("home."+r+".d"))}</span></button>`).join("")+`<a class="tile alt" href="#tutorial" data-nav="tutorial" style="text-decoration:none"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">${ICONS.tutorial}</svg><b>${esc(t("home.tut"))}</b><span>${esc(t("home.tut.d"))}</span></a>`;
+  $("#homeTiles").innerHTML=ROLES.map(r=>`<button type="button" class="tile" data-go="parati/tips" data-setrole="${r}"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">${ic[r]}</svg><b>${esc(t("home."+r))}</b><span>${esc(t("home."+r+".d"))}</span></button>`).join("")+`<a class="tile alt" href="#tutorial" data-nav="tutorial" style="text-decoration:none"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">${ICONS.tutorial}</svg><b>${esc(t("home.tut"))}</b><span>${esc(t("home.tut.d"))}</span></a>`;
+}
+function renderHomeGuide(){
+  const steps=[["s1","inicio"],["s2","parati/tips"],["s3","plan"],["s4","plan"],["s5","evidencia/explorador"]];
+  $("#homeGuide").innerHTML=`<h2 class="hs-h" id="hgH">${esc(t("hg.h"))}</h2><p class="hs-sub">${esc(t("hg.sub"))}</p>
+  <ol class="hg-steps">${steps.map((s,i)=>`<li><span class="hg-n" aria-hidden="true">${i+1}</span><h3>${esc(t("hg."+s[0]+".t"))}</h3><p>${esc(t("hg."+s[0]))}</p>${s[1]==="inicio"?`<a href="#prof" class="hg-go">${esc(t("hg.go"))} <span aria-hidden="true">→</span><span class="sr-only">: ${esc(t("hg."+s[0]+".t"))}</span></a>`:`<a href="#${s[1]}" data-nav="${s[1]}" class="hg-go">${esc(t("hg.go"))} <span aria-hidden="true">→</span><span class="sr-only">: ${esc(t("hg."+s[0]+".t"))}</span></a>`}</li>`).join("")}</ol>
+  <p class="hg-full"><a href="#tutorial" data-nav="tutorial">${esc(t("hg.full"))}</a></p>`;
+  const lv=[["l1",["inicio","parati","kit","plan"]],["l2",["alertas","diagramas","evidencia"]],["l3",["contexto","marco","fuentes"]],["l4",["buscar","glosario","metodo","tutorial","sitio"]]];
+  const lk=(h,lab)=>`<a href="#${h}" data-nav="${h}">${esc(lab)}</a>`;
+  const routes={familia:[["inicio",t("v.inicio")],["parati/tips",t("v.parati")+" › Tips"],["plan",t("v.plan")],["plan",t("sm.print")]],
+    docente:[["inicio",t("v.inicio")],["parati/escenarios",t("v.parati")+" › "+subLabel("parati","escenarios")],["kit/docente",t("v.kit")],["plan",t("v.plan")]],
+    direccion:[["inicio",t("v.inicio")],["kit/direccion",t("v.kit")],["contexto",t("v.contexto")],["marco",t("v.marco")]]};
+  $("#homeMap").innerHTML=`<h2 class="hs-h" id="smH">${esc(t("sm.h"))}</h2><p class="hs-sub">${esc(t("sm.sub"))}</p>
+  <ol class="sm-flow">${lv.map(l=>`<li class="sm-col sm-${l[0]}"><h3>${esc(t("sm."+l[0]))}</h3><p>${esc(t("sm."+l[0]+"d"))}</p><ul>${l[1].map(v=>`<li>${lk(v,t("v."+v))}</li>`).join("")}</ul></li>`).join("")}</ol>
+  <h3 class="sm-rt-h">${esc(t("sm.routes"))}</h3>
+  <div class="sm-routes">${Object.keys(routes).map(r=>`<div class="sm-route"><b>${esc(t("sm.r."+r))}</b><ol>${routes[r].map(x=>`<li>${lk(x[0],x[1])}</li>`).join("")}</ol></div>`).join("")}</div>`;
 }
 function renderTutorial(){
   const lnk=(h,lab)=>`<a href="#${h}" data-nav="${h}">${esc(lab)}</a>`;
   $("#tuPasos").innerHTML=`<h3 class="sh" style="margin-bottom:12px">${esc(t("tu.steps.h"))}</h3><ol class="steps">${[1,2,3,4,5].map(k=>`<li><h4>${esc(t("tu.s"+k+".t"))}</h4><p>${esc(t("tu.s"+k))}</p></li>`).join("")}</ol>
   <h3 class="sh" style="margin:26px 0 4px">${esc(t("tu.tools.h"))}</h3><p class="lead" style="margin-bottom:12px">${esc(t("tu.tools.sub"))}</p><div class="legend-grid">${[["r1","inicio"],["r2","diagramas"],["r3","evidencia/explorador"],["r4","glosario"],["r5","parati/escenarios"],["r6","sitio"]].map(r=>`<div><div><b>${esc(t("tu."+r[0]+".t"))}</b><p>${esc(t("tu."+r[0]))}</p>${lnk(r[1],t("v."+r[1].split("/")[0]))}</div></div>`).join("")}</div>`;
   $("#tuEtq").innerHTML=`<h3 class="sh" style="margin-bottom:10px">${esc(t("tg.kinds"))}</h3><div class="legend-grid">${KINDS.map(k=>`<div><span class="b ${k}">${esc(t("kind."+k))}</span><p>${esc(t("tg.kind."+k))}</p></div>`).join("")}</div>
-  <h3 class="sh" style="margin:26px 0 4px">${esc(t("tg.ages"))}</h3><p class="lead" style="margin-bottom:10px">${esc(t("tg.ages.d"))}</p><div class="row">${[1,2,3].map(k=>`<span class="b age${k}">${esc(t("tg.age"+k))}</span>`).join("")}</div>
+  <h3 class="sh" style="margin:26px 0 4px">${esc(t("tg.ages"))}</h3><p class="lead" style="margin-bottom:10px">${esc(t("tg.ages.d"))}</p><div class="row">${[1,2,3,4].map(k=>`<span class="b age${k}">${esc(t("tg.age"+k))}</span>`).join("")}</div>
   <h3 class="sh" style="margin:26px 0 10px">${esc(t("tg.ev"))}</h3><div class="legend-grid">${STRS.map(k=>`<div><span class="b">${esc(t("str."+k))}</span><p>${esc(t("tg.ev."+k))}</p></div>`).join("")}</div>`;
   $("#tuAcc").innerHTML=`<h3 class="sh" style="margin-bottom:8px">${esc(t("ac.h"))}</h3><p class="lead">${esc(t("ac.1"))}</p><p class="lead" style="margin-top:8px">${esc(t("ac.2"))}</p><p style="margin-top:12px"><button type="button" class="btn" data-open-a11y>${esc(t("a11y.title"))}</button></p>
   <h3 class="sh" style="margin:26px 0 10px">${esc(t("ac.kbd"))}</h3><dl class="kbd">${[1,2,3,4].map(k=>`<dt>${esc(t("ac.k"+k))}</dt><dd>${esc(t("ac.a"+k))}</dd>`).join("")}</dl>`;
@@ -534,6 +788,7 @@ function go(view,sub,o){
   $$(".view").forEach(v=>{v.hidden=v.dataset.view!==view});
   $$(`#v-${view} .subpanel`).forEach(p=>{if(p.dataset.sub==="*")return;const on=p.dataset.sub===sub;p.hidden=!on;if(on)p.setAttribute("aria-labelledby",`tab-${view}-${sub}`)});
   if(view==="diagramas")renderDg();
+  if(view==="plan")renderPlan();
   $$(`#v-${view} .subnav [role=tab]`).forEach(b=>{const on=b.dataset.nav===view+"/"+sub;b.setAttribute("aria-selected",on);b.tabIndex=on?0:-1});
   renderSide();renderCrumb();
   const nm=t("v."+view)+(subs.length>1?" · "+subLabel(view,sub):"");
@@ -554,9 +809,15 @@ window.addEventListener("hashchange",()=>{if(suppress){suppress=0;return}routeFr
 
 /* ---------- Arranque ---------- */
 let l0="es";
-try{const q=new URLSearchParams(location.search).get("lang");l0=LANGS.includes(q)?q:(localStorage.getItem("coa.lang")||((navigator.language||"es").toLowerCase().startsWith("en")?"en":"es"))}catch(e){l0=(navigator.language||"es").toLowerCase().startsWith("en")?"en":"es"}
+/* D4 (v0.6): español por defecto. Prioridad: ?lang= > elección guardada en este navegador > "es". */
+try{const q=new URLSearchParams(location.search).get("lang"),sv=localStorage.getItem("coa.lang");l0=LANGS.includes(q)?q:(LANGS.includes(sv)?sv:"es")}catch(e){l0="es"}
 applyP();
+const h0=location.hash; /* v0.6: conserva el enlace profundo (#vista/sub) que el primer render sobrescribía */
 setLang(l0,true);
+if(h0&&location.hash!==h0)history.replaceState(null,"",h0);
+if(SHARED.length&&!location.hash)history.replaceState(null,"",location.pathname+location.search+"#plan");
 routeFromHash(true);
+window.addEventListener("beforeprint",()=>{if(st.view==="plan")renderPlan()});
+window.addEventListener("afterprint",()=>{document.body.classList.remove("pk");$$(".kmod.pon").forEach(m=>m.classList.remove("pon"))});
 window.COA={st,setLang,t};
 })();

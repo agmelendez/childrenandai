@@ -1,0 +1,538 @@
+[
+ {
+  "source": "S20",
+  "page": 10,
+  "quote": "los nna de menor edad sostienen tener menos habilidades para responder a los peligros y riesgos del entorno digital.",
+  "es": "Los niños de 9 a 12 años declaran menos habilidades que los adolescentes para responder a los riesgos en línea (p. ej., saber denunciar una publicación: 52 % frente a 89 % a los 16–17 años).",
+  "kind": "hallazgo",
+  "ages": [
+   "9-11"
+  ],
+  "audiences": [
+   "Familia",
+   "Docente"
+  ],
+  "theme": "Competencias",
+  "strength": "empirica_encuesta",
+  "caveat": "Encuesta escolar de Uruguay (2022; N = 7822; 9–17 años): transversal y autoinformada; no aplicable directamente a Costa Rica, útil como referencia latinoamericana. No mide uso de IA.",
+  "age_note": "9–12 años frente a 16–17 años (Uruguay)",
+  "id": "S20-01",
+  "en": "Children aged 9–12 report fewer skills than adolescents to respond to online risks (e.g., knowing how to report a post: 52% vs 89% at ages 16–17).",
+  "caveat_en": "School survey in Uruguay (2022; N = 7,822; ages 9–17): cross-sectional and self-reported; not directly applicable to Costa Rica, useful as a Latin American reference. Does not measure AI use.",
+  "age_note_en": "Ages 9–12 vs 16–17 (Uruguay)"
+ },
+ {
+  "source": "S20",
+  "page": 10,
+  "quote": "Los nna no son «nativos digitales», su nivel de habilidades va creciendo a lo largo del tiempo y la educación juega un rol importante.",
+  "es": "Niñas, niños y adolescentes no son «nativos digitales»: sus habilidades crecen con la edad y la educación cumple un papel importante.",
+  "kind": "hallazgo",
+  "ages": [
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Familia",
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Competencias",
+  "strength": "empirica_encuesta",
+  "caveat": "Encuesta escolar de Uruguay (2022; N = 7822; 9–17 años): transversal y autoinformada; no aplicable directamente a Costa Rica, útil como referencia latinoamericana. No mide uso de IA.",
+  "age_note": "9–17 años (3.º de primaria a 6.º de media, Uruguay)",
+  "id": "S20-02",
+  "en": "Children and adolescents are not 'digital natives': their skills grow with age and education plays an important role.",
+  "caveat_en": "School survey in Uruguay (2022; N = 7,822; ages 9–17): cross-sectional and self-reported; not directly applicable to Costa Rica, useful as a Latin American reference. Does not measure AI use.",
+  "age_note_en": "Ages 9–17 (primary year 3 to secondary year 6, Uruguay)"
+ },
+ {
+  "source": "S20",
+  "page": 10,
+  "quote": "los nna de menor edad mencionan más el apoyo de padres y madres en su uso de Internet y les cuentan más sobre lo que hacen en el entorno digital.",
+  "es": "Los más pequeños mencionan más el apoyo de sus padres y les cuentan más lo que hacen en línea.",
+  "kind": "hallazgo",
+  "ages": [
+   "9-11"
+  ],
+  "audiences": [
+   "Familia"
+  ],
+  "theme": "Mediación parental",
+  "strength": "empirica_encuesta",
+  "caveat": "Encuesta escolar de Uruguay (2022; N = 7822; 9–17 años): transversal y autoinformada; no aplicable directamente a Costa Rica, útil como referencia latinoamericana. No mide uso de IA.",
+  "age_note": "9–12 años frente a 16–17 años (Uruguay)",
+  "id": "S20-03",
+  "en": "Younger children mention parental support more and tell their parents more about what they do online.",
+  "caveat_en": "School survey in Uruguay (2022; N = 7,822; ages 9–17): cross-sectional and self-reported; not directly applicable to Costa Rica, useful as a Latin American reference. Does not measure AI use.",
+  "age_note_en": "Ages 9–12 vs 16–17 (Uruguay)",
+  "lectura_cr": "Sugiere que entre los 9 y los 12 años la mediación familiar tiene más llegada (coincide con Kids Online Costa Rica, S25-01).",
+  "lectura_cr_en": "Suggests family mediation reaches children most at ages 9–12 (consistent with Kids Online Costa Rica, S25-01)."
+ },
+ {
+  "source": "S20",
+  "page": 12,
+  "quote": "la mediación de padres y madres es valorada positivamente por nna de todas las edades.",
+  "es": "La mediación de padres y madres es valorada positivamente por niñas, niños y adolescentes de todas las edades; sus pares son el primer referente al contar una mala experiencia y los padres, el segundo.",
+  "kind": "hallazgo",
+  "ages": [
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Familia"
+  ],
+  "theme": "Mediación parental",
+  "strength": "empirica_encuesta",
+  "caveat": "Encuesta escolar de Uruguay (2022; N = 7822; 9–17 años): transversal y autoinformada; no aplicable directamente a Costa Rica, útil como referencia latinoamericana. No mide uso de IA.",
+  "age_note": "9–17 años (3.º de primaria a 6.º de media, Uruguay)",
+  "id": "S20-04",
+  "en": "Parental mediation is valued positively by children and adolescents of all ages; peers are the first people they tell about a bad experience, and parents the second.",
+  "caveat_en": "School survey in Uruguay (2022; N = 7,822; ages 9–17): cross-sectional and self-reported; not directly applicable to Costa Rica, useful as a Latin American reference. Does not measure AI use.",
+  "age_note_en": "Ages 9–17 (primary year 3 to secondary year 6, Uruguay)"
+ },
+ {
+  "source": "S20",
+  "page": 11,
+  "quote": "Uno de cada tres nna declara haber sufrido algún episodio negativo en Internet durante el último año",
+  "es": "Uno de cada tres niñas, niños y adolescentes sufrió algún episodio negativo en internet en el último año (3 de cada 10 varones; 4 de cada 10 mujeres).",
+  "kind": "cifra",
+  "ages": [
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Familia",
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Seguridad y explotación",
+  "strength": "empirica_encuesta",
+  "caveat": "Encuesta escolar de Uruguay (2022; N = 7822; 9–17 años): transversal y autoinformada; no aplicable directamente a Costa Rica, útil como referencia latinoamericana. No mide uso de IA.",
+  "age_note": "9–17 años (3.º de primaria a 6.º de media, Uruguay)",
+  "id": "S20-05",
+  "en": "One in three children and adolescents had a negative experience online in the past year (3 in 10 boys; 4 in 10 girls).",
+  "caveat_en": "School survey in Uruguay (2022; N = 7,822; ages 9–17): cross-sectional and self-reported; not directly applicable to Costa Rica, useful as a Latin American reference. Does not measure AI use.",
+  "age_note_en": "Ages 9–17 (primary year 3 to secondary year 6, Uruguay)",
+  "figure": {
+   "value": "1 de cada 3",
+   "unit": "declara un episodio negativo en internet en el último año",
+   "population": "9–17 años, escolarizados, Uruguay",
+   "n_or_base": "N=7822"
+  },
+  "figure_en": {
+   "value": "1 in 3",
+   "unit": "report a negative online experience in the past year",
+   "population": "ages 9–17, in school, Uruguay",
+   "n_or_base": "N=7,822"
+  }
+ },
+ {
+  "source": "S20",
+  "page": 11,
+  "quote": "El maltrato en línea proviene en mayor proporción de amigos y compañeros de clase que de desconocidos o adultos.",
+  "es": "El maltrato en línea proviene sobre todo de amigos (45 %) y compañeros de clase (29 %), más que de desconocidos o adultos.",
+  "kind": "hallazgo",
+  "ages": [
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Familia",
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Seguridad y explotación",
+  "strength": "empirica_encuesta",
+  "caveat": "Encuesta escolar de Uruguay (2022; N = 7822; 9–17 años): transversal y autoinformada; no aplicable directamente a Costa Rica, útil como referencia latinoamericana. No mide uso de IA.",
+  "age_note": "9–17 años (3.º de primaria a 6.º de media, Uruguay)",
+  "id": "S20-06",
+  "en": "Online mistreatment comes mostly from friends (45%) and classmates (29%) rather than strangers or adults.",
+  "caveat_en": "School survey in Uruguay (2022; N = 7,822; ages 9–17): cross-sectional and self-reported; not directly applicable to Costa Rica, useful as a Latin American reference. Does not measure AI use.",
+  "age_note_en": "Ages 9–17 (primary year 3 to secondary year 6, Uruguay)",
+  "lectura_cr": "La convivencia escolar es parte de la prevención; en Costa Rica, el 71,6 % de las víctimas señala a estudiantes de su propio centro (S25-11).",
+  "lectura_cr_en": "School climate is part of prevention; in Costa Rica, 71.6% of victims point to students at their own school (S25-11)."
+ },
+ {
+  "source": "S20",
+  "page": 11,
+  "quote": "nna utilizan redes sociales que no están diseñadas por defecto para protegerles.",
+  "es": "Niñas, niños y adolescentes usan redes que no están diseñadas por defecto para protegerles; algunas tienen funciones de alto riesgo y no controlan adecuadamente la edad.",
+  "kind": "alerta",
+  "ages": [
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Familia",
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Edad y adecuación",
+  "strength": "empirica_encuesta",
+  "caveat": "Encuesta escolar de Uruguay (2022; N = 7822; 9–17 años): transversal y autoinformada; no aplicable directamente a Costa Rica, útil como referencia latinoamericana. No mide uso de IA.",
+  "age_note": "9–17 años (3.º de primaria a 6.º de media, Uruguay)",
+  "id": "S20-07",
+  "en": "Children and adolescents use social networks not designed by default to protect them; some have high-risk features and do not check age adequately.",
+  "caveat_en": "School survey in Uruguay (2022; N = 7,822; ages 9–17): cross-sectional and self-reported; not directly applicable to Costa Rica, useful as a Latin American reference. Does not measure AI use.",
+  "age_note_en": "Ages 9–17 (primary year 3 to secondary year 6, Uruguay)"
+ },
+ {
+  "source": "S20",
+  "page": 11,
+  "quote": "Casi uno de cada cuatro nna que asiste a educación media recibió mensajes con contenido sexual y uno de cada diez los ha enviado",
+  "es": "Casi uno de cada cuatro estudiantes de secundaria recibió mensajes con contenido sexual y uno de cada diez los envió; ambos aumentan con la edad.",
+  "kind": "cifra",
+  "ages": [
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Familia",
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Seguridad y explotación",
+  "strength": "empirica_encuesta",
+  "caveat": "Encuesta escolar de Uruguay (2022; N = 7822; 9–17 años): transversal y autoinformada; no aplicable directamente a Costa Rica, útil como referencia latinoamericana. No mide uso de IA.",
+  "age_note": "Educación media (≈12–17 años, Uruguay)",
+  "id": "S20-08",
+  "en": "Almost one in four secondary students received sexual messages and one in ten sent them; both increase with age.",
+  "caveat_en": "School survey in Uruguay (2022; N = 7,822; ages 9–17): cross-sectional and self-reported; not directly applicable to Costa Rica, useful as a Latin American reference. Does not measure AI use.",
+  "age_note_en": "Secondary education (≈ ages 12–17, Uruguay)",
+  "figure": {
+   "value": {
+    "recibió": "≈25 %",
+    "envió": "≈10 %"
+   },
+   "unit": "mensajes con contenido sexual",
+   "population": "estudiantes de educación media, Uruguay",
+   "n_or_base": "N=7822 (submuestra media)"
+  },
+  "figure_en": {
+   "value": {
+    "received": "≈25%",
+    "sent": "≈10%"
+   },
+   "unit": "sexual messages",
+   "population": "secondary students, Uruguay",
+   "n_or_base": "N=7,822 (secondary subsample)"
+  }
+ },
+ {
+  "source": "S20",
+  "page": 12,
+  "quote": "La mitad de las y los adolescentes sostuvieron haber tenido algún problema en el sueño o la alimentación, en sus vínculos o en el estudio a raíz del tiempo que pasan en Internet.",
+  "es": "La mitad de los adolescentes reporta problemas de sueño, alimentación, relaciones o estudio por el tiempo en internet, aunque dicen tener estrategias para regularlo.",
+  "kind": "hallazgo",
+  "ages": [
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Familia",
+   "Docente"
+  ],
+  "theme": "Bienestar y dependencia",
+  "strength": "empirica_encuesta",
+  "caveat": "Encuesta escolar de Uruguay (2022; N = 7822; 9–17 años): transversal y autoinformada; no aplicable directamente a Costa Rica, útil como referencia latinoamericana. No mide uso de IA.",
+  "age_note": "Adolescentes (Uruguay)",
+  "id": "S20-09",
+  "en": "Half of adolescents report problems with sleep, eating, relationships or study due to time online, though they say they have strategies to regulate it.",
+  "caveat_en": "School survey in Uruguay (2022; N = 7,822; ages 9–17): cross-sectional and self-reported; not directly applicable to Costa Rica, useful as a Latin American reference. Does not measure AI use.",
+  "age_note_en": "Adolescents (Uruguay)"
+ },
+ {
+  "source": "S21",
+  "page": 6,
+  "quote": "Quien recopile datos personales deberá obtener el consentimiento expreso de la persona titular de los datos o de su representante.",
+  "es": "Quien recopile datos personales debe obtener el consentimiento expreso y por escrito de la persona titular o de su representante.",
+  "kind": "obligacion",
+  "ages": [
+   "6-8",
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Familia",
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Privacidad y datos",
+  "strength": "normativa",
+  "caveat": "Ley vigente en Costa Rica. No establece un régimen específico para personas menores de edad: el consentimiento lo da el titular o su representante legal.",
+  "age_note": "Toda persona; en menores, consentimiento por representación legal",
+  "id": "S21-01",
+  "en": "Anyone collecting personal data must obtain the express written consent of the data subject or their representative.",
+  "caveat_en": "Law in force in Costa Rica. It sets no specific regime for minors: consent is given by the data subject or their legal representative.",
+  "age_note_en": "Everyone; for minors, consent through legal representation",
+  "lectura_cr": "En estudiantes menores de edad, el consentimiento lo da quien ejerce su representación legal; aplica al registrarlos en plataformas de IA.",
+  "lectura_cr_en": "For minor students, consent is given by whoever holds legal representation; this applies when registering them on AI platforms."
+ },
+ {
+  "source": "S21",
+  "page": 5,
+  "quote": "Cuando se soliciten datos de carácter personal será necesario informar de previo a las personas titulares o a sus representantes",
+  "es": "Antes de pedir datos personales hay que informar de forma expresa, precisa e inequívoca sobre la base de datos, sus fines, sus destinatarios y los derechos de la persona.",
+  "kind": "obligacion",
+  "ages": [
+   "6-8",
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Familia",
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Privacidad y datos",
+  "strength": "normativa",
+  "caveat": "Ley vigente en Costa Rica. No establece un régimen específico para personas menores de edad: el consentimiento lo da el titular o su representante legal.",
+  "age_note": "Toda persona; en menores, consentimiento por representación legal",
+  "id": "S21-02",
+  "en": "Before requesting personal data, people must be told expressly, precisely and unambiguously about the database, its purposes, its recipients and their rights.",
+  "caveat_en": "Law in force in Costa Rica. It sets no specific regime for minors: consent is given by the data subject or their legal representative.",
+  "age_note_en": "Everyone; for minors, consent through legal representation",
+  "lectura_cr": "Incluye registrar estudiantes en una plataforma de IA: la escuela debe informar a las familias antes.",
+  "lectura_cr_en": "This includes registering students on an AI platform: the school must inform families beforehand."
+ },
+ {
+  "source": "S21",
+  "page": 11,
+  "quote": "Ninguna persona estará obligada a suministrar datos sensibles.",
+  "es": "Nadie está obligado a dar datos sensibles; su tratamiento (salud, origen étnico, religión, vida sexual, entre otros) está prohibido salvo excepciones legales.",
+  "kind": "obligacion",
+  "ages": [
+   "6-8",
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Familia",
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Privacidad y datos",
+  "strength": "normativa",
+  "caveat": "Ley vigente en Costa Rica. No establece un régimen específico para personas menores de edad: el consentimiento lo da el titular o su representante legal.",
+  "age_note": "Toda persona; en menores, consentimiento por representación legal",
+  "id": "S21-03",
+  "en": "No one is obliged to provide sensitive data; processing it (health, ethnic origin, religion, sex life, among others) is prohibited save legal exceptions.",
+  "caveat_en": "Law in force in Costa Rica. It sets no specific regime for minors: consent is given by the data subject or their legal representative.",
+  "age_note_en": "Everyone; for minors, consent through legal representation"
+ },
+ {
+  "source": "S21",
+  "page": 8,
+  "quote": "Se garantiza el derecho de toda persona al acceso de sus datos personales, rectificación o supresión de estos y a consentir la cesión de sus datos.",
+  "es": "Toda persona tiene derecho a acceder a sus datos, a rectificarlos o suprimirlos y a consentir su cesión; el responsable debe responder gratis en cinco días hábiles.",
+  "kind": "obligacion",
+  "ages": [
+   "6-8",
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Familia",
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Privacidad y datos",
+  "strength": "normativa",
+  "caveat": "Ley vigente en Costa Rica. No establece un régimen específico para personas menores de edad: el consentimiento lo da el titular o su representante legal.",
+  "age_note": "Toda persona; en menores, consentimiento por representación legal",
+  "id": "S21-04",
+  "en": "Everyone has the right to access, correct or delete their data and to consent to its transfer; the controller must respond free of charge within five working days.",
+  "caveat_en": "Law in force in Costa Rica. It sets no specific regime for minors: consent is given by the data subject or their legal representative.",
+  "age_note_en": "Everyone; for minors, consent through legal representation",
+  "lectura_cr": "Madres, padres y encargados pueden ejercer estos derechos en representación de sus hijos frente a la escuela o la plataforma.",
+  "lectura_cr_en": "Parents and guardians can exercise these rights on behalf of their children with the school or the platform."
+ },
+ {
+  "source": "S21",
+  "page": 13,
+  "quote": "El responsable de la base de datos deberá adoptar las medidas de índole técnica y de organización necesarias para garantizar la seguridad de los datos de carácter personal",
+  "es": "El centro educativo, como responsable de sus bases de datos, debe adoptar medidas técnicas y organizativas para proteger los datos personales del estudiantado.",
+  "kind": "obligacion",
+  "ages": [
+   "6-8",
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Dirección"
+  ],
+  "theme": "Gobernanza escolar",
+  "strength": "normativa",
+  "caveat": "Ley vigente en Costa Rica. No establece un régimen específico para personas menores de edad: el consentimiento lo da el titular o su representante legal.",
+  "age_note": "Toda persona; en menores, consentimiento por representación legal",
+  "id": "S21-05",
+  "en": "The school, as controller of its databases, must adopt technical and organisational measures to protect students' personal data.",
+  "caveat_en": "Law in force in Costa Rica. It sets no specific regime for minors: consent is given by the data subject or their legal representative.",
+  "age_note_en": "Everyone; for minors, consent through legal representation"
+ },
+ {
+  "source": "S22",
+  "page": 4,
+  "quote": "Toda manifestación de voluntad expresa, libre, inequívoca, informada y específica que se otorgue por escrito o en medio digital para un fin determinado",
+  "es": "El consentimiento válido es expreso, libre, inequívoco, informado y específico para un fin determinado; si va dentro de un contrato con otros fines, requiere una cláusula separada.",
+  "kind": "definicion",
+  "ages": [
+   "6-8",
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Familia",
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Privacidad y datos",
+  "strength": "normativa",
+  "caveat": "Reglamento vigente (DE 37554-JP, reformado por DE 40008 de 2016).",
+  "age_note": "Toda persona; en menores, consentimiento por representación legal",
+  "id": "S22-01",
+  "en": "Valid consent is express, free, unambiguous, informed and specific to a given purpose; if included in a contract for other purposes, it needs a separate clause.",
+  "caveat_en": "Regulation in force (Executive Decree 37554-JP, amended by Decree 40008 of 2016).",
+  "age_note_en": "Everyone; for minors, consent through legal representation"
+ },
+ {
+  "source": "S23",
+  "page": 8,
+  "quote": "Impulsar programas de concientización en los centros educativos, para dar a conocer a los estudiantes, docentes y padres de familia los riesgos",
+  "es": "La ley encarga a una comisión interinstitucional (PANI, MEP, MICITT, OIJ, Ministerio Público, Viceministerio de Juventud) impulsar programas de concientización en los centros educativos para estudiantes, docentes y familias.",
+  "kind": "obligacion",
+  "ages": [
+   "6-8",
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Familia",
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Responsabilidad compartida",
+  "strength": "normativa",
+  "caveat": "Ley vigente en Costa Rica (2021).",
+  "age_note": "Personas menores de edad (< 18)",
+  "id": "S23-01",
+  "en": "The law tasks an inter-agency commission (PANI, MEP, MICITT, OIJ, Public Prosecutor, Youth Vice-Ministry) with promoting awareness programmes in schools for students, teachers and families.",
+  "caveat_en": "Law in force in Costa Rica (2021).",
+  "age_note_en": "Minors (< 18)"
+ },
+ {
+  "source": "S23",
+  "page": 4,
+  "quote": "la conducta de una persona adulta que reaiiza acciones deliberadas para establecer lazos con una persona menor de edad por internet",
+  "es": "Grooming es la conducta de un adulto que crea deliberadamente lazos con una persona menor de edad por internet para obtener imágenes sexuales o preparar un encuentro.",
+  "kind": "definicion",
+  "ages": [
+   "6-8",
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Familia",
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Seguridad y explotación",
+  "strength": "normativa",
+  "caveat": "Ley vigente en Costa Rica (2021). La cita reproduce una errata del texto oficial («reaiiza»).",
+  "age_note": "Personas menores de edad (< 18)",
+  "id": "S23-02",
+  "en": "Grooming is an adult deliberately building ties with a minor online to obtain sexual images or prepare a meeting.",
+  "caveat_en": "Law in force in Costa Rica (2021). The quote reproduces a typo in the official text.",
+  "age_note_en": "Minors (< 18)"
+ },
+ {
+  "source": "S23",
+  "page": 16,
+  "quote": "La misma pena se impondrá a quien suplantando la identidad de un tercero o mediante el uso de una identidad falsa",
+  "es": "Es delito (2 a 4 años de prisión; 3 a 5 si se busca un encuentro) establecer comunicaciones sexuales con una persona menor de edad, incluso suplantando identidad o con identidad falsa.",
+  "kind": "obligacion",
+  "ages": [
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Familia",
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Seguridad y explotación",
+  "strength": "normativa",
+  "caveat": "Ley vigente en Costa Rica (2021).",
+  "age_note": "Personas menores de edad (< 18)",
+  "id": "S23-03",
+  "en": "It is a crime (2–4 years in prison; 3–5 if a meeting is sought) to engage in sexual communication with a minor, including through impersonation or a false identity.",
+  "caveat_en": "Law in force in Costa Rica (2021).",
+  "age_note_en": "Minors (< 18)"
+ },
+ {
+  "source": "S23",
+  "page": 16,
+  "quote": "su imagen o su voz, alteradas o modificadas, dedicada a actividades sexuales explícitas, reales o simuladas",
+  "es": "La definición legal de material pornográfico infantil incluye la imagen o la voz de una persona menor de edad «alteradas o modificadas» en actividades sexuales «reales o simuladas»; producirlo o divulgarlo se castiga con 5 a 9 años de prisión.",
+  "kind": "obligacion",
+  "ages": [
+   "6-8",
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Familia",
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Seguridad y explotación",
+  "strength": "normativa",
+  "caveat": "Ley de 2021, anterior a la IA generativa masiva: la aplicación a contenido íntegramente sintético es una interpretación del texto, sin jurisprudencia verificada en este corpus.",
+  "age_note": "Personas menores de edad (< 18)",
+  "id": "S23-04",
+  "en": "The legal definition of child sexual abuse material includes a minor's image or voice 'altered or modified' in 'real or simulated' sexual activity; producing or disseminating it carries 5–9 years in prison.",
+  "caveat_en": "2021 law, predating mass generative AI: applying it to fully synthetic content is a reading of the text, with no case law verified in this corpus.",
+  "age_note_en": "Minors (< 18)",
+  "lectura_cr": "Es la base para tratar los deepfakes sexuales de menores como delito; su aplicación a contenido íntegramente sintético carece de jurisprudencia verificada.",
+  "lectura_cr_en": "This is the basis for treating sexual deepfakes of minors as a crime; its application to fully synthetic content lacks verified case law."
+ },
+ {
+  "source": "S23",
+  "page": 14,
+  "quote": "Corresponde al Patronato Nacional de la Infancia (PANI) elaborar, al final de cada año, un informe detallado",
+  "es": "El PANI debe publicar cada año un informe con las acciones de la comisión y los riesgos detectados para menores frente a delitos sexuales en línea.",
+  "kind": "obligacion",
+  "ages": [
+   "6-8",
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Dirección"
+  ],
+  "theme": "Responsabilidad compartida",
+  "strength": "normativa",
+  "caveat": "Ley vigente en Costa Rica (2021).",
+  "age_note": "Personas menores de edad (< 18)",
+  "id": "S23-05",
+  "en": "PANI must publish an annual report on the commission's actions and the risks detected for minors regarding online sexual offences.",
+  "caveat_en": "Law in force in Costa Rica (2021).",
+  "age_note_en": "Minors (< 18)"
+ }
+]

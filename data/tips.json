@@ -1,0 +1,4676 @@
+{
+  "version": "0.8.0",
+  "fecha": "2026-10-26",
+  "_nota": "E3.2 completa: Familia, Docente, Dirección y transversales. Todos en estado borrador (D5).",
+  "tips": [
+    {
+      "id": "T-FAM-001",
+      "texto_es": "Explíquele que la IA no piensa ni siente. Arma respuestas con patrones y se puede equivocar, aunque suene muy segura.",
+      "texto_en": "Explain that AI does not think or feel. It builds answers from patterns and can be wrong, even when it sounds very sure.",
+      "por_que_es": "Los niños pequeños tienden a ver la IA como una persona o una autoridad, y por eso le creen más.",
+      "por_que_en": "Young children tend to see AI as a person or an authority, so they trust it more.",
+      "tema": "Alfabetización en IA",
+      "edad": [
+        "6-8",
+        "9-11"
+      ],
+      "publico": [
+        "Familia"
+      ],
+      "contexto": [
+        "casa"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "alta",
+      "confianza": "A",
+      "evidence_ids": [
+        "S15-10",
+        "S06-07",
+        "S11-10",
+        "S11-47"
+      ],
+      "transfer_id": "TR-004",
+      "ancla_cr": {
+        "tipo": "lineamiento_mep",
+        "referencia": "Guía MEP–UNESCO–ULACIT «Inteligencia artificial en clase» (2026)",
+        "evidence_id": "S14-11"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-FAM-002",
+      "texto_es": "Si su hijo tiene de 6 a 8 años, usen la IA solo juntos y con usted al mando. No lo deje conversar solo con un chatbot.",
+      "texto_en": "If your child is 6 to 8, use AI only together, with you in charge. Do not let them chat alone with a chatbot.",
+      "por_que_es": "Las fuentes piden que en primaria la IA se use con un adulto. En Costa Rica no hay edad mínima: se decide según cuánto se expone el niño y qué riesgos hay.",
+      "por_que_en": "Sources ask that AI in primary school be used with an adult. Costa Rica sets no minimum age: decide based on exposure and risk.",
+      "tema": "Edad y adecuación",
+      "edad": [
+        "6-8"
+      ],
+      "publico": [
+        "Familia"
+      ],
+      "contexto": [
+        "casa"
+      ],
+      "esfuerzo": "medio",
+      "urgencia": "alta",
+      "confianza": "B",
+      "evidence_ids": [
+        "S06-09",
+        "S13-26",
+        "S13-22",
+        "S13-17"
+      ],
+      "transfer_id": "TR-002",
+      "ancla_cr": {
+        "tipo": "ley",
+        "referencia": "Código de la Niñez y la Adolescencia (Ley 7739), art. 5: interés superior según edad y madurez",
+        "evidence_id": "S26-03"
+      },
+      "condicion_adaptacion": "Ninguna norma de Costa Rica fija edad mínima ni regula el uso de IA por menores; se decide por exposición y riesgo, según el interés superior, la edad y la madurez. Casos como Noruega (sin IA generativa en grados 1–7) son ejemplos, no modelos aplicables a Costa Rica.",
+      "advertencia_edad": "En Costa Rica no hay edad mínima legal para usar IA: decida según exposición y riesgo. Como referencia, muchas apps piden 13 años en sus términos de uso.",
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-FAM-003",
+      "texto_es": "De 9 a 11 años, permita usos cortos y con un fin claro, como buscar una idea o practicar. Que sea en un lugar común de la casa, y revisen juntos el resultado.",
+      "texto_en": "From 9 to 11, allow short uses with a clear goal, such as finding an idea or practising. Keep it in a shared space at home and review the result together.",
+      "por_que_es": "El uso con propósito y con apoyo adulto da mejores resultados que el uso largo y pasivo.",
+      "por_que_en": "Purposeful use with adult support gives better results than long, passive use.",
+      "tema": "Mediación parental",
+      "edad": [
+        "9-11"
+      ],
+      "publico": [
+        "Familia"
+      ],
+      "contexto": [
+        "casa"
+      ],
+      "esfuerzo": "medio",
+      "urgencia": "media",
+      "confianza": "B",
+      "evidence_ids": [
+        "S06-03",
+        "S06-09",
+        "S25-06",
+        "S11-02"
+      ],
+      "transfer_id": "TR-002",
+      "ancla_cr": {
+        "tipo": "ley",
+        "referencia": "Código de la Niñez y la Adolescencia (Ley 7739), art. 5: interés superior según edad y madurez",
+        "evidence_id": "S26-03"
+      },
+      "condicion_adaptacion": "Orientación europea; en Costa Rica se gradúa según edad y madurez de cada niño.",
+      "advertencia_edad": "En Costa Rica no hay edad mínima legal para usar IA: decida según exposición y riesgo. Como referencia, muchas apps piden 13 años en sus términos de uso.",
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-FAM-004",
+      "texto_es": "Antes de abrir una cuenta, lea la edad mínima de la app. Si su hijo no la cumple, no mienta sobre su edad: use su propia cuenta y acompáñelo.",
+      "texto_en": "Before opening an account, check the app's minimum age. If your child is under it, do not lie about their age: use your own account and stay with them.",
+      "por_que_es": "En Costa Rica no hay edad mínima legal: decida según exposición y riesgo. Dar datos de un menor exige el permiso escrito de quien lo representa.",
+      "por_que_en": "Costa Rica sets no legal minimum age: decide based on exposure and risk. Sharing a minor's data requires written consent from their legal guardian.",
+      "tema": "Edad y adecuación",
+      "edad": [
+        "6-8",
+        "9-11"
+      ],
+      "publico": [
+        "Familia"
+      ],
+      "contexto": [
+        "casa"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "alta",
+      "confianza": "A",
+      "evidence_ids": [
+        "S13-13",
+        "S13-17",
+        "S08-18",
+        "S21-01"
+      ],
+      "transfer_id": "TR-003",
+      "ancla_cr": {
+        "tipo": "ley",
+        "referencia": "Ley 8968 de Protección de la Persona frente al Tratamiento de sus Datos Personales (consentimiento expreso y escrito; art. 5)",
+        "evidence_id": "S21-01"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": "En Costa Rica no hay edad mínima legal para usar IA: decida según exposición y riesgo. Como referencia, muchas apps piden 13 años en sus términos de uso.",
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-FAM-005",
+      "texto_es": "Enséñele una regla fácil: a la IA no se le dice el nombre completo, la escuela, la dirección ni el teléfono, y no se le mandan fotos.",
+      "texto_en": "Teach a simple rule: never tell AI your full name, school, address or phone number, and never send it photos.",
+      "por_que_es": "Las plataformas de IA pueden guardar o compartir datos sin garantías. La ley protege los datos personales de su hijo.",
+      "por_que_en": "AI platforms may store or share data without safeguards. The law protects your child's personal data.",
+      "tema": "Privacidad y datos",
+      "edad": [
+        "6-8",
+        "9-11"
+      ],
+      "publico": [
+        "Familia"
+      ],
+      "contexto": [
+        "casa"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "alta",
+      "confianza": "A",
+      "evidence_ids": [
+        "S14-03",
+        "S14-04",
+        "S24-01"
+      ],
+      "transfer_id": "TR-006",
+      "ancla_cr": {
+        "tipo": "ley",
+        "referencia": "Ley 8968 de Protección de la Persona frente al Tratamiento de sus Datos Personales (consentimiento expreso y escrito; art. 5)",
+        "evidence_id": "S21-01"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-FAM-006",
+      "texto_es": "Revise los ajustes de cada app con IA. Apague la ubicación, el micrófono, la cámara y la «memoria» del chat si no hacen falta.",
+      "texto_en": "Check the settings of every AI app. Turn off location, microphone, camera and chat 'memory' if they are not needed.",
+      "por_que_es": "La Estrategia Nacional de IA pide limitar los datos que se recogen y usar controles para padres.",
+      "por_que_en": "Costa Rica's National AI Strategy calls for collecting less data and using parental controls.",
+      "tema": "Privacidad y datos",
+      "edad": [
+        "6-8",
+        "9-11"
+      ],
+      "publico": [
+        "Familia"
+      ],
+      "contexto": [
+        "casa"
+      ],
+      "esfuerzo": "medio",
+      "urgencia": "media",
+      "confianza": "B",
+      "evidence_ids": [
+        "S08-16",
+        "S08-10",
+        "S03-06",
+        "S24-02"
+      ],
+      "transfer_id": "TR-012",
+      "ancla_cr": {
+        "tipo": "programa",
+        "referencia": "Estrategia Nacional de IA de Costa Rica 2024–2027 (salvaguardas para la niñez)",
+        "evidence_id": "S24-02"
+      },
+      "condicion_adaptacion": "Los ajustes cambian según la herramienta; la regla europea de privacidad por defecto aún es una propuesta.",
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-FAM-007",
+      "texto_es": "Jueguen a ser detectives: comprueben juntos una respuesta de la IA en un libro, en una página confiable o preguntando a la maestra.",
+      "texto_en": "Play detectives: check an AI answer together in a book, a trusted website or by asking the teacher.",
+      "por_que_es": "La IA inventa datos a veces. Los niños que comparan fuentes confían en ella con más cuidado.",
+      "por_que_en": "AI sometimes makes things up. Children who compare sources trust it more carefully.",
+      "tema": "Alfabetización en IA",
+      "edad": [
+        "6-8",
+        "9-11"
+      ],
+      "publico": [
+        "Familia"
+      ],
+      "contexto": [
+        "casa"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "media",
+      "confianza": "A",
+      "evidence_ids": [
+        "S14-11",
+        "S11-11",
+        "S11-41"
+      ],
+      "transfer_id": "TR-005",
+      "ancla_cr": {
+        "tipo": "lineamiento_mep",
+        "referencia": "Guía MEP–UNESCO–ULACIT «Inteligencia artificial en clase» (2026)",
+        "evidence_id": "S14-11"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-FAM-008",
+      "texto_es": "Si usó IA para una tarea, pregúntele tres cosas: ¿qué herramienta usaste?, ¿cómo revisaste la información?, ¿qué aprendiste?",
+      "texto_en": "If they used AI for homework, ask three things: Which tool did you use? How did you check the information? What did you learn?",
+      "por_que_es": "Son las tres preguntas que propone la guía del MEP para hablar de tareas hechas con IA.",
+      "por_que_en": "These are the three questions the Ministry of Education guide suggests for talking about AI-assisted homework.",
+      "tema": "Aprendizaje y docencia",
+      "edad": [
+        "9-11"
+      ],
+      "publico": [
+        "Familia"
+      ],
+      "contexto": [
+        "casa"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "media",
+      "confianza": "A",
+      "evidence_ids": [
+        "S14-15"
+      ],
+      "transfer_id": "TR-011",
+      "ancla_cr": {
+        "tipo": "lineamiento_mep",
+        "referencia": "Guía MEP–UNESCO–ULACIT «Inteligencia artificial en clase» (2026)",
+        "evidence_id": "S14-15"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-FAM-009",
+      "texto_es": "No deje que la IA haga la tarea. Que la use para pedir una pista o una explicación, y que su hijo escriba o resuelva con sus propias palabras.",
+      "texto_en": "Do not let AI do the homework. Let them use it for a hint or an explanation, and have your child write or solve it in their own words.",
+      "por_que_es": "Si la IA hace el trabajo, la tarea se termina pero el niño no aprende ni siente que es suya.",
+      "por_que_en": "If AI does the work, the task gets done but the child does not learn or feel it is theirs.",
+      "tema": "Aprendizaje y docencia",
+      "edad": [
+        "9-11"
+      ],
+      "publico": [
+        "Familia"
+      ],
+      "contexto": [
+        "casa"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "media",
+      "confianza": "A",
+      "evidence_ids": [
+        "S16-01",
+        "S06-04",
+        "S14-14"
+      ],
+      "transfer_id": "TR-011",
+      "ancla_cr": {
+        "tipo": "lineamiento_mep",
+        "referencia": "Guía MEP–UNESCO–ULACIT «Inteligencia artificial en clase» (2026)",
+        "evidence_id": "S14-14"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-FAM-010",
+      "texto_es": "Evite apps de «amigo virtual», como Character.AI o Replika, y chats con personajes infantiles. Si un chatbot aparece en un juego o red social, desactívelo.",
+      "texto_en": "Avoid 'virtual friend' apps such as Character.AI or Replika, and chats with children's characters. If a chatbot appears in a game or social network, turn it off.",
+      "por_que_es": "Imitan amistades y pueden crear apego. En Costa Rica nada de esto está regulado: no hay ley sobre estos chats ni edad mínima.",
+      "por_que_en": "They imitate friendship and can create attachment. In Costa Rica none of this is regulated: no law on these chats and no minimum age.",
+      "tema": "Bienestar y dependencia",
+      "edad": [
+        "6-8",
+        "9-11"
+      ],
+      "publico": [
+        "Familia"
+      ],
+      "contexto": [
+        "casa"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "alta",
+      "confianza": "B",
+      "evidence_ids": [
+        "S08-09",
+        "S08-12",
+        "S13-11",
+        "S06-05"
+      ],
+      "transfer_id": "TR-007",
+      "ancla_cr": null,
+      "condicion_adaptacion": "NO REGULADO en Costa Rica: no hay norma sobre compañeros de IA ni edad mínima. La referencia es una propuesta europea no vigente (EU KIDS Act). Character.AI y Replika son ejemplos ilustrativos de mercado, no evaluados en el corpus; verificar en E6.",
+      "advertencia_edad": "En Costa Rica no hay edad mínima legal para usar IA: decida según exposición y riesgo. Como referencia, muchas apps piden 13 años en sus términos de uso.",
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-FAM-011",
+      "texto_es": "Recuérdele que la IA no es un amigo. Puede ayudar a practicar, pero las penas y los problemas se cuentan a personas de confianza.",
+      "texto_en": "Remind them that AI is not a friend. It can help them practise, but worries and problems are shared with trusted people.",
+      "por_que_es": "La IA no reemplaza el trato con la familia, los amigos y los docentes. Algunos chatbots dieron malos consejos a niños angustiados.",
+      "por_que_en": "AI does not replace time with family, friends and teachers. Some chatbots gave bad advice to distressed children.",
+      "tema": "Bienestar y dependencia",
+      "edad": [
+        "6-8",
+        "9-11"
+      ],
+      "publico": [
+        "Familia"
+      ],
+      "contexto": [
+        "casa"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "media",
+      "confianza": "B",
+      "evidence_ids": [
+        "S06-05",
+        "S06-06",
+        "S11-35",
+        "S05-02"
+      ],
+      "transfer_id": "TR-007",
+      "ancla_cr": null,
+      "condicion_adaptacion": "Evidencia europea y británica; aplicar con la red de apoyo de la familia y la escuela.",
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-FAM-012",
+      "texto_es": "Hable de la IA sin regañar. Si su hijo le cuenta algo raro o feo que vio, agradézcale que se lo dijo antes de decidir qué hacer.",
+      "texto_en": "Talk about AI without scolding. If your child tells you about something strange or upsetting they saw, thank them for telling you before deciding what to do.",
+      "por_que_es": "Los más pequeños cuentan más a sus padres. En Costa Rica, 14 de cada 100 niños que pidieron ayuda por ciberacoso no la recibieron.",
+      "por_que_en": "Younger children tell their parents more. In Costa Rica, 14 in 100 children who asked for help with cyberbullying did not get it.",
+      "tema": "Mediación parental",
+      "edad": [
+        "6-8",
+        "9-11"
+      ],
+      "publico": [
+        "Familia"
+      ],
+      "contexto": [
+        "casa"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "alta",
+      "confianza": "A",
+      "evidence_ids": [
+        "S16-04",
+        "S20-03",
+        "S20-04",
+        "S25-12"
+      ],
+      "transfer_id": "TR-010",
+      "ancla_cr": {
+        "tipo": "dato_nacional",
+        "referencia": "Kids Online Costa Rica, 2.ª encuesta (2023; informe 2024)",
+        "evidence_id": "S25-12"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-FAM-013",
+      "texto_es": "Ponga reglas, pero también hable con su hijo. Prohibir protege poco. Estar a su lado y explicar le enseña a ver qué es útil y qué es un riesgo.",
+      "texto_en": "Combine rules with conversation. Banning protects a little; staying with them and explaining teaches them to tell useful from risky.",
+      "por_que_es": "En Costa Rica, prohibir sin más protege poco y no enseña a usar bien internet.",
+      "por_que_en": "In Costa Rica, bans alone offer limited protection and do not build skills for using the internet well.",
+      "tema": "Mediación parental",
+      "edad": [
+        "6-8",
+        "9-11"
+      ],
+      "publico": [
+        "Familia"
+      ],
+      "contexto": [
+        "casa"
+      ],
+      "esfuerzo": "medio",
+      "urgencia": "media",
+      "confianza": "A",
+      "evidence_ids": [
+        "S25-07",
+        "S25-06",
+        "S16-02",
+        "S06-03"
+      ],
+      "transfer_id": "TR-001",
+      "ancla_cr": {
+        "tipo": "dato_nacional",
+        "referencia": "Kids Online Costa Rica, 2.ª encuesta (2023; informe 2024)",
+        "evidence_id": "S25-07"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-FAM-014",
+      "texto_es": "Explíquele que hacer o pasar fotos falsas de desnudos de un niño o niña con IA es un delito grave, aunque sea «en broma».",
+      "texto_en": "Explain that making or sharing fake nude images of a child with AI is a serious crime, even as a 'joke'.",
+      "por_que_es": "La ley de Costa Rica castiga las imágenes de menores alteradas o simuladas con penas de 5 a 9 años de cárcel.",
+      "por_que_en": "Costa Rican law punishes altered or simulated images of minors with 5 to 9 years in prison.",
+      "tema": "Seguridad y explotación",
+      "edad": [
+        "9-11"
+      ],
+      "publico": [
+        "Familia"
+      ],
+      "contexto": [
+        "casa"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "alta",
+      "confianza": "A",
+      "evidence_ids": [
+        "S23-04",
+        "S07-06",
+        "S07-07"
+      ],
+      "transfer_id": "TR-008",
+      "ancla_cr": {
+        "tipo": "ley",
+        "referencia": "Ley 10020 (prevención del acoso a personas menores de edad), reforma art. 173 Código Penal: material pornográfico infantil alterado o simulado",
+        "evidence_id": "S23-04"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-FAM-015",
+      "texto_es": "Si le llega una imagen sexual de un niño o niña, aunque sea falsa, no la reenvíe ni dé nombres. Avise a la escuela y, según el caso, al PANI o al OIJ.",
+      "texto_en": "If you receive a sexual image of a child, even a fake one, do not forward it or share names. Tell the school and, depending on the case, PANI (child welfare agency) or OIJ (judicial police).",
+      "por_que_es": "Divulgar ese material también es delito, y la ley prohíbe publicar datos que identifiquen a víctimas menores de edad.",
+      "por_que_en": "Sharing such material is also a crime, and the law forbids publishing data that identifies child victims.",
+      "tema": "Seguridad y explotación",
+      "edad": [
+        "6-8",
+        "9-11"
+      ],
+      "publico": [
+        "Familia"
+      ],
+      "contexto": [
+        "casa"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "alta",
+      "confianza": "A",
+      "evidence_ids": [
+        "S23-04",
+        "S26-07",
+        "S23-01",
+        "S24-05"
+      ],
+      "transfer_id": "TR-008",
+      "ancla_cr": {
+        "tipo": "ley",
+        "referencia": "Ley 10020 (prevención del acoso a personas menores de edad), reforma art. 173 Código Penal: material pornográfico infantil alterado o simulado",
+        "evidence_id": "S23-04"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-FAM-016",
+      "texto_es": "Enséñele que si alguien en línea, un personaje o un chat le pide fotos, secretos o verse en persona, debe parar y contárselo a usted.",
+      "texto_en": "Teach them that if someone online, a character or a chat asks for photos, secrets or to meet in person, they must stop and tell you.",
+      "por_que_es": "Así empieza el grooming, que en Costa Rica es delito. Algunas apps con IA también simulan personas.",
+      "por_que_en": "This is how grooming starts, which is a crime in Costa Rica. Some AI apps also imitate people.",
+      "tema": "Seguridad y explotación",
+      "edad": [
+        "6-8",
+        "9-11"
+      ],
+      "publico": [
+        "Familia"
+      ],
+      "contexto": [
+        "casa"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "alta",
+      "confianza": "A",
+      "evidence_ids": [
+        "S23-02",
+        "S23-03",
+        "S07-12"
+      ],
+      "transfer_id": "TR-009",
+      "ancla_cr": {
+        "tipo": "ley",
+        "referencia": "Ley 10020: grooming y comunicaciones sexuales con personas menores de edad",
+        "evidence_id": "S23-02"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-FAM-017",
+      "texto_es": "Dé el ejemplo: deje el celular cuando come o conversa con su hijo. Su forma de usarlo se parece a la de ellos.",
+      "texto_en": "Lead by example: put your phone away when eating or talking with your child. Your phone habits resemble theirs.",
+      "por_que_es": "En Costa Rica, el uso problemático del celular de los adultos va de la mano con el de los niños (es una asociación, no prueba causa).",
+      "por_que_en": "In Costa Rica, adults' problematic phone use goes hand in hand with children's (an association, not proof of cause).",
+      "tema": "Bienestar y dependencia",
+      "edad": [
+        "6-8",
+        "9-11"
+      ],
+      "publico": [
+        "Familia"
+      ],
+      "contexto": [
+        "casa"
+      ],
+      "esfuerzo": "medio",
+      "urgencia": "media",
+      "confianza": "A",
+      "evidence_ids": [
+        "S25-04"
+      ],
+      "transfer_id": "TR-013",
+      "ancla_cr": {
+        "tipo": "dato_nacional",
+        "referencia": "Kids Online Costa Rica, 2.ª encuesta (2023; informe 2024)",
+        "evidence_id": "S25-04"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-FAM-018",
+      "texto_es": "Cuide el sueño y el tiempo de escuela. Acuerden que las apps con IA se apagan a la hora de dormir, y alternen con juegos y libros sin pantalla.",
+      "texto_en": "Protect sleep and school time. Agree that AI apps are switched off at bedtime, and mix in games and books without screens.",
+      "por_que_es": "Europa pide proteger el sueño y el horario escolar, y varios países vuelven a equilibrar lo digital con lo analógico.",
+      "por_que_en": "Europe calls for protecting sleep and school hours, and several countries are rebalancing digital and analogue resources.",
+      "tema": "Bienestar y dependencia",
+      "edad": [
+        "6-8",
+        "9-11"
+      ],
+      "publico": [
+        "Familia"
+      ],
+      "contexto": [
+        "casa"
+      ],
+      "esfuerzo": "medio",
+      "urgencia": "media",
+      "confianza": "B",
+      "evidence_ids": [
+        "S08-14",
+        "S04-47",
+        "S06-03"
+      ],
+      "transfer_id": "TR-014",
+      "ancla_cr": null,
+      "condicion_adaptacion": "No hay norma en Costa Rica; se plantea como acuerdo familiar, no como regla legal.",
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-FAM-019",
+      "texto_es": "Desconfíe de mensajes que piden datos de su hijo, aunque parezcan de la escuela o de la maestra. Confirme siempre por un canal oficial.",
+      "texto_en": "Be wary of messages asking for your child's data, even if they look like they come from the school or teacher. Always confirm through an official channel.",
+      "por_que_es": "Las escuelas son blanco frecuente de estafas que suplantan a docentes para sacar datos a las familias.",
+      "por_que_en": "Schools are frequent targets of scams that impersonate teachers to get data from families.",
+      "tema": "Seguridad y explotación",
+      "edad": [
+        "6-8",
+        "9-11"
+      ],
+      "publico": [
+        "Familia"
+      ],
+      "contexto": [
+        "casa"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "media",
+      "confianza": "A",
+      "evidence_ids": [
+        "S14-16",
+        "S07-14"
+      ],
+      "transfer_id": "TR-015",
+      "ancla_cr": {
+        "tipo": "lineamiento_mep",
+        "referencia": "Guía MEP–UNESCO–ULACIT «Inteligencia artificial en clase» (2026)",
+        "evidence_id": "S14-16"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-FAM-020",
+      "texto_es": "Usted puede pedir a la escuela o a una empresa qué datos de su hijo tiene, y pedir que los corrijan o los borren. Deben responder gratis en cinco días hábiles.",
+      "texto_en": "You can ask the school or a company what data they hold about your child and request correction or deletion. They must answer free of charge within five business days.",
+      "por_que_es": "Son derechos de la Ley 8968. Como la ley no habla de menores, los ejerce quien representa al niño.",
+      "por_que_en": "These are rights under Law 8968. As the law does not address minors, the child's legal guardian exercises them.",
+      "tema": "Privacidad y datos",
+      "edad": [
+        "6-8",
+        "9-11"
+      ],
+      "publico": [
+        "Familia"
+      ],
+      "contexto": [
+        "casa"
+      ],
+      "esfuerzo": "medio",
+      "urgencia": "baja",
+      "confianza": "A",
+      "evidence_ids": [
+        "S21-04",
+        "S21-02"
+      ],
+      "transfer_id": "TR-016",
+      "ancla_cr": {
+        "tipo": "ley",
+        "referencia": "Ley 8968, derechos de acceso, rectificación y supresión (art. 7)",
+        "evidence_id": "S21-04"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-FAM-021",
+      "texto_es": "Antes de firmar un permiso escolar para una plataforma con IA, pregunte qué datos recoge, para qué los usa y con quién los comparte.",
+      "texto_en": "Before signing a school permission form for an AI platform, ask what data it collects, what for and who it shares it with.",
+      "por_que_es": "La ley exige informar todo eso antes de pedir datos, y el permiso debe ser claro y para un fin concreto.",
+      "por_que_en": "The law requires that information before collecting data, and consent must be clear and for a specific purpose.",
+      "tema": "Privacidad y datos",
+      "edad": [
+        "6-8",
+        "9-11"
+      ],
+      "publico": [
+        "Familia"
+      ],
+      "contexto": [
+        "casa",
+        "aula"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "media",
+      "confianza": "A",
+      "evidence_ids": [
+        "S21-02",
+        "S22-01",
+        "S07-25"
+      ],
+      "transfer_id": "TR-016",
+      "ancla_cr": {
+        "tipo": "ley",
+        "referencia": "Ley 8968 de Protección de la Persona frente al Tratamiento de sus Datos Personales (consentimiento expreso y escrito; art. 5)",
+        "evidence_id": "S21-01"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-FAM-022",
+      "texto_es": "Supervise de forma abierta: dígale qué revisa y por qué, en vez de espiar sus chats. Su privacidad también es un derecho.",
+      "texto_en": "Supervise openly: tell them what you check and why, instead of spying on their chats. Their privacy is a right too.",
+      "por_que_es": "La ley reconoce el derecho de niñas y niños a su vida privada. Espiar rompe la confianza que les hace contarle cosas.",
+      "por_que_en": "The law recognises children's right to privacy. Spying breaks the trust that makes them tell you things.",
+      "tema": "Mediación parental",
+      "edad": [
+        "9-11"
+      ],
+      "publico": [
+        "Familia"
+      ],
+      "contexto": [
+        "casa"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "media",
+      "confianza": "B",
+      "evidence_ids": [
+        "S26-06",
+        "S25-07",
+        "S16-04"
+      ],
+      "transfer_id": "TR-017",
+      "ancla_cr": {
+        "tipo": "ley",
+        "referencia": "Código de la Niñez y la Adolescencia (Ley 7739): derecho a la vida privada",
+        "evidence_id": "S26-06"
+      },
+      "condicion_adaptacion": "En Costa Rica el monitoreo se asocia con protección en adolescentes; de 9 a 11 años conviene más acompañar que vigilar.",
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-FAM-023",
+      "texto_es": "Usen la IA para crear juntos, no solo para preguntar. Inventen un cuento y comenten qué partes salieron bien y cuáles no tienen sentido.",
+      "texto_en": "Use AI to create together, not just to ask questions. Make up a story and talk about which parts worked and which make no sense.",
+      "por_que_es": "Usar la IA con un fin y con un adulto enseña a pensar sobre ella, no solo a obedecerla.",
+      "por_que_en": "Using AI with a purpose and an adult teaches children to think about it, not just obey it.",
+      "tema": "Alfabetización en IA",
+      "edad": [
+        "6-8",
+        "9-11"
+      ],
+      "publico": [
+        "Familia"
+      ],
+      "contexto": [
+        "casa"
+      ],
+      "esfuerzo": "medio",
+      "urgencia": "baja",
+      "confianza": "B",
+      "evidence_ids": [
+        "S06-03",
+        "S11-43",
+        "S15-10"
+      ],
+      "transfer_id": "TR-004",
+      "ancla_cr": null,
+      "condicion_adaptacion": "Práctica propuesta a partir de orientación europea y argentina; validar con docentes de I y II ciclo.",
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-FAM-024",
+      "texto_es": "Pida a la escuela un taller para familias sobre IA, y pregunte qué herramientas usará su hijo en clase.",
+      "texto_en": "Ask the school for a family workshop on AI, and ask which tools your child will use in class.",
+      "por_que_es": "La guía del MEP propone talleres para familias, y la escuela debe contar qué hará el alumnado en línea.",
+      "por_que_en": "The Ministry of Education guide proposes family workshops, and schools should explain what pupils will do online.",
+      "tema": "Responsabilidad compartida",
+      "edad": [
+        "6-8",
+        "9-11"
+      ],
+      "publico": [
+        "Familia"
+      ],
+      "contexto": [
+        "casa",
+        "aula"
+      ],
+      "esfuerzo": "medio",
+      "urgencia": "baja",
+      "confianza": "A",
+      "evidence_ids": [
+        "S14-14",
+        "S07-25",
+        "S23-01"
+      ],
+      "transfer_id": "TR-011",
+      "ancla_cr": {
+        "tipo": "lineamiento_mep",
+        "referencia": "Guía MEP–UNESCO–ULACIT «Inteligencia artificial en clase» (2026)",
+        "evidence_id": "S14-14"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-FAM-025",
+      "texto_es": "Hagan juntos un acuerdo sobre la IA en la casa: para qué sí, para qué no y qué hacer si algo sale mal. Revísenlo cada pocos meses.",
+      "texto_en": "Make a household AI agreement together: what it is for, what it is not for, and what to do if something goes wrong. Review it every few months.",
+      "por_que_es": "La autonomía se da poco a poco, según la edad y la madurez. Las reglas puestas sin hablar casi no cambian lo que hacen.",
+      "por_que_en": "Autonomy is given step by step, according to age and maturity. Rules set without talking barely change what teens do.",
+      "tema": "Mediación parental",
+      "edad": [
+        "12-14"
+      ],
+      "publico": [
+        "Familia"
+      ],
+      "contexto": [
+        "casa"
+      ],
+      "esfuerzo": "medio",
+      "urgencia": "alta",
+      "confianza": "A",
+      "evidence_ids": [
+        "S06-09",
+        "S26-03",
+        "S11-17",
+        "S16-02"
+      ],
+      "transfer_id": "TR-019",
+      "ancla_cr": {
+        "tipo": "ley",
+        "referencia": "Código de la Niñez y la Adolescencia (Ley 7739), art. 5: interés superior según edad y madurez",
+        "evidence_id": "S26-03"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-FAM-026",
+      "texto_es": "Dé más libertad a su hijo adolescente, pero no deje de conversar. Pregúntele qué usa, para qué y qué le preocupa.",
+      "texto_en": "Give your teenager more freedom, but keep talking. Ask what they use, what for and what worries them.",
+      "por_que_es": "Los jóvenes tienen derecho a informarse, con la guía de su familia. Muchos no hablan con adultos por miedo a ser juzgados.",
+      "por_que_en": "Young people have the right to seek information, guided by their family. Many do not talk to adults for fear of being judged.",
+      "tema": "Mediación parental",
+      "edad": [
+        "15-18"
+      ],
+      "publico": [
+        "Familia"
+      ],
+      "contexto": [
+        "casa"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "media",
+      "confianza": "A",
+      "evidence_ids": [
+        "S06-09",
+        "S26-05",
+        "S16-05",
+        "S11-41"
+      ],
+      "transfer_id": "TR-019",
+      "ancla_cr": {
+        "tipo": "ley",
+        "referencia": "Código de la Niñez y la Adolescencia (Ley 7739): derecho a la información con orientación de padres y educadores",
+        "evidence_id": "S26-05"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-FAM-027",
+      "texto_es": "Explíquele que los chatbots tienden a darle la razón. Si pide consejo sobre algo serio, que lo hable también con una persona de confianza.",
+      "texto_en": "Explain that chatbots tend to agree with them. If they ask for advice on something serious, they should also talk to a trusted person.",
+      "por_que_es": "Los chats con IA suelen validar lo que uno dice y pueden reforzar ideas equivocadas. En Costa Rica esto no está regulado.",
+      "por_que_en": "AI chats tend to validate what you say and can reinforce wrong ideas. In Costa Rica this is not regulated.",
+      "tema": "Bienestar y dependencia",
+      "edad": [
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Familia"
+      ],
+      "contexto": [
+        "casa"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "alta",
+      "confianza": "B",
+      "evidence_ids": [
+        "S13-12",
+        "S11-23",
+        "S09-05",
+        "S11-34"
+      ],
+      "transfer_id": "TR-020",
+      "ancla_cr": null,
+      "condicion_adaptacion": "NO REGULADO en Costa Rica: ninguna norma regula los compañeros de IA ni fija edad mínima. La base es evidencia europea y una propuesta UE no vigente.",
+      "advertencia_edad": "En Costa Rica no hay edad mínima legal para usar IA: decida según exposición y riesgo. Como referencia, muchas apps piden 13 años en sus términos de uso.",
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-FAM-028",
+      "texto_es": "Esté atento si su hijo pasa de usar la IA para tareas a usarla como confidente o pareja virtual, por ejemplo en Character.AI o Replika. Hable con él sin burlas.",
+      "texto_en": "Watch for your teen moving from using AI for homework to using it as a confidant or virtual partner, for example on Character.AI or Replika. Talk to them without mocking.",
+      "por_que_es": "Muchos adolescentes cruzan ese paso sin contarlo. Hay reportes de chatbots que animaron a jóvenes a hacerse daño, y nada de esto está regulado en el país.",
+      "por_que_en": "Many teens take that step without telling anyone. Chatbots have been reported encouraging young people to harm themselves, and none of this is regulated in Costa Rica.",
+      "tema": "Bienestar y dependencia",
+      "edad": [
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Familia"
+      ],
+      "contexto": [
+        "casa"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "alta",
+      "confianza": "B",
+      "evidence_ids": [
+        "S16-03",
+        "S11-33",
+        "S05-01",
+        "S16-05"
+      ],
+      "transfer_id": "TR-020",
+      "ancla_cr": null,
+      "condicion_adaptacion": "NO REGULADO en Costa Rica: ninguna norma regula los compañeros de IA ni fija edad mínima. Character.AI y Replika son ejemplos de mercado, no evaluados en el corpus (verificar en E6).",
+      "advertencia_edad": "En Costa Rica no hay edad mínima legal para usar IA: decida según exposición y riesgo. Como referencia, muchas apps piden 13 años en sus términos de uso.",
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-FAM-029",
+      "texto_es": "Si nota tristeza, aislamiento o ideas de hacerse daño, no deje que un chatbot sea su único apoyo. Busque ayuda de una persona profesional.",
+      "texto_en": "If you notice sadness, isolation or thoughts of self-harm, do not let a chatbot be their only support. Seek help from a professional.",
+      "por_que_es": "Algunos chatbots dieron malos consejos a jóvenes en crisis y no avisaron a nadie. La IA no reemplaza el apoyo humano.",
+      "por_que_en": "Some chatbots gave bad advice to young people in crisis and alerted no one. AI does not replace human support.",
+      "tema": "Bienestar y dependencia",
+      "edad": [
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Familia"
+      ],
+      "contexto": [
+        "casa"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "alta",
+      "confianza": "B",
+      "evidence_ids": [
+        "S05-02",
+        "S05-01",
+        "S11-34"
+      ],
+      "transfer_id": "TR-020",
+      "ancla_cr": null,
+      "condicion_adaptacion": "NO REGULADO en Costa Rica: ninguna norma regula los compañeros de IA ni fija edad mínima. Evidencia de un informe parlamentario británico; completar con servicios de apoyo de Costa Rica antes de publicar.",
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-FAM-030",
+      "texto_es": "Hable claro: crear o pasar fotos íntimas falsas de un compañero o compañera con IA es delito y es violencia, no una broma.",
+      "texto_en": "Be clear: making or sharing fake intimate images of a classmate with AI is a crime and a form of violence, not a joke.",
+      "por_que_es": "La ley de Costa Rica castiga las imágenes de menores alteradas o simuladas. Estos casos de acoso con IA van en aumento.",
+      "por_que_en": "Costa Rican law punishes altered or simulated images of minors. These AI harassment cases are on the rise.",
+      "tema": "Seguridad y explotación",
+      "edad": [
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Familia"
+      ],
+      "contexto": [
+        "casa"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "alta",
+      "confianza": "A",
+      "evidence_ids": [
+        "S09-08",
+        "S23-04",
+        "S07-13",
+        "S09-07"
+      ],
+      "transfer_id": "TR-021",
+      "ancla_cr": {
+        "tipo": "ley",
+        "referencia": "Ley 10020 (prevención del acoso a personas menores de edad), reforma art. 173 Código Penal: material pornográfico infantil alterado o simulado",
+        "evidence_id": "S23-04"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-FAM-031",
+      "texto_es": "Hable de los mensajes sexuales. Aunque los dos estén de acuerdo, crear o compartir imágenes íntimas de menores de edad es ilegal.",
+      "texto_en": "Talk about sexual messages. Even if both agree, making or sharing intimate images of minors is illegal.",
+      "por_que_es": "En Costa Rica, 12 de cada 100 jóvenes de 13 a 17 años recibió mensajes sexuales, y casi 4 de cada 10 venían de personas adultas.",
+      "por_que_en": "In Costa Rica, 12 in 100 young people aged 13 to 17 received sexual messages, and almost 4 in 10 came from adults.",
+      "tema": "Seguridad y explotación",
+      "edad": [
+        "15-18"
+      ],
+      "publico": [
+        "Familia"
+      ],
+      "contexto": [
+        "casa"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "alta",
+      "confianza": "A",
+      "evidence_ids": [
+        "S07-08",
+        "S20-08",
+        "S25-13",
+        "S23-04"
+      ],
+      "transfer_id": "TR-021",
+      "ancla_cr": {
+        "tipo": "ley",
+        "referencia": "Ley 10020 (prevención del acoso a personas menores de edad), reforma art. 173 Código Penal: material pornográfico infantil alterado o simulado",
+        "evidence_id": "S23-04"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-FAM-032",
+      "texto_es": "Acuerden que nunca se verá en persona con alguien que conoció por internet sin avisarle a usted antes.",
+      "texto_en": "Agree that they will never meet someone they met online without telling you first.",
+      "por_que_es": "En Costa Rica, 13 de cada 100 jóvenes contactó a personas desconocidas, y unos 5 de cada 100 se encontraron con ellas.",
+      "por_que_en": "In Costa Rica, 13 in 100 teens contacted strangers online, and about 5 in 100 met them in person.",
+      "tema": "Seguridad y explotación",
+      "edad": [
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Familia"
+      ],
+      "contexto": [
+        "casa"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "alta",
+      "confianza": "A",
+      "evidence_ids": [
+        "S25-14",
+        "S23-03"
+      ],
+      "transfer_id": "TR-022",
+      "ancla_cr": {
+        "tipo": "dato_nacional",
+        "referencia": "Kids Online Costa Rica, 2.ª encuesta (2023; informe 2024)",
+        "evidence_id": "S25-14"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-FAM-033",
+      "texto_es": "Muéstrele cómo las apps eligen qué le enseñan: aprenden de sus clics para que siga mirando. Revisen juntos el tiempo de uso.",
+      "texto_en": "Show them how apps choose what to show: they learn from clicks to keep them watching. Check screen time together.",
+      "por_que_es": "Entender el algoritmo ayuda a decidir mejor. En Costa Rica no hay reglas para estos diseños; en Europa son solo una propuesta.",
+      "por_que_en": "Understanding the algorithm helps them decide better. Costa Rica has no rules for these designs; in Europe they are only a proposal.",
+      "tema": "Bienestar y dependencia",
+      "edad": [
+        "12-14"
+      ],
+      "publico": [
+        "Familia"
+      ],
+      "contexto": [
+        "casa"
+      ],
+      "esfuerzo": "medio",
+      "urgencia": "media",
+      "confianza": "B",
+      "evidence_ids": [
+        "S15-12",
+        "S08-13",
+        "S08-15"
+      ],
+      "transfer_id": "TR-023",
+      "ancla_cr": null,
+      "condicion_adaptacion": "Basado en el currículo de Buenos Aires y una propuesta UE no vigente; en Costa Rica no está regulado.",
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-FAM-034",
+      "texto_es": "Cuiden el sueño: acuerden una hora de la noche para dejar el celular y las apps con IA.",
+      "texto_en": "Protect sleep: agree on a time at night to put away the phone and AI apps.",
+      "por_que_es": "La mitad de los adolescentes dice tener problemas de sueño, comida, estudio o relaciones por el tiempo en internet.",
+      "por_que_en": "Half of teenagers report problems with sleep, eating, study or relationships because of time online.",
+      "tema": "Bienestar y dependencia",
+      "edad": [
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Familia"
+      ],
+      "contexto": [
+        "casa"
+      ],
+      "esfuerzo": "medio",
+      "urgencia": "media",
+      "confianza": "B",
+      "evidence_ids": [
+        "S20-09",
+        "S08-14"
+      ],
+      "transfer_id": "TR-023",
+      "ancla_cr": null,
+      "condicion_adaptacion": "Dato de Uruguay; el corpus no tiene un dato equivalente de Costa Rica. Se plantea como acuerdo familiar.",
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-FAM-035",
+      "texto_es": "Si usa la IA para estudiar, que le pida que le explique o le ponga ejercicios, no que le dé algo para copiar. Luego pregúntele qué aprendió.",
+      "texto_en": "If they use AI to study, they should ask for explanations and exercises, not answers to copy. Ask them afterwards what they learned.",
+      "por_que_es": "Los mismos jóvenes temen que la IA los vuelva perezosos. Copiar termina la tarea, pero no deja aprendizaje.",
+      "por_que_en": "Teens themselves fear AI will make them lazy. Copying finishes the task but leaves no learning.",
+      "tema": "Aprendizaje y docencia",
+      "edad": [
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Familia"
+      ],
+      "contexto": [
+        "casa"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "media",
+      "confianza": "A",
+      "evidence_ids": [
+        "S11-12",
+        "S11-21",
+        "S11-48",
+        "S16-01"
+      ],
+      "transfer_id": "TR-024",
+      "ancla_cr": {
+        "tipo": "lineamiento_mep",
+        "referencia": "Guía MEP–UNESCO–ULACIT «Inteligencia artificial en clase» (2026)",
+        "evidence_id": "S14-15"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-FAM-036",
+      "texto_es": "Prefiera apps de estudio que guían con preguntas y no dan la respuesta de una vez.",
+      "texto_en": "Choose study apps that guide with questions and do not hand over the answer straight away.",
+      "por_que_es": "En un estudio con casi 1.000 estudiantes, un tutor de IA común dañó el aprendizaje a largo plazo; uno con salvaguardas lo evitó.",
+      "por_que_en": "In a study with nearly 1,000 students, a standard AI tutor harmed long-term learning; one with safeguards avoided it.",
+      "tema": "Aprendizaje y docencia",
+      "edad": [
+        "15-18"
+      ],
+      "publico": [
+        "Familia"
+      ],
+      "contexto": [
+        "casa"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "baja",
+      "confianza": "B",
+      "evidence_ids": [
+        "S01-01",
+        "S01-02",
+        "S01-03"
+      ],
+      "transfer_id": "TR-024",
+      "ancla_cr": null,
+      "condicion_adaptacion": "Estudio citado en una nota de Türkiye; no hay evaluación de herramientas en Costa Rica.",
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-FAM-037",
+      "texto_es": "Si siente que sabe poco de IA, aprendan juntos: pídale que le enseñe una herramienta y usted aporte su criterio.",
+      "texto_en": "If you feel you know little about AI, learn together: ask them to show you a tool while you bring your judgment.",
+      "por_que_es": "En Costa Rica, 29 de cada 100 menores cree que sus cuidadores saben poco o nada de internet. Saber poco no impide acompañar.",
+      "por_que_en": "In Costa Rica, 29 in 100 children and teens think their caregivers know little or nothing about the internet. Knowing little does not stop you from guiding them.",
+      "tema": "Mediación parental",
+      "edad": [
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Familia"
+      ],
+      "contexto": [
+        "casa"
+      ],
+      "esfuerzo": "medio",
+      "urgencia": "media",
+      "confianza": "A",
+      "evidence_ids": [
+        "S25-03",
+        "S25-02",
+        "S11-41",
+        "S11-20"
+      ],
+      "transfer_id": "TR-027",
+      "ancla_cr": {
+        "tipo": "dato_nacional",
+        "referencia": "Kids Online Costa Rica, 2.ª encuesta (2023; informe 2024)",
+        "evidence_id": "S25-03"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-FAM-038",
+      "texto_es": "Enséñele a no contar a un chatbot datos de salud, de sexualidad o de su familia. Lo que escribe puede guardarse y usarse después.",
+      "texto_en": "Teach them not to tell a chatbot about their health, sexuality or family. What they write can be stored and used later.",
+      "por_que_es": "La ley considera sensibles esos datos. Además, una empresa de IA puede tener que entregar las conversaciones, por ejemplo en un juicio.",
+      "por_que_en": "The law treats such data as sensitive. An AI company may also have to hand over conversations, for example in a lawsuit.",
+      "tema": "Privacidad y datos",
+      "edad": [
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Familia"
+      ],
+      "contexto": [
+        "casa"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "alta",
+      "confianza": "A",
+      "evidence_ids": [
+        "S21-03",
+        "S11-27",
+        "S11-26",
+        "S02-01"
+      ],
+      "transfer_id": "TR-028",
+      "ancla_cr": {
+        "tipo": "ley",
+        "referencia": "Ley 8968: datos sensibles (salud, vida sexual, entre otros)",
+        "evidence_id": "S21-03"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-FAM-039",
+      "texto_es": "Enséñele a usar el botón de reporte de cada red y a denunciar si alguien se hace pasar por él o ella, también con voz o fotos hechas con IA.",
+      "texto_en": "Teach them to use each platform's report button and to report anyone impersonating them, including with AI-made voice or photos.",
+      "por_que_es": "Saber reaccionar no viene solo: se aprende. Avise a la escuela y, según el caso, al PANI o al OIJ.",
+      "por_que_en": "Knowing how to react does not come naturally: it is learned. Tell the school and, depending on the case, PANI or OIJ.",
+      "tema": "Seguridad y explotación",
+      "edad": [
+        "15-18"
+      ],
+      "publico": [
+        "Familia"
+      ],
+      "contexto": [
+        "casa"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "media",
+      "confianza": "A",
+      "evidence_ids": [
+        "S15-13",
+        "S20-02",
+        "S14-16"
+      ],
+      "transfer_id": "TR-029",
+      "ancla_cr": {
+        "tipo": "lineamiento_mep",
+        "referencia": "Guía MEP–UNESCO–ULACIT «Inteligencia artificial en clase» (2026)",
+        "evidence_id": "S14-16"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-FAM-040",
+      "texto_es": "Si pone límites de tiempo, decídalos según cuánto se expone su hijo y qué riesgos ve, no por una edad fija. Use los controles para padres de cada app.",
+      "texto_en": "If you set time limits, base them on how exposed your child is and the risks you see, not on a fixed age. Use each app's parental controls.",
+      "por_que_es": "En Costa Rica no hay edad mínima ni límite legal. La hora diaria que propone Europa para 13 y 14 años es solo un ejemplo.",
+      "por_que_en": "Costa Rica has no minimum age or legal limit. Europe's proposed one-hour daily cap for 13 and 14 year-olds is just an example.",
+      "tema": "Edad y adecuación",
+      "edad": [
+        "12-14"
+      ],
+      "publico": [
+        "Familia"
+      ],
+      "contexto": [
+        "casa"
+      ],
+      "esfuerzo": "medio",
+      "urgencia": "media",
+      "confianza": "B",
+      "evidence_ids": [
+        "S08-04",
+        "S08-05",
+        "S26-03",
+        "S24-02"
+      ],
+      "transfer_id": "TR-019",
+      "ancla_cr": {
+        "tipo": "ley",
+        "referencia": "Código de la Niñez y la Adolescencia (Ley 7739), art. 5: interés superior según edad y madurez",
+        "evidence_id": "S26-03"
+      },
+      "condicion_adaptacion": "Sin norma CR de edad ni de tiempo; decidir por exposición y riesgo (interés superior, edad y madurez).",
+      "advertencia_edad": "En Costa Rica no hay edad mínima legal para usar IA: decida según exposición y riesgo. Como referencia, muchas apps piden 13 años en sus términos de uso.",
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-FAM-041",
+      "texto_es": "Si su hijo sufre acoso o una imagen falsa, no lo culpe. Avise a la escuela y, según el caso, al PANI o al OIJ.",
+      "texto_en": "If your child suffers harassment or a fake image, do not blame them. Tell the school and, depending on the case, PANI or OIJ.",
+      "por_que_es": "En Costa Rica casi todo el acoso viene de estudiantes del mismo centro, y 14 de cada 100 que pidieron ayuda no la recibieron.",
+      "por_que_en": "In Costa Rica most harassment comes from students at the same school, and 14 in 100 who asked for help did not get it.",
+      "tema": "Seguridad y explotación",
+      "edad": [
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Familia"
+      ],
+      "contexto": [
+        "casa"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "alta",
+      "confianza": "A",
+      "evidence_ids": [
+        "S25-11",
+        "S25-12",
+        "S26-07",
+        "S23-04"
+      ],
+      "transfer_id": "TR-021",
+      "ancla_cr": {
+        "tipo": "ley",
+        "referencia": "Ley 10020 (prevención del acoso a personas menores de edad), reforma art. 173 Código Penal: material pornográfico infantil alterado o simulado",
+        "evidence_id": "S23-04"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-FAM-042",
+      "texto_es": "Recuérdele que la IA suena tan segura que cuesta notar cuándo se equivoca. Que compruebe siempre lo importante.",
+      "texto_en": "Remind them that AI sounds so sure it is hard to spot when it is wrong. They should always check what matters.",
+      "por_que_es": "Los mismos adolescentes dicen que es difícil notar el error sin verificar. La guía del MEP pide comprobar con fuentes confiables.",
+      "por_que_en": "Teens themselves say errors are hard to spot without checking. The Ministry of Education guide asks to verify with reliable sources.",
+      "tema": "Alfabetización en IA",
+      "edad": [
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Familia"
+      ],
+      "contexto": [
+        "casa"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "media",
+      "confianza": "A",
+      "evidence_ids": [
+        "S11-24",
+        "S14-11"
+      ],
+      "transfer_id": "TR-005",
+      "ancla_cr": {
+        "tipo": "lineamiento_mep",
+        "referencia": "Guía MEP–UNESCO–ULACIT «Inteligencia artificial en clase» (2026)",
+        "evidence_id": "S14-11"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-TRV-001",
+      "texto_es": "Antes de usar una herramienta de IA con niños o adolescentes, confirme qué datos pide, para qué y con quién los comparte, y obtenga el permiso escrito de quien los representa.",
+      "texto_en": "Before using an AI tool with children or teens, confirm what data it collects, what for and who it shares it with, and get written consent from their legal guardian.",
+      "por_que_es": "La Ley 8968 aplica a toda herramienta de IA que trate datos personales de estudiantes.",
+      "por_que_en": "Law 8968 applies to any AI tool that processes students' personal data.",
+      "tema": "Privacidad y datos",
+      "edad": [
+        "6-8",
+        "9-11",
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Familia",
+        "Docente",
+        "Dirección"
+      ],
+      "contexto": [
+        "casa",
+        "aula",
+        "politica"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "alta",
+      "confianza": "A",
+      "evidence_ids": [
+        "S14-01",
+        "S21-01",
+        "S21-02",
+        "S22-01"
+      ],
+      "transfer_id": null,
+      "ancla_cr": {
+        "tipo": "ley",
+        "referencia": "Ley 8968 de Protección de la Persona frente al Tratamiento de sus Datos Personales (consentimiento expreso y escrito; art. 5)",
+        "evidence_id": "S21-01"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-TRV-002",
+      "texto_es": "En Costa Rica no hay edad mínima legal para usar IA. Decida según la exposición y los riesgos, y revise la edad que pide cada herramienta.",
+      "texto_en": "Costa Rica has no legal minimum age for AI use. Decide based on exposure and risk, and check the age each tool requires.",
+      "por_que_es": "La ley pide decidir por el interés superior, la edad y la madurez. Los 13 años de muchas apps vienen de una ley de EE. UU.",
+      "por_que_en": "The law asks for decisions based on best interests, age and maturity. The age of 13 used by many apps comes from a US law.",
+      "tema": "Edad y adecuación",
+      "edad": [
+        "6-8",
+        "9-11",
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Familia",
+        "Docente",
+        "Dirección"
+      ],
+      "contexto": [
+        "casa",
+        "aula",
+        "politica"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "alta",
+      "confianza": "A",
+      "evidence_ids": [
+        "S26-03",
+        "S13-13",
+        "S13-17",
+        "S03-02",
+        "S13-04"
+      ],
+      "transfer_id": "TR-003",
+      "ancla_cr": {
+        "tipo": "ley",
+        "referencia": "Código de la Niñez y la Adolescencia (Ley 7739), art. 5: interés superior según edad y madurez",
+        "evidence_id": "S26-03"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": "En Costa Rica no hay edad mínima legal para usar IA: decida según exposición y riesgo. Como referencia, muchas apps piden 13 años en sus términos de uso.",
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-TRV-003",
+      "texto_es": "Vea los chats de compañía como un riesgo: en Costa Rica no hay reglas para ellos. Son, por ejemplo, Character.AI, Replika o chats con personajes de niños.",
+      "texto_en": "Treat companion chatbots as an unchecked risk: no rule in Costa Rica regulates them. Examples: Character.AI, Replika or children's characters with chat.",
+      "por_que_es": "Se hacen pasar por amigos, le dan la razón a todo y crean apego. Solo Europa tiene una propuesta, y aún no rige.",
+      "por_que_en": "They imitate friendship, tend to agree and can create attachment. Only Europe has a proposal, not yet in force.",
+      "tema": "Bienestar y dependencia",
+      "edad": [
+        "6-8",
+        "9-11",
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Familia",
+        "Docente",
+        "Dirección"
+      ],
+      "contexto": [
+        "casa",
+        "aula",
+        "politica"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "alta",
+      "confianza": "B",
+      "evidence_ids": [
+        "S08-07",
+        "S08-08",
+        "S13-11",
+        "S13-12"
+      ],
+      "transfer_id": "TR-007",
+      "ancla_cr": null,
+      "condicion_adaptacion": "NO REGULADO en Costa Rica: ninguna norma regula los compañeros de IA ni fija edad mínima. Ejemplos de mercado no evaluados en el corpus (verificar en E6).",
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-TRV-004",
+      "texto_es": "Incluya las imágenes íntimas falsas hechas con IA en las normas de convivencia del centro y en las conversaciones de la casa: son delito.",
+      "texto_en": "Include AI-made fake intimate images in school conduct rules and in conversations at home: they are a crime.",
+      "por_que_es": "La ley de Costa Rica castiga las imágenes de menores alteradas o simuladas, y el acoso viene sobre todo de compañeros.",
+      "por_que_en": "Costa Rican law punishes altered or simulated images of minors, and harassment comes mostly from classmates.",
+      "tema": "Seguridad y explotación",
+      "edad": [
+        "9-11",
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Familia",
+        "Docente",
+        "Dirección"
+      ],
+      "contexto": [
+        "casa",
+        "aula",
+        "politica"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "alta",
+      "confianza": "A",
+      "evidence_ids": [
+        "S23-04",
+        "S07-13",
+        "S09-08",
+        "S25-11"
+      ],
+      "transfer_id": "TR-021",
+      "ancla_cr": {
+        "tipo": "ley",
+        "referencia": "Ley 10020 (prevención del acoso a personas menores de edad), reforma art. 173 Código Penal: material pornográfico infantil alterado o simulado",
+        "evidence_id": "S23-04"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-TRV-005",
+      "texto_es": "Pida pruebas en las que se vea el proceso: borradores, que lo explique en voz alta o trabajo en clase. La nota la pone siempre una persona.",
+      "texto_en": "Design assessments where the process is visible: drafts, oral explanation or in-class work. A person always decides the final grade.",
+      "por_que_es": "Si solo se califica el producto, la IA lo resuelve rápido y el aprendizaje se pierde. Evaluar es una tarea humana.",
+      "por_que_en": "If only the product is graded, AI solves it quickly and learning is lost. Assessment is a human task.",
+      "tema": "Aprendizaje y docencia",
+      "edad": [
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Docente",
+        "Dirección"
+      ],
+      "contexto": [
+        "aula",
+        "politica"
+      ],
+      "esfuerzo": "alto",
+      "urgencia": "media",
+      "confianza": "B",
+      "evidence_ids": [
+        "S15-07",
+        "S01-15",
+        "S01-10",
+        "S09-02"
+      ],
+      "transfer_id": "TR-026",
+      "ancla_cr": null,
+      "condicion_adaptacion": "El corpus no contiene reglas MEP de evaluación con IA; adaptar a la normativa de evaluación vigente.",
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-TRV-006",
+      "texto_es": "Si usa un tutor con IA en clase, solo con estudiantes de 15 a 18 años: que responda con preguntas, use solo el material del curso y nunca dé la respuesta final.",
+      "texto_en": "If you use an AI tutor in class, only with students aged 15 to 18: it should answer with questions, use only course material and never give the final answer.",
+      "por_que_es": "Un tutor que guía con preguntas protege el aprendizaje; uno que da respuestas puede dañarlo a largo plazo.",
+      "por_que_en": "A tutor that guides with questions protects learning; one that gives answers can harm it in the long run.",
+      "tema": "Aprendizaje y docencia",
+      "edad": [
+        "15-18"
+      ],
+      "publico": [
+        "Docente",
+        "Dirección"
+      ],
+      "contexto": [
+        "aula"
+      ],
+      "esfuerzo": "alto",
+      "urgencia": "media",
+      "confianza": "B",
+      "evidence_ids": [
+        "S19-01",
+        "S19-02",
+        "S19-03",
+        "S01-02"
+      ],
+      "transfer_id": "TR-025",
+      "ancla_cr": null,
+      "condicion_adaptacion": "Basado en material de curso y un estudio citado por una nota de Türkiye; requiere herramientas institucionales configurables.",
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DOC-001",
+      "texto_es": "En I y II ciclo, enseñe sobre la IA antes que con la IA: cómo funciona, de dónde salen sus respuestas y por qué se equivoca.",
+      "texto_en": "In primary cycles I and II, teach about AI before teaching with it: how it works, where answers come from and why it makes mistakes.",
+      "por_que_es": "Varios currículos empiezan en primaria por entender la IA, sin uso autónomo. Son ejemplos, no norma de Costa Rica.",
+      "por_que_en": "Several curricula start primary school with understanding AI, without autonomous use. These are examples, not Costa Rican rules.",
+      "tema": "Alfabetización en IA",
+      "edad": [
+        "6-8",
+        "9-11"
+      ],
+      "publico": [
+        "Docente"
+      ],
+      "contexto": [
+        "aula"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "alta",
+      "confianza": "B",
+      "evidence_ids": [
+        "S15-01",
+        "S13-28",
+        "S12-20",
+        "S03-04"
+      ],
+      "transfer_id": "TR-031",
+      "ancla_cr": null,
+      "condicion_adaptacion": "Casos extranjeros citados como ejemplos; ninguna norma CR gradúa la IA por edad: decidir por exposición y riesgo.",
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DOC-002",
+      "texto_es": "Con 6 a 8 años, use la IA solo usted, frente al grupo, para mostrar y conversar. No la ponga en manos de los niños.",
+      "texto_en": "With 6 to 8 year-olds, use AI yourself, in front of the class, to show and discuss. Do not hand it to the children.",
+      "por_que_es": "Las fuentes recomiendan uso mediado por adultos en primaria; en China los alumnos de primaria no generan contenido por su cuenta (ejemplo).",
+      "por_que_en": "Sources recommend adult-mediated use in primary school; in China primary pupils do not generate content on their own (example).",
+      "tema": "Edad y adecuación",
+      "edad": [
+        "6-8"
+      ],
+      "publico": [
+        "Docente"
+      ],
+      "contexto": [
+        "aula"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "alta",
+      "confianza": "B",
+      "evidence_ids": [
+        "S06-09",
+        "S13-22",
+        "S13-17"
+      ],
+      "transfer_id": "TR-002",
+      "ancla_cr": {
+        "tipo": "ley",
+        "referencia": "Código de la Niñez y la Adolescencia (Ley 7739), art. 5: interés superior según edad y madurez",
+        "evidence_id": "S26-03"
+      },
+      "condicion_adaptacion": "Casos extranjeros citados como ejemplos; ninguna norma CR gradúa la IA por edad: decidir por exposición y riesgo.",
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DOC-003",
+      "texto_es": "En II ciclo, si el grupo usa IA, que sea en actividades cortas, guiadas y con un fin claro, y comenten juntos los resultados.",
+      "texto_en": "In cycle II, if the class uses AI, keep activities short, guided and purposeful, and discuss the results together.",
+      "por_que_es": "El uso con propósito y con apoyo adulto se asocia con mejores resultados que el uso pasivo.",
+      "por_que_en": "Purposeful use with adult support is linked to better outcomes than passive use.",
+      "tema": "Aprendizaje y docencia",
+      "edad": [
+        "9-11"
+      ],
+      "publico": [
+        "Docente"
+      ],
+      "contexto": [
+        "aula"
+      ],
+      "esfuerzo": "medio",
+      "urgencia": "media",
+      "confianza": "B",
+      "evidence_ids": [
+        "S06-09",
+        "S06-03",
+        "S04-27"
+      ],
+      "transfer_id": "TR-031",
+      "ancla_cr": {
+        "tipo": "ley",
+        "referencia": "Código de la Niñez y la Adolescencia (Ley 7739), art. 5: interés superior según edad y madurez",
+        "evidence_id": "S26-03"
+      },
+      "condicion_adaptacion": "Casos extranjeros citados como ejemplos; ninguna norma CR gradúa la IA por edad: decidir por exposición y riesgo.",
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DOC-004",
+      "texto_es": "En III ciclo, medie y supervise el uso de IA, y enseñe pensamiento crítico al mismo tiempo.",
+      "texto_en": "In cycle III, mediate and supervise AI use, and teach critical thinking at the same time.",
+      "por_que_es": "El uso autónomo en secundaria debe ir con instrucción explícita en pensamiento crítico.",
+      "por_que_en": "Autonomous use in secondary school must come with explicit critical-thinking instruction.",
+      "tema": "Aprendizaje y docencia",
+      "edad": [
+        "12-14"
+      ],
+      "publico": [
+        "Docente"
+      ],
+      "contexto": [
+        "aula"
+      ],
+      "esfuerzo": "medio",
+      "urgencia": "media",
+      "confianza": "B",
+      "evidence_ids": [
+        "S15-02",
+        "S06-10",
+        "S13-27"
+      ],
+      "transfer_id": "TR-031",
+      "ancla_cr": null,
+      "condicion_adaptacion": "Casos extranjeros citados como ejemplos; ninguna norma CR gradúa la IA por edad: decidir por exposición y riesgo. Base: currículo de Buenos Aires y revisión europea.",
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DOC-005",
+      "texto_es": "En Educación Diversificada, dé autonomía gradual con reglas claras: en qué tareas se permite la IA y cómo se declara su uso.",
+      "texto_en": "In upper secondary, give gradual autonomy with clear rules: which tasks allow AI and how its use is declared.",
+      "por_que_es": "El estudiantado pide reglas claras y parejas; la guía del MEP propone declarar todo uso de IA.",
+      "por_que_en": "Students ask for clear, consistent rules; the Ministry guide proposes declaring all AI use.",
+      "tema": "Aprendizaje y docencia",
+      "edad": [
+        "15-18"
+      ],
+      "publico": [
+        "Docente"
+      ],
+      "contexto": [
+        "aula"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "media",
+      "confianza": "A",
+      "evidence_ids": [
+        "S15-02",
+        "S11-40",
+        "S14-08"
+      ],
+      "transfer_id": "TR-032",
+      "ancla_cr": {
+        "tipo": "lineamiento_mep",
+        "referencia": "Guía MEP–UNESCO–ULACIT «Inteligencia artificial en clase» (2026)",
+        "evidence_id": "S14-08"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DOC-006",
+      "texto_es": "Pida que todo trabajo hecho con IA incluya una declaración de uso y una reflexión personal.",
+      "texto_en": "Require every AI-assisted assignment to include a use statement and a personal reflection.",
+      "por_que_es": "Así se ve qué hizo la IA y qué hizo el estudiante, y se aprende a usarla con honestidad.",
+      "por_que_en": "It shows what AI did and what the student did, and teaches honest use.",
+      "tema": "Aprendizaje y docencia",
+      "edad": [
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Docente"
+      ],
+      "contexto": [
+        "aula"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "media",
+      "confianza": "A",
+      "evidence_ids": [
+        "S14-08",
+        "S15-05"
+      ],
+      "transfer_id": "TR-032",
+      "ancla_cr": {
+        "tipo": "lineamiento_mep",
+        "referencia": "Guía MEP–UNESCO–ULACIT «Inteligencia artificial en clase» (2026)",
+        "evidence_id": "S14-08"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DOC-007",
+      "texto_es": "Pida una bitácora con el prompt, la herramienta, lo que el estudiante cambió y las fuentes que verificó.",
+      "texto_en": "Ask for a log with the prompt, the tool, what the student changed and the sources they checked.",
+      "por_que_es": "La bitácora hace visible el proceso y facilita evaluar el aporte propio.",
+      "por_que_en": "The log makes the process visible and helps assess the student's own contribution.",
+      "tema": "Aprendizaje y docencia",
+      "edad": [
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Docente"
+      ],
+      "contexto": [
+        "aula"
+      ],
+      "esfuerzo": "medio",
+      "urgencia": "media",
+      "confianza": "A",
+      "evidence_ids": [
+        "S14-09",
+        "S15-05"
+      ],
+      "transfer_id": "TR-032",
+      "ancla_cr": {
+        "tipo": "lineamiento_mep",
+        "referencia": "Guía MEP–UNESCO–ULACIT «Inteligencia artificial en clase» (2026)",
+        "evidence_id": "S14-09"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DOC-008",
+      "texto_es": "No use detectores de IA como prueba: fallan y acusan sin razón, sobre todo a quien escribe en una lengua que no es la suya.",
+      "texto_en": "Do not use AI detectors as proof: they fail and wrongly accuse, especially non-native writers.",
+      "por_que_es": "Los detectores dan falsos positivos y tienen sesgo; depender de ellos daña la confianza.",
+      "por_que_en": "Detectors give false positives and are biased; relying on them damages trust.",
+      "tema": "Aprendizaje y docencia",
+      "edad": [
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Docente"
+      ],
+      "contexto": [
+        "aula"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "alta",
+      "confianza": "A",
+      "evidence_ids": [
+        "S01-06",
+        "S18-05",
+        "S14-10"
+      ],
+      "transfer_id": "TR-033",
+      "ancla_cr": {
+        "tipo": "lineamiento_mep",
+        "referencia": "Guía MEP–UNESCO–ULACIT «Inteligencia artificial en clase» (2026)",
+        "evidence_id": "S14-10"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DOC-009",
+      "texto_es": "Ante un trabajo copiado de una IA, primero converse con el estudiante y valore su aporte propio; después aplique las reglas acordadas.",
+      "texto_en": "When work seems copied from AI, first talk with the student and assess their own contribution; then apply the agreed rules.",
+      "por_que_es": "La guía del MEP pide verificar el aporte propio. El estudiantado percibe injusticia cuando cada docente sanciona distinto.",
+      "por_que_en": "The Ministry guide asks to check the student's own contribution. Students see unfairness when each teacher sanctions differently.",
+      "tema": "Aprendizaje y docencia",
+      "edad": [
+        "9-11",
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Docente"
+      ],
+      "contexto": [
+        "aula"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "media",
+      "confianza": "A",
+      "evidence_ids": [
+        "S14-10",
+        "S11-13"
+      ],
+      "transfer_id": "TR-033",
+      "ancla_cr": {
+        "tipo": "lineamiento_mep",
+        "referencia": "Guía MEP–UNESCO–ULACIT «Inteligencia artificial en clase» (2026)",
+        "evidence_id": "S14-10"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DOC-010",
+      "texto_es": "Pida hacer una tarea sin IA, luego pedirle lo mismo a la IA y comparar los resultados.",
+      "texto_en": "Have students do a task without AI, then ask AI for the same and compare results.",
+      "por_que_es": "Comparar muestra qué aporta cada uno y ayuda a decidir cuándo conviene usar la IA.",
+      "por_que_en": "Comparing shows what each contributes and helps decide when AI is worth using.",
+      "tema": "Aprendizaje y docencia",
+      "edad": [
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Docente"
+      ],
+      "contexto": [
+        "aula"
+      ],
+      "esfuerzo": "medio",
+      "urgencia": "media",
+      "confianza": "A",
+      "evidence_ids": [
+        "S16-06",
+        "S15-08",
+        "S14-13"
+      ],
+      "transfer_id": "TR-046",
+      "ancla_cr": {
+        "tipo": "lineamiento_mep",
+        "referencia": "Guía MEP–UNESCO–ULACIT «Inteligencia artificial en clase» (2026)",
+        "evidence_id": "S14-13"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DOC-011",
+      "texto_es": "Antes de usar IA, pregunte al grupo si conviene para esa tarea o si otro método les hace aprender mejor.",
+      "texto_en": "Before using AI, ask the class whether it suits the task or whether another method helps them learn better.",
+      "por_que_es": "Decidir cuándo no usar IA desarrolla autonomía y protege habilidades básicas.",
+      "por_que_en": "Deciding when not to use AI builds autonomy and protects core skills.",
+      "tema": "Competencias",
+      "edad": [
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Docente"
+      ],
+      "contexto": [
+        "aula"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "media",
+      "confianza": "A",
+      "evidence_ids": [
+        "S15-06",
+        "S14-13"
+      ],
+      "transfer_id": "TR-046",
+      "ancla_cr": {
+        "tipo": "lineamiento_mep",
+        "referencia": "Guía MEP–UNESCO–ULACIT «Inteligencia artificial en clase» (2026)",
+        "evidence_id": "S14-13"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DOC-012",
+      "texto_es": "Enseñe a detectar respuestas falsas y referencias inventadas: que pidan las fuentes y las revisen una por una.",
+      "texto_en": "Teach students to spot false answers and invented references: ask for sources and check each one.",
+      "por_que_es": "Los chatbots inventan datos y citas; la guía del MEP pide verificar con fuentes confiables.",
+      "por_que_en": "Chatbots invent facts and citations; the Ministry guide asks to verify with reliable sources.",
+      "tema": "Alfabetización en IA",
+      "edad": [
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Docente"
+      ],
+      "contexto": [
+        "aula"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "alta",
+      "confianza": "A",
+      "evidence_ids": [
+        "S18-01",
+        "S09-06",
+        "S14-11"
+      ],
+      "transfer_id": "TR-005",
+      "ancla_cr": {
+        "tipo": "lineamiento_mep",
+        "referencia": "Guía MEP–UNESCO–ULACIT «Inteligencia artificial en clase» (2026)",
+        "evidence_id": "S14-11"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DOC-013",
+      "texto_es": "Haga actividades de «cazar errores»: muestre respuestas de IA con fallos y que el grupo los encuentre en libros o fuentes confiables.",
+      "texto_en": "Run 'spot the error' activities: show AI answers with mistakes and have the class find them in books or reliable sources.",
+      "por_que_es": "Los niños pequeños tienden a creerle a la IA; quienes verifican confían con más cuidado.",
+      "por_que_en": "Young children tend to believe AI; those who verify trust it more carefully.",
+      "tema": "Alfabetización en IA",
+      "edad": [
+        "9-11"
+      ],
+      "publico": [
+        "Docente"
+      ],
+      "contexto": [
+        "aula"
+      ],
+      "esfuerzo": "medio",
+      "urgencia": "media",
+      "confianza": "A",
+      "evidence_ids": [
+        "S14-11",
+        "S11-10",
+        "S11-11"
+      ],
+      "transfer_id": "TR-005",
+      "ancla_cr": {
+        "tipo": "lineamiento_mep",
+        "referencia": "Guía MEP–UNESCO–ULACIT «Inteligencia artificial en clase» (2026)",
+        "evidence_id": "S14-11"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DOC-014",
+      "texto_es": "Si una herramienta repite estereotipos de género, etnia, lengua o lugar, discútalo en clase y ajusten juntos las instrucciones.",
+      "texto_en": "If a tool repeats gender, ethnic, language or place stereotypes, discuss it in class and adjust the instructions together.",
+      "por_que_es": "La IA hereda y amplía los sesgos de sus datos; la guía del MEP pide trabajarlo en el aula.",
+      "por_que_en": "AI inherits and amplifies bias in its data; the Ministry guide asks to address it in class.",
+      "tema": "Alfabetización en IA",
+      "edad": [
+        "9-11",
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Docente"
+      ],
+      "contexto": [
+        "aula"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "media",
+      "confianza": "A",
+      "evidence_ids": [
+        "S14-12",
+        "S18-02",
+        "S10-08"
+      ],
+      "transfer_id": "TR-034",
+      "ancla_cr": {
+        "tipo": "lineamiento_mep",
+        "referencia": "Guía MEP–UNESCO–ULACIT «Inteligencia artificial en clase» (2026)",
+        "evidence_id": "S14-12"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DOC-015",
+      "texto_es": "Muestre cómo nace un sesgo: entrenen un clasificador sencillo (por ejemplo, Teachable Machine) con datos desequilibrados y vean qué falla.",
+      "texto_en": "Show how bias arises: train a simple classifier (for example, Teachable Machine) on unbalanced data and see what fails.",
+      "por_que_es": "Es una actividad del currículo de ética de IA del MIT para 12 a 14 años; puede darla un docente sin formación técnica.",
+      "por_que_en": "It is an activity from MIT's AI ethics curriculum for ages 12–14; teachers without technical training can run it.",
+      "tema": "Competencias",
+      "edad": [
+        "12-14"
+      ],
+      "publico": [
+        "Docente"
+      ],
+      "contexto": [
+        "aula"
+      ],
+      "esfuerzo": "medio",
+      "urgencia": "baja",
+      "confianza": "B",
+      "evidence_ids": [
+        "S12-43",
+        "S12-42",
+        "S12-19"
+      ],
+      "transfer_id": "TR-034",
+      "ancla_cr": null,
+      "condicion_adaptacion": "Ejemplo de currículo de EE. UU.; requiere conexión a internet.",
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DOC-016",
+      "texto_es": "No suba a la IA nombres, números de cédula, diagnósticos ni trabajos de estudiantes; describa los casos de forma anónima.",
+      "texto_en": "Do not upload student names, ID numbers, diagnoses or work to AI; describe cases anonymously.",
+      "por_que_es": "Las plataformas no garantizan la privacidad, y la Ley 8968 protege los datos del estudiantado.",
+      "por_que_en": "Platforms do not guarantee privacy, and Law 8968 protects student data.",
+      "tema": "Privacidad y datos",
+      "edad": [
+        "6-8",
+        "9-11",
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Docente"
+      ],
+      "contexto": [
+        "aula"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "alta",
+      "confianza": "A",
+      "evidence_ids": [
+        "S14-02",
+        "S14-07",
+        "S14-04"
+      ],
+      "transfer_id": "TR-035",
+      "ancla_cr": {
+        "tipo": "lineamiento_mep",
+        "referencia": "Guía MEP–UNESCO–ULACIT «Inteligencia artificial en clase» (2026)",
+        "evidence_id": "S14-02"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DOC-017",
+      "texto_es": "Trabaje con cuentas institucionales en entornos controlados, y enseñe a no compartir nombres, fotos ni ubicación.",
+      "texto_en": "Work with institutional accounts in controlled environments, and teach students not to share names, photos or location.",
+      "por_que_es": "Lo que se comparte puede usarse para entrenar modelos; las plataformas pueden guardar datos sin garantías.",
+      "por_que_en": "What is shared may be used to train models; platforms may store data without safeguards.",
+      "tema": "Privacidad y datos",
+      "edad": [
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Docente"
+      ],
+      "contexto": [
+        "aula"
+      ],
+      "esfuerzo": "medio",
+      "urgencia": "media",
+      "confianza": "A",
+      "evidence_ids": [
+        "S15-09",
+        "S14-03"
+      ],
+      "transfer_id": "TR-035",
+      "ancla_cr": {
+        "tipo": "lineamiento_mep",
+        "referencia": "Guía MEP–UNESCO–ULACIT «Inteligencia artificial en clase» (2026)",
+        "evidence_id": "S14-03"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DOC-018",
+      "texto_es": "Si un proyecto con IA usa voces o imágenes de estudiantes, pida el consentimiento formal con el formato del MEP.",
+      "texto_en": "If an AI project uses students' voices or images, obtain formal consent using the Ministry's form.",
+      "por_que_es": "La Ley 8968 exige consentimiento expreso y por escrito de quien representa al menor.",
+      "por_que_en": "Law 8968 requires express written consent from the minor's legal guardian.",
+      "tema": "Privacidad y datos",
+      "edad": [
+        "6-8",
+        "9-11",
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Docente"
+      ],
+      "contexto": [
+        "aula"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "alta",
+      "confianza": "A",
+      "evidence_ids": [
+        "S14-06",
+        "S14-05",
+        "S21-01"
+      ],
+      "transfer_id": "TR-035",
+      "ancla_cr": {
+        "tipo": "lineamiento_mep",
+        "referencia": "Guía MEP–UNESCO–ULACIT «Inteligencia artificial en clase» (2026)",
+        "evidence_id": "S14-06"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DOC-019",
+      "texto_es": "Si sospecha abuso, también en línea o con imágenes hechas con IA, denúncielo ante el Ministerio Público y comuníquelo a la dirección.",
+      "texto_en": "If you suspect abuse, including online or with AI-made images, report it to the Public Prosecutor and inform the school leadership.",
+      "por_que_es": "El Código de la Niñez obliga al personal de los centros a denunciar toda sospecha razonable.",
+      "por_que_en": "The Children's Code requires school staff to report any reasonable suspicion.",
+      "tema": "Seguridad y explotación",
+      "edad": [
+        "6-8",
+        "9-11",
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Docente"
+      ],
+      "contexto": [
+        "aula"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "alta",
+      "confianza": "A",
+      "evidence_ids": [
+        "S26-08",
+        "S26-10",
+        "S23-04"
+      ],
+      "transfer_id": "TR-036",
+      "ancla_cr": {
+        "tipo": "ley",
+        "referencia": "Código de la Niñez y la Adolescencia (Ley 7739): obligación de denunciar ante el Ministerio Público y de comunicar al MEP",
+        "evidence_id": "S26-08"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DOC-020",
+      "texto_es": "Enseñe qué son los deepfakes y cómo se manipulan audios e imágenes, y que crearlos con desnudos de menores es delito.",
+      "texto_en": "Teach what deepfakes are and how audio and images are manipulated, and that making them with nudity of minors is a crime.",
+      "por_que_es": "Pasar de espectador engañado a usuario crítico protege; la Ley 10020 castiga las imágenes simuladas de menores.",
+      "por_que_en": "Moving from deceived viewer to critical user protects; Law 10020 punishes simulated images of minors.",
+      "tema": "Seguridad y explotación",
+      "edad": [
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Docente"
+      ],
+      "contexto": [
+        "aula"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "alta",
+      "confianza": "A",
+      "evidence_ids": [
+        "S15-14",
+        "S07-24",
+        "S23-04"
+      ],
+      "transfer_id": "TR-045",
+      "ancla_cr": {
+        "tipo": "ley",
+        "referencia": "Ley 10020 (prevención del acoso a personas menores de edad), reforma art. 173 Código Penal: material pornográfico infantil alterado o simulado",
+        "evidence_id": "S23-04"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DOC-021",
+      "texto_es": "Esté atento a señales emocionales en los trabajos: la IA puede corregir un texto triste, pero no entiende el dolor de quien lo escribe.",
+      "texto_en": "Watch for emotional signals in student work: AI can correct a sad text but does not understand the writer's pain.",
+      "por_que_es": "Detectar señales emocionales es tarea humana; algunos chatbots no alertan ante niños en angustia.",
+      "por_que_en": "Spotting emotional signals is a human task; some chatbots do not raise alerts for children in distress.",
+      "tema": "Bienestar y dependencia",
+      "edad": [
+        "6-8",
+        "9-11",
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Docente"
+      ],
+      "contexto": [
+        "aula"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "alta",
+      "confianza": "A",
+      "evidence_ids": [
+        "S14-19",
+        "S05-02"
+      ],
+      "transfer_id": "TR-049",
+      "ancla_cr": {
+        "tipo": "lineamiento_mep",
+        "referencia": "Guía MEP–UNESCO–ULACIT «Inteligencia artificial en clase» (2026)",
+        "evidence_id": "S14-19"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DOC-022",
+      "texto_es": "Use internet e IA en clase de forma guiada: el uso acompañado en la escuela se asocia con más habilidades digitales.",
+      "texto_en": "Use the internet and AI in class in a guided way: accompanied school use is linked to stronger digital skills.",
+      "por_que_es": "En Costa Rica, el 36 % del estudiantado casi nunca usa internet en la escuela y el acompañamiento docente no mejoró entre 2018 y 2023.",
+      "por_que_en": "In Costa Rica, 36% of students almost never use the internet at school, and teacher guidance did not improve between 2018 and 2023.",
+      "tema": "Aprendizaje y docencia",
+      "edad": [
+        "9-11",
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Docente"
+      ],
+      "contexto": [
+        "aula"
+      ],
+      "esfuerzo": "medio",
+      "urgencia": "media",
+      "confianza": "A",
+      "evidence_ids": [
+        "S25-10",
+        "S25-08",
+        "S25-09"
+      ],
+      "transfer_id": "TR-040",
+      "ancla_cr": {
+        "tipo": "dato_nacional",
+        "referencia": "Kids Online Costa Rica, 2.ª encuesta (2023; informe 2024)",
+        "evidence_id": "S25-10"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DOC-023",
+      "texto_es": "Prefiera herramientas gratuitas o institucionales: si la tarea exige apps de pago, crece la brecha entre estudiantes.",
+      "texto_en": "Prefer free or institutional tools: if a task requires paid apps, the gap between students grows.",
+      "por_que_es": "El acceso desigual a suscripciones amplía la brecha digital y educativa.",
+      "por_que_en": "Unequal access to subscriptions widens digital and educational gaps.",
+      "tema": "Gobernanza escolar",
+      "edad": [
+        "6-8",
+        "9-11",
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Docente"
+      ],
+      "contexto": [
+        "aula"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "media",
+      "confianza": "B",
+      "evidence_ids": [
+        "S18-03",
+        "S16-07"
+      ],
+      "transfer_id": "TR-040",
+      "ancla_cr": null,
+      "condicion_adaptacion": "Evidencia internacional; considerar la conectividad de cada centro.",
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DOC-024",
+      "texto_es": "Use la IA con un fin pedagógico definido: la herramienta no enseña; la intención con que usted la diseña, sí.",
+      "texto_en": "Use AI with a defined teaching purpose: the tool does not teach; your design intention does.",
+      "por_que_es": "La planificación docente decide si la IA ayuda o estorba el aprendizaje.",
+      "por_que_en": "Teacher planning decides whether AI helps or hinders learning.",
+      "tema": "Aprendizaje y docencia",
+      "edad": [
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Docente"
+      ],
+      "contexto": [
+        "aula"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "media",
+      "confianza": "B",
+      "evidence_ids": [
+        "S19-04",
+        "S04-27"
+      ],
+      "transfer_id": "TR-031",
+      "ancla_cr": null,
+      "condicion_adaptacion": "Material de curso y marco checo; adaptar a los programas del MEP.",
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DOC-025",
+      "texto_es": "Elija herramientas que pidan al estudiante explicar su razonamiento y practicar recordando, no solo dar respuestas.",
+      "texto_en": "Choose tools that make students explain their reasoning and practise recall, not just get answers.",
+      "por_que_es": "Los tutores con IA mal diseñados mejoran la nota del momento pero dañan el aprendizaje de largo plazo.",
+      "por_que_en": "Poorly designed AI tutors improve immediate scores but harm long-term learning.",
+      "tema": "Aprendizaje y docencia",
+      "edad": [
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Docente"
+      ],
+      "contexto": [
+        "aula"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "media",
+      "confianza": "B",
+      "evidence_ids": [
+        "S06-11",
+        "S01-03"
+      ],
+      "transfer_id": "TR-024",
+      "ancla_cr": null,
+      "condicion_adaptacion": "Evidencia europea y de Türkiye; no hay evaluación de herramientas en Costa Rica.",
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DOC-026",
+      "texto_es": "Explique al grupo a quién acudir si algo con la IA les asusta o les hace daño, y asegúrese de que responda una persona, no un sistema automático.",
+      "texto_en": "Tell the class who to turn to if something involving AI scares or hurts them, and make sure a person, not an automated system, responds.",
+      "por_que_es": "Los reportes automáticos fallan cuando un niño revela un daño; en Costa Rica 14 de cada 100 que pidieron ayuda no la recibieron.",
+      "por_que_en": "Automated reports fail when a child discloses harm; in Costa Rica 14 in 100 who asked for help did not get it.",
+      "tema": "Responsabilidad compartida",
+      "edad": [
+        "6-8",
+        "9-11",
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Docente"
+      ],
+      "contexto": [
+        "aula"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "alta",
+      "confianza": "A",
+      "evidence_ids": [
+        "S03-18",
+        "S03-14",
+        "S25-12"
+      ],
+      "transfer_id": "TR-047",
+      "ancla_cr": {
+        "tipo": "dato_nacional",
+        "referencia": "Kids Online Costa Rica, 2.ª encuesta (2023; informe 2024)",
+        "evidence_id": "S25-12"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DOC-027",
+      "texto_es": "Si usa IA para calificar o recomendar, la decisión final es suya; informe al estudiantado y a las familias cuándo la usa.",
+      "texto_en": "If you use AI to grade or recommend, the final decision is yours; tell students and families when you use it.",
+      "por_que_es": "La IA puede apoyar decisiones, pero no sustituye la responsabilidad humana; las familias deben saber cuándo interviene.",
+      "por_que_en": "AI can support decisions but does not replace human responsibility; families should know when it is involved.",
+      "tema": "Gobernanza escolar",
+      "edad": [
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Docente"
+      ],
+      "contexto": [
+        "aula"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "media",
+      "confianza": "B",
+      "evidence_ids": [
+        "S01-15",
+        "S10-09",
+        "S10-07",
+        "S15-07"
+      ],
+      "transfer_id": "TR-043",
+      "ancla_cr": null,
+      "condicion_adaptacion": "Sin norma CR sobre decisiones automatizadas en educación; buena práctica.",
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DOC-028",
+      "texto_es": "Antes de usar una herramienta, compruebe que funcione bien en español y sea accesible para estudiantes con discapacidad.",
+      "texto_en": "Before using a tool, check that it works well in Spanish and is accessible to students with disabilities.",
+      "por_que_es": "Algunas herramientas obligan a usar inglés o excluyen a quienes tienen otras necesidades.",
+      "por_que_en": "Some tools force the use of English or exclude students with other needs.",
+      "tema": "Gobernanza escolar",
+      "edad": [
+        "6-8",
+        "9-11",
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Docente"
+      ],
+      "contexto": [
+        "aula"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "media",
+      "confianza": "B",
+      "evidence_ids": [
+        "S11-49",
+        "S03-19",
+        "S13-35"
+      ],
+      "transfer_id": "TR-050",
+      "ancla_cr": null,
+      "condicion_adaptacion": "Sin requisito CR específico en el corpus.",
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DOC-029",
+      "texto_es": "Enseñe a pedir las fuentes de cada respuesta y a comparar lo que dicen distintas IA.",
+      "texto_en": "Teach students to ask for the sources behind each answer and to compare what different AIs say.",
+      "por_que_es": "Las respuestas suenan tan seguras que el error pasa inadvertido si no se verifica.",
+      "por_que_en": "Answers sound so sure that errors go unnoticed without checking.",
+      "tema": "Alfabetización en IA",
+      "edad": [
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Docente"
+      ],
+      "contexto": [
+        "aula"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "media",
+      "confianza": "A",
+      "evidence_ids": [
+        "S09-06",
+        "S11-24",
+        "S14-11"
+      ],
+      "transfer_id": "TR-005",
+      "ancla_cr": {
+        "tipo": "lineamiento_mep",
+        "referencia": "Guía MEP–UNESCO–ULACIT «Inteligencia artificial en clase» (2026)",
+        "evidence_id": "S14-11"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DOC-030",
+      "texto_es": "Actualice cada año su formación en seguridad en línea e IA, incluido cómo reconocer usos indebidos.",
+      "texto_en": "Update your training on online safety and AI every year, including how to recognise misuse.",
+      "por_que_es": "La Estrategia Nacional de IA encarga al MEP capacitar al personal docente; en Europa solo 29 % se formó en el último año.",
+      "por_que_en": "The National AI Strategy tasks the Ministry with training teachers; in Europe only 29% trained in the past year.",
+      "tema": "Responsabilidad compartida",
+      "edad": [
+        "6-8",
+        "9-11",
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Docente"
+      ],
+      "contexto": [
+        "aula"
+      ],
+      "esfuerzo": "medio",
+      "urgencia": "media",
+      "confianza": "A",
+      "evidence_ids": [
+        "S07-23",
+        "S24-04",
+        "S04-17"
+      ],
+      "transfer_id": "TR-037",
+      "ancla_cr": {
+        "tipo": "programa",
+        "referencia": "Estrategia Nacional de IA 2024–2027: el MEP lidera la integración de la IA y la capacitación docente",
+        "evidence_id": "S24-04"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DOC-031",
+      "texto_es": "Converse con el grupo sobre qué datos recoge la IA de ellos y cómo se usan para entrenar modelos.",
+      "texto_en": "Discuss with the class what data AI collects about them and how it is used to train models.",
+      "por_que_es": "Las conversaciones pueden permitir identificar a la persona aunque se borren los nombres.",
+      "por_que_en": "Conversations can allow a person to be identified even when names are removed.",
+      "tema": "Privacidad y datos",
+      "edad": [
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Docente"
+      ],
+      "contexto": [
+        "aula"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "media",
+      "confianza": "B",
+      "evidence_ids": [
+        "S12-24",
+        "S09-04",
+        "S02-04"
+      ],
+      "transfer_id": "TR-035",
+      "ancla_cr": null,
+      "condicion_adaptacion": "Marco UNESCO y preprint técnico; no es lineamiento MEP.",
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DOC-032",
+      "texto_es": "Explique las «cuatro C» de riesgo en línea: contenido, contacto, conducta y comercio, con ejemplos que incluyan la IA.",
+      "texto_en": "Explain the 'four Cs' of online risk: content, contact, conduct and commerce, with examples involving AI.",
+      "por_que_es": "El modelo ordena los riesgos e incluye chats con IA que simulan personas e imágenes hechas con IA.",
+      "por_que_en": "The model organises risks and includes AI chats that imitate people and AI-made images.",
+      "tema": "Seguridad y explotación",
+      "edad": [
+        "9-11",
+        "12-14"
+      ],
+      "publico": [
+        "Docente"
+      ],
+      "contexto": [
+        "aula"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "media",
+      "confianza": "B",
+      "evidence_ids": [
+        "S07-11",
+        "S07-12",
+        "S07-13",
+        "S07-14"
+      ],
+      "transfer_id": "TR-009",
+      "ancla_cr": null,
+      "condicion_adaptacion": "Modelo de la guía inglesa; adaptar ejemplos al contexto costarricense.",
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DOC-033",
+      "texto_es": "Cuando use IA frente al grupo, dígalo en voz alta: los niños deben saber siempre cuándo una respuesta viene de una máquina.",
+      "texto_en": "When you use AI in front of the class, say so aloud: children should always know when an answer comes from a machine.",
+      "por_que_es": "Muchos niños no entienden que interactúan con IA y le atribuyen rasgos humanos y autoridad.",
+      "por_que_en": "Many children do not realise they are interacting with AI and attribute human traits and authority to it.",
+      "tema": "Alfabetización en IA",
+      "edad": [
+        "6-8",
+        "9-11"
+      ],
+      "publico": [
+        "Docente"
+      ],
+      "contexto": [
+        "aula"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "media",
+      "confianza": "B",
+      "evidence_ids": [
+        "S10-14",
+        "S10-06",
+        "S06-07"
+      ],
+      "transfer_id": "TR-004",
+      "ancla_cr": null,
+      "condicion_adaptacion": "Orientación de organismos internacionales; aplicar en I y II ciclo.",
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DOC-034",
+      "texto_es": "Mantenga actividades sin pantalla y use la IA solo cuando aporte un valor educativo claro.",
+      "texto_en": "Keep screen-free activities and use AI only when it adds clear educational value.",
+      "por_que_es": "Suecia y otros países vuelven a equilibrar lo digital y lo analógico; la evidencia causal en primaria es limitada.",
+      "por_que_en": "Sweden and other countries are rebalancing digital and analogue; causal evidence in primary school is limited.",
+      "tema": "Aprendizaje y docencia",
+      "edad": [
+        "6-8",
+        "9-11"
+      ],
+      "publico": [
+        "Docente"
+      ],
+      "contexto": [
+        "aula"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "media",
+      "confianza": "B",
+      "evidence_ids": [
+        "S04-47",
+        "S06-01",
+        "S13-05"
+      ],
+      "transfer_id": "TR-014",
+      "ancla_cr": null,
+      "condicion_adaptacion": "Casos extranjeros citados como ejemplos; ninguna norma CR gradúa la IA por edad: decidir por exposición y riesgo.",
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DOC-035",
+      "texto_es": "Enseñe cómo los algoritmos de recomendación influyen en lo que ven, en su tiempo de pantalla y en su bienestar.",
+      "texto_en": "Teach how recommendation algorithms shape what students see, their screen time and their wellbeing.",
+      "por_que_es": "Entender el algoritmo ayuda a decidir; en Costa Rica estos diseños no están regulados.",
+      "por_que_en": "Understanding the algorithm helps decision-making; in Costa Rica these designs are not regulated.",
+      "tema": "Bienestar y dependencia",
+      "edad": [
+        "12-14"
+      ],
+      "publico": [
+        "Docente"
+      ],
+      "contexto": [
+        "aula"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "media",
+      "confianza": "B",
+      "evidence_ids": [
+        "S15-12",
+        "S08-13"
+      ],
+      "transfer_id": "TR-023",
+      "ancla_cr": null,
+      "condicion_adaptacion": "Currículo de Buenos Aires y propuesta UE no vigente.",
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DOC-036",
+      "texto_es": "Enseñe a reportar y denunciar suplantaciones de identidad, también las hechas con voz o imagen creadas con IA.",
+      "texto_en": "Teach students to report impersonation, including with AI-made voice or images.",
+      "por_que_es": "Las escuelas son blanco frecuente de suplantación. Canales: escuela y, según el caso, PANI u OIJ.",
+      "por_que_en": "Schools are frequent targets of impersonation. Channels: the school and, depending on the case, PANI or OIJ.",
+      "tema": "Seguridad y explotación",
+      "edad": [
+        "15-18"
+      ],
+      "publico": [
+        "Docente"
+      ],
+      "contexto": [
+        "aula"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "media",
+      "confianza": "A",
+      "evidence_ids": [
+        "S15-13",
+        "S14-16"
+      ],
+      "transfer_id": "TR-029",
+      "ancla_cr": {
+        "tipo": "lineamiento_mep",
+        "referencia": "Guía MEP–UNESCO–ULACIT «Inteligencia artificial en clase» (2026)",
+        "evidence_id": "S14-16"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DOC-037",
+      "texto_es": "Trabaje en clase los riesgos del apego a chatbots de compañía, como Character.AI o Replika. Recalque que no están regulados en Costa Rica.",
+      "texto_en": "Address in class the risks of attachment to companion chatbots such as Character.AI or Replika. Stress that they are not regulated in Costa Rica.",
+      "por_que_es": "Estos chats dan la razón a todo y pueden crear dependencia; el currículo de Buenos Aires pide distinguir la empatía simulada de la real.",
+      "por_que_en": "These chats agree with everything and can create dependence; the Buenos Aires curriculum asks students to tell simulated from real empathy.",
+      "tema": "Bienestar y dependencia",
+      "edad": [
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Docente"
+      ],
+      "contexto": [
+        "aula"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "alta",
+      "confianza": "B",
+      "evidence_ids": [
+        "S15-04",
+        "S13-12",
+        "S11-33"
+      ],
+      "transfer_id": "TR-020",
+      "ancla_cr": null,
+      "condicion_adaptacion": "NO REGULADO en Costa Rica: ninguna norma regula los compañeros de IA ni fija edad mínima. Ejemplos de mercado no evaluados en el corpus.",
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DIR-001",
+      "texto_es": "Apruebe una política de IA del centro con reglas claras y comunes para todo el personal docente, y compártala con las familias.",
+      "texto_en": "Approve a school AI policy with clear rules shared by all teachers, and share it with families.",
+      "por_que_es": "Sin reglas comunes cada docente decide distinto y el estudiantado lo percibe como injusto.",
+      "por_que_en": "Without shared rules each teacher decides differently, and students see it as unfair.",
+      "tema": "Gobernanza escolar",
+      "edad": [
+        "6-8",
+        "9-11",
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Dirección"
+      ],
+      "contexto": [
+        "politica"
+      ],
+      "esfuerzo": "alto",
+      "urgencia": "alta",
+      "confianza": "A",
+      "evidence_ids": [
+        "S11-13",
+        "S11-15",
+        "S04-45",
+        "S14-10",
+        "S07-25"
+      ],
+      "transfer_id": "TR-042",
+      "ancla_cr": {
+        "tipo": "lineamiento_mep",
+        "referencia": "Guía MEP–UNESCO–ULACIT «Inteligencia artificial en clase» (2026)",
+        "evidence_id": "S14-10"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DIR-002",
+      "texto_es": "Antes de adoptar una plataforma con IA, exija minimización de datos, privacidad desde el diseño, cifrado y almacenamiento seguro.",
+      "texto_en": "Before adopting an AI platform, require data minimisation, privacy by design, encryption and secure storage.",
+      "por_que_es": "El centro, como responsable de sus bases de datos, debe proteger los datos personales según la Ley 8968.",
+      "por_que_en": "The school, as data controller, must protect personal data under Law 8968.",
+      "tema": "Privacidad y datos",
+      "edad": [
+        "6-8",
+        "9-11",
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Dirección"
+      ],
+      "contexto": [
+        "politica"
+      ],
+      "esfuerzo": "alto",
+      "urgencia": "alta",
+      "confianza": "A",
+      "evidence_ids": [
+        "S17-01",
+        "S21-05",
+        "S17-03"
+      ],
+      "transfer_id": "TR-038",
+      "ancla_cr": {
+        "tipo": "ley",
+        "referencia": "Ley 8968: el responsable de la base de datos adopta medidas técnicas y organizativas de seguridad",
+        "evidence_id": "S21-05"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DIR-003",
+      "texto_es": "Incluya en los contratos con proveedores cláusulas de protección de datos, conservación limitada y derecho a corregir o borrar.",
+      "texto_en": "Include data protection, limited retention and the right to correct or delete in supplier contracts.",
+      "por_que_es": "La compra es el momento para fijar condiciones; la Ley 8968 reconoce acceso, rectificación y supresión.",
+      "por_que_en": "Procurement is when conditions are set; Law 8968 grants access, rectification and erasure.",
+      "tema": "Privacidad y datos",
+      "edad": [
+        "6-8",
+        "9-11",
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Dirección"
+      ],
+      "contexto": [
+        "politica"
+      ],
+      "esfuerzo": "alto",
+      "urgencia": "media",
+      "confianza": "A",
+      "evidence_ids": [
+        "S17-04",
+        "S17-02",
+        "S21-04"
+      ],
+      "transfer_id": "TR-038",
+      "ancla_cr": {
+        "tipo": "ley",
+        "referencia": "Ley 8968, derechos de acceso, rectificación y supresión (art. 7)",
+        "evidence_id": "S21-04"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DIR-004",
+      "texto_es": "Pida al proveedor que explique cómo decide su sistema. Si no puede explicarlo, no lo use para decisiones sobre estudiantes.",
+      "texto_en": "Ask suppliers to explain how their system decides. If they cannot, do not use it for decisions about students.",
+      "por_que_es": "Los sistemas que evalúan o vigilan al estudiantado requieren altos estándares de explicabilidad.",
+      "por_que_en": "Systems that assess or monitor students require high explainability standards.",
+      "tema": "Gobernanza escolar",
+      "edad": [
+        "6-8",
+        "9-11",
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Dirección"
+      ],
+      "contexto": [
+        "politica"
+      ],
+      "esfuerzo": "medio",
+      "urgencia": "media",
+      "confianza": "B",
+      "evidence_ids": [
+        "S10-11",
+        "S10-10",
+        "S03-17"
+      ],
+      "transfer_id": "TR-038",
+      "ancla_cr": null,
+      "condicion_adaptacion": "Orientación internacional; no hay norma CR sobre explicabilidad.",
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DIR-005",
+      "texto_es": "Antes de adoptar IA, pregunte: ¿hay evidencia independiente de que ayuda a esta edad?, ¿hace falta frente a opciones sin IA?, ¿se probó con estudiantes como los nuestros?",
+      "texto_en": "Before adopting AI, ask: is there independent evidence it helps this age group? Is it needed compared with non-AI options? Was it tested with students like ours?",
+      "por_que_es": "UNESCO propone estas preguntas y el principio de precaución, porque falta evidencia en la mayoría de edades y países.",
+      "por_que_en": "UNESCO proposes these questions and the precautionary principle, as evidence is lacking for most ages and countries.",
+      "tema": "Edad y adecuación",
+      "edad": [
+        "6-8",
+        "9-11",
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Dirección"
+      ],
+      "contexto": [
+        "politica"
+      ],
+      "esfuerzo": "medio",
+      "urgencia": "alta",
+      "confianza": "B",
+      "evidence_ids": [
+        "S13-33",
+        "S13-34",
+        "S13-35",
+        "S13-31"
+      ],
+      "transfer_id": "TR-039",
+      "ancla_cr": {
+        "tipo": "ley",
+        "referencia": "Código de la Niñez y la Adolescencia (Ley 7739), art. 5: interés superior en toda acción pública o privada",
+        "evidence_id": "S26-02"
+      },
+      "condicion_adaptacion": "Lista de verificación UNESCO; aplicar según exposición y riesgo, sin edad mínima legal en CR.",
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DIR-006",
+      "texto_es": "Haga una evaluación de impacto en privacidad al menos una vez al año, con herramientas como Responsible Data for Children (RD4C).",
+      "texto_en": "Run a privacy impact assessment at least once a year, using tools such as Responsible Data for Children (RD4C).",
+      "por_que_es": "Revisar periódicamente evita riesgos acumulados y protege a la niñez dentro de los sistemas de datos.",
+      "por_que_en": "Regular review prevents accumulated risks and protects children within data systems.",
+      "tema": "Privacidad y datos",
+      "edad": [
+        "6-8",
+        "9-11",
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Dirección"
+      ],
+      "contexto": [
+        "politica"
+      ],
+      "esfuerzo": "alto",
+      "urgencia": "baja",
+      "confianza": "B",
+      "evidence_ids": [
+        "S17-05",
+        "S17-03"
+      ],
+      "transfer_id": "TR-038",
+      "ancla_cr": {
+        "tipo": "ley",
+        "referencia": "Ley 8968: el responsable de la base de datos adopta medidas técnicas y organizativas de seguridad",
+        "evidence_id": "S21-05"
+      },
+      "condicion_adaptacion": "Herramienta internacional; ajustar a la Ley 8968.",
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DIR-007",
+      "texto_es": "Defina un protocolo de incidentes con IA (deepfakes, acoso, suplantación): quién recibe el caso, cómo se protege a la víctima y cuándo se denuncia.",
+      "texto_en": "Define an AI incident protocol (deepfakes, harassment, impersonation): who receives the case, how the victim is protected and when it is reported.",
+      "por_que_es": "La ley obliga a denunciar y comunicar al MEP, y prohíbe publicar datos de víctimas menores de edad.",
+      "por_que_en": "The law requires reporting and notifying the Ministry, and forbids publishing data on child victims.",
+      "tema": "Seguridad y explotación",
+      "edad": [
+        "6-8",
+        "9-11",
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Dirección"
+      ],
+      "contexto": [
+        "politica"
+      ],
+      "esfuerzo": "alto",
+      "urgencia": "alta",
+      "confianza": "A",
+      "evidence_ids": [
+        "S26-08",
+        "S26-10",
+        "S07-28",
+        "S26-07"
+      ],
+      "transfer_id": "TR-036",
+      "ancla_cr": {
+        "tipo": "ley",
+        "referencia": "Código de la Niñez y la Adolescencia (Ley 7739): las autoridades de los centros comunican al MEP casos de maltrato o abuso",
+        "evidence_id": "S26-10"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DIR-008",
+      "texto_es": "Comunique al MEP los casos de maltrato o abuso, también los ocurridos en línea o con IA, como exige la ley.",
+      "texto_en": "Notify the Ministry of cases of mistreatment or abuse, including online or AI-related ones, as the law requires.",
+      "por_que_es": "Es una obligación del Código de la Niñez; las imágenes simuladas de menores son delito según la Ley 10020.",
+      "por_que_en": "It is a duty under the Children's Code; simulated images of minors are a crime under Law 10020.",
+      "tema": "Seguridad y explotación",
+      "edad": [
+        "6-8",
+        "9-11",
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Dirección"
+      ],
+      "contexto": [
+        "politica"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "alta",
+      "confianza": "A",
+      "evidence_ids": [
+        "S26-10",
+        "S23-04"
+      ],
+      "transfer_id": "TR-036",
+      "ancla_cr": {
+        "tipo": "ley",
+        "referencia": "Código de la Niñez y la Adolescencia (Ley 7739): las autoridades de los centros comunican al MEP casos de maltrato o abuso",
+        "evidence_id": "S26-10"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DIR-009",
+      "texto_es": "Organice formación anual del personal en seguridad en línea e IA.",
+      "texto_en": "Organise annual staff training on online safety and AI.",
+      "por_que_es": "Pocos docentes se forman en IA; la Estrategia Nacional encarga al MEP la capacitación.",
+      "por_que_en": "Few teachers train in AI; the National Strategy tasks the Ministry with training.",
+      "tema": "Responsabilidad compartida",
+      "edad": [
+        "6-8",
+        "9-11",
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Dirección"
+      ],
+      "contexto": [
+        "politica"
+      ],
+      "esfuerzo": "alto",
+      "urgencia": "media",
+      "confianza": "A",
+      "evidence_ids": [
+        "S07-22",
+        "S24-04",
+        "S04-16",
+        "S04-18"
+      ],
+      "transfer_id": "TR-037",
+      "ancla_cr": {
+        "tipo": "programa",
+        "referencia": "Estrategia Nacional de IA 2024–2027: el MEP lidera la integración de la IA y la capacitación docente",
+        "evidence_id": "S24-04"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DIR-010",
+      "texto_es": "Garantice acceso equitativo: dispositivos, conectividad y herramientas gratuitas, para que la IA no amplíe las brechas.",
+      "texto_en": "Ensure equitable access: devices, connectivity and free tools, so AI does not widen gaps.",
+      "por_que_es": "En Costa Rica el 36 % del estudiantado casi nunca usa internet en la escuela; sin acceso, la IA aumenta la desigualdad.",
+      "por_que_en": "In Costa Rica 36% of students almost never use the internet at school; without access, AI increases inequality.",
+      "tema": "Gobernanza escolar",
+      "edad": [
+        "6-8",
+        "9-11",
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Dirección"
+      ],
+      "contexto": [
+        "politica"
+      ],
+      "esfuerzo": "alto",
+      "urgencia": "media",
+      "confianza": "A",
+      "evidence_ids": [
+        "S25-08",
+        "S16-07",
+        "S18-03",
+        "S12-32"
+      ],
+      "transfer_id": "TR-040",
+      "ancla_cr": {
+        "tipo": "dato_nacional",
+        "referencia": "Kids Online Costa Rica, 2.ª encuesta (2023; informe 2024)",
+        "evidence_id": "S25-08"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DIR-011",
+      "texto_es": "No prohíba la IA en todo el centro: sin uso guiado en la escuela, solo aprenden quienes tienen recursos en casa.",
+      "texto_en": "Do not ban AI across the school: without guided school use, only students with resources at home learn.",
+      "por_que_es": "El uso acompañado se asocia con más habilidades; excluir la IA del aula puede ampliar la brecha.",
+      "por_que_en": "Accompanied use is linked to more skills; excluding AI from class can widen the gap.",
+      "tema": "Gobernanza escolar",
+      "edad": [
+        "6-8",
+        "9-11",
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Dirección"
+      ],
+      "contexto": [
+        "politica"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "media",
+      "confianza": "A",
+      "evidence_ids": [
+        "S16-08",
+        "S25-10",
+        "S09-09",
+        "S03-07"
+      ],
+      "transfer_id": "TR-040",
+      "ancla_cr": {
+        "tipo": "dato_nacional",
+        "referencia": "Kids Online Costa Rica, 2.ª encuesta (2023; informe 2024)",
+        "evidence_id": "S25-10"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DIR-012",
+      "texto_es": "Si usa filtros de contenido, que bloqueen lo dañino sin impedir enseñar sobre seguridad en línea, y revise su eficacia cada año.",
+      "texto_en": "If you use content filters, they should block harmful content without preventing teaching about online safety, and be reviewed yearly.",
+      "por_que_es": "El bloqueo excesivo limita lo que se puede enseñar; Inglaterra exige revisión anual (ejemplo).",
+      "por_que_en": "Over-blocking limits what can be taught; England requires annual review (example).",
+      "tema": "Seguridad y explotación",
+      "edad": [
+        "6-8",
+        "9-11",
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Dirección"
+      ],
+      "contexto": [
+        "politica"
+      ],
+      "esfuerzo": "medio",
+      "urgencia": "media",
+      "confianza": "B",
+      "evidence_ids": [
+        "S07-19",
+        "S07-20",
+        "S07-18"
+      ],
+      "transfer_id": "TR-041",
+      "ancla_cr": null,
+      "condicion_adaptacion": "Modelo inglés; en CR no monitorear datos personales sin base en la Ley 8968.",
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DIR-013",
+      "texto_es": "Si un sistema con IA apoya decisiones sobre estudiantes (alertas de abandono, ubicación), nombre a una persona responsable e informe a las familias.",
+      "texto_en": "If an AI system supports decisions about students (dropout alerts, placement), appoint a responsible person and inform families.",
+      "por_que_es": "La IA no debe decidir sola en asuntos con consecuencias; las familias tienen derecho a saberlo.",
+      "por_que_en": "AI should not decide alone on consequential matters; families have a right to know.",
+      "tema": "Gobernanza escolar",
+      "edad": [
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Dirección"
+      ],
+      "contexto": [
+        "politica"
+      ],
+      "esfuerzo": "medio",
+      "urgencia": "media",
+      "confianza": "B",
+      "evidence_ids": [
+        "S03-17",
+        "S10-09",
+        "S01-17"
+      ],
+      "transfer_id": "TR-043",
+      "ancla_cr": null,
+      "condicion_adaptacion": "Sin norma CR sobre decisiones automatizadas en educación.",
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DIR-014",
+      "texto_es": "Cree un canal de reporte seguro, gratuito y confidencial para estudiantes, que confirme la recepción y conecte con apoyo humano.",
+      "texto_en": "Create a safe, free and confidential reporting channel for students that confirms receipt and connects to human support.",
+      "por_que_es": "Los canales automáticos fallan ante revelaciones graves; muchas víctimas no reciben la ayuda que piden.",
+      "por_que_en": "Automated channels fail with serious disclosures; many victims do not get the help they ask for.",
+      "tema": "Responsabilidad compartida",
+      "edad": [
+        "6-8",
+        "9-11",
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Dirección"
+      ],
+      "contexto": [
+        "politica"
+      ],
+      "esfuerzo": "alto",
+      "urgencia": "alta",
+      "confianza": "A",
+      "evidence_ids": [
+        "S03-18",
+        "S03-14",
+        "S25-12"
+      ],
+      "transfer_id": "TR-047",
+      "ancla_cr": {
+        "tipo": "dato_nacional",
+        "referencia": "Kids Online Costa Rica, 2.ª encuesta (2023; informe 2024)",
+        "evidence_id": "S25-12"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DIR-015",
+      "texto_es": "Coordine con el PANI y aproveche los programas de concientización que prevé la Ley 10020 para estudiantes, docentes y familias.",
+      "texto_en": "Coordinate with PANI and use the awareness programmes provided for in Law 10020 for students, teachers and families.",
+      "por_que_es": "La ley crea una comisión (PANI, MEP, MICITT, OIJ y otros) para llevar esos programas a los centros.",
+      "por_que_en": "The law creates a commission (PANI, Ministry of Education, MICITT, OIJ and others) to bring these programmes to schools.",
+      "tema": "Responsabilidad compartida",
+      "edad": [
+        "6-8",
+        "9-11",
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Dirección"
+      ],
+      "contexto": [
+        "politica"
+      ],
+      "esfuerzo": "medio",
+      "urgencia": "media",
+      "confianza": "A",
+      "evidence_ids": [
+        "S23-01",
+        "S24-03",
+        "S23-05"
+      ],
+      "transfer_id": "TR-048",
+      "ancla_cr": {
+        "tipo": "ley",
+        "referencia": "Ley 10020: comisión interinstitucional (PANI, MEP, MICITT, OIJ…) y programas de concientización en centros educativos",
+        "evidence_id": "S23-01"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DIR-016",
+      "texto_es": "Ofrezca talleres para familias sobre IA y crianza digital.",
+      "texto_en": "Offer family workshops on AI and digital parenting.",
+      "por_que_es": "Muchas familias quieren acompañar pero no saben cómo; la guía del MEP propone estos talleres.",
+      "por_que_en": "Many families want to help but do not know how; the Ministry guide proposes these workshops.",
+      "tema": "Responsabilidad compartida",
+      "edad": [
+        "6-8",
+        "9-11",
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Dirección"
+      ],
+      "contexto": [
+        "politica"
+      ],
+      "esfuerzo": "medio",
+      "urgencia": "media",
+      "confianza": "A",
+      "evidence_ids": [
+        "S14-14",
+        "S11-44",
+        "S25-02"
+      ],
+      "transfer_id": "TR-011",
+      "ancla_cr": {
+        "tipo": "lineamiento_mep",
+        "referencia": "Guía MEP–UNESCO–ULACIT «Inteligencia artificial en clase» (2026)",
+        "evidence_id": "S14-14"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DIR-017",
+      "texto_es": "Antes de copiar prohibiciones de celulares de otros países, analice su propio centro: son ejemplos, no normas de Costa Rica.",
+      "texto_en": "Before copying phone bans from other countries, analyse your own school: they are examples, not Costa Rican rules.",
+      "por_que_es": "Inglaterra, Islandia, Rumanía y Países Bajos restringen celulares de formas distintas; el corpus no recoge la norma costarricense.",
+      "por_que_en": "England, Iceland, Romania and the Netherlands restrict phones in different ways; the corpus does not include the Costa Rican rule.",
+      "tema": "Gobernanza escolar",
+      "edad": [
+        "6-8",
+        "9-11",
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Dirección"
+      ],
+      "contexto": [
+        "politica"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "baja",
+      "confianza": "C",
+      "evidence_ids": [
+        "S07-27",
+        "S04-28",
+        "S04-31",
+        "S04-33"
+      ],
+      "transfer_id": "TR-044",
+      "ancla_cr": null,
+      "condicion_adaptacion": "Pendiente investigar la normativa MEP sobre celulares.",
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DIR-018",
+      "texto_es": "Publique cada año qué herramientas de IA usa el centro, para qué y con qué resultados.",
+      "texto_en": "Publish each year which AI tools the school uses, what for and with what results.",
+      "por_que_es": "La IA educativa debe estar sujeta a gobernanza transparente y evaluación independiente.",
+      "por_que_en": "Educational AI should be subject to transparent governance and independent evaluation.",
+      "tema": "Gobernanza escolar",
+      "edad": [
+        "6-8",
+        "9-11",
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Dirección"
+      ],
+      "contexto": [
+        "politica"
+      ],
+      "esfuerzo": "medio",
+      "urgencia": "baja",
+      "confianza": "B",
+      "evidence_ids": [
+        "S06-15",
+        "S04-45"
+      ],
+      "transfer_id": "TR-042",
+      "ancla_cr": null,
+      "condicion_adaptacion": "Orientación europea; adaptar a la rendición de cuentas del centro.",
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DIR-019",
+      "texto_es": "Incluya la alfabetización en IA para todo el estudiantado, no como optativa: si es voluntaria, llega solo a algunos.",
+      "texto_en": "Include AI literacy for all students, not as an elective: if it is optional, it reaches only some.",
+      "por_que_es": "La Estrategia Nacional de IA pide programas adaptados a la niñez y la adolescencia; hacerla obligatoria es cuestión de equidad.",
+      "por_que_en": "The National AI Strategy calls for programmes adapted to children and adolescents; making it compulsory is a matter of equity.",
+      "tema": "Alfabetización en IA",
+      "edad": [
+        "6-8",
+        "9-11",
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Dirección"
+      ],
+      "contexto": [
+        "politica"
+      ],
+      "esfuerzo": "alto",
+      "urgencia": "media",
+      "confianza": "A",
+      "evidence_ids": [
+        "S15-11",
+        "S06-13",
+        "S24-06"
+      ],
+      "transfer_id": "TR-031",
+      "ancla_cr": {
+        "tipo": "programa",
+        "referencia": "Estrategia Nacional de IA 2024–2027: alfabetización en IA adaptada a la niñez y la adolescencia",
+        "evidence_id": "S24-06"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DIR-020",
+      "texto_es": "Defina qué usos de IA se permiten en cada ciclo: aprender sobre la IA en primaria y con la IA en secundaria.",
+      "texto_en": "Define which AI uses are allowed in each cycle: learning about AI in primary and with AI in secondary.",
+      "por_que_es": "Una IA adecuada para adolescentes puede ser dañina para los más pequeños; el uso uniforme no sirve.",
+      "por_que_en": "AI suited to teenagers can harm younger children; uniform use does not work.",
+      "tema": "Edad y adecuación",
+      "edad": [
+        "6-8",
+        "9-11",
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Dirección"
+      ],
+      "contexto": [
+        "politica"
+      ],
+      "esfuerzo": "medio",
+      "urgencia": "alta",
+      "confianza": "B",
+      "evidence_ids": [
+        "S15-01",
+        "S15-02",
+        "S13-01",
+        "S13-21"
+      ],
+      "transfer_id": "TR-031",
+      "ancla_cr": null,
+      "condicion_adaptacion": "Casos extranjeros citados como ejemplos; ninguna norma CR gradúa la IA por edad: decidir por exposición y riesgo.",
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DIR-021",
+      "texto_es": "Exija que las herramientas funcionen en español y sean accesibles para estudiantes con discapacidad.",
+      "texto_en": "Require tools to work in Spanish and be accessible to students with disabilities.",
+      "por_que_es": "La accesibilidad y la lengua deben estar desde el diseño para no excluir a nadie.",
+      "por_que_en": "Accessibility and language must be built in from the start so no one is excluded.",
+      "tema": "Gobernanza escolar",
+      "edad": [
+        "6-8",
+        "9-11",
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Dirección"
+      ],
+      "contexto": [
+        "politica"
+      ],
+      "esfuerzo": "medio",
+      "urgencia": "media",
+      "confianza": "B",
+      "evidence_ids": [
+        "S03-19",
+        "S11-49",
+        "S13-35"
+      ],
+      "transfer_id": "TR-050",
+      "ancla_cr": null,
+      "condicion_adaptacion": "Sin requisito CR específico en el corpus.",
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DIR-022",
+      "texto_es": "Prohíba al personal subir datos identificables de estudiantes a herramientas públicas de IA.",
+      "texto_en": "Forbid staff from uploading identifiable student data to public AI tools.",
+      "por_que_es": "La guía del MEP lo pide expresamente; subir trabajos o datos no garantiza la privacidad.",
+      "por_que_en": "The Ministry guide explicitly requires this; uploading work or data does not guarantee privacy.",
+      "tema": "Privacidad y datos",
+      "edad": [
+        "6-8",
+        "9-11",
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Dirección"
+      ],
+      "contexto": [
+        "politica"
+      ],
+      "esfuerzo": "bajo",
+      "urgencia": "alta",
+      "confianza": "A",
+      "evidence_ids": [
+        "S14-02",
+        "S14-04",
+        "S14-07"
+      ],
+      "transfer_id": "TR-035",
+      "ancla_cr": {
+        "tipo": "lineamiento_mep",
+        "referencia": "Guía MEP–UNESCO–ULACIT «Inteligencia artificial en clase» (2026)",
+        "evidence_id": "S14-02"
+      },
+      "condicion_adaptacion": null,
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DIR-023",
+      "texto_es": "Reconozca el tiempo extra que la IA exige al personal (verificar, supervisar, enseñar) y planifíquelo.",
+      "texto_en": "Recognise the extra time AI demands of staff (checking, supervising, teaching) and plan for it.",
+      "por_que_es": "Adoptar IA genera carga de verificación y supervisión; pocos docentes tienen formación para ello.",
+      "por_que_en": "Adopting AI creates checking and supervision workload; few teachers are trained for it.",
+      "tema": "Gobernanza escolar",
+      "edad": [
+        "6-8",
+        "9-11",
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Dirección"
+      ],
+      "contexto": [
+        "politica"
+      ],
+      "esfuerzo": "medio",
+      "urgencia": "baja",
+      "confianza": "B",
+      "evidence_ids": [
+        "S06-14",
+        "S04-17"
+      ],
+      "transfer_id": "TR-037",
+      "ancla_cr": null,
+      "condicion_adaptacion": "Evidencia europea; ajustar a la jornada docente en Costa Rica.",
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DIR-024",
+      "texto_es": "Revise las plataformas que ya usa: muchas activan funciones de IA sin avisar. Desactive las que no se hayan aprobado.",
+      "texto_en": "Review the platforms you already use: many switch on AI features without notice. Turn off any that have not been approved.",
+      "por_que_es": "Las empresas incorporan IA generativa por defecto, a menudo sin aviso, en herramientas educativas.",
+      "por_que_en": "Companies add generative AI by default, often without notice, to educational tools.",
+      "tema": "Privacidad y datos",
+      "edad": [
+        "6-8",
+        "9-11",
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Dirección"
+      ],
+      "contexto": [
+        "politica"
+      ],
+      "esfuerzo": "medio",
+      "urgencia": "alta",
+      "confianza": "B",
+      "evidence_ids": [
+        "S13-02",
+        "S08-12"
+      ],
+      "transfer_id": "TR-038",
+      "ancla_cr": null,
+      "condicion_adaptacion": "No regulado en CR; depende de la configuración de cada plataforma.",
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    },
+    {
+      "id": "T-DIR-025",
+      "texto_es": "Fórmese con el equipo directivo para evaluar críticamente los sistemas de IA antes de adoptarlos.",
+      "texto_en": "Train with your leadership team to critically evaluate AI systems before adopting them.",
+      "por_que_es": "Ministerios y directivos necesitan conocimientos para evaluar sistemas; la supervisión humana debe estar en el centro.",
+      "por_que_en": "Ministries and school leaders need knowledge to evaluate systems; human oversight must be central.",
+      "tema": "Responsabilidad compartida",
+      "edad": [
+        "6-8",
+        "9-11",
+        "12-14",
+        "15-18"
+      ],
+      "publico": [
+        "Dirección"
+      ],
+      "contexto": [
+        "politica"
+      ],
+      "esfuerzo": "medio",
+      "urgencia": "media",
+      "confianza": "B",
+      "evidence_ids": [
+        "S10-12",
+        "S04-43"
+      ],
+      "transfer_id": "TR-037",
+      "ancla_cr": null,
+      "condicion_adaptacion": "Orientación internacional y alemana; coordinar con el MEP.",
+      "advertencia_edad": null,
+      "estado": "borrador",
+      "revisado_por": [
+        {
+          "rol": "redaccion_ciodd",
+          "fecha": "2026-10-26"
+        }
+      ],
+      "fecha": "2026-10-26",
+      "fecha_verificacion": "2026-10-26"
+    }
+  ]
+}

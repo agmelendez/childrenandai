@@ -1,0 +1,35 @@
+{
+  "version": "0.1",
+  "fecha": "2026-10-26",
+  "_nota": "EJEMPLO DE ESQUEMA, no es una valoración definitiva. La matriz real se construye en E3.1.",
+  "practicas": [
+    {
+      "id": "TR-001",
+      "practica_es": "Alfabetización en IA gradual y apropiada a la edad antes del uso autónomo.",
+      "evidence_ids": ["S03-04", "S12-17"],
+      "jurisdiccion_origen": "Global (orientación voluntaria)",
+      "ancla_cr": null,
+      "criterios": {"legal": 2, "institucional": 1, "cultural": 2, "recursos": 1},
+      "brecha": "Sin lineamiento MEP específico de alfabetización en IA por ciclo identificado en el corpus actual.",
+      "condicion_adaptacion": "Alinear a ciclos MEP (D1) y verificar en E2.3 (lineamientos de educación digital MEP, PRONIE MEP-FOD).",
+      "nivel": "B",
+      "decision": "adaptar",
+      "revisor": "CIOdD",
+      "fecha": "2026-10-26"
+    },
+    {
+      "id": "TR-002",
+      "practica_es": "Obligaciones de vigilancia y filtrado de contenidos en línea del marco estatutario inglés.",
+      "evidence_ids": ["S07-09"],
+      "jurisdiccion_origen": "Inglaterra",
+      "ancla_cr": {"tipo": "ley", "referencia": "Ley 8968, Protección de la Persona frente al tratamiento de sus datos personales"},
+      "criterios": {"legal": 0, "institucional": 1, "cultural": 1, "recursos": 0},
+      "brecha": "Marco jurídico distinto; la vigilancia escolar de datos de menores exige base legal en CR.",
+      "condicion_adaptacion": null,
+      "nivel": "C",
+      "decision": "investigar",
+      "revisor": "CIOdD",
+      "fecha": "2026-10-26"
+    }
+  ]
+}

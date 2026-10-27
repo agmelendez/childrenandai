@@ -34,3 +34,6 @@ Archivar los prompts y el registro de la sesión; validar fichas, clasificación
 # AI-use declaration (English summary)
 
 This site was designed, largely written and programmed with the assistance of Claude (Anthropic) via Claude Code, during 2026 (working version of 7 Oct 2026; configured model `claude-sonnet-5-5`, serving model may vary). The AI catalogued the 13 closed-corpus PDFs, proposed 310 items with verbatim quotes (all machine-verified against the PDFs), paraphrased and translated them, built the diagrams and code, and drafted the references, audit and licence proposal. It did not choose the corpus or take final editorial decisions, and it is not an author. Classification, translations and reference data still need human validation. The published site uses no AI and collects no personal data.
+
+## Actualización v0.9 (26-10-2026)
+Claude (Anthropic) redactó las plantillas del Kit por público a partir de los tips citados, extrajo las cifras del ILIA 2026 para la ficha «Costa Rica en contexto» y programó la portada por perfiles, Mi plan, la hoja imprimible, la búsqueda y los filtros. Control humano pendiente: validación D5 (personas expertas, MEP, filología) y pruebas con usuarios (E5).

@@ -1,0 +1,392 @@
+[
+ {
+  "source": "S25",
+  "page": 24,
+  "quote": "El grupo de 9-12 años reporta mayor mediación que el grupo de adolescentes.",
+  "es": "En Costa Rica, los niños de 9 a 12 años reciben más mediación de sus cuidadores que los adolescentes; predominan la mediación activa (acompañar, conversar) y la restrictiva (prohibir).",
+  "kind": "hallazgo",
+  "ages": [
+   "9-11"
+  ],
+  "audiences": [
+   "Familia"
+  ],
+  "theme": "Mediación parental",
+  "strength": "empirica_encuesta",
+  "caveat": "Encuesta nacional representativa por hogares (jun.–jul. 2023; N = 1200, 9–17 años; Global Kids Online): autoinforme y transversal. No mide uso de IA.",
+  "age_note": "9–12 años frente a 13–17, Costa Rica",
+  "id": "S25-01",
+  "en": "In Costa Rica, children aged 9–12 receive more mediation from caregivers than adolescents; active mediation (accompanying, talking) and restrictive mediation (prohibiting) predominate.",
+  "caveat_en": "Nationally representative household survey (Jun–Jul 2023; N = 1,200, ages 9–17; Global Kids Online): self-reported and cross-sectional. Does not measure AI use.",
+  "age_note_en": "Ages 9–12 vs 13–17, Costa Rica"
+ },
+ {
+  "source": "S25",
+  "page": 5,
+  "quote": "personas cuidadoras interesadas en la crianza digital de sus hijos o hijas, pero sin las habilidades o conocimientos",
+  "es": "Las personas cuidadoras costarricenses se interesan por la crianza digital, pero muchas no tienen las habilidades o conocimientos para promover usos beneficiosos o prevenir situaciones de violencia y riesgo.",
+  "kind": "hallazgo",
+  "ages": [
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Familia",
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Mediación parental",
+  "strength": "empirica_encuesta",
+  "caveat": "Encuesta nacional representativa por hogares (jun.–jul. 2023; N = 1200, 9–17 años; Global Kids Online): autoinforme y transversal. No mide uso de IA.",
+  "age_note": "9–17 años (grupos de análisis 9–12 y 13–17), Costa Rica",
+  "id": "S25-02",
+  "en": "Costa Rican caregivers are interested in digital parenting, but many lack the skills or knowledge to promote beneficial use or prevent violence and risk.",
+  "caveat_en": "Nationally representative household survey (Jun–Jul 2023; N = 1,200, ages 9–17; Global Kids Online): self-reported and cross-sectional. Does not measure AI use.",
+  "age_note_en": "Ages 9–17 (analysis groups 9–12 and 13–17), Costa Rica",
+  "lectura_cr": "El mismo informe reporta habilidades digitales similares entre cuidadores y NNA (pp. 24 y 40): la formación de las familias es condición para mediar.",
+  "lectura_cr_en": "The same report finds similar digital skills among caregivers and children (pp. 24 and 40): training families is a precondition for mediation."
+ },
+ {
+  "source": "S25",
+  "page": 19,
+  "quote": "Un 29% de la muestra considera que las personas cuidadoras tienen poco o ningún conocimiento para usar la Internet.",
+  "es": "El 29 % de niñas, niños y adolescentes considera que sus cuidadores saben poco o nada de internet; la proporción es mayor entre adolescentes y varones.",
+  "kind": "cifra",
+  "ages": [
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Familia",
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Mediación parental",
+  "strength": "empirica_encuesta",
+  "caveat": "Encuesta nacional representativa por hogares (jun.–jul. 2023; N = 1200, 9–17 años; Global Kids Online): autoinforme y transversal. No mide uso de IA.",
+  "age_note": "9–17 años (grupos de análisis 9–12 y 13–17), Costa Rica",
+  "id": "S25-03",
+  "en": "29% of children and adolescents think their caregivers know little or nothing about the internet; the share is higher among adolescents and boys.",
+  "caveat_en": "Nationally representative household survey (Jun–Jul 2023; N = 1,200, ages 9–17; Global Kids Online): self-reported and cross-sectional. Does not measure AI use.",
+  "age_note_en": "Ages 9–17 (analysis groups 9–12 and 13–17), Costa Rica",
+  "figure": {
+   "value": 29,
+   "unit": "% cree que su cuidador sabe poco o nada de internet",
+   "population": "9–17 años, Costa Rica",
+   "n_or_base": "N=1194 usuarios de internet"
+  },
+  "figure_en": {
+   "value": 29,
+   "unit": "% believe their caregiver knows little or nothing about the internet",
+   "population": "ages 9–17, Costa Rica",
+   "n_or_base": "N=1,194 internet users"
+  }
+ },
+ {
+  "source": "S25",
+  "page": 22,
+  "quote": "a mayor uso problemático de las personas adultas, mayor parece ser ese tipo de uso en NNA.",
+  "es": "El uso problemático del celular de los adultos se asocia con el de niñas, niños y adolescentes (r = 0,28).",
+  "kind": "hallazgo",
+  "ages": [
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Familia"
+  ],
+  "theme": "Bienestar y dependencia",
+  "strength": "empirica_encuesta",
+  "caveat": "Correlación moderada y transversal: no indica causalidad. No mide IA.",
+  "age_note": "9–17 años (grupos de análisis 9–12 y 13–17), Costa Rica",
+  "id": "S25-04",
+  "en": "Adults' problematic phone use is associated with that of children and adolescents (r = 0.28).",
+  "caveat_en": "Moderate cross-sectional correlation: does not indicate causality. Does not measure AI.",
+  "age_note_en": "Ages 9–17 (analysis groups 9–12 and 13–17), Costa Rica",
+  "lectura_cr": "El ejemplo de casa cuenta: revisar el propio uso es parte de la mediación.",
+  "lectura_cr_en": "The example at home matters: reviewing one's own use is part of mediation."
+ },
+ {
+  "source": "S25",
+  "page": 4,
+  "quote": "En esta nueva medición nos encontramos un uso más temprano del teléfono celular",
+  "es": "En Costa Rica, la edad del primer teléfono celular parece haber bajado entre 2018 y 2023, y el celular es el principal dispositivo de acceso a internet de niñas, niños y adolescentes.",
+  "kind": "hallazgo",
+  "ages": [
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Familia",
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Edad y adecuación",
+  "strength": "empirica_encuesta",
+  "caveat": "Encuesta nacional representativa por hogares (jun.–jul. 2023; N = 1200, 9–17 años; Global Kids Online): autoinforme y transversal. No mide uso de IA.",
+  "age_note": "9–17 años (grupos de análisis 9–12 y 13–17), Costa Rica",
+  "id": "S25-05",
+  "en": "In Costa Rica, the age of the first mobile phone seems to have dropped between 2018 and 2023, and the phone is children's and adolescents' main device for internet access.",
+  "caveat_en": "Nationally representative household survey (Jun–Jul 2023; N = 1,200, ages 9–17; Global Kids Online): self-reported and cross-sectional. Does not measure AI use.",
+  "age_note_en": "Ages 9–17 (analysis groups 9–12 and 13–17), Costa Rica"
+ },
+ {
+  "source": "S25",
+  "page": 10,
+  "quote": "esto podría haber limitado el desarrollo de las habilidades digitales para el uso seguro y beneficioso.",
+  "es": "Que los niños de 9 a 12 años usen menos internet puede protegerlos, pero también limitar el desarrollo de habilidades para un uso seguro y beneficioso: la restricción sola no basta.",
+  "kind": "hallazgo",
+  "ages": [
+   "9-11"
+  ],
+  "audiences": [
+   "Familia",
+   "Docente"
+  ],
+  "theme": "Edad y adecuación",
+  "strength": "empirica_encuesta",
+  "caveat": "Hallazgo de la encuesta 2018 resumido en el informe 2023 (antecedentes); orientación de los autores, no evaluada experimentalmente.",
+  "age_note": "9–12 años frente a 13–17, Costa Rica",
+  "id": "S25-06",
+  "en": "Children aged 9–12 using the internet less may protect them, but may also limit the development of skills for safe and beneficial use: restriction alone is not enough.",
+  "caveat_en": "Finding from the 2018 survey summarised in the 2023 report (background); authors' interpretation, not experimentally tested.",
+  "age_note_en": "Ages 9–12 vs 13–17, Costa Rica"
+ },
+ {
+  "source": "S25",
+  "page": 11,
+  "quote": "La mediación parental restrictiva parece ser protectora, aunque limitada, ya que la protección se realiza a través de la prohibición del uso, no a través de la identificación de los usos riesgosos y beneficiosos.",
+  "es": "Prohibir protege, pero de forma limitada: no enseña a distinguir usos riesgosos de usos beneficiosos. En adolescentes, la mediación activa (y luego el monitoreo) se asocia con contextos más protectores.",
+  "kind": "hallazgo",
+  "ages": [
+   "9-11"
+  ],
+  "audiences": [
+   "Familia"
+  ],
+  "theme": "Mediación parental",
+  "strength": "empirica_encuesta",
+  "caveat": "Hallazgo de la encuesta 2018 resumido en el informe 2023 (antecedentes); orientación de los autores, no evaluada experimentalmente.",
+  "age_note": "9–12 años frente a 13–17, Costa Rica",
+  "id": "S25-07",
+  "en": "Prohibiting protects, but only partly: it does not teach how to tell risky from beneficial uses. In adolescents, active mediation (followed by monitoring) is associated with more protective contexts.",
+  "caveat_en": "Finding from the 2018 survey summarised in the 2023 report (background); authors' interpretation, not experimentally tested.",
+  "age_note_en": "Ages 9–12 vs 13–17, Costa Rica"
+ },
+ {
+  "source": "S25",
+  "page": 19,
+  "quote": "Alrededor de un 36% de las NNA indican que nunca o casi nunca hacen uso de la Internet en la escuela",
+  "es": "El 36 % de niñas, niños y adolescentes nunca o casi nunca usa internet en la escuela, y solo el 29,1 % lo usa a diario; el uso docente de tecnologías en clase es muy bajo y desigual por región.",
+  "kind": "cifra",
+  "ages": [
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Aprendizaje y docencia",
+  "strength": "empirica_encuesta",
+  "caveat": "Encuesta nacional representativa por hogares (jun.–jul. 2023; N = 1200, 9–17 años; Global Kids Online): autoinforme y transversal. No mide uso de IA.",
+  "age_note": "9–17 años (grupos de análisis 9–12 y 13–17), Costa Rica",
+  "id": "S25-08",
+  "en": "36% of children and adolescents never or almost never use the internet at school, and only 29.1% use it daily; teachers' classroom use of technology is very low and uneven across regions.",
+  "caveat_en": "Nationally representative household survey (Jun–Jul 2023; N = 1,200, ages 9–17; Global Kids Online): self-reported and cross-sectional. Does not measure AI use.",
+  "age_note_en": "Ages 9–17 (analysis groups 9–12 and 13–17), Costa Rica",
+  "figure": {
+   "value": 36,
+   "unit": "% nunca o casi nunca usa internet en la escuela",
+   "population": "9–17 años, Costa Rica",
+   "n_or_base": "N=1194 usuarios de internet"
+  },
+  "figure_en": {
+   "value": 36,
+   "unit": "% never or almost never use the internet at school",
+   "population": "ages 9–17, Costa Rica",
+   "n_or_base": "N=1,194 internet users"
+  }
+ },
+ {
+  "source": "S25",
+  "page": 25,
+  "quote": "La mediación digital activa de las personas docentes, de guía y acompañamiento, se mantiene similar en ambos periodos.",
+  "es": "La guía y el acompañamiento docentes en el uso de la tecnología no mejoraron entre 2018 y 2023 (puntaje medio inferior a 5 sobre 10) y los adolescentes perciben menos que los niños.",
+  "kind": "hallazgo",
+  "ages": [
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Aprendizaje y docencia",
+  "strength": "empirica_encuesta",
+  "caveat": "Encuesta nacional representativa por hogares (jun.–jul. 2023; N = 1200, 9–17 años; Global Kids Online): autoinforme y transversal. No mide uso de IA.",
+  "age_note": "9–17 años (grupos de análisis 9–12 y 13–17), Costa Rica",
+  "id": "S25-09",
+  "en": "Teachers' guidance and support in technology use did not improve between 2018 and 2023 (mean score below 5 out of 10), and adolescents perceive less of it than children.",
+  "caveat_en": "Nationally representative household survey (Jun–Jul 2023; N = 1,200, ages 9–17; Global Kids Online): self-reported and cross-sectional. Does not measure AI use.",
+  "age_note_en": "Ages 9–17 (analysis groups 9–12 and 13–17), Costa Rica"
+ },
+ {
+  "source": "S25",
+  "page": 12,
+  "quote": "es necesario promover el uso guiado de la Internet en la institución educativa",
+  "es": "Promueva el uso guiado de internet en la escuela: cuando hay uso escolar acompañado por docentes, se asocia con más habilidades digitales y con un efecto protector de los pares.",
+  "kind": "recomendacion",
+  "ages": [
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Aprendizaje y docencia",
+  "strength": "empirica_encuesta",
+  "caveat": "Hallazgo de la encuesta 2018 resumido en el informe 2023 (antecedentes); orientación de los autores, no evaluada experimentalmente.",
+  "age_note": "9–17 años (grupos de análisis 9–12 y 13–17), Costa Rica",
+  "id": "S25-10",
+  "en": "Promote guided internet use at school: when school use is accompanied by teachers, it is associated with more digital skills and a protective peer effect.",
+  "caveat_en": "Finding from the 2018 survey summarised in the 2023 report (background); authors' interpretation, not experimentally tested.",
+  "age_note_en": "Ages 9–17 (analysis groups 9–12 and 13–17), Costa Rica"
+ },
+ {
+  "source": "S25",
+  "page": 28,
+  "quote": "un 71,6% indica que se trata de estudiantes de su institución educativa",
+  "es": "Cerca de 22 de cada 100 se sintieron tratados de forma ofensiva y, de ellos, el 71,6 % señala a estudiantes de su propio centro educativo; el ciberacoso ocurre sobre todo por WhatsApp.",
+  "kind": "cifra",
+  "ages": [
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Familia",
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Seguridad y explotación",
+  "strength": "empirica_encuesta",
+  "caveat": "Encuesta nacional representativa por hogares (jun.–jul. 2023; N = 1200, 9–17 años; Global Kids Online): autoinforme y transversal. No mide uso de IA.",
+  "age_note": "9–17 años (grupos de análisis 9–12 y 13–17), Costa Rica",
+  "id": "S25-11",
+  "en": "About 22 in 100 felt treated offensively and, of those, 71.6% point to students from their own school; cyberbullying happens mostly on WhatsApp.",
+  "caveat_en": "Nationally representative household survey (Jun–Jul 2023; N = 1,200, ages 9–17; Global Kids Online): self-reported and cross-sectional. Does not measure AI use.",
+  "age_note_en": "Ages 9–17 (analysis groups 9–12 and 13–17), Costa Rica",
+  "figure": {
+   "value": 71.6,
+   "unit": "% de víctimas que señala a estudiantes de su centro",
+   "population": "9–17 años con trato ofensivo, Costa Rica",
+   "n_or_base": "N=1194 usuarios de internet"
+  },
+  "figure_en": {
+   "value": 71.6,
+   "unit": "% of victims pointing to students at their school",
+   "population": "ages 9–17 treated offensively, Costa Rica",
+   "n_or_base": "N=1,194 internet users"
+  }
+ },
+ {
+  "source": "S25",
+  "page": 31,
+  "quote": "un 14% de esas personas no recibió el apoyo requerido",
+  "es": "La mayoría de las víctimas de ciberacoso pidió ayuda, pero el 14 % de quienes la pidieron no recibió el apoyo que necesitaba y el 9,5 % no buscó ayuda.",
+  "kind": "hallazgo",
+  "ages": [
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Familia",
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Responsabilidad compartida",
+  "strength": "empirica_encuesta",
+  "caveat": "Encuesta nacional representativa por hogares (jun.–jul. 2023; N = 1200, 9–17 años; Global Kids Online): autoinforme y transversal. No mide uso de IA.",
+  "age_note": "9–17 años (grupos de análisis 9–12 y 13–17), Costa Rica",
+  "id": "S25-12",
+  "en": "Most cyberbullying victims sought help, but 14% of those who asked did not receive the support they needed and 9.5% did not seek help.",
+  "caveat_en": "Nationally representative household survey (Jun–Jul 2023; N = 1,200, ages 9–17; Global Kids Online): self-reported and cross-sectional. Does not measure AI use.",
+  "age_note_en": "Ages 9–17 (analysis groups 9–12 and 13–17), Costa Rica"
+ },
+ {
+  "source": "S25",
+  "page": 33,
+  "quote": "El 11,9% dice haber recibido este tipo de mensajes, una disminución con respecto al 2018 (16,2%).",
+  "es": "El 11,9 % de los adolescentes de 13 a 17 años recibió mensajes con contenido sexual (16,2 % en 2018); el 38,6 % de esos mensajes provino de personas adultas.",
+  "kind": "cifra",
+  "ages": [
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Familia",
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Seguridad y explotación",
+  "strength": "empirica_encuesta",
+  "caveat": "Encuesta nacional representativa por hogares (jun.–jul. 2023; N = 1200, 9–17 años; Global Kids Online): autoinforme y transversal. No mide uso de IA.",
+  "age_note": "13–17 años (módulo solo para adolescentes), Costa Rica",
+  "id": "S25-13",
+  "en": "11.9% of adolescents aged 13–17 received sexual messages (16.2% in 2018); 38.6% of those messages came from adults.",
+  "caveat_en": "Nationally representative household survey (Jun–Jul 2023; N = 1,200, ages 9–17; Global Kids Online): self-reported and cross-sectional. Does not measure AI use.",
+  "age_note_en": "Ages 13–17 (adolescent-only module), Costa Rica",
+  "figure": {
+   "value": {
+    "2023": "11,9 %",
+    "2018": "16,2 %"
+   },
+   "unit": "recibió mensajes con contenido sexual",
+   "population": "13–17 años, Costa Rica",
+   "n_or_base": "N=1194 usuarios de internet"
+  },
+  "figure_en": {
+   "value": {
+    "2023": "11.9%",
+    "2018": "16.2%"
+   },
+   "unit": "received sexual messages",
+   "population": "ages 13–17, Costa Rica",
+   "n_or_base": "N=1,194 internet users"
+  }
+ },
+ {
+  "source": "S25",
+  "page": 36,
+  "quote": "13 de 100 adolescentes indica haber tenido contacto con personas desconocidas mediante Internet",
+  "es": "13 de cada 100 adolescentes contactó por internet a personas desconocidas y el 35 % de ellos se encontró en persona (casi 5 de cada 100), en su mayoría con personas de su edad.",
+  "kind": "cifra",
+  "ages": [
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Familia",
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Seguridad y explotación",
+  "strength": "empirica_encuesta",
+  "caveat": "Encuesta nacional representativa por hogares (jun.–jul. 2023; N = 1200, 9–17 años; Global Kids Online): autoinforme y transversal. No mide uso de IA.",
+  "age_note": "13–17 años (módulo solo para adolescentes), Costa Rica",
+  "id": "S25-14",
+  "en": "13 in 100 adolescents contacted strangers online and 35% of them met in person (almost 5 in 100), mostly people their own age.",
+  "caveat_en": "Nationally representative household survey (Jun–Jul 2023; N = 1,200, ages 9–17; Global Kids Online): self-reported and cross-sectional. Does not measure AI use.",
+  "age_note_en": "Ages 13–17 (adolescent-only module), Costa Rica"
+ }
+]

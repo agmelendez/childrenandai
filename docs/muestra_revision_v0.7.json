@@ -1,0 +1,951 @@
+[
+ {
+  "id": "S04-41",
+  "source": "S04",
+  "page": 54,
+  "quote": "A second group of 18 education systems addresses AI and other emerging technologies mainly through national guidance",
+  "es": "En Europa, 18 sistemas educativos abordan la IA sobre todo mediante orientaciones nacionales, apoyo profesional y plataformas de recursos, dejando las decisiones operativas a cada escuela.",
+  "en": "In Europe, 18 education systems address AI mainly through national guidance, professional support and resource platforms, leaving operational decisions to each school.",
+  "kind": "hallazgo",
+  "ages": [
+   "6-8",
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Dirección"
+  ],
+  "theme": "Marco normativo",
+  "strength": "orientacion",
+  "caveat": "Panorama comparado europeo (Eurydice 2026): describe políticas, no evalúa su efecto; no aplicable directamente a Costa Rica."
+ },
+ {
+  "id": "S04-42",
+  "source": "S04",
+  "page": 55,
+  "quote": "This model places implementation at the school level and supports it through guidance and national reference resources, rather than formal regulation.",
+  "es": "El modelo estonio confía la implementación de la IA a las escuelas con guías y recursos nacionales en lugar de regulación formal, un esquema comparable al costarricense (guía docente del MEP).",
+  "en": "Estonia's model leaves AI implementation to schools, supported by national guidance and resources rather than formal regulation, a scheme comparable to Costa Rica's (MEP teacher guide).",
+  "kind": "hallazgo",
+  "ages": [
+   "6-8",
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Dirección"
+  ],
+  "theme": "Gobernanza escolar",
+  "strength": "orientacion",
+  "caveat": "Panorama comparado europeo (Eurydice 2026): describe políticas, no evalúa su efecto; no aplicable directamente a Costa Rica."
+ },
+ {
+  "id": "S04-46",
+  "source": "S04",
+  "page": 161,
+  "quote": "These guidelines typically cover issues such as understanding the logic of AI applications",
+  "es": "Las guías docentes europeas sobre IA suelen cubrir: lógica de las aplicaciones de IA, evaluación crítica de contenido generado, protección de datos y derechos de autor, planificación, diferenciación, evaluación y cómo enseñar un uso responsable.",
+  "en": "European teacher guidelines on AI typically cover: the logic of AI applications, critical evaluation of generated content, data protection and copyright, planning, differentiation, assessment and how to teach responsible use.",
+  "kind": "recomendacion",
+  "ages": [
+   "6-8",
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Docente"
+  ],
+  "theme": "Aprendizaje y docencia",
+  "strength": "orientacion",
+  "caveat": "Panorama comparado europeo (Eurydice 2026): describe políticas, no evalúa su efecto; no aplicable directamente a Costa Rica."
+ },
+ {
+  "id": "S14-16",
+  "source": "S14",
+  "page": 61,
+  "quote": "escuelas y estudiantes son blancos frecuentes de robos de información, phishing o suplantación de identidad",
+  "es": "Escuelas y estudiantes son blancos frecuentes de robo de información, phishing y suplantación de identidad, por ejemplo cuentas falsas que se hacen pasar por docentes para obtener datos de las familias.",
+  "en": "Schools and students are frequent targets of data theft, phishing and impersonation, e.g. fake accounts posing as teachers to obtain families' data.",
+  "kind": "alerta",
+  "ages": [
+   "6-8",
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Familia",
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Seguridad y explotación",
+  "strength": "orientacion",
+  "caveat": "Guía docente oficial MEP–ONU–UNESCO–ULACIT (2026); orientación, no reglamento."
+ },
+ {
+  "id": "S14-13",
+  "source": "S14",
+  "page": 63,
+  "quote": "decidan cuándo es ético usar IA en sus tareas y cuándo deben resolver problemas por sí mismos",
+  "es": "Guíe al estudiantado para que decida cuándo es ético usar IA en sus tareas y cuándo debe resolver los problemas por sí mismo, para desarrollar criterio y autonomía.",
+  "en": "Guide students to decide when it is ethical to use AI in their assignments and when they should solve problems themselves, to build judgement and autonomy.",
+  "kind": "recomendacion",
+  "ages": [
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Docente"
+  ],
+  "theme": "Competencias",
+  "strength": "orientacion",
+  "caveat": "Guía docente oficial MEP–ONU–UNESCO–ULACIT (2026); orientación, no reglamento."
+ },
+ {
+  "id": "S14-03",
+  "source": "S14",
+  "page": 38,
+  "quote": "estos sistemas pueden almacenar o compartir datos sensibles sin garantías legales",
+  "es": "Las plataformas de IA pueden almacenar o compartir datos sensibles sin garantías legales, lo que expone a personas menores de edad a riesgos; use datos ficticios o anonimizados.",
+  "en": "AI platforms may store or share sensitive data without legal guarantees, exposing minors to risk; use fictitious or anonymized data.",
+  "kind": "alerta",
+  "ages": [
+   "6-8",
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Familia",
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Privacidad y datos",
+  "strength": "orientacion",
+  "caveat": "Guía docente oficial MEP–ONU–UNESCO–ULACIT (2026); orientación, no reglamento."
+ },
+ {
+  "id": "S14-01",
+  "source": "S14",
+  "page": 24,
+  "quote": "el uso de datos personales en entornos digitales debe cumplir con la Ley 8968 sobre protección de datos personales.",
+  "es": "Todo uso de datos personales de estudiantes en entornos digitales, incluidas las herramientas de IA, debe cumplir la Ley 8968 de Protección de la Persona frente al Tratamiento de sus Datos Personales.",
+  "en": "Any use of students' personal data in digital environments, including AI tools, must comply with Costa Rica's Law 8968 on the protection of personal data.",
+  "kind": "obligacion",
+  "ages": [
+   "6-8",
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Familia",
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Privacidad y datos",
+  "strength": "normativa",
+  "caveat": "Recuerda una obligación legal vigente en Costa Rica (Ley 8968); la guía no desarrolla el régimen específico para personas menores de edad."
+ },
+ {
+  "id": "S14-14",
+  "source": "S14",
+  "page": 67,
+  "quote": "enseñar a usar herramientas como Copilot para apoyar tareas sin hacer el trabajo por los hijos",
+  "es": "La escuela puede organizar talleres para familias que enseñen a usar la IA para acompañar las tareas sin hacer el trabajo por los hijos.",
+  "en": "Schools can run workshops for families on using AI to support homework without doing the work for their children.",
+  "kind": "recomendacion",
+  "ages": [
+   "6-8",
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Familia",
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Mediación parental",
+  "strength": "orientacion",
+  "caveat": "Guía docente oficial MEP–ONU–UNESCO–ULACIT (2026); orientación, no reglamento."
+ },
+ {
+  "id": "S14-07",
+  "source": "S14",
+  "page": 37,
+  "quote": "No garantiza privacidad de datos, lo cual es crítico en contextos educativos",
+  "es": "La propia guía advierte que subir ensayos estudiantiles a ChatGPT no garantiza la privacidad de los datos, algo crítico en educación.",
+  "en": "The guide itself warns that uploading student essays to ChatGPT does not guarantee data privacy, which is critical in education.",
+  "kind": "alerta",
+  "ages": [
+   "6-8",
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Privacidad y datos",
+  "strength": "orientacion",
+  "caveat": "Inconsistencia interna: la misma sección propone subir ensayos para corregirlos. Esta advertencia y la Ley 8968 exigen anonimizar antes de hacerlo."
+ },
+ {
+  "id": "S14-10",
+  "source": "S14",
+  "page": 38,
+  "quote": "promover normas claras de uso responsable de la IA antes de aplicar consecuencias",
+  "es": "Ante un trabajo copiado de una IA, verifique primero el aporte propio del estudiante y establezca normas claras de uso responsable antes de aplicar consecuencias.",
+  "en": "When work appears copied from AI, first check the student's own contribution and set clear rules for responsible use before applying consequences.",
+  "kind": "recomendacion",
+  "ages": [
+   "6-8",
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Gobernanza escolar",
+  "strength": "orientacion",
+  "caveat": "Guía docente oficial MEP–ONU–UNESCO–ULACIT (2026); orientación, no reglamento."
+ },
+ {
+  "id": "S15-06",
+  "source": "S15",
+  "page": 13,
+  "quote": "Antes de la consulta, guía a los estudiantes para evaluar si el uso de la IA es realmente ventajoso y ético para la tarea",
+  "es": "Antes de usar la IA, guíe al estudiantado a evaluar si realmente conviene y es ético para la tarea, o si otro método desarrolla mejor la habilidad buscada.",
+  "en": "Before using AI, guide students to assess whether it is really useful and ethical for the task, or whether another method better builds the target skill.",
+  "kind": "recomendacion",
+  "ages": [
+   "12-14"
+  ],
+  "audiences": [
+   "Docente"
+  ],
+  "theme": "Aprendizaje y docencia",
+  "strength": "normativa",
+  "caveat": "Norma curricular de otra jurisdicción (CABA); útil como modelo de progresión, no aplicable directamente en Costa Rica."
+ },
+ {
+  "id": "S15-14",
+  "source": "S15",
+  "page": 14,
+  "quote": "Alfabetización informacional: abordaje de los deepfakes y la manipulación audiovisual.",
+  "es": "Incluya en la enseñanza los deepfakes y la manipulación audiovisual, para que el estudiantado pase de «espectador engañado» a «creador responsable».",
+  "en": "Include deepfakes and audiovisual manipulation in teaching, so students move from 'deceived viewer' to 'responsible creator'.",
+  "kind": "recomendacion",
+  "ages": [
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Seguridad y explotación",
+  "strength": "normativa",
+  "caveat": "Norma curricular de otra jurisdicción (CABA); útil como modelo de progresión, no aplicable directamente en Costa Rica."
+ },
+ {
+  "id": "S15-13",
+  "source": "S15",
+  "page": 20,
+  "quote": "Aplicar los procedimientos de reporte y denuncia disponibles ante situaciones de suplantación de identidad.",
+  "es": "En la secundaria alta, el estudiantado debe saber usar los procedimientos de reporte y denuncia ante una suplantación de identidad.",
+  "en": "In upper secondary, students should know how to use reporting procedures in cases of identity impersonation.",
+  "kind": "competencia",
+  "ages": [
+   "15-18"
+  ],
+  "audiences": [
+   "Familia",
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Seguridad y explotación",
+  "strength": "normativa",
+  "caveat": "Norma curricular de otra jurisdicción (CABA); útil como modelo de progresión, no aplicable directamente en Costa Rica."
+ },
+ {
+  "id": "S15-04",
+  "source": "S15",
+  "page": 18,
+  "quote": "Reconocimiento de los riesgos de establecer vínculos afectivos o de dependencia emocional con sistemas de inteligencia artificial",
+  "es": "En la secundaria baja, el estudiantado debe reconocer los riesgos de establecer vínculos afectivos o de dependencia emocional con sistemas de IA y distinguir la empatía simulada de un vínculo humano.",
+  "en": "In lower secondary, students should recognise the risks of forming emotional bonds or dependence on AI systems and distinguish simulated empathy from a genuine human bond.",
+  "kind": "competencia",
+  "ages": [
+   "12-14"
+  ],
+  "audiences": [
+   "Familia",
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Bienestar y dependencia",
+  "strength": "normativa",
+  "caveat": "Norma curricular de otra jurisdicción (CABA); útil como modelo de progresión, no aplicable directamente en Costa Rica."
+ },
+ {
+  "id": "S15-10",
+  "source": "S15",
+  "page": 14,
+  "quote": "Evitar el antropomorfismo permite pasar del asombro acrítico a la comprensión",
+  "es": "Explique que la IA no «piensa», no «sabe» ni «siente»: calcula respuestas probables a partir de patrones. Evitar hablar de ella como si fuera una persona ayuda a pasar del asombro a la comprensión.",
+  "en": "Explain that AI does not 'think', 'know' or 'feel': it computes likely answers from patterns. Avoiding talking about it as a person helps move from awe to understanding.",
+  "kind": "recomendacion",
+  "ages": [
+   "6-8",
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Familia",
+   "Docente"
+  ],
+  "theme": "Alfabetización en IA",
+  "strength": "normativa",
+  "caveat": "Norma curricular de otra jurisdicción (CABA); útil como modelo de progresión, no aplicable directamente en Costa Rica."
+ },
+ {
+  "id": "S16-05",
+  "source": "S16",
+  "page": 14,
+  "quote": "Young people are not talking to adults about the relational impact of AI at all.",
+  "es": "Según una persona líder de una organización juvenil, los jóvenes no hablan con los adultos sobre el impacto de la IA en sus relaciones porque perciben juicio y vergüenza.",
+  "en": "According to a youth organisation leader, young people do not talk to adults about AI's relational impact because they sense judgement and shame.",
+  "kind": "hallazgo",
+  "ages": [
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Familia",
+   "Docente"
+  ],
+  "theme": "Mediación parental",
+  "strength": "opinion",
+  "caveat": "Testimonio individual (EE. UU.), no un dato."
+ },
+ {
+  "id": "S16-04",
+  "source": "S16",
+  "page": 14,
+  "quote": "we need to address the shame attached to relying on it and break the ‘code of secrecy’ between generations",
+  "es": "Hable sin juzgar sobre el uso que sus hijos hacen de la IA: la vergüenza alimenta un «código de silencio» entre generaciones que cierra la comunicación.",
+  "en": "Talk without judgement about how your children use AI: shame feeds a 'code of secrecy' between generations that shuts down communication.",
+  "kind": "recomendacion",
+  "ages": [
+   "6-8",
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Familia"
+  ],
+  "theme": "Mediación parental",
+  "strength": "opinion",
+  "caveat": "Informe cualitativo para financiadores (52 participantes, 16 países); perspectivas y testimonios, no generalizable."
+ },
+ {
+  "id": "S16-03",
+  "source": "S16",
+  "page": 15,
+  "quote": "there’s a threshold moment most young people pass through when they shift from using AI for practical tasks (like homework help) to using it for relational or emotional support",
+  "es": "Muchos adolescentes pasan por un momento umbral: del uso de la IA para tareas prácticas (como los deberes) a usarla como apoyo emocional o relacional. Quienes reflexionaron antes lo atraviesan mejor.",
+  "en": "Many adolescents go through a threshold moment: from using AI for practical tasks (like homework) to using it for emotional or relational support. Those who reflected beforehand navigate it better.",
+  "kind": "hallazgo",
+  "ages": [
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Familia",
+   "Docente"
+  ],
+  "theme": "Bienestar y dependencia",
+  "strength": "opinion",
+  "caveat": "Informe cualitativo para financiadores (52 participantes, 16 países); perspectivas y testimonios, no generalizable."
+ },
+ {
+  "id": "S17-03",
+  "source": "S17",
+  "page": 31,
+  "quote": "Ensure groups in situation of marginalization and vulnerability, including children, are actively included and protected in data ecosystems.",
+  "es": "Asegure que los grupos vulnerables, incluida la niñez, estén incluidos y protegidos en los ecosistemas de datos.",
+  "en": "Ensure vulnerable groups, including children, are included and protected in data ecosystems.",
+  "kind": "recomendacion",
+  "ages": [
+   "6-8",
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Dirección"
+  ],
+  "theme": "Privacidad y datos",
+  "strength": "orientacion",
+  "caveat": "Marco general de gobernanza de datos, no específico de escuelas ni de niñez; su aplicación a plataformas educativas es una extrapolación del equipo CIOdD."
+ },
+ {
+  "id": "S17-01",
+  "source": "S17",
+  "page": 16,
+  "quote": "Adopt data minimization, privacy by-design, encryption, and secure storage practices.",
+  "es": "Al adoptar plataformas con IA, exija minimización de datos, privacidad desde el diseño, cifrado y almacenamiento seguro.",
+  "en": "When adopting AI platforms, require data minimisation, privacy by design, encryption and secure storage.",
+  "kind": "recomendacion",
+  "ages": [
+   "6-8",
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Dirección"
+  ],
+  "theme": "Privacidad y datos",
+  "strength": "orientacion",
+  "caveat": "Marco general de gobernanza de datos, no específico de escuelas ni de niñez; su aplicación a plataformas educativas es una extrapolación del equipo CIOdD."
+ },
+ {
+  "id": "S18-02",
+  "source": "S18",
+  "page": 10,
+  "quote": "AI is vulnerable to biases embedded in the data it learns from.",
+  "es": "La IA hereda los sesgos de los datos con que se entrena y puede reproducirlos y amplificarlos.",
+  "en": "AI inherits the biases of its training data and can reproduce and amplify them.",
+  "kind": "alerta",
+  "ages": [
+   "15-18"
+  ],
+  "audiences": [
+   "Docente"
+  ],
+  "theme": "Alfabetización en IA",
+  "strength": "orientacion",
+  "caveat": "Kit de 2023 para educación superior; listas de herramientas desactualizadas. Licencia CC BY-NC-SA: solo cita breve y paráfrasis."
+ },
+ {
+  "id": "S18-03",
+  "source": "S18",
+  "page": 10,
+  "quote": "This inequality can further widen the digital divide and perpetuate educational disparities.",
+  "es": "Si las herramientas útiles requieren suscripciones de pago, el acceso desigual amplía la brecha digital y las desigualdades educativas.",
+  "en": "If useful tools require paid subscriptions, unequal access widens the digital divide and educational inequality.",
+  "kind": "alerta",
+  "ages": [
+   "15-18"
+  ],
+  "audiences": [
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Gobernanza escolar",
+  "strength": "orientacion",
+  "caveat": "Kit de 2023 para educación superior; listas de herramientas desactualizadas. Licencia CC BY-NC-SA: solo cita breve y paráfrasis."
+ },
+ {
+  "id": "S19-04",
+  "source": "S19",
+  "page": 1,
+  "quote": "No es la herramienta la que enseña, sino la intención con la que fue diseñada",
+  "es": "No es la herramienta la que enseña, sino la intención pedagógica con que se diseña; la plantilla propuesta define persona, tarea, contexto y formato.",
+  "en": "It is not the tool that teaches but the pedagogical intention behind its design; the proposed template defines persona, task, context and format.",
+  "kind": "hallazgo",
+  "ages": [
+   "15-18"
+  ],
+  "audiences": [
+   "Docente"
+  ],
+  "theme": "Aprendizaje y docencia",
+  "strength": "opinion",
+  "caveat": "Material de curso sin autoría ni fecha publicadas; ejemplo pensado para 18–25 años. Las herramientas de IA generativa fijan edades mínimas en sus términos de uso: verificarlas antes de recomendarlas a menores."
+ },
+ {
+  "id": "S19-03",
+  "source": "S19",
+  "page": 5,
+  "quote": "Siempre plantea preguntas que promuevan la mejora y la sustentación de las ideas de la persona estudiante.",
+  "es": "Instruya al tutor para que siempre responda con preguntas que obliguen al estudiante a sustentar y mejorar sus ideas (tutor socrático).",
+  "en": "Instruct the tutor to always respond with questions that push the student to support and improve their ideas (Socratic tutor).",
+  "kind": "recomendacion",
+  "ages": [
+   "15-18"
+  ],
+  "audiences": [
+   "Docente"
+  ],
+  "theme": "Aprendizaje y docencia",
+  "strength": "orientacion",
+  "caveat": "Material de curso sin autoría ni fecha publicadas; ejemplo pensado para 18–25 años. Las herramientas de IA generativa fijan edades mínimas en sus términos de uso: verificarlas antes de recomendarlas a menores."
+ },
+ {
+  "id": "S20-04",
+  "source": "S20",
+  "page": 12,
+  "quote": "la mediación de padres y madres es valorada positivamente por nna de todas las edades.",
+  "es": "La mediación de padres y madres es valorada positivamente por niñas, niños y adolescentes de todas las edades; sus pares son el primer referente al contar una mala experiencia y los padres, el segundo.",
+  "en": "Parental mediation is valued positively by children and adolescents of all ages; peers are the first people they tell about a bad experience, and parents the second.",
+  "kind": "hallazgo",
+  "ages": [
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Familia"
+  ],
+  "theme": "Mediación parental",
+  "strength": "empirica_encuesta",
+  "caveat": "Encuesta escolar de Uruguay (2022; N = 7822; 9–17 años): transversal y autoinformada; no aplicable directamente a Costa Rica, útil como referencia latinoamericana. No mide uso de IA."
+ },
+ {
+  "id": "S20-08",
+  "source": "S20",
+  "page": 11,
+  "quote": "Casi uno de cada cuatro nna que asiste a educación media recibió mensajes con contenido sexual y uno de cada diez los ha enviado",
+  "es": "Casi uno de cada cuatro estudiantes de secundaria recibió mensajes con contenido sexual y uno de cada diez los envió; ambos aumentan con la edad.",
+  "en": "Almost one in four secondary students received sexual messages and one in ten sent them; both increase with age.",
+  "kind": "cifra",
+  "ages": [
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Familia",
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Seguridad y explotación",
+  "strength": "empirica_encuesta",
+  "caveat": "Encuesta escolar de Uruguay (2022; N = 7822; 9–17 años): transversal y autoinformada; no aplicable directamente a Costa Rica, útil como referencia latinoamericana. No mide uso de IA."
+ },
+ {
+  "id": "S20-02",
+  "source": "S20",
+  "page": 10,
+  "quote": "Los nna no son «nativos digitales», su nivel de habilidades va creciendo a lo largo del tiempo y la educación juega un rol importante.",
+  "es": "Niñas, niños y adolescentes no son «nativos digitales»: sus habilidades crecen con la edad y la educación cumple un papel importante.",
+  "en": "Children and adolescents are not 'digital natives': their skills grow with age and education plays an important role.",
+  "kind": "hallazgo",
+  "ages": [
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Familia",
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Alfabetización en IA",
+  "strength": "empirica_encuesta",
+  "caveat": "Encuesta escolar de Uruguay (2022; N = 7822; 9–17 años): transversal y autoinformada; no aplicable directamente a Costa Rica, útil como referencia latinoamericana. No mide uso de IA."
+ },
+ {
+  "id": "S20-09",
+  "source": "S20",
+  "page": 12,
+  "quote": "La mitad de las y los adolescentes sostuvieron haber tenido algún problema en el sueño o la alimentación, en sus vínculos o en el estudio a raíz del tiempo que pasan en Internet.",
+  "es": "La mitad de los adolescentes reporta problemas de sueño, alimentación, relaciones o estudio por el tiempo en internet, aunque dicen tener estrategias para regularlo.",
+  "en": "Half of adolescents report problems with sleep, eating, relationships or study due to time online, though they say they have strategies to regulate it.",
+  "kind": "hallazgo",
+  "ages": [
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Familia",
+   "Docente"
+  ],
+  "theme": "Bienestar y dependencia",
+  "strength": "empirica_encuesta",
+  "caveat": "Encuesta escolar de Uruguay (2022; N = 7822; 9–17 años): transversal y autoinformada; no aplicable directamente a Costa Rica, útil como referencia latinoamericana. No mide uso de IA."
+ },
+ {
+  "id": "S21-04",
+  "source": "S21",
+  "page": 8,
+  "quote": "Se garantiza el derecho de toda persona al acceso de sus datos personales, rectificación o supresión de estos y a consentir la cesión de sus datos.",
+  "es": "Las familias pueden pedir acceso, rectificación o supresión de los datos de sus hijos y decidir si se ceden a terceros; el responsable debe responder gratis en cinco días hábiles.",
+  "en": "Families may request access to, correction or deletion of their children's data and decide whether it is shared with third parties; the controller must respond free of charge within five working days.",
+  "kind": "obligacion",
+  "ages": [
+   "6-8",
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Familia",
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Privacidad y datos",
+  "strength": "normativa",
+  "caveat": "Ley vigente en Costa Rica. No establece un régimen específico para personas menores de edad: el consentimiento lo da el titular o su representante legal."
+ },
+ {
+  "id": "S21-03",
+  "source": "S21",
+  "page": 11,
+  "quote": "Ninguna persona estará obligada a suministrar datos sensibles.",
+  "es": "Nadie está obligado a dar datos sensibles; su tratamiento (salud, origen étnico, religión, vida sexual, entre otros) está prohibido salvo excepciones legales.",
+  "en": "No one is obliged to provide sensitive data; processing it (health, ethnic origin, religion, sex life, among others) is prohibited save legal exceptions.",
+  "kind": "obligacion",
+  "ages": [
+   "6-8",
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Familia",
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Privacidad y datos",
+  "strength": "normativa",
+  "caveat": "Ley vigente en Costa Rica. No establece un régimen específico para personas menores de edad: el consentimiento lo da el titular o su representante legal."
+ },
+ {
+  "id": "S22-01",
+  "source": "S22",
+  "page": 4,
+  "quote": "Toda manifestación de voluntad expresa, libre, inequívoca, informada y específica que se otorgue por escrito o en medio digital para un fin determinado",
+  "es": "El consentimiento válido es expreso, libre, inequívoco, informado y específico para un fin determinado; si va dentro de un contrato con otros fines, requiere una cláusula separada.",
+  "en": "Valid consent is express, free, unambiguous, informed and specific to a given purpose; if included in a contract for other purposes, it needs a separate clause.",
+  "kind": "definicion",
+  "ages": [
+   "6-8",
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Familia",
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Privacidad y datos",
+  "strength": "normativa",
+  "caveat": "Reglamento vigente (DE 37554-JP, reformado por DE 40008 de 2016)."
+ },
+ {
+  "id": "S23-05",
+  "source": "S23",
+  "page": 14,
+  "quote": "Corresponde al Patronato Nacional de la Infancia (PANI) elaborar, al final de cada año, un informe detallado",
+  "es": "El PANI debe publicar cada año un informe con las acciones de la comisión y los riesgos detectados para menores frente a delitos sexuales en línea.",
+  "en": "PANI must publish an annual report on the commission's actions and the risks detected for minors regarding online sexual offences.",
+  "kind": "obligacion",
+  "ages": [
+   "6-8",
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Dirección"
+  ],
+  "theme": "Responsabilidad compartida",
+  "strength": "normativa",
+  "caveat": "Ley vigente en Costa Rica (2021)."
+ },
+ {
+  "id": "S23-04",
+  "source": "S23",
+  "page": 16,
+  "quote": "su imagen o su voz, alteradas o modificadas, dedicada a actividades sexuales explícitas, reales o simuladas",
+  "es": "La definición legal de material pornográfico infantil incluye la imagen o la voz de una persona menor de edad «alteradas o modificadas» en actividades sexuales «reales o simuladas»: base para tratar los deepfakes sexuales de menores como delito (5 a 9 años por producir o divulgar).",
+  "en": "The legal definition of child sexual abuse material includes a minor's image or voice 'altered or modified' in 'real or simulated' sexual activity: grounds for treating sexual deepfakes of minors as a crime (5–9 years for producing or disseminating).",
+  "kind": "obligacion",
+  "ages": [
+   "6-8",
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Familia",
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Seguridad y explotación",
+  "strength": "normativa",
+  "caveat": "Ley de 2021, anterior a la IA generativa masiva: la aplicación a contenido íntegramente sintético es una interpretación del texto, sin jurisprudencia verificada en este corpus."
+ },
+ {
+  "id": "S24-04",
+  "source": "S24",
+  "page": 26,
+  "quote": "El MEP no solo debe liderar la integración de herramientas de IA en el sistema educativo, sino también capacitar al personal docente",
+  "es": "El MEP debe liderar la integración de la IA y capacitar a sus docentes, incluso para identificar y gestionar usos indebidos de la IA por parte del estudiantado.",
+  "en": "MEP must lead AI integration and train teachers, including to identify and manage students' misuse of AI.",
+  "kind": "recomendacion",
+  "ages": [
+   "6-8",
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Gobernanza escolar",
+  "strength": "orientacion",
+  "caveat": "Estrategia Nacional de IA de Costa Rica, versión final 2.6 (23-8-2024); política pública, no norma vinculante."
+ },
+ {
+  "id": "S24-03",
+  "source": "S24",
+  "page": 26,
+  "quote": "El trabajo conjunto entre el Ministerio de Educación Pública (MEP) y el Patronato Nacional de la Infancia (PANI) es fundamental",
+  "es": "La estrategia pide que el MEP y el PANI trabajen juntos para desarrollar políticas y protocolos que fomenten competencias digitales y a la vez protejan a niñas, niños y adolescentes frente a la IA.",
+  "en": "The strategy calls for MEP and PANI to work together on policies and protocols that build digital skills while protecting children and adolescents regarding AI.",
+  "kind": "recomendacion",
+  "ages": [
+   "6-8",
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Responsabilidad compartida",
+  "strength": "orientacion",
+  "caveat": "Estrategia Nacional de IA de Costa Rica, versión final 2.6 (23-8-2024); política pública, no norma vinculante."
+ },
+ {
+  "id": "S24-05",
+  "source": "S24",
+  "page": 27,
+  "quote": "el PANI tiene la responsabilidad de asegurar que se implementen medidas robustas para proteger a los menores de posibles abusos y riesgos derivados del uso de la IA.",
+  "es": "Según la estrategia, corresponde al PANI asegurar medidas sólidas de protección frente a abusos y riesgos derivados del uso de la IA.",
+  "en": "According to the strategy, PANI is responsible for ensuring robust protection measures against abuse and risks arising from AI use.",
+  "kind": "recomendacion",
+  "ages": [
+   "6-8",
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Familia",
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Responsabilidad compartida",
+  "strength": "orientacion",
+  "caveat": "Estrategia Nacional de IA de Costa Rica, versión final 2.6 (23-8-2024); política pública, no norma vinculante."
+ },
+ {
+  "id": "S25-02",
+  "source": "S25",
+  "page": 5,
+  "quote": "personas cuidadoras interesadas en la crianza digital de sus hijos o hijas, pero sin las habilidades o conocimientos",
+  "es": "Las personas cuidadoras costarricenses se interesan por la crianza digital, pero muchas no tienen las habilidades o conocimientos para promover usos beneficiosos o prevenir riesgos; sus habilidades digitales son similares a las de sus hijos.",
+  "en": "Costa Rican caregivers are interested in digital parenting, but many lack the skills or knowledge to promote beneficial use or prevent risks; their digital skills are similar to their children's.",
+  "kind": "hallazgo",
+  "ages": [
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Familia",
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Mediación parental",
+  "strength": "empirica_encuesta",
+  "caveat": "Encuesta nacional representativa por hogares (jun.–jul. 2023; N = 1200, 9–17 años; Global Kids Online): autoinforme y transversal. No mide uso de IA."
+ },
+ {
+  "id": "S25-06",
+  "source": "S25",
+  "page": 10,
+  "quote": "esto podría haber limitado el desarrollo de las habilidades digitales para el uso seguro y beneficioso.",
+  "es": "Que los niños de 9 a 12 años usen menos internet puede protegerlos, pero también limitar el desarrollo de habilidades para un uso seguro y beneficioso: la restricción sola no basta.",
+  "en": "Children aged 9–12 using the internet less may protect them, but may also limit the development of skills for safe and beneficial use: restriction alone is not enough.",
+  "kind": "hallazgo",
+  "ages": [
+   "9-11"
+  ],
+  "audiences": [
+   "Familia",
+   "Docente"
+  ],
+  "theme": "Edad y adecuación",
+  "strength": "empirica_encuesta",
+  "caveat": "Hallazgo de la encuesta 2018 resumido en el informe 2023 (antecedentes); orientación de los autores, no evaluada experimentalmente."
+ },
+ {
+  "id": "S25-13",
+  "source": "S25",
+  "page": 33,
+  "quote": "El 11,9% dice haber recibido este tipo de mensajes, una disminución con respecto al 2018 (16,2%).",
+  "es": "El 11,9 % de los adolescentes de 13 a 17 años recibió mensajes con contenido sexual (16,2 % en 2018); el 38,6 % de esos mensajes provino de personas adultas.",
+  "en": "11.9% of adolescents aged 13–17 received sexual messages (16.2% in 2018); 38.6% of those messages came from adults.",
+  "kind": "cifra",
+  "ages": [
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Familia",
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Seguridad y explotación",
+  "strength": "empirica_encuesta",
+  "caveat": "Encuesta nacional representativa por hogares (jun.–jul. 2023; N = 1200, 9–17 años; Global Kids Online): autoinforme y transversal. No mide uso de IA."
+ },
+ {
+  "id": "S25-03",
+  "source": "S25",
+  "page": 19,
+  "quote": "Un 29% de la muestra considera que las personas cuidadoras tienen poco o ningún conocimiento para usar la Internet.",
+  "es": "El 29 % de niñas, niños y adolescentes considera que sus cuidadores saben poco o nada de internet; la proporción es mayor entre adolescentes y varones.",
+  "en": "29% of children and adolescents think their caregivers know little or nothing about the internet; the share is higher among adolescents and boys.",
+  "kind": "cifra",
+  "ages": [
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Familia",
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Mediación parental",
+  "strength": "empirica_encuesta",
+  "caveat": "Encuesta nacional representativa por hogares (jun.–jul. 2023; N = 1200, 9–17 años; Global Kids Online): autoinforme y transversal. No mide uso de IA."
+ },
+ {
+  "id": "S25-07",
+  "source": "S25",
+  "page": 11,
+  "quote": "La mediación parental restrictiva parece ser protectora, aunque limitada, ya que la protección se realiza a través de la prohibición del uso, no a través de la identificación de los usos riesgosos y beneficiosos.",
+  "es": "Prohibir protege, pero de forma limitada: no enseña a distinguir usos riesgosos de usos beneficiosos. En adolescentes, la mediación activa (y luego el monitoreo) se asocia con contextos más protectores.",
+  "en": "Prohibiting protects, but only partly: it does not teach how to tell risky from beneficial uses. In adolescents, active mediation (followed by monitoring) is associated with more protective contexts.",
+  "kind": "hallazgo",
+  "ages": [
+   "9-11"
+  ],
+  "audiences": [
+   "Familia"
+  ],
+  "theme": "Mediación parental",
+  "strength": "empirica_encuesta",
+  "caveat": "Hallazgo de la encuesta 2018 resumido en el informe 2023 (antecedentes); orientación de los autores, no evaluada experimentalmente."
+ },
+ {
+  "id": "S26-06",
+  "source": "S26",
+  "page": 10,
+  "quote": "Las personas menores de edad tendrán derecho a no ser objeto de injerencia en su vida privada, familia, domicilio y correspondencia; sin perjuicio de los derechos y deberes inherentes a la patria potestad.",
+  "es": "Las personas menores de edad tienen derecho a la privacidad, compatible con los deberes de crianza: la supervisión parental de dispositivos debe ser proporcional y respetar su vida privada.",
+  "en": "Minors have a right to privacy, compatible with parental duties: parental supervision of devices should be proportionate and respect their private life.",
+  "kind": "obligacion",
+  "ages": [
+   "6-8",
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Familia",
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Privacidad y datos",
+  "strength": "normativa",
+  "caveat": "Ley vigente en Costa Rica (1998, con reformas). Anterior al entorno digital: su aplicación a plataformas e IA es una interpretación de sus principios."
+ },
+ {
+  "id": "S26-05",
+  "source": "S26",
+  "page": 8,
+  "quote": "El ejercicio de este derecho deberá ejecutarse de manera responsable y bajo la orientación de los padres, representantes o educadores.",
+  "es": "Niñas, niños y adolescentes tienen derecho a buscar información por cualquier medio, ejercido de forma responsable y con la orientación de padres, representantes o educadores: la ley respalda acompañar, no solo prohibir.",
+  "en": "Children and adolescents have the right to seek information through any medium, exercised responsibly and with guidance from parents, representatives or educators: the law supports accompanying, not just prohibiting.",
+  "kind": "obligacion",
+  "ages": [
+   "6-8",
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Familia",
+   "Docente"
+  ],
+  "theme": "Mediación parental",
+  "strength": "normativa",
+  "caveat": "Ley vigente en Costa Rica (1998, con reformas). Anterior al entorno digital: su aplicación a plataformas e IA es una interpretación de sus principios."
+ },
+ {
+  "id": "S26-08",
+  "source": "S26",
+  "page": 19,
+  "quote": "Igual obligación tendrán las autoridades y el personal de centros educativos",
+  "es": "El personal de los centros educativos está obligado a denunciar ante el Ministerio Público cualquier sospecha razonable de maltrato o abuso contra una persona menor de edad, también si ocurre por medios digitales.",
+  "en": "School staff are obliged to report to the Public Prosecutor any reasonable suspicion of mistreatment or abuse of a minor, including when it happens through digital means.",
+  "kind": "obligacion",
+  "ages": [
+   "6-8",
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Seguridad y explotación",
+  "strength": "normativa",
+  "caveat": "Ley vigente; la extensión a la violencia digital es interpretación del principio general."
+ },
+ {
+  "id": "S26-03",
+  "source": "S26",
+  "page": 3,
+  "quote": "Su edad, grado de madurez, capacidad de discernimiento y demás condiciones personales.",
+  "es": "El interés superior se determina según la edad, el grado de madurez y la capacidad de discernimiento de cada niña, niño o adolescente: base legal para adecuar el uso de IA a la etapa de desarrollo y no solo a la edad cronológica.",
+  "en": "Best interests are determined by each child's age, maturity and discernment: the legal basis for matching AI use to developmental stage, not only chronological age.",
+  "kind": "obligacion",
+  "ages": [
+   "6-8",
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Familia",
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Edad y adecuación",
+  "strength": "normativa",
+  "caveat": "Ley vigente en Costa Rica (1998, con reformas). Anterior al entorno digital: su aplicación a plataformas e IA es una interpretación de sus principios."
+ }
+]

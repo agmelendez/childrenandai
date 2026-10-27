@@ -8,6 +8,9 @@ d = root / "data"
 parts = {}
 for k, f in (("items", "items.json"), ("catalog", "catalog.json"), ("glossary", "glossary.json"), ("figsrc", "figure_sources.json")):
     parts[k] = json.loads((d / f).read_text(encoding="utf-8"))
+for k, f in (("tips", "tips.json"), ("transfer", "transfer.json"), ("modules", "modules.json"), ("ctx", "context_cr.json"), ("ctxsrc", "context_sources.json")):  # E3 (v0.8), E4 (v0.9)
+    if (d / f).exists():
+        parts[k] = {x: v for x, v in json.loads((d / f).read_text(encoding="utf-8")).items() if not x.startswith("_")}
 # comprobaciones mínimas de integridad
 ids = [i["id"] for i in parts["items"]]
 assert len(ids) == len(set(ids)), "ids de ítems duplicados"
@@ -19,4 +22,4 @@ if miss:
     print(f"AVISO: {len(miss)} ítems sin traducción al inglés", file=sys.stderr)
 js = "/* Archivo generado por tools/build_data.py. No editar a mano: edite data/*.json y vuelva a generar. */\nwindow.COA_DATA=" + json.dumps(parts, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/") + ";\n"
 (d / "data.js").write_text(js, encoding="utf-8")
-print(f"data/data.js escrito: {len(ids)} ítems, {len(srcs)} fuentes, {len(parts['glossary'])} entradas de glosario, {len(js)//1024} KB")
+print(f"data/data.js escrito: {len(ids)} ítems, {len(parts.get('tips',{}).get('tips',[]))} tips, {len(srcs)} fuentes, {len(parts['glossary'])} entradas de glosario, {len(js)//1024} KB")

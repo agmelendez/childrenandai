@@ -1,0 +1,598 @@
+[
+ {
+  "source": "S26",
+  "page": 1,
+  "quote": "se considerará niño o niña a toda persona desde su concepción hasta los doce años de edad cumplidos, y adolescente a toda persona mayor de doce años y menor de dieciocho.",
+  "es": "La ley costarricense considera niña o niño a toda persona hasta los 12 años cumplidos y adolescente a quien tiene más de 12 y menos de 18.",
+  "kind": "definicion",
+  "ages": [
+   "6-8",
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Familia",
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Edad y adecuación",
+  "strength": "normativa",
+  "caveat": "Ley vigente (1998). Las bandas del sitio (D1) agrupan los 12 años con III ciclo por criterio escolar; la ley los considera aún niñez hasta cumplirlos.",
+  "age_note": "Personas menores de 18 años (niño o niña hasta los 12 cumplidos; adolescente de 12 a 18)",
+  "id": "S26-01",
+  "en": "Costa Rican law considers a child anyone up to age 12 and an adolescent anyone over 12 and under 18.",
+  "caveat_en": "Law in force (1998). The site's bands (D1) group age 12 with the 3rd cycle on school grounds; the law still treats 12-year-olds as children until their birthday.",
+  "age_note_en": "Persons under 18 (child up to age 12; adolescent from 12 to 18)",
+  "lectura_cr": "Las bandas del sitio (D1) agrupan los 12 años con III ciclo por criterio escolar; legalmente siguen siendo niñez hasta cumplirlos.",
+  "lectura_cr_en": "The site's bands (D1) group age 12 with the 3rd cycle on school grounds; legally they remain children until their 12th birthday."
+ },
+ {
+  "source": "S26",
+  "page": 2,
+  "quote": "Toda acción pública o privada concerniente a una persona menor de dieciocho años, deberá considerar su interés superior",
+  "es": "Toda acción pública o privada que concierna a una persona menor de 18 años debe considerar su interés superior.",
+  "kind": "obligacion",
+  "ages": [
+   "6-8",
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Familia",
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Responsabilidad compartida",
+  "strength": "normativa",
+  "caveat": "Ley vigente en Costa Rica (1998, con reformas). Anterior al entorno digital: su aplicación a plataformas e IA es una interpretación de sus principios.",
+  "age_note": "Personas menores de 18 años (niño o niña hasta los 12 cumplidos; adolescente de 12 a 18)",
+  "id": "S26-02",
+  "en": "Every public or private action concerning a person under 18 must consider their best interests.",
+  "caveat_en": "Law in force in Costa Rica (1998, as amended). Predates the digital environment: applying it to platforms and AI is an interpretation of its principles.",
+  "age_note_en": "Persons under 18 (child up to age 12; adolescent from 12 to 18)",
+  "lectura_cr": "Incluye decidir la adopción de herramientas de IA en la escuela o en casa.",
+  "lectura_cr_en": "This includes deciding whether to adopt AI tools at school or at home."
+ },
+ {
+  "source": "S26",
+  "page": 3,
+  "quote": "Su edad, grado de madurez, capacidad de discernimiento y demás condiciones personales.",
+  "es": "El interés superior se determina considerando, entre otros factores, la edad, el grado de madurez y la capacidad de discernimiento de cada niña, niño o adolescente.",
+  "kind": "obligacion",
+  "ages": [
+   "6-8",
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Familia",
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Edad y adecuación",
+  "strength": "normativa",
+  "caveat": "Ley vigente en Costa Rica (1998, con reformas). Anterior al entorno digital: su aplicación a plataformas e IA es una interpretación de sus principios.",
+  "age_note": "Personas menores de 18 años (niño o niña hasta los 12 cumplidos; adolescente de 12 a 18)",
+  "id": "S26-03",
+  "en": "Best interests are determined by considering, among other factors, each child's age, maturity and discernment.",
+  "caveat_en": "Law in force in Costa Rica (1998, as amended). Predates the digital environment: applying it to platforms and AI is an interpretation of its principles.",
+  "age_note_en": "Persons under 18 (child up to age 12; adolescent from 12 to 18)",
+  "lectura_cr": "Base legal para adecuar el uso de IA a la etapa de desarrollo y no solo a la edad cronológica, ya que ninguna norma CR fija edades mínimas para IA.",
+  "lectura_cr_en": "Legal basis for matching AI use to developmental stage, not only chronological age, since no Costa Rican rule sets minimum ages for AI."
+ },
+ {
+  "source": "S26",
+  "page": 3,
+  "quote": "La obligación de procurar el desarrollo integral de la persona menor de edad les corresponde, en forma primordial, a los padres o encargados.",
+  "es": "La responsabilidad principal por el desarrollo integral de hijas e hijos (también en el entorno digital) corresponde a padres, madres y encargados; las instituciones deben garantizar su interés superior.",
+  "kind": "obligacion",
+  "ages": [
+   "6-8",
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Familia"
+  ],
+  "theme": "Responsabilidad compartida",
+  "strength": "normativa",
+  "caveat": "Ley vigente en Costa Rica (1998, con reformas). Anterior al entorno digital: su aplicación a plataformas e IA es una interpretación de sus principios.",
+  "age_note": "Personas menores de 18 años (niño o niña hasta los 12 cumplidos; adolescente de 12 a 18)",
+  "id": "S26-04",
+  "en": "Primary responsibility for children's overall development (including online) lies with parents and guardians; institutions must guarantee their best interests.",
+  "caveat_en": "Law in force in Costa Rica (1998, as amended). Predates the digital environment: applying it to platforms and AI is an interpretation of its principles.",
+  "age_note_en": "Persons under 18 (child up to age 12; adolescent from 12 to 18)"
+ },
+ {
+  "source": "S26",
+  "page": 8,
+  "quote": "El ejercicio de este derecho deberá ejecutarse de manera responsable y bajo la orientación de los padres, representantes o educadores.",
+  "es": "Niñas, niños y adolescentes tienen derecho a obtener información por cualquier fuente y medio, ejercido de forma responsable y con la orientación de padres, representantes o educadores.",
+  "kind": "obligacion",
+  "ages": [
+   "6-8",
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Familia",
+   "Docente"
+  ],
+  "theme": "Mediación parental",
+  "strength": "normativa",
+  "caveat": "Ley vigente en Costa Rica (1998, con reformas). Anterior al entorno digital: su aplicación a plataformas e IA es una interpretación de sus principios.",
+  "age_note": "Personas menores de 18 años (niño o niña hasta los 12 cumplidos; adolescente de 12 a 18)",
+  "id": "S26-05",
+  "en": "Children and adolescents have the right to obtain information from any source and medium, exercised responsibly and with guidance from parents, representatives or educators.",
+  "caveat_en": "Law in force in Costa Rica (1998, as amended). Predates the digital environment: applying it to platforms and AI is an interpretation of its principles.",
+  "age_note_en": "Persons under 18 (child up to age 12; adolescent from 12 to 18)",
+  "lectura_cr": "La ley respalda acompañar el acceso a la información, no solo prohibirlo.",
+  "lectura_cr_en": "The law supports accompanying access to information, not only prohibiting it."
+ },
+ {
+  "source": "S26",
+  "page": 10,
+  "quote": "Las personas menores de edad tendrán derecho a no ser objeto de injerencia en su vida privada, familia, domicilio y correspondencia; sin perjuicio de los derechos y deberes inherentes a la patria potestad.",
+  "es": "Las personas menores de edad tienen derecho a no sufrir injerencias en su vida privada, familia, domicilio y correspondencia, sin perjuicio de los derechos y deberes de la patria potestad.",
+  "kind": "obligacion",
+  "ages": [
+   "6-8",
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Familia",
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Privacidad y datos",
+  "strength": "normativa",
+  "caveat": "Ley vigente en Costa Rica (1998, con reformas). Anterior al entorno digital: su aplicación a plataformas e IA es una interpretación de sus principios.",
+  "age_note": "Personas menores de 18 años (niño o niña hasta los 12 cumplidos; adolescente de 12 a 18)",
+  "id": "S26-06",
+  "en": "Minors have the right not to suffer interference in their private life, family, home and correspondence, without prejudice to parental rights and duties.",
+  "caveat_en": "Law in force in Costa Rica (1998, as amended). Predates the digital environment: applying it to platforms and AI is an interpretation of its principles.",
+  "age_note_en": "Persons under 18 (child up to age 12; adolescent from 12 to 18)",
+  "lectura_cr": "En el entorno digital sugiere una supervisión parental de dispositivos proporcional, que respete su privacidad.",
+  "lectura_cr_en": "Online, this suggests proportionate parental supervision of devices that respects their privacy."
+ },
+ {
+  "source": "S26",
+  "page": 11,
+  "quote": "Queda prohibida la publicación del nombre o cualquier dato personal que permita identificar a una persona menor de edad autora o víctima de un hecho delictivo",
+  "es": "Está prohibido publicar el nombre o cualquier dato personal que identifique a una persona menor de edad autora o víctima de un hecho delictivo, salvo autorización judicial.",
+  "kind": "obligacion",
+  "ages": [
+   "6-8",
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Familia",
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Seguridad y explotación",
+  "strength": "normativa",
+  "caveat": "Ley vigente en Costa Rica (1998, con reformas). Anterior al entorno digital: su aplicación a plataformas e IA es una interpretación de sus principios.",
+  "age_note": "Personas menores de 18 años (niño o niña hasta los 12 cumplidos; adolescente de 12 a 18)",
+  "id": "S26-07",
+  "en": "Publishing the name or any personal data identifying a minor who is the perpetrator or victim of a crime is prohibited, save judicial authorisation.",
+  "caveat_en": "Law in force in Costa Rica (1998, as amended). Predates the digital environment: applying it to platforms and AI is an interpretation of its principles.",
+  "age_note_en": "Persons under 18 (child up to age 12; adolescent from 12 to 18)",
+  "lectura_cr": "Implica no difundir ni reenviar imágenes, deepfakes o datos de una niña, niño o adolescente que sufre una agresión.",
+  "lectura_cr_en": "This means not sharing or forwarding images, deepfakes or data of a child who suffers an attack."
+ },
+ {
+  "source": "S26",
+  "page": 19,
+  "quote": "Igual obligación tendrán las autoridades y el personal de centros educativos",
+  "es": "Las autoridades y el personal de los centros educativos están obligados a denunciar ante el Ministerio Público cualquier sospecha razonable de maltrato o abuso contra una persona menor de edad.",
+  "kind": "obligacion",
+  "ages": [
+   "6-8",
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Seguridad y explotación",
+  "strength": "normativa",
+  "caveat": "Ley vigente; la extensión a la violencia digital es interpretación del principio general.",
+  "age_note": "Personas menores de 18 años (niño o niña hasta los 12 cumplidos; adolescente de 12 a 18)",
+  "id": "S26-08",
+  "en": "School authorities and staff are obliged to report to the Public Prosecutor any reasonable suspicion of mistreatment or abuse of a minor.",
+  "caveat_en": "Law in force; extending it to digital violence is a reading of the general principle.",
+  "age_note_en": "Persons under 18 (child up to age 12; adolescent from 12 to 18)",
+  "lectura_cr": "Por interpretación, alcanza también la violencia ejercida por medios digitales.",
+  "lectura_cr_en": "By interpretation, this also covers violence through digital means."
+ },
+ {
+  "source": "S26",
+  "page": 23,
+  "quote": "Estimular en todos los niveles el desarrollo del pensamiento autónomo, crítico y creativo",
+  "es": "En el diseño de las políticas educativas, el Estado debe estimular en todos los niveles el desarrollo del pensamiento autónomo, crítico y creativo.",
+  "kind": "obligacion",
+  "ages": [
+   "6-8",
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Competencias",
+  "strength": "normativa",
+  "caveat": "Ley vigente en Costa Rica (1998, con reformas). Anterior al entorno digital: su aplicación a plataformas e IA es una interpretación de sus principios.",
+  "age_note": "Personas menores de 18 años (niño o niña hasta los 12 cumplidos; adolescente de 12 a 18)",
+  "id": "S26-09",
+  "en": "In designing education policy, the State must foster autonomous, critical and creative thinking at all levels.",
+  "caveat_en": "Law in force in Costa Rica (1998, as amended). Predates the digital environment: applying it to platforms and AI is an interpretation of its principles.",
+  "age_note_en": "Persons under 18 (child up to age 12; adolescent from 12 to 18)",
+  "lectura_cr": "Base legal para que la IA en el aula no sustituya el razonamiento del estudiantado.",
+  "lectura_cr_en": "Legal basis for ensuring classroom AI does not replace students' reasoning."
+ },
+ {
+  "source": "S26",
+  "page": 25,
+  "quote": "estarán obligadas a comunicar al Ministerio de Educación Pública lo siguiente:",
+  "es": "Las autoridades de los centros educativos públicos y privados deben comunicar al MEP los casos de maltrato físico o emocional, abuso sexual o trato corruptor que afecten al estudiantado.",
+  "kind": "obligacion",
+  "ages": [
+   "6-8",
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Dirección"
+  ],
+  "theme": "Gobernanza escolar",
+  "strength": "normativa",
+  "caveat": "Ley vigente en Costa Rica (1998, con reformas). Anterior al entorno digital: su aplicación a plataformas e IA es una interpretación de sus principios.",
+  "age_note": "Personas menores de 18 años (niño o niña hasta los 12 cumplidos; adolescente de 12 a 18)",
+  "id": "S26-10",
+  "en": "Authorities of public and private schools must report to MEP cases of physical or emotional mistreatment, sexual abuse or corrupting treatment affecting students.",
+  "caveat_en": "Law in force in Costa Rica (1998, as amended). Predates the digital environment: applying it to platforms and AI is an interpretation of its principles.",
+  "age_note_en": "Persons under 18 (child up to age 12; adolescent from 12 to 18)"
+ },
+ {
+  "source": "S24",
+  "page": 26,
+  "quote": "Los niños, niñas y adolescentes son particularmente vulnerables a la manipulación de datos y a influencias negativas en plataformas digitales",
+  "es": "La Estrategia Nacional de IA reconoce que niñas, niños y adolescentes son especialmente vulnerables a la manipulación de datos, a contenidos inapropiados y a la explotación comercial de sus datos sensibles.",
+  "kind": "alerta",
+  "ages": [
+   "6-8",
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Familia",
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Privacidad y datos",
+  "strength": "orientacion",
+  "caveat": "Estrategia Nacional de IA de Costa Rica, versión final 2.6 (23-8-2024); política pública, no norma vinculante.",
+  "age_note": "Niñez y adolescencia (sin edades)",
+  "id": "S24-01",
+  "en": "The National AI Strategy recognises that children and adolescents are especially vulnerable to data manipulation, inappropriate content and commercial exploitation of their sensitive data.",
+  "caveat_en": "Costa Rica's National AI Strategy, final version 2.6 (23 Aug 2024); public policy, not binding law.",
+  "age_note_en": "Childhood and adolescence (no ages)"
+ },
+ {
+  "source": "S24",
+  "page": 26,
+  "quote": "es crucial establecer salvaguardas éticas robustas que incluyan la anonimización de datos, la limitación en la recolección y uso de información personal, y la implementación de controles parentales efectivos.",
+  "es": "Salvaguardas recomendadas por la política nacional: anonimizar datos, limitar la recolección y el uso de información personal y aplicar controles parentales efectivos.",
+  "kind": "recomendacion",
+  "ages": [
+   "6-8",
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Familia",
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Privacidad y datos",
+  "strength": "orientacion",
+  "caveat": "Estrategia Nacional de IA de Costa Rica, versión final 2.6 (23-8-2024); política pública, no norma vinculante.",
+  "age_note": "Niñez y adolescencia (sin edades)",
+  "id": "S24-02",
+  "en": "Safeguards recommended by national policy: anonymise data, limit collection and use of personal information, and apply effective parental controls.",
+  "caveat_en": "Costa Rica's National AI Strategy, final version 2.6 (23 Aug 2024); public policy, not binding law.",
+  "age_note_en": "Childhood and adolescence (no ages)"
+ },
+ {
+  "source": "S24",
+  "page": 26,
+  "quote": "El trabajo conjunto entre el Ministerio de Educación Pública (MEP) y el Patronato Nacional de la Infancia (PANI) es fundamental",
+  "es": "La estrategia pide que el MEP y el PANI trabajen juntos para desarrollar políticas y protocolos que fomenten competencias digitales y a la vez protejan a niñas, niños y adolescentes frente a la IA.",
+  "kind": "recomendacion",
+  "ages": [
+   "6-8",
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Responsabilidad compartida",
+  "strength": "orientacion",
+  "caveat": "Estrategia Nacional de IA de Costa Rica, versión final 2.6 (23-8-2024); política pública, no norma vinculante.",
+  "age_note": "Niñez y adolescencia (sin edades)",
+  "id": "S24-03",
+  "en": "The strategy calls for MEP and PANI to work together on policies and protocols that build digital skills while protecting children and adolescents regarding AI.",
+  "caveat_en": "Costa Rica's National AI Strategy, final version 2.6 (23 Aug 2024); public policy, not binding law.",
+  "age_note_en": "Childhood and adolescence (no ages)"
+ },
+ {
+  "source": "S24",
+  "page": 26,
+  "quote": "El MEP no solo debe liderar la integración de herramientas de IA en el sistema educativo, sino también capacitar al personal docente",
+  "es": "El MEP debe liderar la integración de la IA y capacitar a sus docentes, incluso para identificar y gestionar usos indebidos de la IA por parte del estudiantado.",
+  "kind": "recomendacion",
+  "ages": [
+   "6-8",
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Gobernanza escolar",
+  "strength": "orientacion",
+  "caveat": "Estrategia Nacional de IA de Costa Rica, versión final 2.6 (23-8-2024); política pública, no norma vinculante.",
+  "age_note": "Niñez y adolescencia (sin edades)",
+  "id": "S24-04",
+  "en": "MEP must lead AI integration and train teachers, including to identify and manage students' misuse of AI.",
+  "caveat_en": "Costa Rica's National AI Strategy, final version 2.6 (23 Aug 2024); public policy, not binding law.",
+  "age_note_en": "Childhood and adolescence (no ages)"
+ },
+ {
+  "source": "S24",
+  "page": 27,
+  "quote": "el PANI tiene la responsabilidad de asegurar que se implementen medidas robustas para proteger a los menores de posibles abusos y riesgos derivados del uso de la IA.",
+  "es": "Según la estrategia, corresponde al PANI asegurar medidas sólidas de protección frente a abusos y riesgos derivados del uso de la IA.",
+  "kind": "recomendacion",
+  "ages": [
+   "6-8",
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Familia",
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Responsabilidad compartida",
+  "strength": "orientacion",
+  "caveat": "Estrategia Nacional de IA de Costa Rica, versión final 2.6 (23-8-2024); política pública, no norma vinculante.",
+  "age_note": "Niñez y adolescencia (sin edades)",
+  "id": "S24-05",
+  "en": "According to the strategy, PANI is responsible for ensuring robust protection measures against abuse and risks arising from AI use.",
+  "caveat_en": "Costa Rica's National AI Strategy, final version 2.6 (23 Aug 2024); public policy, not binding law.",
+  "age_note_en": "Childhood and adolescence (no ages)"
+ },
+ {
+  "source": "S24",
+  "page": 24,
+  "quote": "La alfabetización digital no solo debe enfocarse en el uso básico de las tecnologías, sino también en la comprensión de los riesgos y oportunidades asociados con la IA",
+  "es": "La alfabetización digital debe ir más allá del uso básico e incluir la comprensión de los riesgos y oportunidades de la IA, con programas adaptados a la niñez y la adolescencia.",
+  "kind": "recomendacion",
+  "ages": [
+   "6-8",
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Familia",
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Alfabetización en IA",
+  "strength": "orientacion",
+  "caveat": "Estrategia Nacional de IA de Costa Rica, versión final 2.6 (23-8-2024); política pública, no norma vinculante.",
+  "age_note": "Niñez y adolescencia (sin edades)",
+  "id": "S24-06",
+  "en": "Digital literacy must go beyond basic use and include understanding AI's risks and opportunities, with programmes adapted to children and adolescents.",
+  "caveat_en": "Costa Rica's National AI Strategy, final version 2.6 (23 Aug 2024); public policy, not binding law.",
+  "age_note_en": "Childhood and adolescence (no ages)"
+ },
+ {
+  "source": "S04",
+  "page": 54,
+  "quote": "A second group of 18 education systems addresses AI and other emerging technologies mainly through national guidance",
+  "es": "En Europa, 18 sistemas educativos abordan la IA sobre todo mediante orientaciones nacionales, apoyo profesional y plataformas de recursos, dejando las decisiones operativas a cada escuela.",
+  "kind": "hallazgo",
+  "ages": [
+   "6-8",
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Dirección"
+  ],
+  "theme": "Marco normativo",
+  "strength": "orientacion",
+  "caveat": "Panorama comparado europeo (Eurydice 2026): describe políticas, no evalúa su efecto; no aplicable directamente a Costa Rica.",
+  "age_note": "Educación escolar ISCED 1–3 (sin desglose)",
+  "id": "S04-41",
+  "en": "In Europe, 18 education systems address AI mainly through national guidance, professional support and resource platforms, leaving operational decisions to each school.",
+  "caveat_en": "European comparative overview (Eurydice 2026): describes policies, does not evaluate their effect; not directly applicable to Costa Rica.",
+  "age_note_en": "School education ISCED 1–3 (not broken down)"
+ },
+ {
+  "source": "S04",
+  "page": 55,
+  "quote": "This model places implementation at the school level and supports it through guidance and national reference resources, rather than formal regulation.",
+  "es": "El modelo estonio confía la implementación de la IA a las escuelas, con guías y recursos nacionales en lugar de regulación formal.",
+  "kind": "hallazgo",
+  "ages": [
+   "6-8",
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Dirección"
+  ],
+  "theme": "Gobernanza escolar",
+  "strength": "orientacion",
+  "caveat": "Panorama comparado europeo (Eurydice 2026): describe políticas, no evalúa su efecto; no aplicable directamente a Costa Rica.",
+  "age_note": "Educación escolar ISCED 1–3 (sin desglose)",
+  "id": "S04-42",
+  "en": "Estonia's model leaves AI implementation to schools, supported by national guidance and resources rather than formal regulation.",
+  "caveat_en": "European comparative overview (Eurydice 2026): describes policies, does not evaluate their effect; not directly applicable to Costa Rica.",
+  "age_note_en": "School education ISCED 1–3 (not broken down)",
+  "lectura_cr": "Es un esquema comparable al costarricense, que también se apoya en una guía orientadora del MEP y no en regulación.",
+  "lectura_cr_en": "This is comparable to Costa Rica's approach, which also relies on MEP guidance rather than regulation."
+ },
+ {
+  "source": "S04",
+  "page": 55,
+  "quote": "Human oversight, explainability and teacher professional responsibility are central principles.",
+  "es": "Las recomendaciones alemanas sobre IA escolar ponen en el centro la supervisión humana, la explicabilidad y la responsabilidad profesional docente, alineadas con la Ley de IA y el RGPD.",
+  "kind": "recomendacion",
+  "ages": [
+   "6-8",
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Gobernanza escolar",
+  "strength": "orientacion",
+  "caveat": "Panorama comparado europeo (Eurydice 2026): describe políticas, no evalúa su efecto; no aplicable directamente a Costa Rica.",
+  "age_note": "Educación escolar ISCED 1–3 (sin desglose)",
+  "id": "S04-43",
+  "en": "German recommendations on school AI centre human oversight, explainability and teachers' professional responsibility, aligned with the AI Act and GDPR.",
+  "caveat_en": "European comparative overview (Eurydice 2026): describes policies, does not evaluate their effect; not directly applicable to Costa Rica.",
+  "age_note_en": "School education ISCED 1–3 (not broken down)"
+ },
+ {
+  "source": "S04",
+  "page": 58,
+  "quote": "ethical governance is articulated mainly through guidance documents",
+  "es": "En la mayoría de los sistemas europeos, la ética de la IA escolar se expresa en guías y principios generales, no en procedimientos obligatorios.",
+  "kind": "hallazgo",
+  "ages": [
+   "6-8",
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Dirección"
+  ],
+  "theme": "Marco normativo",
+  "strength": "orientacion",
+  "caveat": "Panorama comparado europeo (Eurydice 2026): describe políticas, no evalúa su efecto; no aplicable directamente a Costa Rica.",
+  "age_note": "Educación escolar ISCED 1–3 (sin desglose)",
+  "id": "S04-44",
+  "en": "In most European systems, school AI ethics is expressed in guidance and general principles rather than binding procedures.",
+  "caveat_en": "European comparative overview (Eurydice 2026): describes policies, does not evaluate their effect; not directly applicable to Costa Rica.",
+  "age_note_en": "School education ISCED 1–3 (not broken down)"
+ },
+ {
+  "source": "S04",
+  "page": 58,
+  "quote": "such as rules governing platform selection, technical standards, data-sharing arrangements",
+  "es": "Pase de los principios a reglas concretas: criterios de selección de plataformas, estándares técnicos, acuerdos de intercambio de datos y evaluaciones de riesgo en cada centro.",
+  "kind": "recomendacion",
+  "ages": [
+   "6-8",
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Dirección"
+  ],
+  "theme": "Gobernanza escolar",
+  "strength": "orientacion",
+  "caveat": "Panorama comparado europeo (Eurydice 2026): describe políticas, no evalúa su efecto; no aplicable directamente a Costa Rica.",
+  "age_note": "Educación escolar ISCED 1–3 (sin desglose)",
+  "id": "S04-45",
+  "en": "Move from principles to concrete rules: platform selection criteria, technical standards, data-sharing agreements and school-level risk assessments.",
+  "caveat_en": "European comparative overview (Eurydice 2026): describes policies, does not evaluate their effect; not directly applicable to Costa Rica.",
+  "age_note_en": "School education ISCED 1–3 (not broken down)"
+ },
+ {
+  "source": "S04",
+  "page": 161,
+  "quote": "These guidelines typically cover issues such as understanding the logic of AI applications",
+  "es": "Las guías docentes europeas sobre IA suelen cubrir: lógica de las aplicaciones de IA, evaluación crítica de contenido generado, protección de datos y derechos de autor, planificación, diferenciación, evaluación y cómo enseñar un uso responsable.",
+  "kind": "recomendacion",
+  "ages": [
+   "6-8",
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Docente"
+  ],
+  "theme": "Aprendizaje y docencia",
+  "strength": "orientacion",
+  "caveat": "Panorama comparado europeo (Eurydice 2026): describe políticas, no evalúa su efecto; no aplicable directamente a Costa Rica.",
+  "age_note": "Educación escolar ISCED 1–3 (sin desglose)",
+  "id": "S04-46",
+  "en": "European teacher guidelines on AI typically cover: the logic of AI applications, critical evaluation of generated content, data protection and copyright, planning, differentiation, assessment and how to teach responsible use.",
+  "caveat_en": "European comparative overview (Eurydice 2026): describes policies, does not evaluate their effect; not directly applicable to Costa Rica.",
+  "age_note_en": "School education ISCED 1–3 (not broken down)"
+ },
+ {
+  "source": "S04",
+  "page": 161,
+  "quote": "recommending the selective use of digital tools only when they offer clear educational value.",
+  "es": "Suecia reorientó su política hacia los recursos analógicos y recomienda usar herramientas digitales solo cuando aportan un valor educativo claro; Dinamarca, Croacia y Malta piden equilibrar recursos digitales y no digitales.",
+  "kind": "hallazgo",
+  "ages": [
+   "6-8",
+   "9-11",
+   "12-14",
+   "15-18"
+  ],
+  "audiences": [
+   "Familia",
+   "Docente",
+   "Dirección"
+  ],
+  "theme": "Aprendizaje y docencia",
+  "strength": "orientacion",
+  "caveat": "Panorama comparado europeo (Eurydice 2026): describe políticas, no evalúa su efecto; no aplicable directamente a Costa Rica.",
+  "age_note": "Educación escolar ISCED 1–3 (sin desglose)",
+  "id": "S04-47",
+  "en": "Sweden has shifted policy towards analogue resources, recommending digital tools only when they add clear educational value; Denmark, Croatia and Malta call for balancing digital and non-digital resources.",
+  "caveat_en": "European comparative overview (Eurydice 2026): describes policies, does not evaluate their effect; not directly applicable to Costa Rica.",
+  "age_note_en": "School education ISCED 1–3 (not broken down)"
+ }
+]

@@ -1,0 +1,68 @@
+[
+ {
+  "id": "S25",
+  "file": "Informe Completo Resultados Kids Online_marzo 2024.pdf",
+  "corto": "Pérez Sánchez (2024) – Kids Online Costa Rica 2023",
+  "corto_en": "Pérez Sánchez (2024) – Kids Online Costa Rica 2023",
+  "titulo": "Niñas, niños y adolescentes en la Internet: Informe Segunda encuesta Kids Online. Costa Rica, 2024",
+  "autores": [
+   "Pérez Sánchez, R."
+  ],
+  "organizacion": "Fundación Paniamor; Instituto de Investigaciones Psicológicas, Universidad de Costa Rica (red Global Kids Online)",
+  "anio": "2024",
+  "fecha": "marzo de 2024",
+  "fecha_en": "March 2024",
+  "editorial": "Fundación Paniamor",
+  "identificadores": "",
+  "serie": "",
+  "serie_en": "",
+  "url": "https://paniamor.org/files/project/files/6541_240311informeresultadoskidsonlinecostarica2023marzo2024.pdf",
+  "tipo": "Encuesta nacional representativa (Global Kids Online)",
+  "tipo_en": "Nationally representative survey (Global Kids Online)",
+  "evidencia": "Empírica: encuesta por hogares (N = 1200, 9–17 años, y una persona cuidadora por caso)",
+  "evidencia_en": "Empirical: household survey (N = 1,200, ages 9–17, plus one caregiver each)",
+  "idioma": "es",
+  "jurisdiccion": "Costa Rica",
+  "jurisdiccion_en": "Costa Rica",
+  "transferibilidad_cr": "Ancla nacional empírica",
+  "transferibilidad_cr_en": "National empirical anchor",
+  "estado_normativo": "No normativo",
+  "estado_normativo_en": "Non-normative",
+  "edades": "9–17 años (grupos 9–12 y 13–17)",
+  "edades_en": "Ages 9–17 (groups 9–12 and 13–17)",
+  "destinatarios": [
+   "Política pública",
+   "Escuelas",
+   "Familias"
+  ],
+  "autoridad": "Alta (UCR, metodología Global Kids Online)",
+  "autoridad_en": "High (UCR, Global Kids Online methodology)",
+  "relevancia": "Alta (único dato empírico nacional del corpus)",
+  "relevancia_en": "High (only national empirical data in the corpus)",
+  "licencia": "No indicada (cita breve)",
+  "licencia_en": "Not stated (brief quotation)",
+  "contenido": "Ecología digital, usos, habilidades, mediación parental y docente, discriminación, bullying y ciberbullying, mensajes sexuales y contacto con desconocidos; comparación con 2018 y por región.",
+  "contenido_en": "Digital ecology, uses, skills, parental and teacher mediation, discrimination, bullying and cyberbullying, sexual messages and contact with strangers; comparison with 2018 and by region.",
+  "paginas_verificadas": "4–5, 10–12, 19, 22, 24–25, 28, 31, 33, 36",
+  "alertas": [
+   "No mide uso de IA",
+   "Los gráficos no son extraíbles como texto; las cifras se toman del texto del informe",
+   "Los ítems de antecedentes resumen la encuesta 2018"
+  ],
+  "alertas_en": [
+   "Does not measure AI use",
+   "Charts are not extractable as text; figures are taken from the report text",
+   "Background items summarise the 2018 survey"
+  ],
+  "apa7": "Pérez Sánchez, R. (2024). *Niñas, niños y adolescentes en la Internet: Informe Segunda encuesta Kids Online. Costa Rica, 2024*. Fundación Paniamor; Instituto de Investigaciones Psicológicas, Universidad de Costa Rica. https://paniamor.org/files/project/files/6541_240311informeresultadoskidsonlinecostarica2023marzo2024.pdf",
+  "document_id": "doc_729fc8c2cb84b04a",
+  "paginas_pdf": 46,
+  "sha256": "729fc8c2cb84b04ade64fe8cec76f844f95eb5e1db52c46d7c17e8aa64107431",
+  "cobertura_chunks": null,
+  "paginas_revision_integridad": "",
+  "autor_corto": "Pérez Sánchez",
+  "autor_corto_en": "Pérez Sánchez",
+  "nota_apa": "",
+  "nota_apa_en": ""
+ }
+]

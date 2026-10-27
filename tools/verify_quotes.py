@@ -3,6 +3,7 @@
 Requiere el pages.jsonl del pipeline CIOdD-UCR (una línea JSON por página, con
 `clean_text`, `page_number` y el nombre del archivo o `document_id`).
 Uso: python3 -I tools/verify_quotes.py RUTA/pages.jsonl [data/items.json]
+Admite varias extracciones de la misma página (p. ej., pipeline V5.2 y pdftotext): la cita es válida si es subcadena exacta de al menos una.
 Los campos del JSONL se detectan automáticamente; ajuste FILE_KEYS si su pipeline usa otros nombres."""
 import json, sys, unicodedata, pathlib, re
 FILE_KEYS = ("file", "filename", "source_file", "pdf", "path")
@@ -19,11 +20,11 @@ for line in open(sys.argv[1], encoding="utf-8"):
     if not sid:
         for k in FILE_KEYS:
             if r.get(k): sid = by_file.get(norm(pathlib.Path(r[k]).name)); break
-    if sid: pages[(sid, int(r["page_number"]))] = norm(r.get("clean_text", ""))
+    if sid: pages.setdefault((sid, int(r["page_number"])), []).append(norm(r.get("clean_text", "")))
 bad = 0
 for i in items:
     t = pages.get((i["source"], i["page"]))
     if t is None: print(f"{i['id']}: página {i['page']} no encontrada en el JSONL"); bad += 1
-    elif norm(i["quote"]) not in t: print(f"{i['id']}: la cita NO es subcadena exacta de la página {i['page']}"); bad += 1
+    elif not any(norm(i["quote"]) in x for x in t): print(f"{i['id']}: la cita NO es subcadena exacta de la página {i['page']}"); bad += 1
 print(f"{len(items)-bad}/{len(items)} citas verificadas" + ("" if not bad else f"; {bad} con problemas"))
 sys.exit(1 if bad else 0)

@@ -22,7 +22,7 @@ TEXT = [("ink", "bg"), ("ink", "surface"), ("ink", "soft"), ("muted", "bg"), ("m
         ("navy", "surface"), ("navy", "soft"), ("navy", "info-bg"), ("link", "bg"), ("link", "surface"),
         ("on-blue", "blue"), ("surface", "navy"), ("hero-ink", "hero"), ("hero-muted", "hero"),
         ("ok", "ok-bg"), ("warn", "warn-bg"), ("bad", "bad-bg"), ("a0i", "a0"), ("a1i", "a1"), ("a2i", "a2"), ("a3i", "a3"),
-        ("cur-ink", "cur"), ("t1", "t1-bg"), ("t2", "t2-bg"), ("t3", "t3-bg"), ("t1", "surface"), ("t2", "surface"), ("t3", "surface"),
+        ("cur-ink", "cur"), ("t1", "t1-bg"), ("t2", "t2-bg"), ("t3", "t3-bg"), ("t4", "t4-bg"), ("t1", "surface"), ("t2", "surface"), ("t3", "surface"), ("t4", "surface"),
         ("side-ink", "side-bg"), ("side-muted", "side-bg"), ("side-act-ink", "side-act-bg"), ("side-ink", "side-hover"), ("side-muted", "side-hover"),
         ("hero-ink", "hero2"), ("hero-muted", "hero2"), ("ok", "surface"), ("warn", "surface"), ("bad", "surface")]
 GFX = [("line", "surface"), ("line", "bg"), ("focus", "bg"), ("focus", "surface"), ("hero-line", "hero"), ("a3", "surface"), ("cur", "hero")]  # los bordes de color por edad y separadores del menú son decorativos: la edad también va en texto

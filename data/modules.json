@@ -1,0 +1,776 @@
+{
+ "_nota": "Generado por tools/e4_modules.py. Estado: borrador (D5). Las plantillas son redacción CIOdD a partir de los tips citados; no son normativa.",
+ "familia": [
+  {
+   "id": "conv",
+   "tipo": "tarjetas",
+   "titulo_es": "Tarjetas de conversación por edad",
+   "titulo_en": "Conversation cards by age",
+   "intro_es": "Preguntas abiertas para hablar de la IA sin regañar. Use una o dos por semana, en un momento tranquilo.",
+   "intro_en": "Open questions to talk about AI without scolding. Use one or two a week, at a calm moment.",
+   "bandas": {
+    "6-8": [
+     {
+      "es": "¿La IA piensa o siente como tú? ¿Cómo lo sabemos?",
+      "en": "Does AI think or feel like you? How do we know?",
+      "tips": [
+       "T-FAM-001"
+      ],
+      "items": []
+     },
+     {
+      "es": "Si la IA te dice algo, ¿cómo podemos comprobar si es verdad?",
+      "en": "If AI tells you something, how can we check if it is true?",
+      "tips": [
+       "T-FAM-007"
+      ],
+      "items": []
+     },
+     {
+      "es": "¿Qué cosas nunca le contamos a una máquina? (nombre, escuela, casa, fotos)",
+      "en": "What do we never tell a machine? (name, school, home, photos)",
+      "tips": [
+       "T-FAM-005"
+      ],
+      "items": []
+     },
+     {
+      "es": "Si algo en la pantalla te asusta o te pide un secreto, ¿a quién se lo cuentas?",
+      "en": "If something on the screen scares you or asks for a secret, who do you tell?",
+      "tips": [
+       "T-FAM-016",
+       "T-FAM-012"
+      ],
+      "items": []
+     }
+    ],
+    "9-11": [
+     {
+      "es": "¿Para qué te sirvió la IA esta semana? ¿Qué aprendiste tú?",
+      "en": "What did AI help you with this week? What did you learn?",
+      "tips": [
+       "T-FAM-008",
+       "T-FAM-009"
+      ],
+      "items": []
+     },
+     {
+      "es": "¿Un chatbot puede ser tu amigo? ¿En qué se diferencia de una persona?",
+      "en": "Can a chatbot be your friend? How is it different from a person?",
+      "tips": [
+       "T-FAM-011",
+       "T-FAM-010"
+      ],
+      "items": []
+     },
+     {
+      "es": "Si alguien hiciera una foto falsa de un compañero, ¿qué harías?",
+      "en": "If someone made a fake photo of a classmate, what would you do?",
+      "tips": [
+       "T-FAM-014",
+       "T-FAM-015"
+      ],
+      "items": []
+     },
+     {
+      "es": "¿Qué reviso yo de tu uso de la IA, y por qué?",
+      "en": "What do I check about your AI use, and why?",
+      "tips": [
+       "T-FAM-022"
+      ],
+      "items": []
+     }
+    ],
+    "12-14": [
+     {
+      "es": "¿Te ha dado la razón un chatbot en algo en lo que no estabas seguro?",
+      "en": "Has a chatbot agreed with you on something you were unsure about?",
+      "tips": [
+       "T-FAM-027"
+      ],
+      "items": []
+     },
+     {
+      "es": "¿Cómo crees que la app decide qué videos mostrarte?",
+      "en": "How do you think the app decides which videos to show you?",
+      "tips": [
+       "T-FAM-033"
+      ],
+      "items": []
+     },
+     {
+      "es": "¿Qué pondríamos en nuestro acuerdo de IA de la casa?",
+      "en": "What would we put in our home AI agreement?",
+      "tips": [
+       "T-FAM-025"
+      ],
+      "items": []
+     },
+     {
+      "es": "¿Me enseñas una herramienta de IA que uses? Yo te cuento qué me preocupa.",
+      "en": "Will you show me an AI tool you use? I'll tell you what worries me.",
+      "tips": [
+       "T-FAM-037"
+      ],
+      "items": []
+     }
+    ],
+    "15-18": [
+     {
+      "es": "¿Qué usas, para qué, y qué te preocupa de la IA?",
+      "en": "What do you use, what for, and what worries you about AI?",
+      "tips": [
+       "T-FAM-026"
+      ],
+      "items": []
+     },
+     {
+      "es": "¿Qué datos tuyos no deberías escribirle a un chatbot?",
+      "en": "Which of your data should you never type into a chatbot?",
+      "tips": [
+       "T-FAM-038"
+      ],
+      "items": []
+     },
+     {
+      "es": "Si alguien se hace pasar por ti con voz o fotos falsas, ¿qué pasos darías?",
+      "en": "If someone impersonates you with fake voice or photos, what steps would you take?",
+      "tips": [
+       "T-FAM-039",
+       "T-FAM-041"
+      ],
+      "items": []
+     },
+     {
+      "es": "¿La IA te ayuda a aprender o a terminar rápido? ¿Cómo lo notas?",
+      "en": "Does AI help you learn or just finish fast? How can you tell?",
+      "tips": [
+       "T-FAM-035",
+       "T-FAM-036"
+      ],
+      "items": []
+     }
+    ]
+   }
+  },
+  {
+   "id": "acuerdo",
+   "tipo": "acuerdo",
+   "titulo_es": "Acuerdo de uso de la IA en el hogar",
+   "titulo_en": "Home AI use agreement",
+   "intro_es": "Plantilla para completar en familia. Marque lo que acuerdan, escriba sus propias reglas y revísenla cada pocos meses.",
+   "intro_en": "A template to complete as a family. Tick what you agree on, add your own rules and review it every few months.",
+   "secciones": [
+    {
+     "es": "Para qué sí usamos la IA",
+     "en": "What we do use AI for",
+     "items": [
+      {
+       "es": "Para pedir pistas y explicaciones, no para que haga la tarea.",
+       "en": "To ask for hints and explanations, not to do the homework.",
+       "tips": [
+        "T-FAM-009",
+        "T-FAM-035"
+       ],
+       "items": []
+      },
+      {
+       "es": "Para crear juntos (cuentos, ideas) y comentar el resultado.",
+       "en": "To create together (stories, ideas) and discuss the result.",
+       "tips": [
+        "T-FAM-023"
+       ],
+       "items": []
+      },
+      {
+       "es": "Con menos de 9 años, solo juntos y con una persona adulta al mando.",
+       "en": "Under 9, only together and with an adult in charge.",
+       "tips": [
+        "T-FAM-002"
+       ],
+       "items": []
+      }
+     ]
+    },
+    {
+     "es": "Lo que no hacemos",
+     "en": "What we don't do",
+     "items": [
+      {
+       "es": "No damos nombre completo, escuela, dirección, teléfono ni fotos.",
+       "en": "We don't share full name, school, address, phone or photos.",
+       "tips": [
+        "T-FAM-005",
+        "T-FAM-038"
+       ],
+       "items": []
+      },
+      {
+       "es": "No usamos apps de «amigo virtual» ni chats de compañía.",
+       "en": "We don't use 'virtual friend' apps or companion chats.",
+       "tips": [
+        "T-FAM-010",
+        "T-TRV-003"
+       ],
+       "items": []
+      },
+      {
+       "es": "No creamos ni reenviamos imágenes falsas de otras personas.",
+       "en": "We don't create or forward fake images of other people.",
+       "tips": [
+        "T-FAM-014",
+        "T-FAM-030"
+       ],
+       "items": []
+      },
+      {
+       "es": "No mentimos sobre la edad para abrir una cuenta.",
+       "en": "We don't lie about age to open an account.",
+       "tips": [
+        "T-FAM-004"
+       ],
+       "items": []
+      }
+     ]
+    },
+    {
+     "es": "Dónde y cuándo",
+     "en": "Where and when",
+     "items": [
+      {
+       "es": "En un lugar común de la casa (hasta los 11 años).",
+       "en": "In a shared space at home (up to age 11).",
+       "tips": [
+        "T-FAM-003"
+       ],
+       "items": []
+      },
+      {
+       "es": "Las apps con IA se apagan a la hora de dormir.",
+       "en": "AI apps are switched off at bedtime.",
+       "tips": [
+        "T-FAM-018",
+        "T-FAM-034"
+       ],
+       "items": []
+      },
+      {
+       "es": "Ubicación, micrófono, cámara y memoria del chat apagados si no hacen falta.",
+       "en": "Location, microphone, camera and chat memory off when not needed.",
+       "tips": [
+        "T-FAM-006"
+       ],
+       "items": []
+      }
+     ]
+    },
+    {
+     "es": "Si algo sale mal",
+     "en": "If something goes wrong",
+     "items": [
+      {
+       "es": "Lo contamos sin miedo: nadie será castigado por avisar.",
+       "en": "We tell without fear: nobody is punished for telling.",
+       "tips": [
+        "T-FAM-012",
+        "T-FAM-041"
+       ],
+       "items": []
+      },
+      {
+       "es": "Si alguien pide fotos, secretos o vernos en persona, paramos y avisamos.",
+       "en": "If someone asks for photos, secrets or to meet, we stop and tell.",
+       "tips": [
+        "T-FAM-016",
+        "T-FAM-032"
+       ],
+       "items": []
+      },
+      {
+       "es": "Avisamos a la escuela y, según el caso, al PANI o al OIJ.",
+       "en": "We inform the school and, depending on the case, PANI or OIJ.",
+       "tips": [
+        "T-FAM-015",
+        "T-FAM-041"
+       ],
+       "items": []
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "docente": [
+  {
+   "id": "escenarios",
+   "tipo": "escenarios",
+   "titulo_es": "Escenarios por ciclo del MEP",
+   "titulo_en": "Scenarios by MEP cycle",
+   "intro_es": "Situaciones frecuentes y una respuesta basada en los tips. Úselas en reuniones de personal o en su planificación.",
+   "intro_en": "Common situations and a response based on the tips. Use them in staff meetings or planning.",
+   "bandas": {
+    "6-8": [
+     {
+      "es": "Una niña pregunta si puede hablar sola con el chatbot de la tablet. → Use la IA usted, frente al grupo, y diga en voz alta cuándo una respuesta viene de una máquina.",
+      "en": "A girl asks if she can chat alone with the tablet chatbot. → Use AI yourself, in front of the group, and say aloud when an answer comes from a machine.",
+      "tips": [
+       "T-DOC-002",
+       "T-DOC-033"
+      ],
+      "items": []
+     }
+    ],
+    "9-11": [
+     {
+      "es": "El grupo encuentra un dato falso en una respuesta de IA. → Conviértalo en actividad de «cazar errores» y verifiquen en libros o fuentes confiables.",
+      "en": "The group finds a false fact in an AI answer. → Turn it into an 'error hunt' and check against books or reliable sources.",
+      "tips": [
+       "T-DOC-013",
+       "T-DOC-003"
+      ],
+      "items": []
+     }
+    ],
+    "12-14": [
+     {
+      "es": "Un estudiante entrega un texto que parece hecho con IA. → No use detectores como prueba; converse primero y valore su aporte propio.",
+      "en": "A student hands in a text that looks AI-made. → Don't use detectors as proof; talk first and assess their own contribution.",
+      "tips": [
+       "T-DOC-008",
+       "T-DOC-009"
+      ],
+      "items": []
+     },
+     {
+      "es": "Circula en el grupo una foto falsa de una compañera. → Proteja a la víctima, comunique a la dirección y denuncie ante el Ministerio Público.",
+      "en": "A fake photo of a classmate circulates. → Protect the victim, inform leadership and report to the Public Prosecutor.",
+      "tips": [
+       "T-DOC-019",
+       "T-DOC-020"
+      ],
+      "items": []
+     }
+    ],
+    "15-18": [
+     {
+      "es": "Quiere usar un tutor con IA en Diversificada. → Que responda con preguntas, use solo el material del curso y nunca dé la respuesta final.",
+      "en": "You want to use an AI tutor in upper secondary. → It should answer with questions, use only course material and never give the final answer.",
+      "tips": [
+       "T-TRV-006",
+       "T-DOC-025"
+      ],
+      "items": []
+     },
+     {
+      "es": "Un estudiante usa un chatbot como confidente. → Atienda las señales emocionales y oriente hacia apoyo humano.",
+      "en": "A student uses a chatbot as a confidant. → Attend to emotional signals and guide towards human support.",
+      "tips": [
+       "T-DOC-021",
+       "T-DOC-037",
+       "T-DOC-026"
+      ],
+      "items": []
+     }
+    ]
+   }
+  },
+  {
+   "id": "evaluacion",
+   "tipo": "lista",
+   "titulo_es": "Evaluar cuando hay IA",
+   "titulo_en": "Assessing when AI is involved",
+   "intro_es": "Lista de verificación para diseñar tareas y pruebas.",
+   "intro_en": "Checklist to design assignments and tests.",
+   "items": [
+    {
+     "es": "La tarea muestra el proceso: borradores, explicación oral o trabajo en clase.",
+     "en": "The task shows the process: drafts, oral explanation or in-class work.",
+     "tips": [
+      "T-TRV-005"
+     ],
+     "items": []
+    },
+    {
+     "es": "Se pide declarar el uso de IA y una reflexión personal.",
+     "en": "Students declare AI use and add a personal reflection.",
+     "tips": [
+      "T-DOC-006"
+     ],
+     "items": []
+    },
+    {
+     "es": "Hay bitácora: prompt, herramienta, cambios y fuentes verificadas.",
+     "en": "There is a log: prompt, tool, changes and verified sources.",
+     "tips": [
+      "T-DOC-007"
+     ],
+     "items": []
+    },
+    {
+     "es": "No se usan detectores de IA como prueba.",
+     "en": "AI detectors are not used as proof.",
+     "tips": [
+      "T-DOC-008"
+     ],
+     "items": []
+    },
+    {
+     "es": "La nota y la decisión final las pone una persona; se informa si se usó IA para calificar.",
+     "en": "A person sets the grade and final decision; AI use in grading is disclosed.",
+     "tips": [
+      "T-DOC-027"
+     ],
+     "items": []
+    },
+    {
+     "es": "Las herramientas exigidas son gratuitas o institucionales.",
+     "en": "Required tools are free or institutional.",
+     "tips": [
+      "T-DOC-023"
+     ],
+     "items": []
+    }
+   ]
+  },
+  {
+   "id": "prompts",
+   "tipo": "prompts",
+   "titulo_es": "Instrucciones (prompts) seguras",
+   "titulo_en": "Safe prompts",
+   "intro_es": "Plantillas para usar con el grupo. Nunca incluya nombres, cédulas, diagnósticos ni trabajos identificables.",
+   "intro_en": "Templates to use with the group. Never include names, ID numbers, diagnoses or identifiable work.",
+   "items": [
+    {
+     "es": "«Explícame [tema] para estudiantes de [nivel] con un ejemplo de Costa Rica. Al final, dime qué fuentes confiables puedo revisar.»",
+     "en": "“Explain [topic] for [level] students with an example from Costa Rica. At the end, tell me which reliable sources I can check.”",
+     "tips": [
+      "T-DOC-012",
+      "T-DOC-029"
+     ],
+     "items": []
+    },
+    {
+     "es": "«Actúa como tutor: no me des la respuesta; hazme una pregunta a la vez para que yo llegue a ella.»",
+     "en": "“Act as a tutor: don't give me the answer; ask me one question at a time so I reach it myself.”",
+     "tips": [
+      "T-TRV-006",
+      "T-DOC-025",
+      "T-FAM-036"
+     ],
+     "items": []
+    },
+    {
+     "es": "«Revisa este texto anónimo y señala tres errores de argumento, sin reescribirlo.»",
+     "en": "“Review this anonymous text and point out three argument errors, without rewriting it.”",
+     "tips": [
+      "T-DOC-016",
+      "T-DOC-024"
+     ],
+     "items": []
+    },
+    {
+     "es": "«Dame tres respuestas distintas a esta pregunta y explica en qué difieren.» (para comparar con otra IA o con un libro)",
+     "en": "“Give me three different answers to this question and explain how they differ.” (to compare with another AI or a book)",
+     "tips": [
+      "T-DOC-029",
+      "T-DOC-010"
+     ],
+     "items": []
+    }
+   ]
+  }
+ ],
+ "direccion": [
+  {
+   "id": "politica",
+   "tipo": "acuerdo",
+   "titulo_es": "Plantilla de política institucional de IA",
+   "titulo_en": "Institutional AI policy template",
+   "intro_es": "Estructura mínima para una política del centro. Complete cada apartado con su comunidad educativa y alinéela con las orientaciones del MEP.",
+   "intro_en": "Minimum structure for a school policy. Complete each section with your school community and align it with MEP guidance.",
+   "secciones": [
+    {
+     "es": "1. Propósito y alcance",
+     "en": "1. Purpose and scope",
+     "items": [
+      {
+       "es": "Reglas comunes para todo el personal, compartidas con las familias.",
+       "en": "Common rules for all staff, shared with families.",
+       "tips": [
+        "T-DIR-001"
+       ],
+       "items": []
+      },
+      {
+       "es": "Uso guiado, no prohibición total: la escuela enseña el uso responsable.",
+       "en": "Guided use, not a blanket ban: the school teaches responsible use.",
+       "tips": [
+        "T-DIR-011",
+        "T-DIR-017"
+       ],
+       "items": []
+      }
+     ]
+    },
+    {
+     "es": "2. Usos permitidos por ciclo",
+     "en": "2. Permitted uses by cycle",
+     "items": [
+      {
+       "es": "Primaria: aprender sobre la IA; secundaria: aprender con la IA.",
+       "en": "Primary: learn about AI; secondary: learn with AI.",
+       "tips": [
+        "T-DIR-020",
+        "T-DOC-001"
+       ],
+       "items": []
+      },
+      {
+       "es": "Alfabetización en IA para todo el estudiantado.",
+       "en": "AI literacy for all students.",
+       "tips": [
+        "T-DIR-019"
+       ],
+       "items": []
+      }
+     ]
+    },
+    {
+     "es": "3. Datos y privacidad (Ley 8968)",
+     "en": "3. Data and privacy (Law 8968)",
+     "items": [
+      {
+       "es": "Prohibido subir datos identificables de estudiantes a IA pública.",
+       "en": "Uploading identifiable student data to public AI is forbidden.",
+       "tips": [
+        "T-DIR-022"
+       ],
+       "items": [
+        "S21-05"
+       ]
+      },
+      {
+       "es": "Consentimiento expreso y por escrito cuando corresponda.",
+       "en": "Express written consent where applicable.",
+       "tips": [
+        "T-TRV-001"
+       ],
+       "items": [
+        "S21-01",
+        "S22-01"
+       ]
+      },
+      {
+       "es": "Evaluación anual de impacto en privacidad.",
+       "en": "Annual privacy impact assessment.",
+       "tips": [
+        "T-DIR-006"
+       ],
+       "items": []
+      }
+     ]
+    },
+    {
+     "es": "4. Decisiones automatizadas y transparencia",
+     "en": "4. Automated decisions and transparency",
+     "items": [
+      {
+       "es": "Persona responsable de cada sistema que apoye decisiones; se informa a las familias.",
+       "en": "A named person responsible for each decision-support system; families are informed.",
+       "tips": [
+        "T-DIR-013",
+        "T-DIR-004"
+       ],
+       "items": []
+      },
+      {
+       "es": "Informe anual de herramientas usadas, fines y resultados.",
+       "en": "Annual report of tools used, purposes and results.",
+       "tips": [
+        "T-DIR-018"
+       ],
+       "items": []
+      }
+     ]
+    },
+    {
+     "es": "5. Equidad, accesibilidad y formación",
+     "en": "5. Equity, accessibility and training",
+     "items": [
+      {
+       "es": "Acceso equitativo y herramientas gratuitas, en español y accesibles.",
+       "en": "Equitable access, free tools in Spanish and accessible.",
+       "tips": [
+        "T-DIR-010",
+        "T-DIR-021"
+       ],
+       "items": []
+      },
+      {
+       "es": "Formación anual del personal y talleres para familias; tiempo reconocido.",
+       "en": "Annual staff training and family workshops; time recognised.",
+       "tips": [
+        "T-DIR-009",
+        "T-DIR-016",
+        "T-DIR-023"
+       ],
+       "items": []
+      }
+     ]
+    },
+    {
+     "es": "6. Protección e incidentes",
+     "en": "6. Protection and incidents",
+     "items": [
+      {
+       "es": "Protocolo de incidentes y canal de reporte confidencial (ver módulo siguiente).",
+       "en": "Incident protocol and confidential reporting channel (see next module).",
+       "tips": [
+        "T-DIR-007",
+        "T-DIR-014"
+       ],
+       "items": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "compras",
+   "tipo": "lista",
+   "titulo_es": "Lista de verificación para adquirir plataformas con IA",
+   "titulo_en": "Checklist for procuring AI platforms",
+   "intro_es": "Úsela antes de firmar o activar una herramienta. Si alguna respuesta es «no», no la adopte todavía.",
+   "intro_en": "Use it before signing or activating a tool. If any answer is 'no', don't adopt it yet.",
+   "items": [
+    {
+     "es": "¿Hay evidencia independiente de que ayuda a esta edad, y hace falta frente a opciones sin IA?",
+     "en": "Is there independent evidence it helps at this age, and is it needed versus non-AI options?",
+     "tips": [
+      "T-DIR-005"
+     ],
+     "items": []
+    },
+    {
+     "es": "¿Minimiza datos, con privacidad desde el diseño, cifrado y almacenamiento seguro?",
+     "en": "Does it minimise data, with privacy by design, encryption and secure storage?",
+     "tips": [
+      "T-DIR-002"
+     ],
+     "items": []
+    },
+    {
+     "es": "¿El contrato limita la conservación y garantiza corregir o borrar datos?",
+     "en": "Does the contract limit retention and guarantee correction or deletion?",
+     "tips": [
+      "T-DIR-003"
+     ],
+     "items": [
+      "S21-04"
+     ]
+    },
+    {
+     "es": "¿El proveedor explica cómo decide su sistema?",
+     "en": "Can the provider explain how its system decides?",
+     "tips": [
+      "T-DIR-004"
+     ],
+     "items": []
+    },
+    {
+     "es": "¿Funciona bien en español y es accesible para estudiantes con discapacidad?",
+     "en": "Does it work well in Spanish and is it accessible for students with disabilities?",
+     "tips": [
+      "T-DIR-021",
+      "T-DOC-028"
+     ],
+     "items": []
+    },
+    {
+     "es": "¿Es gratuita o institucional para el estudiantado?",
+     "en": "Is it free or institutional for students?",
+     "tips": [
+      "T-DOC-023",
+      "T-DIR-010"
+     ],
+     "items": []
+    },
+    {
+     "es": "¿Se revisaron funciones de IA activadas sin aviso en plataformas que ya usa?",
+     "en": "Were AI features switched on without notice in existing platforms reviewed?",
+     "tips": [
+      "T-DIR-024"
+     ],
+     "items": []
+    }
+   ]
+  },
+  {
+   "id": "incidentes",
+   "tipo": "pasos",
+   "titulo_es": "Protocolo de incidentes con IA",
+   "titulo_en": "AI incident protocol",
+   "intro_es": "Para deepfakes, acoso, suplantación o contacto sexual en línea. Adapte nombres y plazos a su centro.",
+   "intro_en": "For deepfakes, harassment, impersonation or online sexual contact. Adapt names and deadlines to your school.",
+   "items": [
+    {
+     "es": "Recibir: una persona designada recibe el caso por un canal seguro y confidencial, y confirma la recepción.",
+     "en": "Receive: a designated person takes the case through a safe, confidential channel and confirms receipt.",
+     "tips": [
+      "T-DIR-014",
+      "T-DIR-007"
+     ],
+     "items": []
+    },
+    {
+     "es": "Proteger: priorizar a la víctima; no culparla; no reenviar ni pedir copias de imágenes sexuales de menores.",
+     "en": "Protect: prioritise the victim; don't blame them; don't forward or request copies of sexual images of minors.",
+     "tips": [
+      "T-FAM-041",
+      "T-FAM-015"
+     ],
+     "items": []
+    },
+    {
+     "es": "Resguardar la identidad: no publicar datos que identifiquen a víctima o autor.",
+     "en": "Protect identity: don't publish data identifying victim or perpetrator.",
+     "tips": [],
+     "items": [
+      "S26-07"
+     ]
+    },
+    {
+     "es": "Denunciar: ante sospecha razonable de abuso, al Ministerio Público; según el caso, al PANI o al OIJ.",
+     "en": "Report: on reasonable suspicion of abuse, to the Public Prosecutor; depending on the case, PANI or OIJ.",
+     "tips": [
+      "T-DOC-019"
+     ],
+     "items": [
+      "S26-08",
+      "S23-04"
+     ]
+    },
+    {
+     "es": "Comunicar al MEP los casos de maltrato o abuso, también en línea o con IA.",
+     "en": "Notify MEP of abuse cases, including online or AI-generated.",
+     "tips": [
+      "T-DIR-008"
+     ],
+     "items": [
+      "S26-10"
+     ]
+    },
+    {
+     "es": "Acompañar y prevenir: apoyo humano, revisión de normas de convivencia y formación.",
+     "en": "Support and prevent: human support, review of conduct rules and training.",
+     "tips": [
+      "T-TRV-004",
+      "T-DIR-009",
+      "T-DIR-015"
+     ],
+     "items": []
+    }
+   ]
+  }
+ ]
+}

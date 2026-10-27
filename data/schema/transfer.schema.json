@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ciodd.ucr.ac.cr/children-on-ai/schema/transfer.schema.json",
+  "title": "Children on AI · matriz de transferibilidad (E0.3, v1.0)",
+  "description": "Principio 3: toda práctica extranjera pasa por esta matriz antes de convertirse en tip. Fuente → ancla CR → condición de adaptación → nivel A/B/C.",
+  "type": "object",
+  "required": ["version", "fecha", "practicas"],
+  "additionalProperties": false,
+  "properties": {
+    "version": {"type": "string"},
+    "fecha": {"type": "string", "format": "date"},
+    "practicas": {"type": "array", "items": {"$ref": "#/$defs/practica"}}
+  },
+  "$defs": {
+    "itemId": {"type": "string", "pattern": "^S\\d{2}-\\d{2,3}$"},
+    "puntaje": {"type": "integer", "minimum": 0, "maximum": 2, "description": "0 = barrera, 1 = requiere adaptación, 2 = compatible"},
+    "practica": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "practica_es", "evidence_ids", "jurisdiccion_origen", "ancla_cr", "criterios", "brecha", "condicion_adaptacion", "nivel", "decision", "revisor", "fecha"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^TR-\\d{3}$"},
+        "practica_es": {"type": "string", "minLength": 10},
+        "practica_en": {"type": "string"},
+        "evidence_ids": {"type": "array", "items": {"$ref": "#/$defs/itemId"}, "minItems": 1, "uniqueItems": true},
+        "jurisdiccion_origen": {"type": "string"},
+        "ancla_cr": {
+          "oneOf": [
+            {"type": "null"},
+            {"type": "object", "additionalProperties": false, "required": ["tipo", "referencia"],
+             "properties": {"tipo": {"enum": ["ley", "reglamento", "lineamiento_mep", "programa", "dato_nacional", "institucion"]}, "referencia": {"type": "string"}, "evidence_id": {"$ref": "#/$defs/itemId"}}}
+          ]
+        },
+        "criterios": {
+          "type": "object", "additionalProperties": false,
+          "required": ["legal", "institucional", "cultural", "recursos"],
+          "properties": {"legal": {"$ref": "#/$defs/puntaje"}, "institucional": {"$ref": "#/$defs/puntaje"}, "cultural": {"$ref": "#/$defs/puntaje"}, "recursos": {"$ref": "#/$defs/puntaje"}}
+        },
+        "brecha": {"type": "string"},
+        "condicion_adaptacion": {"type": ["string", "null"]},
+        "nivel": {"enum": ["A", "B", "C"]},
+        "decision": {"enum": ["adoptar", "adaptar", "no_transferir", "investigar"]},
+        "revisor": {"type": "string"},
+        "fecha": {"type": "string", "format": "date"}
+      },
+      "allOf": [
+        {"if": {"properties": {"nivel": {"const": "A"}}}, "then": {"properties": {"ancla_cr": {"type": "object"}}}},
+        {"if": {"properties": {"decision": {"const": "adaptar"}}}, "then": {"properties": {"condicion_adaptacion": {"type": "string", "minLength": 10}}}},
+        {"if": {"properties": {"criterios": {"properties": {"legal": {"const": 0}}}}}, "then": {"properties": {"decision": {"enum": ["no_transferir", "investigar"]}}}}
+      ]
+    }
+  }
+}

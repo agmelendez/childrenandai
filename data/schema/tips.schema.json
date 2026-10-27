@@ -1,0 +1,344 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ciodd.ucr.ac.cr/children-on-ai/schema/tips.schema.json",
+  "title": "Children on AI · tips.json (E0.2, v1.0)",
+  "description": "Capa de recomendaciones accionables (D3). Cada tip se apoya en ítems verificados (evidence_ids) y declara su nivel de confianza y su anclaje o condición de adaptación a Costa Rica.",
+  "type": "object",
+  "required": [
+    "version",
+    "fecha",
+    "tips"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+(\\.\\d+)?$"
+    },
+    "fecha": {
+      "type": "string",
+      "format": "date"
+    },
+    "tips": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/tip"
+      }
+    }
+  },
+  "$defs": {
+    "banda": {
+      "enum": [
+        "6-8",
+        "9-11",
+        "12-14",
+        "15-18"
+      ],
+      "description": "Bandas MEP propuestas en D1 (I ciclo, II ciclo, III ciclo, Diversificada)."
+    },
+    "itemId": {
+      "type": "string",
+      "pattern": "^S\\d{2}-\\d{2,3}$"
+    },
+    "texto": {
+      "type": "string",
+      "minLength": 10,
+      "maxLength": 400
+    },
+    "tip": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "texto_es",
+        "texto_en",
+        "por_que_es",
+        "por_que_en",
+        "tema",
+        "edad",
+        "publico",
+        "contexto",
+        "esfuerzo",
+        "urgencia",
+        "confianza",
+        "evidence_ids",
+        "ancla_cr",
+        "condicion_adaptacion",
+        "estado",
+        "revisado_por",
+        "fecha",
+        "fecha_verificacion"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^T-[A-Z]{3}-\\d{3}$",
+          "description": "T-<público FAM|DOC|DIR|TRV>-<nnn>"
+        },
+        "texto_es": {
+          "$ref": "#/$defs/texto",
+          "description": "Acción en imperativo y lenguaje llano."
+        },
+        "texto_en": {
+          "$ref": "#/$defs/texto"
+        },
+        "por_que_es": {
+          "$ref": "#/$defs/texto"
+        },
+        "por_que_en": {
+          "$ref": "#/$defs/texto"
+        },
+        "tema": {
+          "type": "string",
+          "minLength": 3
+        },
+        "edad": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/banda"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "publico": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "Familia",
+              "Docente",
+              "Dirección"
+            ]
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "contexto": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "casa",
+              "aula",
+              "politica"
+            ]
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "esfuerzo": {
+          "enum": [
+            "bajo",
+            "medio",
+            "alto"
+          ]
+        },
+        "urgencia": {
+          "enum": [
+            "alta",
+            "media",
+            "baja"
+          ]
+        },
+        "confianza": {
+          "enum": [
+            "A",
+            "B",
+            "C"
+          ],
+          "description": "A: ancla normativa/dato CR + evidencia empírica o normativa; B: orientación internacional transferible con condición; C: evidencia indirecta, propuesta no vigente u opinión."
+        },
+        "evidence_ids": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/itemId"
+          },
+          "minItems": 1,
+          "uniqueItems": true,
+          "description": "Principio 2: ningún tip sin evidencia."
+        },
+        "transfer_id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^TR-\\d{3}$"
+        },
+        "ancla_cr": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "tipo",
+                "referencia"
+              ],
+              "properties": {
+                "tipo": {
+                  "enum": [
+                    "ley",
+                    "reglamento",
+                    "lineamiento_mep",
+                    "programa",
+                    "dato_nacional",
+                    "institucion"
+                  ]
+                },
+                "referencia": {
+                  "type": "string",
+                  "minLength": 5
+                },
+                "evidence_id": {
+                  "$ref": "#/$defs/itemId"
+                }
+              }
+            }
+          ]
+        },
+        "condicion_adaptacion": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "advertencia_edad": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Ej.: edad mínima de los términos de uso de la herramienta."
+        },
+        "estado": {
+          "enum": [
+            "borrador",
+            "revision_expertos",
+            "validacion_mep",
+            "revision_filologica",
+            "publicado",
+            "caducado"
+          ]
+        },
+        "revisado_por": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "rol",
+              "fecha"
+            ],
+            "properties": {
+              "rol": {
+                "enum": [
+                  "redaccion_ciodd",
+                  "experto_educacion",
+                  "mep",
+                  "filologia"
+                ]
+              },
+              "iniciales": {
+                "type": "string"
+              },
+              "fecha": {
+                "type": "string",
+                "format": "date"
+              },
+              "institucion": {
+                "type": "string"
+              }
+            }
+          },
+          "description": "D5 (aprobada 26-10-2026): publicar exige al menos una validación de persona experta en educación, una del MEP y una revisión filológica."
+        },
+        "fecha": {
+          "type": "string",
+          "format": "date"
+        },
+        "fecha_verificacion": {
+          "type": "string",
+          "format": "date",
+          "description": "E6: caduca a los 12 meses sin revisión."
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "ancla_cr": {
+                "type": "null"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "condicion_adaptacion": {
+                "type": "string",
+                "minLength": 10
+              },
+              "confianza": {
+                "enum": [
+                  "B",
+                  "C"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "estado": {
+                "const": "publicado"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "revisado_por": {
+                "allOf": [
+                  {
+                    "contains": {
+                      "properties": {
+                        "rol": {
+                          "const": "experto_educacion"
+                        }
+                      },
+                      "required": [
+                        "rol"
+                      ]
+                    }
+                  },
+                  {
+                    "contains": {
+                      "properties": {
+                        "rol": {
+                          "const": "mep"
+                        }
+                      },
+                      "required": [
+                        "rol"
+                      ]
+                    }
+                  },
+                  {
+                    "contains": {
+                      "properties": {
+                        "rol": {
+                          "const": "filologia"
+                        }
+                      },
+                      "required": [
+                        "rol"
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

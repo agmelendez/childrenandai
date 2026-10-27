@@ -1,0 +1,230 @@
+{
+ "_nota": "E4.6 · Ficha «Costa Rica en contexto». Cifras ILIA tomadas del Gráfico 1 (p. 22 del PDF) y del texto (pp. 21, 24, 45, 103, 115). El texto de la p. 45 da 50,3 en Factores habilitantes y el Gráfico 1 da 50,5: se usa el gráfico y se anota la discrepancia.",
+ "ilia": {
+  "fuente": "C01",
+  "pagina": 22,
+  "dims_es": [
+   "ILIA total",
+   "Factores habilitantes",
+   "Investigación, desarrollo y adopción",
+   "Gobernanza"
+  ],
+  "dims_en": [
+   "ILIA total",
+   "Enabling factors",
+   "Research, development and adoption",
+   "Governance"
+  ],
+  "paises": [
+   [
+    "Chile",
+    71.4,
+    63.4,
+    73.7,
+    80.8
+   ],
+   [
+    "Brasil",
+    68.4,
+    59.2,
+    63.9,
+    89.5
+   ],
+   [
+    "Uruguay",
+    67.0,
+    61.0,
+    65.1,
+    79.4
+   ],
+   [
+    "Colombia",
+    56.8,
+    46.4,
+    51.6,
+    80.9
+   ],
+   [
+    "Costa Rica",
+    56.0,
+    50.5,
+    45.0,
+    80.5
+   ],
+   [
+    "Argentina",
+    55.6,
+    52.7,
+    48.4,
+    70.3
+   ],
+   [
+    "Perú",
+    52.7,
+    45.5,
+    39.4,
+    83.2
+   ],
+   [
+    "México",
+    52.0,
+    49.6,
+    45.6,
+    65.0
+   ],
+   [
+    "Ecuador",
+    51.8,
+    47.0,
+    39.0,
+    77.4
+   ],
+   [
+    "Rep. Dominicana",
+    45.1,
+    43.3,
+    27.1,
+    73.2
+   ],
+   [
+    "Panamá",
+    39.3,
+    43.1,
+    31.8,
+    43.3
+   ],
+   [
+    "El Salvador",
+    37.9,
+    35.1,
+    24.7,
+    61.3
+   ],
+   [
+    "Trinidad y Tabago",
+    35.5,
+    44.2,
+    31.7,
+    26.9
+   ],
+   [
+    "Paraguay",
+    32.6,
+    43.5,
+    21.8,
+    30.3
+   ],
+   [
+    "Jamaica",
+    32.4,
+    40.4,
+    26.9,
+    27.2
+   ],
+   [
+    "Cuba",
+    30.9,
+    21.4,
+    31.7,
+    45.2
+   ],
+   [
+    "Guatemala",
+    29.0,
+    40.1,
+    23.4,
+    19.3
+   ],
+   [
+    "Honduras",
+    26.2,
+    31.7,
+    22.9,
+    21.6
+   ]
+  ],
+  "nota_es": "El Gráfico 1 muestra 18 países; Venezuela y Bolivia no aparecen en la extracción de esa página.",
+  "nota_en": "Chart 1 shows 18 countries; Venezuela and Bolivia do not appear in the extraction of that page."
+ },
+ "datos": [
+  {
+   "v": "5.º",
+   "es": "lugar regional en el ILIA 2026 (56,0 puntos); grupo «adoptantes», que encabeza junto a Colombia y Argentina.",
+   "en": "regional place in ILIA 2026 (56.0 points); 'adopters' group, which it leads with Colombia and Argentina.",
+   "ref": "C01",
+   "p": "21–22"
+  },
+  {
+   "v": "25,1 %",
+   "es": "de la población de 15 a 64 años usa activamente IA generativa: la tasa más alta de la región (promedio 16,1 %).",
+   "en": "of people aged 15–64 actively use generative AI: the highest rate in the region (average 16.1%).",
+   "ref": "C01",
+   "p": "24, 115"
+  },
+  {
+   "v": "0,754 %",
+   "es": "concentración de habilidades de ingeniería en IA: más del doble que Chile y Colombia.",
+   "en": "concentration of AI engineering skills: more than double Chile and Colombia.",
+   "ref": "C01",
+   "p": "103"
+  },
+  {
+   "v": "45,0",
+   "es": "puntos en Investigación, desarrollo y adopción: la dimensión más débil de Costa Rica.",
+   "en": "points in Research, development and adoption: Costa Rica's weakest dimension.",
+   "ref": "C01",
+   "p": "22"
+  }
+ ],
+ "ninez_items": [
+  "S20-05",
+  "S20-08",
+  "S20-01",
+  "S20-06",
+  "S20-04"
+ ],
+ "marco_items": [
+  "S26-01",
+  "S26-02",
+  "S21-01",
+  "S21-04",
+  "S23-04",
+  "S26-08",
+  "S24-01",
+  "S24-03"
+ ],
+ "vacios": [
+  {
+   "es": "No hay edad mínima legal para usar IA: decida según la exposición y el riesgo.",
+   "en": "There is no legal minimum age to use AI: decide by exposure and risk.",
+   "tips": [
+    "T-TRV-002"
+   ],
+   "items": []
+  },
+  {
+   "es": "Los chatbots de compañía no están regulados en Costa Rica.",
+   "en": "Companion chatbots are not regulated in Costa Rica.",
+   "tips": [
+    "T-TRV-003"
+   ],
+   "items": []
+  },
+  {
+   "es": "La Estrategia Nacional de IA pide al MEP y al PANI protocolos conjuntos, todavía por desarrollar.",
+   "en": "The National AI Strategy asks MEP and PANI for joint protocols, still to be developed.",
+   "tips": [],
+   "items": [
+    "S24-03"
+   ]
+  },
+  {
+   "es": "Las prohibiciones de otros países (p. ej., Noruega) son ejemplos, no normas aplicables.",
+   "en": "Other countries' bans (e.g., Norway) are examples, not applicable rules.",
+   "tips": [
+    "T-DIR-017"
+   ],
+   "items": []
+  }
+ ]
+}

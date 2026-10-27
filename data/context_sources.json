@@ -1,0 +1,53 @@
+{
+ "_nota": "Fuentes de contexto (E2.2): se citan para encuadre y para la ficha «Costa Rica en contexto» (E4.6). No generan ítems de recomendación ni se muestran en «Las 19 fuentes».",
+ "fuentes_contexto": [
+  {
+   "id": "C01",
+   "file": "ILIA IA 2026.pdf",
+   "sha256_16": "fa958a9438d21899",
+   "paginas_pdf": 276,
+   "corto": "CEPAL y CENIA (2026) – Índice Latinoamericano de Inteligencia Artificial (ILIA) 2026",
+   "uso": "Posición de Costa Rica en preparación y gobernanza de IA (E4.6)",
+   "licencia": "© CEPAL; el PDF pide no redistribuir copias: enlazar a la versión oficial",
+   "apa7": "Comisión Económica para América Latina y el Caribe & Centro Nacional de Inteligencia Artificial. (2026). *Índice Latinoamericano de Inteligencia Artificial (ILIA) 2026*. CEPAL. [URL por completar; verificar título exacto en portada]"
+  },
+  {
+   "id": "C02",
+   "file": "Inteligencia artificial para una mejor regulación-  Oportunidades y desafíos para América Latina y el Caribe.pdf",
+   "sha256_16": "561d420431f724f5",
+   "paginas_pdf": 34,
+   "corto": "López Azumendi, Cáceres y Guio (2026) – IA para una mejor regulación (BID)",
+   "uso": "Contexto regulatorio de América Latina y el Caribe",
+   "licencia": "CC BY 4.0",
+   "apa7": "López Azumendi, S., Cáceres, C., & Guio, A. (2026). *Inteligencia artificial para una mejor regulación: Oportunidades y desafíos para América Latina y el Caribe*. Banco Interamericano de Desarrollo. [URL/DOI por completar]"
+  },
+  {
+   "id": "C03",
+   "file": "La era de la IA y nuestro futuro.pdf",
+   "sha256_16": "630e163c7dfa65ae",
+   "paginas_pdf": 194,
+   "corto": "Kissinger, Schmidt y Huttenlocher – La era de la IA y nuestro futuro",
+   "uso": "Cita de encuadre (IA como «niñera, tutor, amigo»); ensayo de opinión, no evidencia",
+   "licencia": "Obra con derechos reservados: solo cita breve",
+   "apa7": "Kissinger, H. A., Schmidt, E., & Huttenlocher, D. (s. f.). *La era de la IA y nuestro futuro*. [Editorial y año de la edición en español por completar]"
+  },
+  {
+   "id": "C04",
+   "file": "Resultados Primera Encuesta Kids Online_2018.pdf",
+   "corto": "Pérez Sánchez (2019) – Kids Online Costa Rica 2018",
+   "uso": "Línea de base 2018; sus hallazgos ya entran vía los antecedentes de S25"
+  },
+  {
+   "id": "C05",
+   "file": "Resultados Segunda Encuesta Kids Online_2023.pdf",
+   "corto": "Paniamor–IIP-UCR (2023) – Kids Online Costa Rica 2023: primeros resultados",
+   "uso": "Versión preliminar de S25 (duplicado)"
+  },
+  {
+   "id": "C06",
+   "file": "Resumen Resultados Kids Online_2023.pdf",
+   "corto": "Paniamor–IIP-UCR (2023) – Kids Online Costa Rica 2023: resumen",
+   "uso": "Resumen de S25 (duplicado)"
+  }
+ ]
+}

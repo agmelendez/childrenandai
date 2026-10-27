@@ -53,7 +53,7 @@ Los textos de la interfaz están en `assets/js/i18n.js`. **Para añadir un idiom
 
 1. Cree el repositorio y suba todo: `git init && git add . && git commit -m "Children on AI 0.3" && git branch -M main && git remote add origin <URL> && git push -u origin main`
 2. En GitHub: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
-3. Cada `push` a `main` ejecuta las comprobaciones y publica en `https://<usuario>.github.io/<repositorio>/`.
+3. Cada `push` a `main` ejecuta las comprobaciones y publica en `https://agmelendez.github.io/childrenandai/`.
 
 Si prefiere sin Actions: Source = *Deploy from a branch*, rama `main`, carpeta `/ (root)`; el archivo `.nojekyll` ya está incluido.
 
