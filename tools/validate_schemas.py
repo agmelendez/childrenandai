@@ -10,7 +10,12 @@ from jsonschema import Draft202012Validator, FormatChecker
 R = pathlib.Path(__file__).resolve().parent.parent; D = R / "data"
 load = lambda p: json.loads(p.read_text(encoding="utf-8"))
 V = {k: Draft202012Validator(load(D/"schema"/f"{k}.schema.json"), format_checker=FormatChecker()) for k in ("tips", "transfer")}
-ITEMS = {i["id"] for i in load(D/"items.json")}
+_IT = load(D/"items.json"); ITEMS = {i["id"] for i in _IT}
+ESTATUS = {"ley_cr", "directriz_mep", "recomendacion", "ley_extranjera", "propuesta", "dato"}  # E5.1
+def check_items():
+    bad = [i["id"] for i in _IT if i.get("estatus") not in ESTATUS]
+    print(("OK " if not bad else "ERR") + f" data/items.json · estatus (E5.1)" + (f"\n     · sin estatus válido: {bad[:10]}…" if bad else ""))
+    return bool(bad)
 
 def check(kind, doc, label):
     errs = [f"{'/'.join(map(str, e.absolute_path)) or '(raíz)'}: {e.message[:160]}" for e in V[kind].iter_errors({k: v for k, v in doc.items() if not k.startswith("_")})]
@@ -30,6 +35,7 @@ def run(pairs):
         if not p.exists(): print(f"—  {p.relative_to(R)}: no existe (se crea en E3)"); continue
         doc = load(p); errs = check(kind, doc, p.name)
         if kind == "tips":
+            errs += [f"{t['id']}: sin pasos (E5.3–E5.4: obligatorios en todo tip)" for t in doc["tips"] if not t.get("pasos")]
             errs += [f"{t['id']}: transfer_id {t['transfer_id']} no está en la matriz" for t in doc["tips"] if t.get("transfer_id") and t["transfer_id"] not in tr_ids]
         print(("OK " if not errs else "ERR") + f" {p.relative_to(R)}" + "".join("\n     · " + e for e in errs)); bad += bool(errs)
     return bad
@@ -47,6 +53,9 @@ def selftest():
         ("tips", mut(t0, "tips", lambda t: t.update(estado="publicado")), "publicado sin validación de expertos, MEP y filología (D5)"),
         ("tips", mut(t0, "tips", lambda t: t.update(estado="publicado", revisado_por=[{"rol":"redaccion_ciodd","fecha":"2026-10-26"},{"rol":"experto_educacion","fecha":"2026-10-26"},{"rol":"filologia","fecha":"2026-10-26"}])), "publicado sin validación del MEP (D5)"),
         ("tips", mut(t0, "tips", lambda t: t.update(fecha="26/10/2026")), "fecha no ISO"),
+        ("tips", mut(t0, "tips", lambda t: t.update(estatus="propuesta")), "tip con estatus de propuesta (E5.1)"),
+        ("tips", mut(t0, "tips", lambda t: t.pop("estatus")), "tip sin estatus (E5.1)"),
+        ("tips", mut(t0, "tips", lambda t: t.update(pasos={"hacer": {"es": "Haga algo concreto hoy."}})), "pasos incompletos (E5.3)"),
         ("transfer", mut(x0, "practicas", lambda p: p.update(nivel="A")), "nivel A sin ancla CR"),
         ("transfer", mut(x0, "practicas", lambda p: p.update(condicion_adaptacion=None)), "adaptar sin condición"),
         ("transfer", mut(x0, "practicas", lambda p: p["criterios"].update(legal=0)), "barrera legal con decisión 'adaptar'"),
@@ -61,4 +70,4 @@ if __name__ == "__main__":
     a = sys.argv[1:]
     if "--selftest" in a: sys.exit(selftest())
     pairs = [("transfer", D/"ejemplos/transfer.ejemplo.json"), ("tips", D/"ejemplos/tips.ejemplo.json")] if "--ejemplos" in a else [("transfer", D/"transfer.json"), ("tips", D/"tips.json")]
-    sys.exit(run(pairs))
+    sys.exit(run(pairs) + (0 if "--ejemplos" in a else check_items()))

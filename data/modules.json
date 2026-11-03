@@ -608,7 +608,7 @@
       },
       {
        "es": "Formación anual del personal y talleres para familias; tiempo reconocido.",
-       "en": "Annual staff training and family workshops; time recognised.",
+       "en": "Annual staff training and family workshops; time recognized.",
        "tips": [
         "T-DIR-009",
         "T-DIR-016",
@@ -653,7 +653,7 @@
     },
     {
      "es": "¿Minimiza datos, con privacidad desde el diseño, cifrado y almacenamiento seguro?",
-     "en": "Does it minimise data, with privacy by design, encryption and secure storage?",
+     "en": "Does it minimize data, with privacy by design, encryption and secure storage?",
      "tips": [
       "T-DIR-002"
      ],
@@ -724,7 +724,7 @@
     },
     {
      "es": "Proteger: priorizar a la víctima; no culparla; no reenviar ni pedir copias de imágenes sexuales de menores.",
-     "en": "Protect: prioritise the victim; don't blame them; don't forward or request copies of sexual images of minors.",
+     "en": "Protect: prioritize the victim; don't blame them; don't forward or request copies of sexual images of minors.",
      "tips": [
       "T-FAM-041",
       "T-FAM-015"

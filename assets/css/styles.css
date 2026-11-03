@@ -599,3 +599,49 @@ details.prov>summary .pv-src{font-weight:400;color:var(--muted)}
   body.pk .kmod.pon .krefs{font-size:7.5pt}
   body.pk textarea{border:1px solid #777;min-height:90pt}
 }
+
+/* E5.3 · Cómo hacerlo y 3 acciones iniciales */
+.how{border:1px solid var(--line,#d5dce6);border-radius:8px;padding:6px 10px;background:var(--soft)}
+.how>summary{font-weight:700;cursor:pointer;color:var(--ink)}
+.howl{display:grid;gap:8px;margin:8px 0 2px}
+.hw{display:grid;grid-template-columns:minmax(0,1fr);gap:2px}
+.hw dt{font-weight:700;font-size:.88rem;display:flex;align-items:center;gap:6px;color:var(--ink)}
+.hw dt i{font-style:normal;display:inline-grid;place-items:center;width:1.4em;height:1.4em;border-radius:50%;background:var(--ink);color:var(--bg,#fff);font-size:.78rem}
+.hw.h4 dt i{background:var(--warn,#8a5a00)}
+.hw dd{margin:0 0 0 1.9em;font-size:.93rem}
+.t5s{font-size:.9rem;margin:0}
+.f3{border:2px solid var(--ink);border-radius:10px;padding:12px 14px;margin:0 0 14px;background:var(--soft)}
+.f3.ok{border-width:1px}
+.f3l{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:10px}
+.f3l li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px;align-items:start}
+.f3n{display:inline-grid;place-items:center;width:1.9em;height:1.9em;border-radius:50%;background:var(--ink);color:var(--bg,#fff);font-weight:700}
+.f3a{font-weight:700;margin:0 0 2px}
+.st3{text-align:left;margin:12px auto;max-width:640px}
+@media print{.how,.f3{display:none!important}}
+
+/* E5.4 · Alertas: observar–conversar–actuar */
+.oca{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:0 0 12px;padding:10px 12px;border:1px solid var(--line);border-left:5px solid var(--ok);border-radius:8px;background:var(--surface)}
+.ocs b{display:flex;align-items:center;gap:6px;font-size:.92rem;color:var(--ink)}
+.ocs b i{font-style:normal;display:inline-grid;place-items:center;width:1.5em;height:1.5em;border-radius:50%;background:var(--ink);color:var(--surface);font-size:.8rem}
+.ocs p{margin:4px 0 0;font-size:.92rem}
+.ocg{grid-column:1/-1;margin:0;font-size:.9rem}
+@media (max-width:720px){.oca{grid-template-columns:minmax(0,1fr)}}
+
+/* Auditoría E5 · la hoja de Mi plan ocupaba 2 páginas (la 2.ª en blanco) por min-height:100vh */
+@media print{.app,.main{min-height:0!important;height:auto!important}}
+
+/* Auditoría E5 · URL y DOI largos no deben ensanchar la página */
+.apa,.refitem,.cite{overflow-wrap:anywhere}
+
+/* E5.5 · ruta principiante, ¿Por dónde sigo? y ayuda */
+.hg-more{margin:6px 0 0;font-size:.95rem}
+.nextc{margin:28px 0 8px;padding:14px 16px;border:2px solid var(--ink);border-radius:10px;background:var(--soft)}
+.nextc h2{font-size:1.1rem;margin:0 0 8px;color:var(--ink)}
+.nextc .stx{margin:8px 0 0}.nextc .cite{margin:8px 0 0}
+.ayuda{margin:0 0 14px;padding:12px 14px;border:2px solid var(--bad);border-radius:10px;background:var(--surface)}
+.ayuda h3{margin:0 0 4px;color:var(--ink)}
+.ayl{list-style:none;margin:8px 0;padding:0;display:grid;gap:6px;grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+.ayl li{display:grid;gap:1px;font-size:.92rem}.ayl span{color:var(--muted);font-size:.86rem}
+.aynum{font-weight:800;font-size:1.05rem}
+.ayline{font-size:.9rem;margin:6px 0 0}
+@media print{.nextc{display:none!important}}

@@ -104,6 +104,6 @@ Supuestos: sesión útil ≈ 200 k tokens de contexto efectivo (por encima, la c
 | E2 | 2–3 | v0.7 | E0 | Corpus S14–S19 + ítems reetiquetados | **Completada 26-10-2026 · v0.7** (26 fuentes, 422 ítems, 12/12 temas con ancla CR; ver CIERRE_E2_v0.7.md) |
 | E3 | 4–5 | v0.8 | E2 | tips.json + transfer.json | **Completada 26-10-2026 · v0.8 (para revisión)**: 110 tips, 50 prácticas; ver CIERRE_E3_v0.8.md |
 | E4 | 6–7 | v0.9 | E3 | Portada por perfiles, Mi plan, PDF | **Completada 26-10-2026 · v0.9** (E4.1–E4.6; ver CIERRE_E4_v0.9.md y PREPARACION_E5.md) |
-| E5 | 8–9 | v1.0 | E4 | Informe de usabilidad, lanzamiento | Pendiente |
+| E5 | 8–9 | v1.0 | E4 | Informe de usabilidad, lanzamiento | **En curso**: E5.1–E5.5 de los comentarios del 3 nov hechas (v0.14.0; ver PLAN_E5_COMENTARIOS_3NOV.md y AUDITORIA_E0_E5.4.md); falta la prueba con usuarios |
 
  Riesgos principales: escasez de evidencia empírica CR para 6–11 (mitigación: nivel C explícito + agenda de investigación); cambios en términos de uso de herramientas (E6); disponibilidad de pares validadores (E5).

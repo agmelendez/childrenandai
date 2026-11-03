@@ -1,0 +1,365 @@
+{
+ "_nota": "E5.4: guía observar–conversar–actuar por tema de alerta. Generado por tools/e5_pasos_1218.py.",
+ "temas": {
+  "Bienestar y dependencia": {
+   "casa": {
+    "observar": {
+     "es": "Cambios de sueño o de ánimo, aislarse, o preferir un chatbot a las personas.",
+     "en": "Changes in sleep or mood, withdrawing, or preferring a chatbot to people."
+    },
+    "conversar": {
+     "es": "«¿Cómo te sientes después de usar esta app?» Escuche sin juzgar.",
+     "en": "“How do you feel after using this app?” Listen without judging."
+    },
+    "actuar": {
+     "es": "Acuerden horarios. Si la tristeza sigue, pida apoyo a Orientación o a un profesional.",
+     "en": "Agree on schedules. If sadness continues, seek support from the counselor or a professional."
+    }
+   },
+   "escuela": {
+    "observar": {
+     "es": "Cansancio, aislamiento o textos con tristeza en los trabajos.",
+     "en": "Tiredness, withdrawal or sad content in assignments."
+    },
+    "conversar": {
+     "es": "Converse a solas, con calma, y pregunte cómo está.",
+     "en": "Talk privately and calmly, and ask how they are."
+    },
+    "actuar": {
+     "es": "Avise a Orientación y siga el protocolo del centro.",
+     "en": "Inform the counselor and follow the school protocol."
+    }
+   }
+  },
+  "Aprendizaje y docencia": {
+   "casa": {
+    "observar": {
+     "es": "Tareas perfectas que su hijo o hija no sabe explicar.",
+     "en": "Perfect homework your child cannot explain."
+    },
+    "conversar": {
+     "es": "«Cuéntame con tus palabras qué aprendiste.»",
+     "en": "“Tell me in your own words what you learned.”"
+    },
+    "actuar": {
+     "es": "Acuerden usar la IA para pistas y no para copiar.",
+     "en": "Agree to use AI for hints, not for copying."
+    }
+   },
+   "escuela": {
+    "observar": {
+     "es": "Trabajos muy distintos al nivel habitual o iguales entre sí.",
+     "en": "Work very different from the usual level, or identical across students."
+    },
+    "conversar": {
+     "es": "Pida al estudiante que explique su proceso, sin acusar.",
+     "en": "Ask the student to explain their process, without accusing."
+    },
+    "actuar": {
+     "es": "Ajuste la tarea para que muestre el proceso y aplique las reglas acordadas.",
+     "en": "Adjust the task so the process is visible and apply the agreed rules."
+    }
+   }
+  },
+  "Seguridad y explotación": {
+   "casa": {
+    "observar": {
+     "es": "Secretos con alguien en línea, regalos, pedidos de fotos o de verse.",
+     "en": "Secrets with someone online, gifts, requests for photos or to meet."
+    },
+    "conversar": {
+     "es": "«Si alguien te pide fotos o secretos, puedes contarme sin miedo.»",
+     "en": "“If anyone asks you for photos or secrets, you can tell me without fear.”"
+    },
+    "actuar": {
+     "es": "Guarde pruebas, no reenvíe nada y avise a la escuela; según el caso, al PANI o al OIJ.",
+     "en": "Save evidence, forward nothing and tell the school; depending on the case, PANI or the OIJ."
+    }
+   },
+   "escuela": {
+    "observar": {
+     "es": "Imágenes falsas que circulan, burlas o miedo a ir a clases.",
+     "en": "Fake images circulating, mocking or fear of coming to school."
+    },
+    "conversar": {
+     "es": "Escuche a quien cuenta y protéjalo; no investigue por su cuenta.",
+     "en": "Listen to whoever tells you and protect them; do not investigate alone."
+    },
+    "actuar": {
+     "es": "Avise a la dirección el mismo día; la dirección comunica y denuncia según la ley.",
+     "en": "Tell the principal the same day; the principal reports as the law requires."
+    }
+   }
+  },
+  "Edad y adecuación": {
+   "casa": {
+    "observar": {
+     "es": "Apps que piden una edad mayor que la de su hijo o hija.",
+     "en": "Apps that require an age above your child's."
+    },
+    "conversar": {
+     "es": "«Esta app es para más grandes. La usamos juntos.»",
+     "en": "“This app is for older kids. We'll use it together.”"
+    },
+    "actuar": {
+     "es": "Use su propia cuenta y acompañe; no mienta sobre la edad.",
+     "en": "Use your own account and stay with them; do not lie about age."
+    }
+   },
+   "escuela": {
+    "observar": {
+     "es": "Herramientas que no son para la edad del grupo.",
+     "en": "Tools not meant for the class's age."
+    },
+    "conversar": {
+     "es": "Explique al grupo por qué se usa o no una herramienta.",
+     "en": "Explain to the class why a tool is or is not used."
+    },
+    "actuar": {
+     "es": "Revise la edad que pide cada herramienta antes de usarla en clase.",
+     "en": "Check the age each tool requires before using it in class."
+    }
+   }
+  },
+  "Alfabetización en IA": {
+   "casa": {
+    "observar": {
+     "es": "Creer que la IA siempre tiene razón o que es una persona.",
+     "en": "Believing AI is always right or is a person."
+    },
+    "conversar": {
+     "es": "«¿Cómo sabes que es cierto?»",
+     "en": "“How do you know it's true?”"
+    },
+    "actuar": {
+     "es": "Comprueben juntos las respuestas en otra fuente.",
+     "en": "Check answers together in another source."
+    }
+   },
+   "escuela": {
+    "observar": {
+     "es": "El grupo copia respuestas de la IA sin revisarlas.",
+     "en": "The class copies AI answers without checking."
+    },
+    "conversar": {
+     "es": "Pregunte de dónde sale cada dato.",
+     "en": "Ask where each fact comes from."
+    },
+    "actuar": {
+     "es": "Haga actividades para cazar errores de la IA.",
+     "en": "Run activities to catch AI mistakes."
+    }
+   }
+  },
+  "Gobernanza escolar": {
+   "casa": {
+    "observar": {
+     "es": "La escuela usa apps con IA sin explicar cuáles.",
+     "en": "The school uses AI apps without saying which."
+    },
+    "conversar": {
+     "es": "Pregunte en la reunión de familias qué herramientas se usan.",
+     "en": "Ask at the parents' meeting which tools are used."
+    },
+    "actuar": {
+     "es": "Pida por escrito qué datos recogen y para qué.",
+     "en": "Ask in writing what data they collect and why."
+    }
+   },
+   "escuela": {
+    "observar": {
+     "es": "Cada docente usa sus propias reglas o apps que nadie aprobó.",
+     "en": "Each teacher uses different rules or unapproved tools."
+    },
+    "conversar": {
+     "es": "Hablen del tema en una reunión del personal.",
+     "en": "Discuss it at a staff meeting."
+    },
+    "actuar": {
+     "es": "Acuerden reglas para todos y compártanlas con las familias.",
+     "en": "Agree on a common policy and share it with families."
+    }
+   }
+  },
+  "Privacidad y datos": {
+   "casa": {
+    "observar": {
+     "es": "Apps que piden cámara, ubicación o datos personales.",
+     "en": "Apps asking for the camera, location or personal data."
+    },
+    "conversar": {
+     "es": "«Esto no se le dice a la IA: nombre, escuela, casa, fotos.»",
+     "en": "“We don't tell AI this: name, school, home, photos.”"
+    },
+    "actuar": {
+     "es": "Apague permisos que no hacen falta y borre el historial.",
+     "en": "Turn off unneeded permissions and delete the history."
+    }
+   },
+   "escuela": {
+    "observar": {
+     "es": "Datos de estudiantes subidos a apps públicas.",
+     "en": "Student data uploaded to public apps."
+    },
+    "conversar": {
+     "es": "Recuerde la regla al personal sin señalar a nadie.",
+     "en": "Remind staff of the rule without singling anyone out."
+    },
+    "actuar": {
+     "es": "Borre los datos subidos y avise a la dirección.",
+     "en": "Delete the uploaded data and inform the principal."
+    }
+   }
+  },
+  "Responsabilidad compartida": {
+   "casa": {
+    "observar": {
+     "es": "Nadie sabe quién se encarga de qué entre casa y escuela.",
+     "en": "Nobody knows who handles what between home and school."
+    },
+    "conversar": {
+     "es": "Hable con la persona docente sobre cómo se usa la IA.",
+     "en": "Talk with the teacher about how AI is used."
+    },
+    "actuar": {
+     "es": "Acuerden un canal para avisarse de problemas.",
+     "en": "Agree on a channel to tell each other about problems."
+    }
+   },
+   "escuela": {
+    "observar": {
+     "es": "Las familias no saben qué hace la escuela con la IA.",
+     "en": "Families do not know what the school does with AI."
+    },
+    "conversar": {
+     "es": "Explique en reuniones qué se usa y por qué.",
+     "en": "Explain at meetings what is used and why."
+    },
+    "actuar": {
+     "es": "Ofrezca talleres y un canal de contacto.",
+     "en": "Offer workshops and a contact channel."
+    }
+   }
+  },
+  "Uso y prevalencia": {
+   "casa": {
+    "observar": {
+     "es": "Su hija usa IA más de lo que usted pensaba.",
+     "en": "Your child uses AI more than you thought."
+    },
+    "conversar": {
+     "es": "Pregúntele qué usa y para qué, con curiosidad.",
+     "en": "Ask what they use and why, with curiosity."
+    },
+    "actuar": {
+     "es": "Acuerden juntos dónde y cuándo se usa.",
+     "en": "Agree together on where and when it is used."
+    }
+   },
+   "escuela": {
+    "observar": {
+     "es": "El grupo usa IA fuera de clase sin guía.",
+     "en": "The class uses AI outside school without guidance."
+    },
+    "conversar": {
+     "es": "Pregunte al grupo qué herramientas usa.",
+     "en": "Ask the class which tools they use."
+    },
+    "actuar": {
+     "es": "Incluya uso guiado en clase.",
+     "en": "Include guided use in class."
+    }
+   }
+  },
+  "Marco normativo": {
+   "casa": {
+    "observar": {
+     "es": "Oír que «la ley prohíbe» algo que solo es una norma de otro país.",
+     "en": "Hearing that “the law bans” something that is only another country's rule."
+    },
+    "conversar": {
+     "es": "Revise la etiqueta: ley en Costa Rica, directriz, recomendación o norma de otro país.",
+     "en": "Check the label: Costa Rican law, directive, recommendation or another country's rule."
+    },
+    "actuar": {
+     "es": "Ante un delito, use los canales oficiales: escuela, PANI u OIJ.",
+     "en": "If a crime occurs, use official channels: school, PANI or OIJ."
+    }
+   },
+   "escuela": {
+    "observar": {
+     "es": "Medidas copiadas de otros países como si fueran ley aquí.",
+     "en": "Measures copied from other countries as if they were law here."
+    },
+    "conversar": {
+     "es": "Explique qué obliga en Costa Rica y qué es ejemplo.",
+     "en": "Explain what is binding in Costa Rica and what is an example."
+    },
+    "actuar": {
+     "es": "Siga las leyes y la Guía MEP; trate lo demás como recomendación.",
+     "en": "Follow the laws and the MEP guide; treat the rest as recommendations."
+    }
+   }
+  },
+  "Mediación parental": {
+   "casa": {
+    "observar": {
+     "es": "Solo prohibir, o no saber qué hace su hijo o hija en línea.",
+     "en": "Only banning, or not knowing what your child does online."
+    },
+    "conversar": {
+     "es": "Pregunte, escuche y use la tecnología con su hijo o hija.",
+     "en": "Ask, listen and use technology with your child."
+    },
+    "actuar": {
+     "es": "Ponga pocas reglas con su porqué y revísenlas juntos.",
+     "en": "Set a few rules with their reasons and review them together."
+    }
+   },
+   "escuela": {
+    "observar": {
+     "es": "Hay familias que piden ayuda para guiar a sus hijos en casa.",
+     "en": "Families asking for help to guide at home."
+    },
+    "conversar": {
+     "es": "Dé ideas simples en las reuniones.",
+     "en": "Share simple ideas at meetings."
+    },
+    "actuar": {
+     "es": "Ofrezca talleres cortos para las familias.",
+     "en": "Offer workshops for families."
+    }
+   }
+  },
+  "Competencias": {
+   "casa": {
+    "observar": {
+     "es": "Su hijo usa la IA pero no sabe revisar lo que da.",
+     "en": "Your child uses AI but cannot check what it gives."
+    },
+    "conversar": {
+     "es": "«¿Cómo comprobaste esto?»",
+     "en": "“How did you check this?”"
+    },
+    "actuar": {
+     "es": "Practiquen juntos a verificar en otra fuente.",
+     "en": "Practice checking in another source together."
+    }
+   },
+   "escuela": {
+    "observar": {
+     "es": "Hay estudiantes que no saben revisar lo que dice la IA.",
+     "en": "Students with little practice in evaluating AI."
+    },
+    "conversar": {
+     "es": "Hablen de cómo saber si algo es cierto.",
+     "en": "Talk about how they know whether something is true."
+    },
+    "actuar": {
+     "es": "Planee clases para comprobar datos en otras fuentes.",
+     "en": "Plan verification activities in the course."
+    }
+   }
+  }
+ }
+}

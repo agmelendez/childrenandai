@@ -1,0 +1,100 @@
+{
+ "_nota": "E5.5: contactos de ayuda en Costa Rica. Datos aportados por Agustín Gómez Meléndez (3 nov 2026); OIJ según su página de contacto. Revisar cada 6 meses (E6).",
+ "fuentes": {
+  "pani": "Patronato Nacional de la Infancia (PANI), datos aportados por el equipo (3 nov 2026)",
+  "oij": "https://sitiooij.poder-judicial.go.cr/index.php/menu-ayuda/contactenos"
+ },
+ "contactos": [
+  {
+   "id": "911",
+   "quien": {
+    "es": "Emergencias (24 horas)",
+    "en": "Emergencies (24 hours)"
+   },
+   "num": "9-1-1",
+   "cuando": {
+    "es": "Si la vida o la integridad de un niño, niña o adolescente está en riesgo.",
+    "en": "If a child's or teen's life or safety is at risk."
+   },
+   "src": "pani"
+  },
+  {
+   "id": "pani",
+   "quien": {
+    "es": "PANI · línea gratuita para niñez y adolescencia",
+    "en": "PANI (National Child Welfare Agency) · free line for children and teens"
+   },
+   "num": "1147",
+   "cuando": {
+    "es": "Para pedir orientación o reportar una situación.",
+    "en": "To ask for guidance or report a situation."
+   },
+   "src": "pani"
+  },
+  {
+   "id": "pani-wa",
+   "quien": {
+    "es": "PANI · WhatsApp",
+    "en": "PANI · WhatsApp"
+   },
+   "num": "8989-1147",
+   "cuando": {
+    "es": "Lunes a viernes, de 7:00 a. m. a 10:00 p. m.",
+    "en": "Monday to Friday, 7:00 a.m. to 10:00 p.m."
+   },
+   "src": "pani"
+  },
+  {
+   "id": "pani-coi",
+   "quien": {
+    "es": "PANI · Centro de Orientación e Información",
+    "en": "PANI · Guidance and Information Center"
+   },
+   "num": "2523-0700",
+   "cuando": {
+    "es": "Lunes a viernes, de 7:30 a. m. a 4:00 p. m. También 2523-0800, 2523-0900 y 2523-0881.",
+    "en": "Monday to Friday, 7:30 a.m. to 4:00 p.m. Also 2523-0800, 2523-0900 and 2523-0881."
+   },
+   "src": "pani"
+  },
+  {
+   "id": "pani-am",
+   "quien": {
+    "es": "PANI · línea para madres adolescentes",
+    "en": "PANI · line for teenage mothers"
+   },
+   "num": "800-226-2626",
+   "cuando": {
+    "es": "Lunes a viernes, de 7:00 a. m. a 10:00 p. m.",
+    "en": "Monday to Friday, 7:00 a.m. to 10:00 p.m."
+   },
+   "src": "pani"
+  },
+  {
+   "id": "oij",
+   "quien": {
+    "es": "OIJ · línea confidencial (gratis)",
+    "en": "OIJ (Judicial Investigation Agency) · confidential line (free)"
+   },
+   "num": "800-8000-645",
+   "cuando": {
+    "es": "Para denunciar un delito, también en línea o con IA.",
+    "en": "To report a crime, including online or AI-related."
+   },
+   "src": "oij"
+  },
+  {
+   "id": "oij-c",
+   "quien": {
+    "es": "OIJ · central telefónica",
+    "en": "OIJ · switchboard"
+   },
+   "num": "2295-3000",
+   "cuando": {
+    "es": "Denuncias y estafas: 2295-3643. Correo: oij_denuncias@poder-judicial.go.cr",
+    "en": "Reports and scams: 2295-3643. Email: oij_denuncias@poder-judicial.go.cr"
+   },
+   "src": "oij"
+  }
+ ]
+}

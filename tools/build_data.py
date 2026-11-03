@@ -8,7 +8,7 @@ d = root / "data"
 parts = {}
 for k, f in (("items", "items.json"), ("catalog", "catalog.json"), ("glossary", "glossary.json"), ("figsrc", "figure_sources.json")):
     parts[k] = json.loads((d / f).read_text(encoding="utf-8"))
-for k, f in (("tips", "tips.json"), ("transfer", "transfer.json"), ("modules", "modules.json"), ("ctx", "context_cr.json"), ("ctxsrc", "context_sources.json")):  # E3 (v0.8), E4 (v0.9)
+for k, f in (("tips", "tips.json"), ("transfer", "transfer.json"), ("modules", "modules.json"), ("ctx", "context_cr.json"), ("ctxsrc", "context_sources.json"), ("oca", "alertas_oca.json"), ("ayuda", "ayuda.json")):  # E5.4: alertas_oca  # E3 (v0.8), E4 (v0.9)
     if (d / f).exists():
         parts[k] = {x: v for x, v in json.loads((d / f).read_text(encoding="utf-8")).items() if not x.startswith("_")}
 # comprobaciones mínimas de integridad

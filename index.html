@@ -58,8 +58,9 @@ if(p.size)r.style.setProperty("--fs",p.size/100);
 <section class="view" id="v-inicio" data-view="inicio" aria-labelledby="h1" hidden>
   <div class="hero">
     <div class="ageline" aria-hidden="true"><i></i><i></i><i></i></div>
-    <h1 id="h1" data-i18n="hero.h1">¿Qué dicen las fuentes sobre la IA a cada edad?</h1>
+    <h1 id="h1" data-i18n="hero.h1">Cómo acompañar a niñas, niños y adolescentes con la IA, según su edad</h1>
     <p class="sub" data-i18n="hero.sub"></p>
+    <p class="acc" data-i18n="acc.inicio"></p>
   <section class="hsec hg-in" id="homeGuide" aria-labelledby="hgH"></section>
 
     <div class="prof" id="prof" role="region" aria-labelledby="profH">
@@ -79,6 +80,7 @@ if(p.size)r.style.setProperty("--fs",p.size/100);
       <p class="mobnote" id="rulerNote"></p>
       <button type="button" class="pill rtoggle" id="rulerFull" aria-pressed="false" aria-controls="rulerBox"></button>
       <div class="scroller gfx" id="rulerBox"><div id="ruler"></div></div>
+      <div id="rulerMean"></div>
       <details class="alt" id="rulerAlt" style="margin-top:10px;background:var(--surface);color:var(--ink)"></details>
       <div class="agectl"><label for="age" data-i18n="ruler.age">Edad</label><output id="ageOut" for="age">11</output><input type="range" id="age" min="6" max="18" value="11" step="1"></div>
       <div class="legend gfx" id="legend"></div>
@@ -176,6 +178,7 @@ if(p.size)r.style.setProperty("--fs",p.size/100);
   <div class="subpanel" id="sp-evidencia-mapa" data-sub="mapa" role="tabpanel">
     <p class="lead" data-i18n="ev.lead"></p>
     <div class="wide"><div class="heat" id="heat" role="group"></div></div>
+    <div id="heatMean"></div>
     <p class="cite" data-i18n="ev.cite"></p>
     <p class="srcline" data-note="heat"></p>
   </div>
@@ -193,6 +196,7 @@ if(p.size)r.style.setProperty("--fs",p.size/100);
   <header class="vh" id="vh-marco"></header>
   <div class="note" data-i18n="marco.note"></div>
   <div class="tw" id="twNorm" role="region" tabindex="0"><table id="tNorm"></table></div>
+  <div id="marcoMean"></div>
   <p class="srcline" data-note="marco"></p>
 </section>
 
@@ -285,6 +289,9 @@ if(p.size)r.style.setProperty("--fs",p.size/100);
 <script src="assets/js/i18n.nav.js"></script>
 <script src="assets/js/i18n.prov.js"></script>
 <script src="assets/js/i18n.plan.js"></script>
+<script src="assets/js/i18n.e5.js"></script>
+<script src="assets/js/i18n.e53.js"></script>
+<script src="assets/js/i18n.e56.js"></script>
 <script src="data/data.js"></script>
 <script src="assets/js/app.js"></script>
 </body>

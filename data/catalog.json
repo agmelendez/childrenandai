@@ -645,10 +645,10 @@
    ],
    "organizacion": "EU Kids Online",
    "anio": "2026",
-   "fecha": "[POR COMPLETAR]",
+   "fecha": "2026-02-10",
    "serie": "EU Kids Online Report No 1 | 2026",
-   "editorial": "[POR COMPLETAR] (cita sugerida truncada en el PDF)",
-   "identificadores": "[POR COMPLETAR]",
+   "editorial": "EU Kids Online; The London School of Economics and Political Science",
+   "identificadores": "https://doi.org/10.21953/researchonline.lse.ac.uk.00137132",
    "url": "https://researchonline.lse.ac.uk/id/eprint/137132",
    "tipo": "Informe empírico (encuesta EU Kids Online 2025)",
    "evidencia": "Empírica (encuesta)",
@@ -668,10 +668,9 @@
    "contenido": "Uso de IA generativa por edad (aumenta con la edad); restricciones parentales (Fig. 11); opiniones de los niños (Fig. 12). UNESCO (S13) cita 72 % de 9–17 años en Europa usando IA generativa.",
    "paginas_verificadas": "Portada",
    "alertas": [
-    "Editorial/DOI por completar",
     "Lectura de resultados clave pendiente"
    ],
-   "apa7": "Staksrud, E., Mascheroni, G., Milosevic, T., Ní Bhroin, N., Ólafsson, K., Şengül-İnal, G., & Stoilova, M. (2026). *European children's use and understanding of generative AI* (EU Kids Online Report No. 1). EU Kids Online. [DOI/URL por completar]. https://researchonline.lse.ac.uk/id/eprint/137132",
+   "apa7": "Staksrud, E., Mascheroni, G., Milosevic, T., Ní Bhroin, N., Ólafsson, K., Şengül-İnal, G., & Stoilova, M. (2026). *European children's use and understanding of generative AI: EU Kids Online 2026* (EU Kids Online Reports No. 1). EU Kids Online; The London School of Economics and Political Science. https://doi.org/10.21953/researchonline.lse.ac.uk.00137132",
    "document_id": "doc_93f7bc26ea342ca3",
    "paginas_pdf": 35,
    "sha256": "24d8683d23979db3e31739da239e5ba29688eec81891e33fc8da41a3ebdeb01c",
@@ -696,8 +695,8 @@
    "autor_corto": "Staksrud et al.",
    "autor_corto_en": "Staksrud et al.",
    "licencia_en": "Not stated in the PDF consulted; check the original publication",
-   "nota_apa": "Editorial normalizada a «EU Kids Online». Falta DOI/URL.",
-   "nota_apa_en": "Publisher normalised to “EU Kids Online”. DOI/URL missing."
+   "nota_apa": "DOI y editorial verificados en LSE Research Online (auditoría E5, 3 nov 2026).",
+   "nota_apa_en": "DOI and publisher verified on LSE Research Online (E5 audit, 3 Nov 2026)."
   },
   {
    "id": "S12",
@@ -749,7 +748,7 @@
    "estado_normativo_en": "Guidance (non-binding)",
    "edades_en": "Primary and secondary school students (progression by levels, not by fixed age)",
    "transferibilidad_cr_en": "High (adaptable curricular framework)",
-   "contenido_en": "12 competencies in 4 dimensions (human-centred mindset, ethics of AI, AI techniques and applications, AI system design) and 3 progression levels (understand, apply, create).",
+   "contenido_en": "12 competencies in 4 dimensions (human-centered mindset, ethics of AI, AI techniques and applications, AI system design) and 3 progression levels (understand, apply, create).",
    "alertas_en": [
     "2030 in the text is an SDG target, not the year of publication",
     "Table-header pseudo-sections in the corpus"
@@ -842,7 +841,7 @@
    "cobertura_chunks": null,
    "paginas_revision_integridad": "",
    "nota_apa": "Autoría tomada de la ficha catalográfica (p. 2). Año 2026 confirmado por la publicación en el sitio del MEP (feb. 2026); los créditos indican © 2025.",
-   "nota_apa_en": "Authorship from the catalogue record (p. 2). Year 2026 confirmed by publication on the MEP website (Feb 2026); credits show © 2025.",
+   "nota_apa_en": "Authorship from the catalog record (p. 2). Year 2026 confirmed by publication on the MEP website (Feb 2026); credits show © 2025.",
    "corto": "MEP–ONU–UNESCO–ULACIT (2026) – Inteligencia artificial en clase (guía docente)",
    "corto_en": "MEP–UN–UNESCO–ULACIT (2026) – Artificial Intelligence in Class (teacher guide)",
    "titulo": "Inteligencia artificial en clase (guía para docente): Formación de docentes en el uso de herramientas de inteligencia artificial para mejorar los procesos educativos en primaria y secundaria",
@@ -1139,7 +1138,7 @@
    ],
    "alertas_en": [
     "Outdated (2023); obsolete tool lists",
-    "NC licence incompatible with text reuse under CC BY-SA: paraphrase and cite",
+    "NC license incompatible with text reuse under CC BY-SA: paraphrase and cite",
     "Recommends a detector (GPTZero) that its own cited evidence questions"
    ],
    "apa7": "Lee, S. (2023). *AI toolkit for educators*. Paradox Learning.",
@@ -1398,14 +1397,14 @@
    "file": "Ley 10020 .pdf",
    "serie": "",
    "serie_en": "",
-   "url": "[POR COMPLETAR]",
+   "url": "https://sinalevi.go.cr/ResultadosNormativa/Informacion?param1=95290&param2=127168&param3=1&param4=",
    "sha256": "f07023063836a3db712da4c1a03c1955f92a6cb3f71bb4299e4be2165baa6966",
    "document_id": "doc_f07023063836a3db",
    "paginas_pdf": 17,
    "cobertura_chunks": null,
    "paginas_revision_integridad": "",
-   "nota_apa": "Falta enlace estable al SCIJ.",
-   "nota_apa_en": "SCIJ URL missing.",
+   "nota_apa": "Enlace al SINALEVI aportado por Agustín Gómez Meléndez (3 nov 2026).",
+   "nota_apa_en": "SINALEVI link provided by Agustín Gómez Meléndez (3 Nov 2026).",
    "identificadores": "Ley n.º 10020",
    "autores": [],
    "editorial": "SCIJ",
@@ -1443,7 +1442,7 @@
    "licencia": "Texto normativo oficial (dominio público)",
    "licencia_en": "Official legal text (public domain)",
    "contenido": "Define el grooming; crea la comisión interinstitucional adscrita al PANI (concientización en centros educativos, informe anual); reforma los arts. 167, 167 bis, 168, 173, 173 bis y 174 del Código Penal.",
-   "contenido_en": "Defines grooming; creates the inter-agency commission under PANI (school awareness programmes, annual report); amends Criminal Code arts. 167, 167 bis, 168, 173, 173 bis and 174.",
+   "contenido_en": "Defines grooming; creates the inter-agency commission under PANI (school awareness programs, annual report); amends Criminal Code arts. 167, 167 bis, 168, 173, 173 bis and 174.",
    "paginas_verificadas": "4, 8, 14, 16",
    "alertas": [
     "Páginas impares de «ficha» casi vacías en la impresión del SCIJ"
@@ -1451,7 +1450,7 @@
    "alertas_en": [
     "Odd 'record' pages almost empty in the SCIJ printout"
    ],
-   "apa7": "Ley n.º 10020. Ley para la Prevención del Acoso a Personas Menores de Edad por Medios Electrónicos o Virtuales (Grooming) y Reformas al Código Penal. (2021). Asamblea Legislativa de la República de Costa Rica.",
+   "apa7": "Ley n.º 10020. Ley para la Prevención del Acoso a Personas Menores de Edad por Medios Electrónicos o Virtuales (Grooming) y Reformas al Código Penal. (2021). Asamblea Legislativa de la República de Costa Rica. https://sinalevi.go.cr/ResultadosNormativa/Informacion?param1=95290&param2=127168&param3=1&param4=",
    "autor_corto": "Ley 10020",
    "autor_corto_en": "Law 10020"
   },

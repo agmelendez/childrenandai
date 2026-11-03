@@ -1,12 +1,12 @@
 # Auditoría APA 7 (7.ª ed.) · Children on AI
 
-Generado por `tools/audit_apa.py` el 2026-10-26 a partir de `data/*.json`. No lo edite a mano.
+Generado por `tools/audit_apa.py` el 2026-11-03 a partir de `data/*.json`. No lo edite a mano.
 
 ## Resumen
 
-- Referencias: **26**; completas (con URL/DOI y sin campos pendientes): **17**; con datos pendientes: **9**.
+- Referencias: **26**; completas (con URL/DOI y sin campos pendientes): **19**; con datos pendientes: **7**.
 - Ítems con cita textual y página: **422**; claves de cita en el texto únicas: **sí**.
-- Errores estructurales: **0**; avisos de datos pendientes: **9**.
+- Errores estructurales: **0**; avisos de datos pendientes: **7**.
 
 ## Referencias
 
@@ -22,7 +22,7 @@ Generado por `tools/audit_apa.py` el 2026-10-26 a partir de `data/*.json`. No lo
 | S08 | European Commission, 2026 | falta | pendiente | No indicada en el PDF consultado; verificar con la publicación original | Sin URL de EUR-Lex localizada para COM(2026) 681 final; hay copias en registros del Consejo y parlamentos nacionales. |
 | S09 | de Miguel, 2026 | falta | pendiente | No indicada en el PDF consultado; verificar con la publicación original | Sin URL localizada para la reseña. |
 | S10 | Kralj, 2026 | falta | pendiente | © UNESCO 2026; CC BY-SA 3.0 IGO | Sin URL localizada en UNESDOC. |
-| S11 | Staksrud et al., 2026 | sí | pendiente | No indicada en el PDF consultado; verificar con la publicación original | Editorial normalizada a «EU Kids Online». Falta DOI/URL. |
+| S11 | Staksrud et al., 2026 | sí | completa | No indicada en el PDF consultado; verificar con la publicación original | DOI y editorial verificados en LSE Research Online (auditoría E5, 3 nov 2026). |
 | S12 | Miao y Shiohira, 2024 | sí | completa | CC BY-SA 3.0 IGO | Identificador UNESDOC 391105 (versión en inglés). |
 | S13 | Livingstone et al., 2026 | sí | completa | © UNESCO 2026; CC BY-SA 3.0 IGO | Identificador UNESDOC 399343, tomado del nombre del PDF oficial (399343eng): verificar. |
 | S14 | Mora Diaz y Vargas Vásquez, 2026 | sí | completa | Reproducción total o parcial permitida citando la fuente y sin fines comerciales | Autoría tomada de la ficha catalográfica (p. 2). Año 2026 confirmado por la publicación en el sitio del MEP (feb. 2026); los créditos indican © 2025. |
@@ -34,7 +34,7 @@ Generado por `tools/audit_apa.py` el 2026-10-26 a partir de `data/*.json`. No lo
 | S20 | Dodel et al., 2023 | sí | completa | No indicada (cita breve) | Año de publicación por verificar (datos 2022). |
 | S21 | Ley 8968, 2011 | sí | completa | Texto normativo oficial (dominio público) | Copia oficial del MICITT (texto del SCIJ consultado el 7-1-2026). |
 | S22 | Decreto 37554-JP, 2012 | sí | completa | Texto normativo oficial (dominio público) | Copia oficial del TSE; la versión consultada es la impresión del SCIJ (versión 3 de 3). |
-| S23 | Ley 10020, 2021 | falta | pendiente | Texto normativo oficial (dominio público) | Falta enlace estable al SCIJ. |
+| S23 | Ley 10020, 2021 | sí | completa | Texto normativo oficial (dominio público) | Enlace al SINALEVI aportado por Agustín Gómez Meléndez (3 nov 2026). |
 | S24 | MICITT, 2024 | sí | completa | Documento público oficial |  |
 | S25 | Pérez Sánchez, 2024 | sí | completa | No indicada (cita breve) |  |
 | S26 | Ley 7739, 1998 | sí | completa | Texto normativo oficial (dominio público) |  |
@@ -72,8 +72,6 @@ Cada gráfico, mapa, tabla y tarjeta del sitio muestra «Nota. Elaboración prop
 - S08: URL/DOI o datos por completar
 - S09: URL/DOI o datos por completar
 - S10: URL/DOI o datos por completar
-- S11: URL/DOI o datos por completar
 - S16: URL/DOI o datos por completar
 - S18: URL/DOI o datos por completar
 - S19: URL/DOI o datos por completar
-- S23: URL/DOI o datos por completar

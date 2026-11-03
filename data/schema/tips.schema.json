@@ -67,7 +67,8 @@
         "estado",
         "revisado_por",
         "fecha",
-        "fecha_verificacion"
+        "fecha_verificacion",
+        "estatus"
       ],
       "properties": {
         "id": {
@@ -259,6 +260,44 @@
           "type": "string",
           "format": "date",
           "description": "E6: caduca a los 12 meses sin revisión."
+        },
+        "estatus": {
+          "type": "string",
+          "enum": [
+            "ley_cr",
+            "directriz_mep",
+            "recomendacion"
+          ],
+          "description": "E5.1: estatus normativo del tip. ley_cr = el tip afirma una obligación o delito de ley costarricense; directriz_mep = lineamiento oficial del MEP dirigido a docentes o dirección; recomendacion = buena práctica no obligatoria. Un tip no puede ser ley_extranjera ni propuesta."
+        },
+        "pasos": {
+          "type": "object",
+          "description": "E5.3: de la recomendación a la acción. Operacionaliza el tip sin añadir evidencia ni obligaciones.",
+          "additionalProperties": false,
+          "required": [
+            "hacer",
+            "ejemplo",
+            "empezar",
+            "senal"
+          ],
+          "properties": {
+            "hacer": {
+              "$ref": "#/$defs/bilingue",
+              "description": "Qué hacer, en concreto"
+            },
+            "ejemplo": {
+              "$ref": "#/$defs/bilingue",
+              "description": "Ejemplo cotidiano (casa, aula o centro)"
+            },
+            "empezar": {
+              "$ref": "#/$defs/bilingue",
+              "description": "Por dónde empezar: acción pequeña de minutos"
+            },
+            "senal": {
+              "$ref": "#/$defs/bilingue",
+              "description": "Señal a observar y qué hacer"
+            }
+          }
         }
       },
       "allOf": [
@@ -339,6 +378,26 @@
           }
         }
       ]
+    },
+    "bilingue": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "es",
+        "en"
+      ],
+      "properties": {
+        "es": {
+          "type": "string",
+          "minLength": 10,
+          "maxLength": 220
+        },
+        "en": {
+          "type": "string",
+          "minLength": 10,
+          "maxLength": 240
+        }
+      }
     }
   }
 }

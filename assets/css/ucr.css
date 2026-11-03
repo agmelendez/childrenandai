@@ -153,3 +153,66 @@ footer.foot a{color:#fff}
 .sm-route ol{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px 4px;align-items:center}
 .sm-route li{display:flex;align-items:center;gap:4px;font-size:.9rem}
 .sm-route li:not(:last-child)::after{content:"→";color:var(--muted)}
+
+/* E5.1 · estatus normativo: ícono + texto + color (no solo color, WCAG 1.4.1) */
+.b.st{font-weight:700;border:1px solid currentColor;gap:4px;display:inline-flex;align-items:center}
+.b.st i{font-style:normal}
+.b.st-ley_cr{background:#005da4;color:#fff;border-color:#005da4}
+.b.st-directriz_mep{background:#e3f1e6;color:#1d5f2c}
+.b.st-recomendacion{background:#fff;color:#00467c}
+.b.st-ley_extranjera{background:#f2f2f2;color:#4d4d4d;border-style:dashed}
+.b.st-propuesta{background:#fff4e0;color:#7a4a00;border-style:dashed}
+.b.st-dato{background:#fff;color:#4d4d4d}
+.stx{font-size:.84rem;margin:2px 0 0;color:var(--muted)}
+.stleg{margin:0 0 12px;padding:10px 12px;border:1px solid #c8c8c8;border-radius:8px;background:#fff}
+.stleg summary{font-weight:700;cursor:pointer;color:#005da4}
+.stleg dl{display:grid;grid-template-columns:max-content 1fr;gap:6px 10px;margin:8px 0 0;align-items:center}
+.stleg dd{margin:0;font-size:.88rem}
+.gcr{display:block;margin-top:4px;font-size:.86rem}
+[data-theme="dark"] .stleg{background:transparent;border-color:#666}
+[data-theme="dark"] .b.st-recomendacion,[data-theme="dark"] .b.st-dato{background:transparent;color:#cfe3ff}
+[data-theme="dark"] .b.st-ley_extranjera{background:transparent;color:#ddd}
+@media (forced-colors:active){.b.st{forced-color-adjust:auto;border:1px solid CanvasText}}
+[data-theme^="hc"] .b.st,[data-theme^="hc"] .stleg{background:transparent!important;color:inherit!important;border-color:currentColor!important}
+[data-theme^="hc"] .stleg summary,[data-theme="dark"] .stleg summary{color:inherit}
+
+/* E5.2 · «Esto significa que…» y frases de acompañamiento */
+.mean{margin:10px 0 4px;padding:10px 12px;border-left:4px solid #005da4;background:#eef5fb;color:#1b1b1b;font-size:.95rem;line-height:1.55;border-radius:0 6px 6px 0}
+.mean b{color:#00467c}
+.acc{margin:6px 0 0;font-size:.95rem;color:#1d5f2c;font-weight:600}
+[data-theme="dark"] .mean{background:transparent;color:inherit}[data-theme="dark"] .mean b,[data-theme="dark"] .acc{color:inherit}
+[data-theme^="hc"] .mean,[data-theme^="hc"] .acc,[data-theme^="hc"] .mean b{background:transparent!important;color:inherit!important;border-color:currentColor!important}
+.hero>.sub{display:block;color:#333}  /* E5.2: el subtítulo vuelve a mostrarse (ahora explica el beneficio, no la regla) */
+.vh p.acc{color:#1d5f2c;font-weight:600;font-size:.98rem}
+[data-theme="dark"] .vh p.acc,[data-theme="dark"] .hero>.sub,[data-theme^="hc"] .vh p.acc,[data-theme^="hc"] .hero>.sub{color:inherit}
+.pst{font-size:.78rem;font-weight:700;color:#00467c}@media print{.pst{color:#000}}
+
+/* E5.7 · uso del espacio (3 nov 2026): portada en dos columnas, pasos a 3 columnas reales, filas de enlaces y «¿Por dónde sigo?» compactos */
+.hg-steps{grid-template-columns:repeat(3,minmax(0,1fr))}
+.hg-tail{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:6px 24px;margin-top:12px}
+.hg-tail .hg-more,.hg-tail .hg-full{margin:0}
+@media(min-width:1100px){
+  .content{max-width:1400px;margin-inline:auto}
+  .hero{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);column-gap:44px;row-gap:0;align-items:center}
+  .hero>*{grid-column:1/-1}
+  .hero>h1{grid-column:1;grid-row:1 / span 2;max-width:none;margin:0}
+  .hero>.sub{grid-column:2;grid-row:1;align-self:end;max-width:none;margin:0;padding-left:20px;border-left:3px solid var(--ucr-azul)}
+  .hero>.acc{grid-column:2;grid-row:2;align-self:start;margin:0;padding:10px 0 0 20px;border-left:3px solid var(--ucr-azul)}
+  .hero>.hsec.hg-in{grid-row:3;margin-top:28px}
+  .hero>.prof{grid-row:4}
+  .prof-qs{grid-template-columns:auto minmax(0,1fr);column-gap:40px}
+  .prof-qs .seg{flex-wrap:nowrap}
+  .nextc{display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:28px;align-items:center}
+  .nextc h2{grid-column:1/-1}
+  .nextc .row{grid-column:1;grid-row:2}
+  .nextc .stx{grid-column:2;grid-row:2;margin:0}
+  .nextc .cite{grid-column:1/-1}
+}
+@media(max-width:760px){.hg-steps{grid-template-columns:1fr}}
+@media(min-width:1100px){
+  .vh{grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);column-gap:44px;row-gap:0;align-items:center;padding-block:30px 18px}
+  .vh>*{grid-column:1/-1}
+  .vh>h2{grid-column:1;grid-row:1 / span 2;margin:0}
+  .vh>p:not(.acc){grid-column:2;grid-row:1;max-width:none;margin:0;padding-left:20px;border-left:3px solid var(--ucr-azul);align-self:end}
+  .vh>p.acc{grid-column:2;grid-row:2;margin:0;padding:8px 0 0 20px;border-left:3px solid var(--ucr-azul);align-self:start}
+}

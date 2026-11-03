@@ -25,4 +25,4 @@ Esta es una adaptación de obras originales de la UNESCO. La responsabilidad por
 El nombre, los logotipos y la marca del CIOdD y de la UCR no se licencian. El sitio solo usa la paleta institucional.
 
 ## Herramienta de IA
-Anthropic. (2026). *Claude* (Sonnet 5.5) [Large language model]. https://claude.ai — véase `docs/DECLARACION_IA.md`.
+Anthropic. (2026). *Claude* (Sonnet 5.5 y Opus 5.5) [Large language model]. https://claude.ai — véase `docs/DECLARACION_IA.md`.

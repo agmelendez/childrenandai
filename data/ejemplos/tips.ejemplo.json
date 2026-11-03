@@ -1,30 +1,63 @@
 {
-  "version": "0.1",
-  "fecha": "2026-10-26",
-  "_nota": "EJEMPLO DE ESQUEMA, no es contenido publicable. La redacción definitiva de tips ocurre en E3.",
-  "tips": [
+ "version": "0.1",
+ "fecha": "2026-10-26",
+ "_nota": "EJEMPLO DE ESQUEMA, no es contenido publicable. La redacción definitiva de tips ocurre en E3.",
+ "tips": [
+  {
+   "id": "T-FAM-001",
+   "texto_es": "Explique a su hijo o hija, con ejemplos de la casa, que la IA puede equivocarse aunque suene segura.",
+   "texto_en": "Explain to your child, with everyday examples, that AI can be wrong even when it sounds confident.",
+   "por_que_es": "Las fuentes piden alfabetización gradual: entender cómo funciona la IA antes de usarla con autonomía.",
+   "por_que_en": "Sources call for gradual literacy: understanding how AI works before using it autonomously.",
+   "tema": "Alfabetización en IA",
+   "edad": [
+    "6-8",
+    "9-11"
+   ],
+   "publico": [
+    "Familia"
+   ],
+   "contexto": [
+    "casa"
+   ],
+   "esfuerzo": "bajo",
+   "urgencia": "media",
+   "confianza": "B",
+   "evidence_ids": [
+    "S03-04"
+   ],
+   "transfer_id": "TR-001",
+   "ancla_cr": null,
+   "condicion_adaptacion": "Orientación internacional voluntaria; usar ejemplos y vocabulario locales hasta disponer de lineamiento MEP.",
+   "advertencia_edad": null,
+   "estado": "borrador",
+   "revisado_por": [
     {
-      "id": "T-FAM-001",
-      "texto_es": "Explique a su hijo o hija, con ejemplos de la casa, que la IA puede equivocarse aunque suene segura.",
-      "texto_en": "Explain to your child, with everyday examples, that AI can be wrong even when it sounds confident.",
-      "por_que_es": "Las fuentes piden alfabetización gradual: entender cómo funciona la IA antes de usarla con autonomía.",
-      "por_que_en": "Sources call for gradual literacy: understanding how AI works before using it autonomously.",
-      "tema": "Alfabetización en IA",
-      "edad": ["6-8", "9-11"],
-      "publico": ["Familia"],
-      "contexto": ["casa"],
-      "esfuerzo": "bajo",
-      "urgencia": "media",
-      "confianza": "B",
-      "evidence_ids": ["S03-04"],
-      "transfer_id": "TR-001",
-      "ancla_cr": null,
-      "condicion_adaptacion": "Orientación internacional voluntaria; usar ejemplos y vocabulario locales hasta disponer de lineamiento MEP.",
-      "advertencia_edad": null,
-      "estado": "borrador",
-      "revisado_por": [{"rol": "redaccion_ciodd", "fecha": "2026-10-26"}],
-      "fecha": "2026-10-26",
-      "fecha_verificacion": "2026-10-26"
+     "rol": "redaccion_ciodd",
+     "fecha": "2026-10-26"
     }
-  ]
+   ],
+   "fecha": "2026-10-26",
+   "fecha_verificacion": "2026-10-26",
+   "estatus": "recomendacion",
+   "pasos": {
+    "hacer": {
+     "es": "Use palabras simples: la IA es un programa que adivina la palabra que sigue. No sabe si algo es verdad.",
+     "en": "Use simple words: AI is a program that guesses the next word. It does not know if something is true."
+    },
+    "ejemplo": {
+     "es": "Pídanle a la IA un dato que ustedes ya saben, como el nombre de su barrio. Vean juntos si acierta o se equivoca.",
+     "en": "Ask the AI something you already know, like the name of your neighbourhood. Check together whether it gets it right."
+    },
+    "empezar": {
+     "es": "Hoy, pregúntele: «¿Crees que la IA piensa como tú?». Escuche su respuesta antes de explicar.",
+     "en": "Today, ask your child: “Do you think AI thinks like you do?” Listen before you explain."
+    },
+    "senal": {
+     "es": "Si dice «la IA me dijo y es verdad», pregunte «¿cómo lo sabes?» y busquen juntos otra fuente.",
+     "en": "If your child says “the AI told me, so it's true”, ask “how do you know?” and look for another source together."
+    }
+   }
+  }
+ ]
 }

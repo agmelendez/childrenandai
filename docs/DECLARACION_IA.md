@@ -4,7 +4,7 @@ Versión 0.4 · 7 de octubre de 2026. Es la misma declaración que muestra el si
 
 **Herramienta.** Claude (Anthropic), modelo de lenguaje de gran tamaño, usado mediante Claude Code (agente con acceso a archivos y ejecución de scripts) durante 2026. Modelo configurado en la sesión: `claude-sonnet-5-5`; el modelo que atiende cada turno puede variar, por lo que no se garantiza un único modelo en todo el trabajo. Algunas traducciones se hicieron en paralelo con subagentes del mismo sistema.
 
-Referencia (APA 7): Anthropic. (2026). *Claude* (Sonnet 5.5) [Large language model]. https://claude.ai
+Referencia (APA 7): Anthropic. (2026). *Claude* (Sonnet 5.5 y Opus 5.5) [Large language model]. https://claude.ai
 
 ## Qué hizo la IA y qué control humano existe
 
@@ -37,3 +37,6 @@ This site was designed, largely written and programmed with the assistance of Cl
 
 ## Actualización v0.9 (26-10-2026)
 Claude (Anthropic) redactó las plantillas del Kit por público a partir de los tips citados, extrajo las cifras del ILIA 2026 para la ficha «Costa Rica en contexto» y programó la portada por perfiles, Mi plan, la hoja imprimible, la búsqueda y los filtros. Control humano pendiente: validación D5 (personas expertas, MEP, filología) y pruebas con usuarios (E5).
+
+## Actualización v0.11–v0.13 (3-11-2026, comentarios del 3 nov)
+Claude (Anthropic; Claude Code, modelo `claude-opus-5-5` en esta sesión) propuso la clasificación de estatus normativo (E5.1), reescribió textos en lenguaje sencillo (E5.2), redactó los pasos «Cómo hacerlo» de los 110 tips (E5.3–E5.4) y la guía observar–conversar–actuar por tema de alerta, programó estas funciones y la auditoría de cierre. No incorporó evidencia nueva: los pasos operacionalizan tips ya citados. Control humano: decisiones y criterios de Agustín Gómez Meléndez; pendiente validación D5 (personas expertas, MEP, filología) y revisión de la versión en inglés.

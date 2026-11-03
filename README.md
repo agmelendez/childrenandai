@@ -1,34 +1,42 @@
 # Children on AI
 
-Sitio web interactivo para familias, docentes y direcciones escolares con **recomendaciones, alertas y diagramas** sobre el uso de IA en niñez y adolescencia, derivados de un corpus cerrado de **13 documentos** (tramos 6–11, 12–14 y 15–18 años). Cada ítem trae su **cita textual y página del PDF**. Formato CIOdD-UCR, citas APA 7.
+Sitio web interactivo del CIOdD-UCR para familias, docentes y direcciones escolares de Costa Rica: **110 consejos (tips) accionables**, alertas y diagramas sobre el uso de IA en niñez y adolescencia, por rol y por banda de edad del MEP (6–8, 9–11, 12–14, 15–18). Se apoya en un corpus cerrado de **26 fuentes** y **422 ítems** con cita textual y página del PDF. Formato CIOdD-UCR, citas APA 7, ES/EN.
 
-*Interactive site for families, teachers and school leaders with recommendations, alerts and diagrams on children's and adolescents' use of AI, derived from a closed corpus of 13 documents. Every item carries its verbatim quote and PDF page. Spanish and English UI.*
+*Interactive CIOdD-UCR site for families, teachers and school leaders in Costa Rica: 110 actionable tips, alerts and diagrams on children's and adolescents' use of AI, by role and MEP age band, built on a closed corpus of 26 sources and 422 items with verbatim quotes and PDF pages. Spanish and English UI.*
 
-Estado: **borrador 0.4**. Las paráfrasis, traducciones al inglés, clasificación (tramo, rol, tema) y lectura de figuras **no tienen validación humana**; las 310 citas textuales sí se verifican por script (ver abajo).
+Estado: **v0.14.0 (borrador, 3 nov 2026)**. Cada tip trae su estatus (ley en Costa Rica, directriz del MEP, recomendación), evidencia citada, nivel de confianza y pasos «Cómo hacerlo». Los tips están **pendientes de validación** por personas expertas en educación, el MEP y revisión filológica (D5); las 422 citas se verifican por script. Historial en `CHANGELOG.md`.
 
 ## Estructura
 
 ```
-index.html                 Página única (esqueleto semántico, botones flotantes, diálogo de accesibilidad)
-assets/css/styles.css      Temas (claro, oscuro, 3 de alto contraste), ajustes de accesibilidad, diseño
-assets/js/i18n.js          Textos de interfaz ES/EN y datos de diagramas/tablas que cambian con el idioma
-assets/js/i18n.nav.js      Textos de menú, inicio, tutorial y mapa del sitio (ES/EN)
-assets/js/app.js           Lógica (sin dependencias): regla de edades, diagramas, filtros, glosario, idioma, accesibilidad
-data/items.json            310 ítems (es/en, cita, página, clasificación)   ← fuente editable
-data/catalog.json          Catálogo de las 13 fuentes (es/en, APA 7)        ← fuente editable
-data/glossary.json         61 siglas y términos (es/en)                     ← fuente editable
-data/data.js               Generado desde los tres JSON (permite abrir index.html con doble clic)
-tools/build_data.py        Genera data/data.js
-tools/verify_quotes.py     Verifica cada cita contra el pages.jsonl del pipeline
-tools/contrast.py          Verifica contraste WCAG de los temas
-tools/audit_apa.py         Auditoría APA 7 → docs/AUDITORIA_APA7.md
-.github/workflows/pages.yml  Comprobaciones + despliegue en GitHub Pages
-docs/ACCESIBILIDAD.md      Qué se implementó y cómo probarlo
+index.html                   Página única (menú lateral, vistas, diálogo de accesibilidad)
+assets/css/styles.css, ucr.css  Temas (claro, oscuro, alto contraste), identidad UCR, impresión
+assets/js/app.js             Lógica sin dependencias
+assets/js/i18n*.js           Textos ES/EN (i18n, nav, plan, prov, e5, e53)
+data/items.json              422 ítems de evidencia (cita, página, clasificación, estatus)   ← editable
+data/catalog.json            26 fuentes (APA 7, licencias)                                    ← editable
+data/glossary.json           Glosario (siglas, «¿aplica en Costa Rica?»)                      ← editable
+data/tips.json               110 tips con pasos (generados por tools/e5_pasos*.py)           ← editable
+data/transfer.json           Matriz de transferibilidad a Costa Rica
+data/alertas_oca.json        Guía observar–conversar–actuar por tema de alerta (generado)
+data/modules.json, context_cr.json  Kit por público y ficha «Costa Rica en contexto»
+data/data.js                 Generado por tools/build_data.py (permite abrir index.html con doble clic)
+data/schema/                 JSON Schema de tips y transfer
+tools/                       build_data, validate_schemas, readability, verify_quotes, audit_apa, contrast, e5_*
+docs/                        Decisiones, planes, cierres y auditorías por etapa
 ```
 
-No hay paso de compilación ni dependencias de ejecución. Los PDF fuente **no** están en el repositorio.
+## Comprobaciones antes de publicar
 
-## Navegación (v0.4)
+```bash
+python3 tools/build_data.py
+python3 tools/validate_schemas.py && python3 tools/validate_schemas.py --selftest
+python3 tools/readability.py --ui --pasos --strict
+python3 -I tools/verify_quotes.py RUTA/pages.jsonl
+python3 -I tools/audit_apa.py && python3 tools/contrast.py
+```
+
+## Navegación
 
 Menú lateral agrupado (Empezar · Explorar · Fuentes y normas · Consulta · Ayuda) con subsecciones; en móvil es un panel deslizable. Se muestra una sección a la vez, con pestañas internas, y cada una tiene enlace propio (`#parati/guias`, `#diagramas/resp`, `#evidencia/explorador`). Incluye **Cómo usar este sitio** (tutorial, etiquetas y colores, teclado, preguntas frecuentes) y **Mapa del sitio** con descargas JSON. Para añadir una sección: `VIEWS`/`GROUPS`/`ICONS` en `app.js`, un `<section class="view" id="v-…">` en `index.html` y las claves `v.`, `d.` en `i18n.nav.js`. Los colores por edad (6–11 verde azulado, 12–14 ámbar, 15–18 violeta) son los tokens `--t1/--t2/--t3`.
 
@@ -53,7 +61,7 @@ Los textos de la interfaz están en `assets/js/i18n.js`. **Para añadir un idiom
 
 1. Cree el repositorio y suba todo: `git init && git add . && git commit -m "Children on AI 0.3" && git branch -M main && git remote add origin <URL> && git push -u origin main`
 2. En GitHub: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
-3. Cada `push` a `main` ejecuta las comprobaciones y publica en `https://agmelendez.github.io/childrenandai/`.
+3. Cada `push` a `main` ejecuta las comprobaciones y publica en `https://<usuario>.github.io/<repositorio>/`.
 
 Si prefiere sin Actions: Source = *Deploy from a branch*, rama `main`, carpeta `/ (root)`; el archivo `.nojekyll` ya está incluido.
 
@@ -79,4 +87,4 @@ Botón flotante **Accesibilidad** (abajo a la derecha) y botón flotante **ES | 
 
 ## English summary
 
-Static site, no build step. Open `index.html` or run `python3 -m http.server`. Edit `data/*.json`, run `python3 tools/build_data.py`, commit, push to `main`; enable **Settings → Pages → Source: GitHub Actions**. Floating **ES | EN** and **Accessibility** buttons (contrast themes, text size, screen-reader-oriented text versions of all diagrams, text mode). Quotes verified with `tools/verify_quotes.py` (310/310 against the pipeline's `pages.jsonl`). Every graphic carries an APA 7 source note; see `docs/AUDITORIA_APA7.md`, `docs/DECLARACION_IA.md` (AI-use declaration), `LICENSE` (MIT code), `LICENSE-CONTENT.md` (CC BY-SA 4.0 content, proposal pending legal review). Pending: screen-reader user testing, human validation of paraphrases and translations, pending URLs/DOIs, citation text.
+Static site, no build step. Open `index.html` or run `python3 -m http.server`. Edit `data/*.json`, run `python3 tools/build_data.py`, commit, push to `main`; enable **Settings → Pages → Source: GitHub Actions**. Floating **ES | EN** and **Accessibility** buttons (contrast themes, text size, screen-reader-oriented text versions of all diagrams, text mode). Quotes verified with `tools/verify_quotes.py` (422/422 against the pipeline's `pages.jsonl`). Every graphic carries an APA 7 source note; see `docs/AUDITORIA_APA7.md`, `docs/DECLARACION_IA.md` (AI-use declaration), `LICENSE` (MIT code), `LICENSE-CONTENT.md` (CC BY-SA 4.0 content, proposal pending legal review). Pending: screen-reader user testing, human validation of paraphrases and translations, pending URLs/DOIs, citation text.

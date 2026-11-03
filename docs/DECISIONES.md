@@ -5,9 +5,9 @@ Origen: `PLAN_MEJORA_2026-10.md`, «Decisiones de partida». Estado: **propuesta
 | # | Decisión | Propuesta | Estado | Aplicada en | Responsable / fecha |
 |---|---|---|---|---|---|
 | D1 | Bandas de edad | 4 bandas MEP sin traslape: **6–8** (I ciclo), **9–11** (II ciclo), **12–14** (III ciclo), **15–18** (Diversificada). Los 12 años van con III ciclo | **Aprobada** | v0.7-dev (E2.4, `tools/rebands_d1.py`) | Agustín Gómez Meléndez · 26-10-2026 |
-| D2 | Público prioritario de portada | Familias («¿Quién eres? + edad»); docentes y dirección a un clic; la regla de edades pasa a Evidencia | Propuesta | — (E4.1) | |
+| D2 | Público del producto | Familias (padres y madres), docentes y dirección escolar: los tres públicos desde el origen del proyecto; la portada pregunta «¿Quién eres?» + edad | **Aprobada** | E4.1 | Agustín Gómez Meléndez · 03-11-2026 |
 | D3 | Unidad de producto | **Tip** (acción) sobre la base de **ítems** (evidencia) | **Aprobada** | E3 (tips.json) | Agustín Gómez Meléndez · 26-10-2026 |
-| D4 | Idioma por defecto | ES, con EN opcional y memoria de elección | **Aplicada provisionalmente** | v0.6 (E1.1) | Pendiente de firma |
+| D4 | Idioma | Español por defecto; versión en inglés como traducción automática asistida por IA (se mantiene, con revisión final de Agustín) y memoria de elección | **Aprobada** | v0.6 (E1.1) | Agustín Gómez Meléndez · 03-11-2026 |
 | D5 | Validación de tips | Redacción CIOdD + **validación por personas expertas en educación** + **validación del MEP** + revisión filológica. La validación externa se realiza «en su momento» (antes de publicar tips; los borradores pueden mostrarse marcados como tales) | **Aprobada (modificada)** | E3.4 / E5 · `tips.schema.json` | Agustín Gómez Meléndez · 26-10-2026 |
 
 ## Decisiones operativas tomadas en E1 (v0.6)

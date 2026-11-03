@@ -35,7 +35,12 @@ const th=x=>t("theme."+x);
 const roleL=r=>t("role."+r);
 const agel=k=>(AGES.find(a=>a[0]===k)||[0,k])[1];
 /* No aplicable directamente en CR: ítem con estatus legal extranjero/no adoptado, o advertencia que lo declara. */
-const notCR=i=>(i.legal_status?1:0)||(/no (es )?aplica(ble)?( directamente)?/i.test(i.caveat||"")?1:0);
+const notCR=i=>(["ley_extranjera","propuesta"].includes(i.estatus)?1:0)||(i.legal_status?1:0)||(/no (es )?aplica(ble)?( directamente)?/i.test(i.caveat||"")?1:0);
+/* E5.1: estatus normativo (ícono + texto + explicación breve) */
+const ESTS=["ley_cr","directriz_mep","recomendacion","ley_extranjera","propuesta"],EICO={ley_cr:"⚖",directriz_mep:"★",recomendacion:"✓",ley_extranjera:"⊘",propuesta:"…",dato:"i"};
+const stb=(e,lab)=>e&&e!=="dato"?`<span class="b st st-${e}" title="${esc(t("esx."+e))}"><i aria-hidden="true">${EICO[e]}</i>${esc(lab||t("es."+e))}</span>`:"";
+const stLeg=open=>`<details class="stleg"${open?" open":""}><summary>${esc(t("esl.h"))}</summary><p class="stx">${esc(t("esl.sub"))}</p><dl>${ESTS.map(e=>`<dt>${stb(e)}</dt><dd>${esc(t("esx."+e))}</dd>`).join("")}</dl></details>`;
+const meanP=k=>`<p class="mean"><b>${esc(t("mean.lbl"))}</b> ${esc(t("mean."+k))}</p>`; /* E5.2 */
 const tramo=a=>a<=8?"6-8":a<=11?"9-11":a<=14?"12-14":"15-18";
 const bl=o=>o[st.lang]||o.es;
 /* ---------- Procedencia: citas en el texto (APA 7) y notas de fuente ---------- */
@@ -72,7 +77,7 @@ function card(i,opt){
   const ageIdx=a=>AGES.findIndex(x=>x[0]===a)+1;
   const ac=ages.length===AGES.length?`<span class="b">${esc(t("card.allages"))}</span>`:ages.length?ages.map(a=>`<span class="b age${ageIdx(a)}">${agel(a)}</span>`).join(""):`<span class="b" title="${esc(agenote||"")}">${esc(t("card.noage"))}</span>`;
   const lv=lvl&&typeof lvl==="object"?`<details><summary>${esc(t("comp.l1"))} · ${esc(t("comp.l2"))} · ${esc(t("comp.l3"))}</summary><dl class="lv"><dt>${esc(t("comp.l1"))}</dt><dd>${esc(lvl.understand||"")}</dd><dt>${esc(t("comp.l2"))}</dt><dd>${esc(lvl.apply||"")}</dd><dt>${esc(t("comp.l3"))}</dt><dd>${esc(lvl.create||"")}</dd></dl></details>`:"";
-  return `<article class="item k-${i.kind} ab-${ages.length===1?ageIdx(ages[0]):0}" id="c-${i.id}" tabindex="-1" aria-label="${esc(t("kind."+i.kind)+" "+i.id)}"><div class="row"><span class="b ${i.kind}">${esc(t("kind."+i.kind))}</span><span class="b">${esc(th(i.theme))}</span>${ac}${notCR(i)?`<span class="b na">${esc(t("card.na"))}</span>`:""}</div>
+  return `<article class="item k-${i.kind} ab-${ages.length===1?ageIdx(ages[0]):0}" id="c-${i.id}" tabindex="-1" aria-label="${esc(t("kind."+i.kind)+" "+i.id)}"><div class="row">${stb(i.estatus)}<span class="b ${i.kind}">${esc(t("kind."+i.kind))}</span><span class="b">${esc(th(i.theme))}</span>${ac}${notCR(i)&&!["ley_extranjera","propuesta"].includes(i.estatus)?`<span class="b na">${esc(t("card.na"))}</span>`:""}</div>
   <p>${esc(itx(i))}</p>
   ${loc(i,"lectura_cr")?`<p class="lcr"><b>${esc(t("card.lcr"))}</b> ${esc(loc(i,"lectura_cr"))}</p>`:""}
   ${fig?`<div class="fg">${fmtFig(fig)}</div>`:""}
@@ -157,7 +162,7 @@ function renderLectura(){
   $("#lstats").innerHTML=`<button type="button" class="stat" data-lexp="1" title="${esc(t("stat.allx"))}"><b>${m.length}</b><span>${esc(t("stat.items",{r:roleL(st.role).toLowerCase(),t:agel(tramo(st.age))}))}</span><em>${esc(t("stat.allx"))} →</em></button>`+fb("recomendacion",cnt("recomendacion"),t("stat.recs"))+fb("alerta",cnt("alerta"),t("stat.alerts"))+fb("obligacion",cnt("obligacion"),t("stat.oblig"))+`<div class="stat"><b>${new Set(m.map(i=>i.source)).size}</b><span>${esc(t("stat.sources"))}</span></div>`;
   const nCR=list.filter(i=>!notCR(i)).length;
   $("#lstate").innerHTML=`<span>${esc(LF?t("lectura.filtered",{n:list.length,k:t({recomendacion:"stat.recs",alerta:"stat.alerts",obligacion:"stat.oblig"}[LF])}):t("lectura.order"))} ${esc(t("lectura.cr",{n:nCR,m:list.length}))}</span>${LF?` <button type="button" class="pill" data-lf="">${esc(t("lectura.clear"))}</button>`:""}`;
-  $("#lecturaList").innerHTML=list.slice(0,st.lshown).map(i=>card(i)).join("")||`<div class="empty">${esc(t("empty.items"))}</div>`;
+  $("#lstate").insertAdjacentHTML("beforeend",stLeg(false));$("#lecturaList").innerHTML=list.slice(0,st.lshown).map(i=>card(i)).join("")||`<div class="empty">${esc(t("empty.items"))}</div>`;
   $("#lmore").hidden=list.length<=st.lshown;$("#lmore").textContent=t("lectura.more",{n:list.length-st.lshown});
   renderAlertas();renderTips();
 }
@@ -166,6 +171,13 @@ function renderLectura(){
 const TIPS=(D.tips&&D.tips.tips)||[];
 const tl=(x,f)=>(st.lang!=="es"&&x[f+"_"+st.lang])?x[f+"_"+st.lang]:x[f+"_es"];
 const URG={alta:0,media:1,baja:2}, CONF={A:0,B:1,C:2};
+/* E5.3: «Cómo hacerlo» · qué hacer, ejemplo, por dónde empezar, señal y qué hacer (pasos heredan evidencia y estatus del tip) */
+const EFF={bajo:0,medio:1,alto:2};
+const pz=(x,k)=>x.pasos&&x.pasos[k]?(x.pasos[k][st.lang]||x.pasos[k].es):"";
+const exL=x=>t("how.ex."+(x.publico.length>1?"g":x.publico[0]==="Familia"?"casa":x.publico[0]==="Docente"?"aula":"centro"));
+function howBlock(x,open){if(!x.pasos)return"";return `<details class="how"${open?" open":""}><summary>${esc(t("how.h"))}</summary><dl class="howl"><div class="hw h1"><dt><i aria-hidden="true">1</i>${esc(t("how.hacer"))}</dt><dd>${esc(pz(x,"hacer"))}</dd></div><div class="hw h2"><dt><i aria-hidden="true">2</i>${esc(exL(x))}</dt><dd>${esc(pz(x,"ejemplo"))}</dd></div><div class="hw h3"><dt><i aria-hidden="true">3</i>${esc(t("how.empezar"))}</dt><dd>${esc(pz(x,"empezar"))}</dd></div><div class="hw h4"><dt><i aria-hidden="true">!</i>${esc(t("how.senal"))}</dt><dd>${esc(pz(x,"senal"))}</dd></div></dl></details>`}
+const pasosTxt=x=>Object.values(x.pasos||{}).map(v=>v.es+" "+v.en).join(" ");
+const startSort=(a,b)=>(EFF[a.esfuerzo]-EFF[b.esfuerzo])||(URG[a.urgencia]-URG[b.urgencia])||(CONF[a.confianza]-CONF[b.confianza])||a.id.localeCompare(b.id);
 function tipCard(x){
   const ev=x.evidence_ids.map(id=>{const i=BYID[id];if(!i)return"";const s=SRC[i.source];return `<li><p>${esc(itx(i))}</p><span class="cite">${apaLink(i.source,"("+ckey(s)+", "+pageTxt([i.page])+")")} · ${esc(t("card.id"))} ${id}</span></li>`}).join("");
   const cr=x.ancla_cr?`<p class="tcr ok"><b>${esc(t("tips.cr"))}</b> ${esc(x.ancla_cr.referencia)}</p>`:"";
@@ -173,9 +185,11 @@ function tipCard(x){
   const age=x.advertencia_edad?`<div class="cv">${esc(t("tips.age"))} ${esc(x.advertencia_edad)}</div>`:"";
   const ages=x.edad.length===AGES.length?`<span class="b">${esc(t("card.allages"))}</span>`:x.edad.map(a=>`<span class="b age${AGES.findIndex(z=>z[0]===a)+1}">${agel(a)}</span>`).join("");
   return `<article class="item tip conf-${x.confianza}" id="c-${x.id}" tabindex="-1" aria-label="${esc(t("tips.card")+" "+x.id)}">
-  <div class="row"><span class="b sem sem-${x.confianza}"><span class="dot" aria-hidden="true"></span>${esc(t("conf."+x.confianza))}</span><span class="b">${esc(th(x.tema))}</span>${ages}${x.estado!=="publicado"?`<span class="b na">${esc(t("tips.draft"))}</span>`:""}</div>
+  <div class="row">${stb(x.estatus)}<span class="b sem sem-${x.confianza}"><span class="dot" aria-hidden="true"></span>${esc(t("conf."+x.confianza))}</span><span class="b">${esc(th(x.tema))}</span>${ages}${x.estado!=="publicado"?`<span class="b na">${esc(t("tips.draft"))}</span>`:""}</div>
   <p class="tip-a">${esc(tl(x,"texto"))}</p>
+  <p class="stx">${esc(t("esx."+x.estatus))}</p>
   <p class="tip-w"><b>${esc(t("tips.why"))}</b> ${esc(tl(x,"por_que"))}</p>
+  ${howBlock(x,true)}
   ${cr}${ad}${age}
   <div class="row tip-m"><span class="cite">${esc(t("tips.urg"))}: ${esc(t("lvl."+x.urgencia))}</span><span class="cite">${esc(t("tips.eff"))}: ${esc(t("lvl."+x.esfuerzo))}</span><span class="cite">${x.id}${x.transfer_id?" · "+x.transfer_id:""}</span>${saveBtn(x)}</div>
   <details class="prov"><summary>${esc(t("tips.ev",{n:x.evidence_ids.length}))}</summary><div class="pvb"><ul class="tev">${ev}</ul>${st.lang!=="es"?`<span class="cite">${esc(t("tips.esonly"))}</span>`:""}</div></details></article>`;
@@ -187,7 +201,7 @@ function renderTips(){
   const n=m.length;
   if(f)m=m.filter(x=>x.confianza===f);
   m.sort((a,b)=>(URG[a.urgencia]-URG[b.urgencia])||(CONF[a.confianza]-CONF[b.confianza])||a.id.localeCompare(b.id));
-  $("#tipNote").innerHTML=`<b>${esc(t("tips.note.h"))}</b> ${esc(t("tips.note"))}`;
+  $("#tipNote").innerHTML=`<b>${esc(t("tips.note.h"))}</b> ${esc(t("tips.note"))}`;if(!$("#tipLeg"))$("#tipNote").insertAdjacentHTML("afterend",`<div id="tipLeg"></div>`);$("#tipLeg").innerHTML=stLeg(true)+(AY.length?`<p class="ayline"><b>${esc(t("ay.short"))}</b> 9-1-1 · PANI 1147 · OIJ 800-8000-645 · <a href="#alertas" data-nav="alertas" data-help="1">${esc(t("ay.link"))}</a></p>`:"");
   $("#tipFilt").innerHTML=["","A","B","C"].map(k=>`<button type="button" class="chip" data-tf="${k}" aria-pressed="${f===k}">${esc(k?t("conf."+k):t("tips.all"))} (${k?TIPS.filter(x=>x.edad.includes(tr)&&x.publico.includes(st.role)&&tipMatch(x)&&x.confianza===k).length:n})</button>`).join("");
   $("#tipState").textContent=t("tips.state",{n:m.length,r:roleL(st.role).toLowerCase(),t:agel(tr)});
   $("#tipList").innerHTML=m.map(tipCard).join("")||`<div class="empty">${esc(t("tips.empty"))}</div>`;
@@ -216,7 +230,7 @@ function renderProfile(){
   $("#profBand").innerHTML=AGES.map((a,k)=>`<button type="button" class="bd bd${k+1}" data-pband="${a[0]}" aria-pressed="${a[0]===tr}">${esc(t("prof.years",{t:a[1]}))}<small>${esc(t("prof.cyc"+(k+1)))}</small></button>`).join("");
   const all=TIPS.filter(x=>x.edad.includes(tr)&&x.publico.includes(st.role)).sort(tipSort),top=all.slice(0,5);
   $("#profState").textContent=t("prof.top",{n:top.length,r:roleL(st.role).toLowerCase(),t:agel(tr)});
-  $("#top5").innerHTML=top.map((x,k)=>`<li class="t5 conf-${x.confianza}"><span class="t5n" aria-hidden="true">${k+1}</span><div class="t5b"><p class="t5a">${esc(tl(x,"texto"))}</p><p class="t5w">${esc(tl(x,"por_que"))}</p><div class="row"><span class="b sem sem-${x.confianza}"><span class="dot" aria-hidden="true"></span>${esc(t("conf."+x.confianza))}</span><span class="b">${esc(th(x.tema))}</span>${saveBtn(x)}<a href="#parati/tips" class="t5go" data-tipgo="${x.id}">${esc(t("prof.ev"))}<span class="sr-only"> · ${x.id}</span></a></div></div></li>`).join("")||`<li class="empty">${esc(t("tips.empty"))}</li>`;
+  $("#top5").innerHTML=top.map((x,k)=>`<li class="t5 conf-${x.confianza}"><span class="t5n" aria-hidden="true">${k+1}</span><div class="t5b"><p class="t5a">${esc(tl(x,"texto"))}</p><p class="t5w">${esc(tl(x,"por_que"))}</p>${x.pasos?`<p class="t5s"><b>${esc(t("how.empezar"))}:</b> ${esc(pz(x,"empezar"))}</p>`:""}<div class="row">${stb(x.estatus)}<span class="b sem sem-${x.confianza}"><span class="dot" aria-hidden="true"></span>${esc(t("conf."+x.confianza))}</span><span class="b">${esc(th(x.tema))}</span>${saveBtn(x)}<a href="#parati/tips" class="t5go" data-tipgo="${x.id}">${esc(t("prof.ev"))}<span class="sr-only"> · ${x.id}</span></a></div></div></li>`).join("")||`<li class="empty">${esc(t("tips.empty"))}</li>`;
   $("#profAll").textContent=t("prof.all",{n:all.length});
   $("#profPlan").textContent=t("prof.plan",{n:PL.saved.length});
 }
@@ -241,13 +255,24 @@ function renderPlan(){
   const nw=SHARED.filter(id=>!inPlan(id));
   $("#planShared").innerHTML=SHARED.length?`<div class="note plan-sh" role="region" aria-label="${esc(t("plan.sh.h"))}"><p><b>${esc(t("plan.sh.h"))}</b> ${esc(t("plan.sh.p",{n:SHARED.length,m:nw.length}))}</p><ul>${SHARED.map(id=>`<li>${esc(tl(TBY[id],"texto"))} <span class="cite">${id}</span></li>`).join("")}</ul><div class="row">${nw.length?`<button type="button" class="btn" id="shAdd">${esc(t("plan.sh.add",{n:nw.length}))}</button>`:""}<button type="button" class="btn ghost" id="shDrop">${esc(t("plan.sh.drop"))}</button></div></div>`:"";
   const L=planTips(),n=L.length,d=L.filter(x=>PL.done[x.id]).length,pc=n?Math.round(100*d/n):0;
-  if(!n){$("#planBody").innerHTML=`<div class="empty plan-empty"><p><b>${esc(t("plan.empty.h"))}</b></p><p>${esc(t("plan.empty"))}</p><p class="row" style="justify-content:center"><a class="btn" href="#inicio" data-nav="inicio">${esc(t("plan.empty.go"))}</a><a class="btn ghost" href="#parati/tips" data-nav="parati/tips">${esc(t("plan.empty.tips"))}</a></p><p class="cite">${esc(t("plan.privacy"))}</p></div>`;$("#printSheet").innerHTML="";return}
+  if(!n){$("#planBody").innerHTML=`<div class="empty plan-empty"><p><b>${esc(t("plan.empty.h"))}</b></p><p>${esc(t("plan.empty"))}</p>${starterBox()}<p class="row" style="justify-content:center"><a class="btn" href="#inicio" data-nav="inicio">${esc(t("plan.empty.go"))}</a><a class="btn ghost" href="#parati/tips" data-nav="parati/tips">${esc(t("plan.empty.tips"))}</a></p><p class="cite">${esc(t("plan.privacy"))}</p></div>`;$("#printSheet").innerHTML="";return}
   const prog=`<div class="plan-prog"><div class="row" style="justify-content:space-between"><b id="progL">${esc(t("plan.prog",{d:d,n:n}))}</b><span class="cite">${pc} %</span></div><div class="bar" role="progressbar" aria-labelledby="progL" aria-valuemin="0" aria-valuemax="${n}" aria-valuenow="${d}" aria-valuetext="${esc(t("plan.prog",{d:d,n:n}))}"><i style="width:${pc}%"></i></div></div>`;
-  const act=`<div class="row plan-act"><button type="button" class="btn" id="planPrint">${esc(t("plan.print"))}</button><button type="button" class="btn ghost" id="planShare">${esc(t("plan.share"))}</button><label class="chkl"><input type="checkbox" id="planWhy" ${PL.why?"checked":""}> ${esc(t("plan.why"))}</label><button type="button" class="btn ghost danger" id="planClear">${esc(t("plan.clear"))}</button></div><div id="shareBox"></div>${n>(PL.why?8:14)?`<p class="tipnote">${esc(t("plan.long",{n:n}))}</p>`:""}<p class="cite">${esc(t("plan.privacy"))}</p>`;
+  const act=`<div class="row plan-act"><button type="button" class="btn" id="planPrint">${esc(t("plan.print"))}</button><button type="button" class="btn ghost" id="planShare">${esc(t("plan.share"))}</button><label class="chkl"><input type="checkbox" id="planWhy" ${PL.why?"checked":""}> ${esc(t("plan.why"))}</label><button type="button" class="btn ghost danger" id="planClear">${esc(t("plan.clear"))}</button></div><div id="shareBox"></div>${n>(PL.why?7:12)?`<p class="tipnote">${esc(t("plan.long",{n:n}))}</p>`:""}<p class="cite">${esc(t("plan.privacy"))}</p>`;
   const by={};L.forEach(x=>(by[x.publico[0]]=by[x.publico[0]]||[]).push(x));
-  const list=Object.keys(by).map(r=>`<h3 class="sh plan-g">${esc(roleL(r))} <span class="cite">(${by[r].length})</span></h3><ul class="plan-l">${by[r].map(x=>`<li class="pi conf-${x.confianza}${PL.done[x.id]?" d":""}"><input type="checkbox" id="dn-${x.id}" data-done="${x.id}" ${PL.done[x.id]?"checked":""}><div class="pib"><label for="dn-${x.id}" class="pia">${esc(tl(x,"texto"))}</label><p class="t5w">${esc(tl(x,"por_que"))}</p><div class="row"><span class="b sem sem-${x.confianza}"><span class="dot" aria-hidden="true"></span>${esc(t("conf."+x.confianza))}</span><span class="b">${esc(bandsOf(x))}</span><span class="b">${esc(th(x.tema))}</span><span class="cite">${esc(t("plan.done"))}${PL.done[x.id]?" ✓":""} · ${x.id}</span><a href="#parati/tips" data-tipgo="${x.id}">${esc(t("prof.ev"))}<span class="sr-only"> · ${x.id}</span></a><button type="button" class="pill" data-save="${x.id}" aria-pressed="true" aria-label="${esc(t("plan.remove")+" · "+x.id)}">${esc(t("plan.remove"))}</button></div></div></li>`).join("")}</ul>`).join("");
-  $("#planBody").innerHTML=prog+act+list;
+  const list=Object.keys(by).map(r=>`<h3 class="sh plan-g">${esc(roleL(r))} <span class="cite">(${by[r].length})</span></h3><ul class="plan-l">${by[r].map(x=>`<li class="pi conf-${x.confianza}${PL.done[x.id]?" d":""}"><input type="checkbox" id="dn-${x.id}" data-done="${x.id}" ${PL.done[x.id]?"checked":""}><div class="pib"><label for="dn-${x.id}" class="pia">${esc(tl(x,"texto"))}</label><p class="t5w">${esc(tl(x,"por_que"))}</p>${howBlock(x,false)}<div class="row">${stb(x.estatus)}<span class="b sem sem-${x.confianza}"><span class="dot" aria-hidden="true"></span>${esc(t("conf."+x.confianza))}</span><span class="b">${esc(bandsOf(x))}</span><span class="b">${esc(th(x.tema))}</span><span class="cite">${esc(t("plan.done"))}${PL.done[x.id]?" ✓":""} · ${x.id}</span><a href="#parati/tips" data-tipgo="${x.id}">${esc(t("prof.ev"))}<span class="sr-only"> · ${x.id}</span></a><button type="button" class="pill" data-save="${x.id}" aria-pressed="true" aria-label="${esc(t("plan.remove")+" · "+x.id)}">${esc(t("plan.remove"))}</button></div></div></li>`).join("")}</ul>`).join("");
+  $("#planBody").innerHTML=first3(L)+prog+act+list;
   renderSheet(L);
+}
+/* E5.3: Mi plan empieza con 3 acciones pequeñas (menor esfuerzo, luego urgencia y confianza) */
+function first3(L){
+  const todo=L.filter(x=>x.pasos&&!PL.done[x.id]).sort(startSort).slice(0,3);
+  if(!todo.length)return L.some(x=>x.pasos)?`<div class="note f3 ok"><p><b>${esc(t("f3.alldone"))}</b></p></div>`:"";
+  return `<section class="f3" aria-labelledby="f3h"><h3 class="sh" id="f3h">${esc(t("f3.h"))}</h3><p class="stx">${esc(t("f3.sub"))}</p><ol class="f3l">${todo.map((x,k)=>`<li><span class="f3n" aria-hidden="true">${k+1}</span><div><p class="f3a">${esc(pz(x,"empezar"))}</p><p class="cite">${esc(t("f3.from"))} ${esc(tl(x,"texto"))} · ${x.id}</p><button type="button" class="pill" data-f3done="${x.id}">${esc(t("f3.done"))}<span class="sr-only"> · ${x.id}</span></button></div></li>`).join("")}</ol></section>`;
+}
+function starterBox(){
+  const tr=tramo(st.age),S=TIPS.filter(x=>x.pasos&&x.edad.includes(tr)&&x.publico.includes(st.role)).sort(startSort).slice(0,3);
+  if(!S.length)return"";
+  return `<div class="f3 st3"><p><b>${esc(t("f3.st.h",{r:roleL(st.role).toLowerCase(),t:agel(tr)}))}</b></p><ol class="f3l">${S.map((x,k)=>`<li><span class="f3n" aria-hidden="true">${k+1}</span><div><p class="f3a">${esc(pz(x,"empezar"))}</p><p class="cite">${esc(tl(x,"texto"))} · ${x.id}</p></div></li>`).join("")}</ol><p class="row" style="justify-content:center"><button type="button" class="btn" id="f3add" data-ids="${S.map(x=>x.id).join(",")}">${esc(t("f3.st.add"))}</button></p></div>`;
 }
 function renderSheet(L){
   const dt=new Date().toLocaleDateString(st.lang==="en"?"en-GB":"es-CR",{year:"numeric",month:"long",day:"numeric"});
@@ -255,9 +280,9 @@ function renderSheet(L){
   const srcs=[...new Set(L.flatMap(x=>x.evidence_ids.map(id=>BYID[id]&&BYID[id].source)).filter(Boolean))].sort((a,b)=>ckey(SRC[a]).localeCompare(ckey(SRC[b])));
   const cites=x=>[...new Set(x.evidence_ids.map(id=>BYID[id]&&ckey(SRC[BYID[id].source])).filter(Boolean))].join("; ");
   $("#printSheet").innerHTML=`<header class="ps-h"><div><b class="ps-brand">Children on AI</b><span>${esc(t("ps.sub"))}</span></div><div class="ps-meta"><b>${esc(t("ps.title"))}</b><span>${esc(t("ps.for",{r:roles}))} · ${esc(dt)}</span><span>${esc(t("plan.prog",{d:L.filter(x=>PL.done[x.id]).length,n:L.length}))}</span></div></header>
-  <table class="ps-t"><thead><tr><th scope="col" class="c0">✓</th><th scope="col">${esc(t("ps.action"))}</th><th scope="col">${esc(t("ps.ages"))}</th><th scope="col">${esc(t("ps.conf"))}</th><th scope="col">${esc(t("ps.src"))}</th></tr></thead><tbody>${L.map(x=>`<tr><td class="c0"><span class="box">${PL.done[x.id]?"✓":""}</span></td><td><b>${esc(tl(x,"texto"))}</b>${PL.why?`<br><span class="w">${esc(tl(x,"por_que"))}</span>`:""}</td><td>${esc(bandsOf(x))}</td><td>${esc(t("ps.c"+x.confianza))}</td><td class="s">${esc(cites(x))}<br>${x.id}</td></tr>`).join("")}</tbody></table>
+  <table class="ps-t"><thead><tr><th scope="col" class="c0">✓</th><th scope="col">${esc(t("ps.action"))}</th><th scope="col">${esc(t("ps.ages"))}</th><th scope="col">${esc(t("ps.conf"))}</th><th scope="col">${esc(t("ps.src"))}</th></tr></thead><tbody>${L.map(x=>`<tr><td class="c0"><span class="box">${PL.done[x.id]?"✓":""}</span></td><td><span class="pst">${EICO[x.estatus]||""} ${esc(t("es."+x.estatus))}</span><br><b>${esc(tl(x,"texto"))}</b>${PL.why?`<br><span class="w">${esc(tl(x,"por_que"))}</span>`:""}${x.pasos?`<br><span class="w"><b>${esc(t("how.empezar"))}:</b> ${esc(pz(x,"empezar"))}</span>`:""}</td><td>${esc(bandsOf(x))}</td><td>${esc(t("ps.c"+x.confianza))}</td><td class="s">${esc(cites(x))}<br>${x.id}</td></tr>`).join("")}</tbody></table>
   <div class="ps-notes"><p><b>${esc(t("ps.notes"))}</b></p><div class="lines"><i></i><i></i><i></i></div></div>
-  <footer class="ps-f"><p>${esc(t("ps.draft"))}</p><p>${esc(t("ps.refs"))} ${srcs.map(s=>esc(ckey(SRC[s]))).join("; ")}. ${esc(t("ps.full"))}</p><p>${esc(t("ps.lic"))} · ${esc(baseURL())}</p></footer>`;
+  <footer class="ps-f"><p><b>${esc(t("ay.short"))}</b> 9-1-1 · PANI 1147 · OIJ 800-8000-645</p><p>${esc(t("ps.draft"))}</p><p>${esc(t("ps.refs"))} ${srcs.map(s=>esc(ckey(SRC[s]))).join("; ")}. ${esc(t("ps.full"))}</p><p>${esc(t("ps.lic"))} · ${esc(baseURL())}</p></footer>`;
 }
 
 /* ---------- E4.4 Búsqueda y filtros · E4.5 Módulos por público · E4.6 Costa Rica en contexto (v0.9) ---------- */
@@ -273,15 +298,17 @@ function tipControls(){
   <div><label class="lbl" for="te">${esc(t("tf.eff"))}</label><select id="te">${opt("",t("tf.all"),st.te)}${EFFS.map(x=>opt(x,t("lvl."+x),st.te)).join("")}</select></div>
   <div class="tfr"><button type="button" class="pill" id="tfReset">${esc(t("tf.reset"))}</button></div>`;
 }
-const tipMatch=x=>(!st.tt||x.tema===st.tt)&&(!st.tc||x.contexto.includes(st.tc))&&(!st.te||x.esfuerzo===st.te)&&(!st.tq||norm([x.id,x.texto_es,x.texto_en,x.por_que_es,x.por_que_en,x.tema,th(x.tema)].join(" ")).includes(norm(st.tq)));
+const wordHit=(txt,q)=>{const n=norm(txt);return norm(q).split(/\s+/).filter(Boolean).every(w=>new RegExp("(^|[^a-z0-9])"+w.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")).test(n))};
+const tipMatch=x=>(!st.tt||x.tema===st.tt)&&(!st.tc||x.contexto.includes(st.tc))&&(!st.te||x.esfuerzo===st.te)&&(!st.tq||wordHit([x.id,x.texto_es,x.texto_en,x.por_que_es,x.por_que_en,x.tema,th(x.tema),pasosTxt(x)].join(" "),st.tq));
 
 /* Búsqueda global */
 let GQ="";
 function renderSearch(){
   const box=$("#gres");if(!box)return;const q=norm(GQ.trim());
   if(q.length<2){box.innerHTML=`<p class="cite">${esc(t("gs.min"))}</p>`;$("#gstate").textContent="";return}
-  const has=s=>norm(s).includes(q);
-  const tips=TIPS.filter(x=>has([x.id,x.texto_es,x.texto_en,x.por_que_es,x.por_que_en,th(x.tema)].join(" "))).sort(tipSort);
+  const qs=q.split(/\s+/).filter(Boolean).map(w=>new RegExp("(^|[^a-z0-9])"+w.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")));
+  const has=s=>{const n=norm(s);return qs.every(r=>r.test(n))};/* E5.5: cada palabra debe empezar una palabra del texto («PANI» ya no encuentra «compañía») */
+  const tips=TIPS.filter(x=>has([x.id,x.texto_es,x.texto_en,x.por_que_es,x.por_que_en,th(x.tema),pasosTxt(x)].join(" "))).sort(tipSort);
   const secs=[];Object.keys(VIEWS).forEach(v=>{if(has(t("v."+v)+" "+t("d."+v)))secs.push([v,"",t("v."+v),t("d."+v)]);VIEWS[v].forEach(sb=>{const l=subLabel(v,sb);if(has(l))secs.push([v,sb,t("v."+v)+" › "+l,""])})});
   const gl=GLO.filter(g=>has([g.k,g.k_en,g.long,g.long_en,g.def,g.def_en].join(" "))).slice(0,8);
   const its=IT.filter(i=>has([i.id,i.es,i.en,th(i.theme)].join(" ")));
@@ -341,8 +368,8 @@ function renderCtx(){
   <section class="cxsec" aria-labelledby="cx-h1"><h3 class="sh" id="cx-h1">${esc(t("cx.h1"))}</h3><p class="lead">${esc(t("cx.p1"))}</p>
   <div class="seg" role="group" aria-label="${esc(t("cx.dim"))}">${dims.map((d,k)=>`<button type="button" data-cdim="${k}" aria-pressed="${k===CDIM}">${esc(d)}</button>`).join("")}</div>
   <p class="lstate" aria-live="polite">${esc(t("cx.rank",{d:dims[CDIM],n:rk,m:rows.length}))}</p>
-  <div class="scroller gfx"><svg class="cxchart" viewBox="0 0 ${W} ${H}" role="img" aria-labelledby="cx-ct"><title id="cx-ct">${esc(t("cx.chart",{d:dims[CDIM],n:rk,m:rows.length}))}</title>${grid}${bars}</svg></div>
-  <p class="cite">${esc(t("cx.bands"))}</p>
+  <div class="scroller gfx" tabindex="0" role="region" aria-label="${esc(t("cx.h1"))}"><svg class="cxchart" viewBox="0 0 ${W} ${H}" role="img" aria-labelledby="cx-ct"><title id="cx-ct">${esc(t("cx.chart",{d:dims[CDIM],n:rk,m:rows.length}))}</title>${grid}${bars}</svg></div>
+  <p class="cite">${esc(t("cx.bands"))}</p>${meanP("ilia")}
   ${altTable([t("cx.country"),...dims],I.paises.map(r=>[r[0],...r.slice(1).map(v=>String(v))]),t("cx.h1"))}
   <p class="srcline"><b>${esc(t("prov.nota"))}</b> ${esc(t("cx.src"))} ${ctxCite("22")}. ${esc(bt({es:I.nota_es,en:I.nota_en}))} ${esc(t("cx.disc"))}</p></section>
   <section class="cxsec" aria-labelledby="cx-h2"><h3 class="sh" id="cx-h2">${esc(t("cx.h2"))}</h3><p class="lead">${esc(t("cx.p2"))}</p><div class="grid2">${CTX.ninez_items.map(id=>BYID[id]?card(BYID[id]):"").join("")}</div></section>
@@ -352,11 +379,15 @@ function renderCtx(){
 }
 
 /* ---------- Alertas ---------- */
+/* E5.4: cada tema de alerta trae una guía observar–conversar–actuar (casa para Familia; escuela para Docente y Dirección) */
+const OCA=(D.oca&&D.oca.temas)||{};
+function ocaBox(k){const g=OCA[k];if(!g)return"";const c=g[st.role==="Familia"?"casa":"escuela"],n=TIPS.filter(x=>x.tema===k&&x.publico.includes(st.role)&&x.edad.includes(tramo(st.age))).length;
+  return `<div class="oca" role="group" aria-label="${esc(t("oca.lbl",{t:th(k)}))}"><div class="ocs o1"><b><i aria-hidden="true">1</i>${esc(t("oca.observar"))}</b><p>${esc(c.observar[st.lang]||c.observar.es)}</p></div><div class="ocs o2"><b><i aria-hidden="true">2</i>${esc(t("oca.conversar"))}</b><p>${esc(c.conversar[st.lang]||c.conversar.es)}</p></div><div class="ocs o3"><b><i aria-hidden="true">3</i>${esc(t("oca.actuar"))}</b><p>${esc(c.actuar[st.lang]||c.actuar.es)}</p></div>${n?`<p class="ocg"><a href="#parati/tips" data-ocatips="${esc(k)}">${esc(t("oca.tips",{n:n}))}</a></p>`:""}</div>`}
 function renderAlertas(){
   const tr=tramo(st.age),al=IT.filter(i=>i.kind==="alerta"&&(i.ages||[]).includes(tr)&&(i.audiences||[]).includes(st.role));
   const by={};al.forEach(i=>(by[i.theme]=by[i.theme]||[]).push(i));
   const ks=Object.keys(by).sort((a,b)=>th(a).localeCompare(th(b),st.lang));
-  $("#alFuentes").innerHTML=`<p class="cite" style="margin-bottom:10px">${esc(t("alertas.count",{n:al.length,r:roleL(st.role).toLowerCase(),t:agel(tr),a:st.age}))}</p>`+(ks.map(k=>`<h4 style="margin:14px 0 8px;font:700 1.05rem var(--f-display);color:var(--navy)">${esc(th(k))}</h4><div class="grid2">${by[k].map(i=>card(i)).join("")}</div>`).join("")||`<div class="empty">${esc(t("alertas.none"))}</div>`);
+  $("#alFuentes").innerHTML=ayudaBox()+`<div class="note oca-in"><p><b>${esc(t("oca.in.h"))}</b> ${esc(t("oca.in"))}</p></div><p class="cite" style="margin-bottom:10px">${esc(t("alertas.count",{n:al.length,r:roleL(st.role).toLowerCase(),t:agel(tr),a:st.age}))}</p>`+(ks.map(k=>`<h4 style="margin:14px 0 8px;font:700 1.05rem var(--f-display);color:var(--navy)">${esc(th(k))}</h4>${ocaBox(k)}<div class="grid2">${by[k].map(i=>card(i)).join("")}</div>`).join("")||`<div class="empty">${esc(t("alertas.none"))}</div>`);
   $("#alDatos").innerHTML=`<div class="grid2">${ID.datos.map(d=>{const x=bl(d);return `<article class="item" style="border-color:var(--warn)"><h3>${esc(x[0])}</h3><p>${esc(x[1])}</p><div class="row">${d.refs.map(r=>`<button class="pill" data-open="${r}" type="button">${r} · ${esc(t("card.pdf",{p:BYID[r]?BYID[r].page:""}))}</button>`).join("")}</div><p class="srcline"><b>${esc(t("prov.nota"))}</b> ${d.refs.length?t("prov.alert",{c:inText(d.refs)}):t("prov.corpus")} ${esc(t("prov.pdfnote"))}</p></article>`}).join("")}</div><div id="alOpen" class="grid2" style="margin-top:12px"></div>`;
 }
 
@@ -373,7 +404,7 @@ function figMediacion(){
   names.forEach(n=>{const vals=f[n];o+=`<text x="${L-8}" y="${y+10}" text-anchor="end">${esc(n.length>44?n.slice(0,43)+"…":n)}</text>`;vals.forEach((v,k)=>{if(!st.ser[k])return;o+=`<g class="clk" tabindex="0" role="button" data-open="S11-18" aria-label="${esc(n+", "+lab[k]+": "+v+" %")}"><rect x="${L}" y="${y}" width="${v*S}" height="9" rx="2" fill="${cols[k]}"/></g><text class="mono" aria-hidden="true" x="${L+v*S+4}" y="${y+8}">${v}</text>`;y+=11});y+=14});
   o+=`</svg>`;
   const rows=names.map(n=>[n,...f[n].map(v=>v+" %")]);
-  return `<figure class="fig"><div class="row gfx" role="group" aria-label="${esc(t("dg.mediacion"))}">${lab.map((l,k)=>`<button class="chip" type="button" data-ser="${k}" aria-pressed="${st.ser[k]}"><i class="sw" style="background:${cols[k]};margin-right:6px;border-color:var(--ink)"></i>${esc(l)}</button>`).join("")}</div><div class="wide gfx">${o}</div>${altTable([t("med.activity"),...lab],rows,t("med.axis"))}<figcaption>${t("med.cap")}</figcaption></figure>`;
+  return `<figure class="fig"><div class="row gfx" role="group" aria-label="${esc(t("dg.mediacion"))}">${lab.map((l,k)=>`<button class="chip" type="button" data-ser="${k}" aria-pressed="${st.ser[k]}"><i class="sw" style="background:${cols[k]};margin-right:6px;border-color:var(--ink)"></i>${esc(l)}</button>`).join("")}</div><div class="wide gfx">${o}</div>${altTable([t("med.activity"),...lab],rows,t("med.axis"))}<figcaption>${t("med.cap")}</figcaption>${meanP("med")}</figure>`;
 }
 function figTutor(){
   return `<figure class="fig"><div class="wide gfx"><svg viewBox="0 0 720 300" role="group" aria-label="${esc(t("tut.aria"))}" focusable="false">
@@ -385,7 +416,7 @@ function figTutor(){
   <g class="clk" tabindex="0" role="button" data-open="S01-01" aria-label="${esc(t("tut.basic1")+": "+t("tut.basic2"))}"><rect x="400" y="198" width="190" height="42" rx="6" fill="var(--bad-bg)"/><text x="410" y="216" style="fill:var(--bad)">${esc(t("tut.basic1"))}</text><text x="410" y="231" style="fill:var(--bad);font-size:10.5px">${esc(t("tut.basic2"))}</text></g>
   <g class="clk" tabindex="0" role="button" data-open="S01-02" aria-label="${esc(t("tut.safe1")+": "+t("tut.safe2"))}"><rect x="430" y="44" width="250" height="42" rx="6" fill="var(--soft)"/><text x="440" y="62">${esc(t("tut.safe1"))}</text><text x="440" y="77" style="font-size:10.5px">${esc(t("tut.safe2"))}</text></g>
   <g class="clk" tabindex="0" role="button" data-open="S01-03" aria-label="${esc(t("tut.short1")+" "+t("tut.short2"))}"><rect x="76" y="176" width="250" height="42" rx="6" fill="var(--soft)"/><text x="86" y="194">${esc(t("tut.short1"))}</text><text x="86" y="209" style="font-size:10.5px">${esc(t("tut.short2"))}</text></g>
-  </svg></div>${altText(t("tut.text"))}<figcaption>${t("tut.cap")}</figcaption></figure>`;
+  </svg></div>${altText(t("tut.text"))}<figcaption>${t("tut.cap")}</figcaption>${meanP("tut")}</figure>`;
 }
 const RESP=[
  {id:"gob",x:225,y:10,w:250,h:56,refs:["S08-01","S13-30","S04-24","S13-13"]},
@@ -419,14 +450,14 @@ function figComp(){
   const nm=id=>itx(BYID[id]).split(" (")[0];
   let o=`<div class="wide"><div role="group" aria-label="${esc(t("dg.comp"))}" style="display:grid;grid-template-columns:minmax(140px,1fr) repeat(3,minmax(160px,1.3fr));gap:6px;min-width:calc(660px * var(--fs))"><div></div>${["l1","l2","l3"].map(l=>`<div class="lbl" style="margin:0;padding:4px">${esc(t("comp."+l))}</div>`).join("")}`;
   dims.forEach(d=>{o+=`<button type="button" class="pill" style="border-radius:8px;font-weight:600" data-open="${d[1]}">${esc(t("comp."+d[0]))}</button>`;d[2].forEach((id,k)=>{o+=`<button type="button" data-open="${id}" style="border:1px solid var(--line);border-radius:8px;background:var(--a${k+1});color:var(--a${k+1}i);padding:10px;font:500 .88rem var(--f-body);cursor:pointer;text-align:left" aria-label="${esc(t("comp."+d[0])+" · "+t("comp.l"+(k+1))+": "+nm(id))}">${esc(nm(id))}</button>`})});
-  return o+`</div></div><figcaption>${t("comp.cap")}</figcaption>`;
+  return o+`</div></div><figcaption>${t("comp.cap")}</figcaption>${meanP("comp")}`;
 }
 function renderDg(){
   const b=$("#dgBody");
   if(st.dg==="mediacion")b.innerHTML=figMediacion();
   if(st.dg==="tutor")b.innerHTML=figTutor();
-  if(st.dg==="resp")b.innerHTML=`<figure class="fig"><div class="wide gfx">${figResp()}</div>${altText(t("resp.text")+" "+RESP.map(r=>t("resp."+r.id)+": "+r.refs.join(", ")+".").join(" "))}<figcaption>${t("resp.cap")}</figcaption></figure>`;
-  if(st.dg==="sist")b.innerHTML=`<figure class="fig"><div class="wide gfx">${figSist()}</div>${altTable([t("sist.col1"),t("sist.col2"),t("sist.col3")],SIST.map(r=>[t("sist."+r[0]),String(r[1]),String(r[2])]),t("dg.sist"))}<div class="stats"><button class="stat" type="button" data-open="S04-17"><b>29 %</b><span>${esc(t("sist.talis1"))}</span></button><button class="stat" type="button" data-open="S04-18"><b>25 %</b><span>${esc(t("sist.talis2"))}</span></button></div><figcaption>${t("sist.cap")}</figcaption></figure>`;
+  if(st.dg==="resp")b.innerHTML=`<figure class="fig"><div class="wide gfx">${figResp()}</div>${altText(t("resp.text")+" "+RESP.map(r=>t("resp."+r.id)+": "+r.refs.join(", ")+".").join(" "))}<figcaption>${t("resp.cap")}</figcaption>${meanP("resp")}</figure>`;
+  if(st.dg==="sist")b.innerHTML=`<figure class="fig"><div class="wide gfx">${figSist()}</div>${altTable([t("sist.col1"),t("sist.col2"),t("sist.col3")],SIST.map(r=>[t("sist."+r[0]),String(r[1]),String(r[2])]),t("dg.sist"))}<div class="stats"><button class="stat" type="button" data-open="S04-17"><b>29 %</b><span>${esc(t("sist.talis1"))}</span></button><button class="stat" type="button" data-open="S04-18"><b>25 %</b><span>${esc(t("sist.talis2"))}</span></button></div><figcaption>${t("sist.cap")}</figcaption>${meanP("sist")}</figure>`;
   if(st.dg==="comp")b.innerHTML=`<figure class="fig">${figComp()}</figure>`;
   b.insertAdjacentHTML("beforeend",`<p class="srcline">${srcNoteInner(st.dg)}</p>`);
   $("#dgDetail").innerHTML="";
@@ -450,12 +481,12 @@ function filters(){
   const sel=(id,lab,opts,cur)=>`<div><label class="lbl" for="${id}">${esc(lab)}</label><select id="${id}"><option value="">${esc(t("ex.all"))}</option>${opts.map(o=>`<option value="${esc(o[0])}" ${o[0]===cur?"selected":""}>${esc(o[1])}</option>`).join("")}</select></div>`;
   const e=st.ex;
   $("#filters").innerHTML=`<div><label class="lbl" for="q">${esc(t("ex.q"))}</label><input type="search" id="q" value="${esc(e.q)}" placeholder="${esc(t("ex.qph"))}"></div>`+
-   sel("fk",t("ex.kind"),KINDS.map(k=>[k,t("kind."+k)]),e.kind)+sel("ft",t("ex.theme"),THS().map(x=>[x,th(x)]),e.theme)+sel("fs",t("ex.src"),CAT.map(c=>[c.id,c.id+" · "+loc(c,"corto")]),e.src)+sel("fa",t("ex.age"),AGES.map(a=>[a[0],t("ex.agesuf",{a:a[1]})]),e.age)+sel("fu",t("ex.aud"),ROLES.map(r=>[r,roleL(r)]),e.aud)+sel("fr",t("ex.str"),STRS.map(s=>[s,t("str."+s)]),e.str);
+   sel("fk",t("ex.kind"),KINDS.map(k=>[k,t("kind."+k)]),e.kind)+sel("ft",t("ex.theme"),THS().map(x=>[x,th(x)]),e.theme)+sel("fs",t("ex.src"),CAT.map(c=>[c.id,c.id+" · "+loc(c,"corto")]),e.src)+sel("fa",t("ex.age"),AGES.map(a=>[a[0],t("ex.agesuf",{a:a[1]})]),e.age)+sel("fu",t("ex.aud"),ROLES.map(r=>[r,roleL(r)]),e.aud)+sel("fr",t("ex.str"),STRS.map(s=>[s,t("str."+s)]),e.str)+sel("fe",t("ex.est"),[...ESTS,"dato"].map(k=>[k,t("es."+k)]),e.est||"");
   $("#explorador").textContent=t("ex.h2",{n:IT.length});
 }
 function exFilter(){
   const e=st.ex,q=e.q.toLowerCase();
-  return IT.filter(i=>(!e.kind||i.kind===e.kind)&&(!e.theme||i.theme===e.theme)&&(!e.src||i.source===e.src)&&(!e.age||(e.age==="sin"?!(i.ages||[]).length:(i.ages||[]).includes(e.age)))&&(!e.aud||(i.audiences||[]).includes(e.aud))&&(!e.str||i.strength===e.str)&&(!q||(i.es+" "+(i.en||"")+" "+i.quote+" "+th(i.theme)).toLowerCase().includes(q)));
+  return IT.filter(i=>(!e.kind||i.kind===e.kind)&&(!e.theme||i.theme===e.theme)&&(!e.src||i.source===e.src)&&(!e.age||(e.age==="sin"?!(i.ages||[]).length:(i.ages||[]).includes(e.age)))&&(!e.aud||(i.audiences||[]).includes(e.aud))&&(!e.str||i.strength===e.str)&&(!e.est||i.estatus===e.est)&&(!q||(i.es+" "+(i.en||"")+" "+i.quote+" "+th(i.theme)).toLowerCase().includes(q)));
 }
 function renderEx(announceIt){
   const m=exFilter(),msg=t("ex.count",{n:m.length,m:IT.length});$("#exCount").textContent=msg;
@@ -500,7 +531,7 @@ function renderMetodo(){
   $("#mstats").innerHTML=`<div class="stat"><b>${CAT.length}</b><span>${esc(t("me.docs"))}</span></div><div class="stat"><b>${pages}</b><span>${esc(t("me.pages"))}</span></div><div class="stat"><b>${IT.length}</b><span>${esc(t("me.items"))}</span></div><div class="stat"><b>${IT.filter(i=>i.kind==="recomendacion").length}</b><span>${esc(t("me.recs"))}</span></div><div class="stat"><b>${IT.filter(i=>i.kind==="alerta").length}</b><span>${esc(t("me.alerts"))}</span></div>`;
   $("#meCards").innerHTML=[1,2,3,4].map(k=>`<div class="item"><h3>${esc(t("me.c"+k+"t"))}</h3><p>${esc(t("me.c"+k))}</p></div>`).join("")+`<div class="item"><h3>${esc(t("me.c5t"))}</h3><p class="apa">${phm(em(t("me.c5")))}</p></div>`;
   const h3=k=>`<h3 class="sh" style="margin:22px 0 8px">${esc(t(k))}</h3>`;
-  $("#iaBody").innerHTML=`<h3 class="sh" style="margin-bottom:8px">${esc(t("ia.h"))}</h3><div class="note">${esc(t("ia.lead"))}</div>${h3("ia.tool.h")}<p>${esc(t("ia.tool"))}</p>${h3("ia.tasks.h")}${table(t("ia.cols").split("|"),rowsOf("ia.t",7).map(r=>r.map(esc)),t("ia.tasks.h"))}${h3("ia.not.h")}<p>${esc(t("ia.not"))}</p>${h3("ia.lim.h")}<p>${esc(t("ia.lim"))}</p>${h3("ia.priv.h")}<p>${esc(t("ia.priv"))}</p>${h3("ia.cite.h")}<p class="apa">${em(t("prov.refs.aiapa"))}</p>${h3("ia.todo.h")}<p>${esc(t("ia.todo"))}</p>`;
+  $("#iaBody").innerHTML=`<h3 class="sh" style="margin-bottom:8px">${esc(t("ia.h"))}</h3><div class="note">${esc(t("ia.lead"))}</div>${h3("ia.tool.h")}<p>${esc(t("ia.tool"))}</p>${h3("ia.tasks.h")}${table(t("ia.cols").split("|"),rowsOf("ia.t",8).map(r=>r.map(esc)),t("ia.tasks.h"))}${h3("ia.not.h")}<p>${esc(t("ia.not"))}</p>${h3("ia.lim.h")}<p>${esc(t("ia.lim"))}</p>${h3("ia.priv.h")}<p>${esc(t("ia.priv"))}</p>${h3("ia.cite.h")}<p class="apa">${em(t("prov.refs.aiapa"))}</p>${h3("ia.todo.h")}<p>${esc(t("ia.todo"))}</p>`;
   $("#licBody").innerHTML=`<h3 class="sh" style="margin-bottom:8px">${esc(t("lic.h"))}</h3><p class="lead">${esc(t("lic.lead"))}</p>${table(t("lic.cols").split("|"),rowsOf("lic.r",6).map(r=>r.map(esc)),t("lic.h"))}${h3("lic.src.h")}<p class="cite" style="margin-bottom:8px">${esc(t("lic.src.note"))}</p>${table([t("au.cols").split("|")[0],t("prov.lic")],CAT.map(s=>[apaLink(s.id,s.id+" · "+ckey(s)),esc(loc(s,"licencia"))]),t("lic.src.h"))}${h3("lic.attr.h")}<p class="apa">${phm(esc(t("lic.attr")))}</p><div class="note" style="margin-top:14px">${esc(t("lic.flag"))}</div>`;
   const ok=CAT.filter(s=>refUrl(s)&&!refPend(s)).length,nu=CAT.filter(s=>!refUrl(s)).length,np=CAT.filter(refPend).length;
   const uniq=new Set(CAT.map(ckey)).size===CAT.length;
@@ -537,8 +568,8 @@ function srcLabel(s){if(s==="g")return t("gl.srcG");const p=(s.split(":")[1]||""
 function glCats(){const cs=[...new Set(GLO.map(g=>g.cat))];$("#cg").innerHTML=`<option value="">${esc(t("gl.allcat"))}</option>`+cs.map(c=>`<option value="${esc(c)}" ${c===st.glc?"selected":""}>${esc(loc(GLO.find(g=>g.cat===c),"cat"))}</option>`).join("")}
 function renderGl(){
   const q=st.glq.toLowerCase(),c=st.glc;
-  const m=GLO.filter(g=>(!c||g.cat===c)&&(!q||(g.k+" "+(g.k_en||"")+" "+g.long+" "+(g.long_en||"")+" "+loc(g,"def")).toLowerCase().includes(q)));
-  $("#gl").innerHTML=m.map(g=>`<div class="g" id="g-${GLO.indexOf(g)}"><dt>${esc(gk(g))}</dt><dd><b>${esc(loc(g,"long"))}</b>${loc(g,"def")?`<br>${esc(loc(g,"def"))}`:""}<br><span class="s">${esc(srcLabel(g.src))}</span></dd></div>`).join("")||`<div class="empty">${esc(t("gl.none"))}</div>`;
+  const m=GLO.filter(g=>(!c||g.cat===c)&&(!q||(g.k+" "+(g.k_en||"")+" "+g.long+" "+(g.long_en||"")+" "+loc(g,"def")).toLowerCase().includes(q))).map(g=>[g,GLO.findIndex(z=>z.cat===g.cat),g.aplica_cr==="si"?0:1,GLO.indexOf(g)]).sort((x,y)=>(x[1]-y[1])||(x[2]-y[2])||(x[3]-y[3])).map(x=>x[0]);
+  $("#gl").innerHTML=m.map(g=>`<div class="g" id="g-${GLO.indexOf(g)}"><dt>${esc(gk(g))}</dt><dd><b>${esc(loc(g,"long"))}</b>${loc(g,"def")?`<br>${esc(loc(g,"def"))}`:""}<br>${g.aplica_cr?`<span class="gcr">${stb(g.aplica_estatus||{si:"ley_cr",no:"ley_extranjera",referencia:"recomendacion"}[g.aplica_cr],t("gl.cr."+g.aplica_cr))} ${esc(loc(g,"nota_cr")||"")}</span>`:""}<span class="s">${esc(srcLabel(g.src))}</span></dd></div>`).join("")||`<div class="empty">${esc(t("gl.none"))}</div>`;
   $("#glCount").textContent=m.length+" / "+GLO.length;
 }
 let tipFor=null;
@@ -592,7 +623,7 @@ function setLang(l,quiet){
 function renderAll(){
   buildAbbr();
   renderHeads();renderSubnavs();renderHome();renderTutorial();renderMap();renderHomeGuide();
-  $("#ruler").innerHTML=buildRuler();rulerAlt();legend();
+  $("#ruler").innerHTML=buildRuler();$("#rulerMean").innerHTML=meanP("ruler");$("#heatMean").innerHTML=meanP("heat");$("#marcoMean").innerHTML=meanP("marco");rulerAlt();legend();
   glCats();$("#qg").value=st.glq;
   filters();renderHeat();renderEx();renderDg();renderEsc();renderNorm();renderFuentes();renderPlan();tipControls();renderKit();renderCtx();renderSearch();$("#gq").value=GQ;renderMetodo();renderGl();fillNotes();
   $("#age").setAttribute("aria-label",t("ruler.control"));
@@ -629,6 +660,10 @@ document.addEventListener("click",e=>{
   if(sv){const id=sv.dataset.save,wasPlan=st.view==="plan";toggleSave(id);if(wasPlan){renderPlan();const f=$("#planBody .pi [data-done]")||$("#planBody a,#planBody button");if(f)f.focus()}return}
   const pr=e.target.closest("[data-prole],[data-pband]");
   if(pr){if(pr.dataset.prole)st.role=pr.dataset.prole;else st.age=BANDAGE[pr.dataset.pband];saveProf();const sel=pr.dataset.prole?`[data-prole="${st.role}"]`:`[data-pband="${tramo(st.age)}"]`;setAge(st.age,true);const b=document.querySelector("#prof "+sel);if(b)b.focus();announce($("#profState").textContent);return}
+  const hl=e.target.closest("[data-help]");
+  if(hl){e.preventDefault();go("alertas","fuentes",{quiet:true});const b=$("#ayuda");if(b){b.scrollIntoView({block:"start",behavior:smooth()});b.focus({preventScroll:true})}return}
+  const og=e.target.closest("[data-ocatips]");
+  if(og){e.preventDefault();st.tt=og.dataset.ocatips;st.tf="";go("parati","tips",{quiet:true});tipControls();renderTips();const h=$("#tipState");if(h){h.setAttribute("tabindex","-1");h.focus()}announce($("#tipState").textContent);return}
   const tgo=e.target.closest("[data-tipgo]");
   if(tgo){e.preventDefault();const id=tgo.dataset.tipgo,x=TBY[id];if(x&&!x.publico.includes(st.role))st.role=x.publico[0];if(x&&!x.edad.includes(tramo(st.age)))st.age=BANDAGE[x.edad[0]];st.tf="";setAge(st.age,true);go("parati","tips",{quiet:true});const c=document.getElementById("c-"+id);if(c){c.scrollIntoView({block:"start",behavior:smooth()});c.focus({preventScroll:true});const dd=c.querySelector("details.prov");if(dd)dd.open=true}return}
   const kb=e.target.closest("[data-kband]");
@@ -647,6 +682,10 @@ document.addEventListener("click",e=>{
   if(e.target.closest("#planShare")){const u=shareURL();$("#shareBox").innerHTML=`<label class="lbl" for="shareU">${esc(t("plan.share.l"))}</label><input id="shareU" class="shareu" readonly value="${esc(u)}">`;const inp=$("#shareU");inp.focus();inp.select();const ok=()=>announce(t("plan.copied"));try{navigator.clipboard.writeText(u).then(ok,()=>announce(t("plan.copy.manual")))}catch(er){announce(t("plan.copy.manual"))}return}
   const cl=e.target.closest("#planClear");
   if(cl){if(cl.dataset.arm){PL.saved=[];PL.done={};savePL();renderPlan();renderSide();renderProfile();renderTips();announce(t("plan.cleared"));const h=$("#h-plan");if(h)h.focus();return}cl.dataset.arm="1";cl.textContent=t("plan.clear.ok");announce(t("plan.clear.ok"));setTimeout(()=>{if(document.body.contains(cl)){delete cl.dataset.arm;cl.textContent=t("plan.clear")}},5000);return}
+  const f3=e.target.closest("[data-f3done]");
+  if(f3){const id=f3.dataset.f3done;PL.done[id]=true;savePL();renderPlan();const n=$("#f3h")||$("#progL");if(n){n.setAttribute("tabindex","-1");n.focus()}announce(t("f3.marked",{id:id})+" "+$("#progL").textContent);return}
+  const fa=e.target.closest("#f3add");
+  if(fa){fa.dataset.ids.split(",").forEach(id=>{if(!inPlan(id))PL.saved.push(id)});savePL();renderPlan();renderSide();renderProfile();renderTips();announce(t("f3.added"));const n=$("#f3h");if(n){n.setAttribute("tabindex","-1");n.focus()}return}
   if(e.target.closest("#shAdd")){SHARED.forEach(id=>{if(!inPlan(id))PL.saved.push(id)});savePL();const k=SHARED.length;SHARED=[];history.replaceState(null,"",location.pathname+"#plan");renderPlan();renderSide();renderProfile();renderTips();announce(t("plan.sh.added",{n:k}));const b=$("#planPrint");if(b)b.focus();return}
   if(e.target.closest("#shDrop")){SHARED=[];history.replaceState(null,"",location.pathname+"#plan");renderPlan();const h=$("#h-plan");if(h)h.focus();return}
   const tg=e.target.closest("[data-nav],[data-go],[data-open-a11y],#menuBtn,#scrim,[data-ref],[data-apa],[data-open],[data-role],[data-heat],[data-src],[data-ser],[data-resp],[data-lang],[data-lf],[data-tf],[data-lexp],#lmore,#rulerFull,#more,#exReset,#a11yBtn,#a11yClose,#szDec,#szInc,#szReset,#a11yReset");
@@ -687,7 +726,7 @@ document.addEventListener("click",e=>{
   if(d.src){st.ex={q:"",kind:"",theme:"",src:d.src,age:"",aud:"",str:""};st.shown=24;filters();renderEx(true);goExplorer();return}
 });
 document.addEventListener("change",e=>{
-  const id=e.target.id,m={fk:"kind",ft:"theme",fs:"src",fa:"age",fu:"aud",fr:"str"};
+  const id=e.target.id,m={fk:"kind",ft:"theme",fs:"src",fa:"age",fu:"aud",fr:"str",fe:"est"};
   if(m[id]){st.ex[m[id]]=e.target.value;st.shown=24;renderEx(true);return}
   if(e.target.dataset.done){const id=e.target.dataset.done;if(e.target.checked)PL.done[id]=true;else delete PL.done[id];savePL();renderPlan();const c=document.getElementById("dn-"+id);if(c)c.focus();announce($("#progL").textContent);return}
   if(["tt","tc","te"].includes(id)){st[id]=e.target.value;renderTips();announce($("#tipState").textContent);return}
@@ -734,7 +773,7 @@ function renderCrumb(){
   $("#crumb").innerHTML="<ol>"+items.map((x,k)=>`<li${k===items.length-1?' aria-current="page"':""}>${esc(x)}</li>`).join("")+"</ol>";
 }
 function renderHeads(){
-  $$(".vh").forEach(h=>{const v=h.id.slice(3);h.innerHTML=`<div class="ageline" aria-hidden="true"><i></i><i></i><i></i></div><h2 id="h-${v}" tabindex="-1">${esc(t("v."+v))}</h2><p>${esc(t("d."+v))}</p>`});
+  $$(".vh").forEach(h=>{const v=h.id.slice(3);h.innerHTML=`<div class="ageline" aria-hidden="true"><i></i><i></i><i></i></div><h2 id="h-${v}" tabindex="-1">${esc(t("v."+v))}</h2><p>${esc(t("d."+v))}</p>${I.es["acc."+v]?`<p class="acc">${esc(t("acc."+v))}</p>`:""}`});
 }
 function renderSubnavs(){
   $$(".subnav").forEach(n=>{const v=n.dataset.for;n.setAttribute("aria-label",t("v."+v));n.innerHTML=VIEWS[v].map(sb=>`<button type="button" role="tab" id="tab-${v}-${sb}" data-nav="${v}/${sb}" aria-selected="false" tabindex="-1" aria-controls="${panelId(v,sb)}">${esc(subLabel(v,sb))}</button>`).join("")});
@@ -744,10 +783,11 @@ function renderHome(){
   $("#homeTiles").innerHTML=ROLES.map(r=>`<button type="button" class="tile" data-go="parati/tips" data-setrole="${r}"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">${ic[r]}</svg><b>${esc(t("home."+r))}</b><span>${esc(t("home."+r+".d"))}</span></button>`).join("")+`<a class="tile alt" href="#tutorial" data-nav="tutorial" style="text-decoration:none"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">${ICONS.tutorial}</svg><b>${esc(t("home.tut"))}</b><span>${esc(t("home.tut.d"))}</span></a>`;
 }
 function renderHomeGuide(){
-  const steps=[["s1","inicio"],["s2","parati/tips"],["s3","plan"],["s4","plan"],["s5","evidencia/explorador"]];
+  const steps=[["s1","inicio"],["s2","parati/tips"],["s3","plan"]];
   $("#homeGuide").innerHTML=`<h2 class="hs-h" id="hgH">${esc(t("hg.h"))}</h2><p class="hs-sub">${esc(t("hg.sub"))}</p>
   <ol class="hg-steps">${steps.map((s,i)=>`<li><span class="hg-n" aria-hidden="true">${i+1}</span><h3>${esc(t("hg."+s[0]+".t"))}</h3><p>${esc(t("hg."+s[0]))}</p>${s[1]==="inicio"?`<a href="#prof" class="hg-go">${esc(t("hg.go"))} <span aria-hidden="true">→</span><span class="sr-only">: ${esc(t("hg."+s[0]+".t"))}</span></a>`:`<a href="#${s[1]}" data-nav="${s[1]}" class="hg-go">${esc(t("hg.go"))} <span aria-hidden="true">→</span><span class="sr-only">: ${esc(t("hg."+s[0]+".t"))}</span></a>`}</li>`).join("")}</ol>
-  <p class="hg-full"><a href="#tutorial" data-nav="tutorial">${esc(t("hg.full"))}</a></p>`;
+  <div class="hg-tail"><p class="hg-more"><b>${esc(t("hg.more"))}</b> <a href="#plan" data-nav="plan">${esc(t("hg.s4.t"))}</a> · <a href="#evidencia/explorador" data-nav="evidencia/explorador">${esc(t("hg.s5.t"))}</a> · <a href="#alertas" data-nav="alertas">${esc(t("v.alertas"))}</a></p>
+  <p class="hg-full"><a href="#tutorial" data-nav="tutorial">${esc(t("hg.full"))}</a></p></div>`;
   const lv=[["l1",["inicio","parati","kit","plan"]],["l2",["alertas","diagramas","evidencia"]],["l3",["contexto","marco","fuentes"]],["l4",["buscar","glosario","metodo","tutorial","sitio"]]];
   const lk=(h,lab)=>`<a href="#${h}" data-nav="${h}">${esc(lab)}</a>`;
   const routes={familia:[["inicio",t("v.inicio")],["parati/tips",t("v.parati")+" › Tips"],["plan",t("v.plan")],["plan",t("sm.print")]],
@@ -762,7 +802,7 @@ function renderTutorial(){
   const lnk=(h,lab)=>`<a href="#${h}" data-nav="${h}">${esc(lab)}</a>`;
   $("#tuPasos").innerHTML=`<h3 class="sh" style="margin-bottom:12px">${esc(t("tu.steps.h"))}</h3><ol class="steps">${[1,2,3,4,5].map(k=>`<li><h4>${esc(t("tu.s"+k+".t"))}</h4><p>${esc(t("tu.s"+k))}</p></li>`).join("")}</ol>
   <h3 class="sh" style="margin:26px 0 4px">${esc(t("tu.tools.h"))}</h3><p class="lead" style="margin-bottom:12px">${esc(t("tu.tools.sub"))}</p><div class="legend-grid">${[["r1","inicio"],["r2","diagramas"],["r3","evidencia/explorador"],["r4","glosario"],["r5","parati/escenarios"],["r6","sitio"]].map(r=>`<div><div><b>${esc(t("tu."+r[0]+".t"))}</b><p>${esc(t("tu."+r[0]))}</p>${lnk(r[1],t("v."+r[1].split("/")[0]))}</div></div>`).join("")}</div>`;
-  $("#tuEtq").innerHTML=`<h3 class="sh" style="margin-bottom:10px">${esc(t("tg.kinds"))}</h3><div class="legend-grid">${KINDS.map(k=>`<div><span class="b ${k}">${esc(t("kind."+k))}</span><p>${esc(t("tg.kind."+k))}</p></div>`).join("")}</div>
+  $("#tuEtq").innerHTML=`<h3 class="sh" style="margin-bottom:10px">${esc(t("tg.est"))}</h3>${stLeg(true)}<h3 class="sh" style="margin-bottom:10px">${esc(t("tg.kinds"))}</h3><div class="legend-grid">${KINDS.map(k=>`<div><span class="b ${k}">${esc(t("kind."+k))}</span><p>${esc(t("tg.kind."+k))}</p></div>`).join("")}</div>
   <h3 class="sh" style="margin:26px 0 4px">${esc(t("tg.ages"))}</h3><p class="lead" style="margin-bottom:10px">${esc(t("tg.ages.d"))}</p><div class="row">${[1,2,3,4].map(k=>`<span class="b age${k}">${esc(t("tg.age"+k))}</span>`).join("")}</div>
   <h3 class="sh" style="margin:26px 0 10px">${esc(t("tg.ev"))}</h3><div class="legend-grid">${STRS.map(k=>`<div><span class="b">${esc(t("str."+k))}</span><p>${esc(t("tg.ev."+k))}</p></div>`).join("")}</div>`;
   $("#tuAcc").innerHTML=`<h3 class="sh" style="margin-bottom:8px">${esc(t("ac.h"))}</h3><p class="lead">${esc(t("ac.1"))}</p><p class="lead" style="margin-top:8px">${esc(t("ac.2"))}</p><p style="margin-top:12px"><button type="button" class="btn" data-open-a11y>${esc(t("a11y.title"))}</button></p>
@@ -777,6 +817,24 @@ function renderMap(){
 function openMenu(){document.body.classList.add("menu-open");$("#menuBtn").setAttribute("aria-expanded","true");$("#menuBtn span").textContent=t("menu.close");setTimeout(()=>{const f=$("#sideNav a[aria-current=page]")||$("#sideNav a");if(f)f.focus()},60)}
 function closeMenu(back){if(!document.body.classList.contains("menu-open"))return;document.body.classList.remove("menu-open");$("#menuBtn").setAttribute("aria-expanded","false");$("#menuBtn span").textContent=t("menu.open");if(back)$("#menuBtn").focus()}
 let suppress=0;
+/* E5.5: «¿Por dónde sigo?» al final de cada vista: 1 paso recomendado y 1 alternativo */
+const NEXT={inicio:["parati/tips","plan"],"parati/tips":["plan","alertas"],"parati/lectura":["parati/tips","plan"],"parati/guias":["parati/tips","plan"],"parati/escenarios":["parati/tips","plan"],
+ plan:["kit","alertas"],kit:["plan","parati/tips"],alertas:["parati/tips","plan"],diagramas:["parati/tips","evidencia"],evidencia:["parati/tips","fuentes"],
+ contexto:["marco","parati/tips"],marco:["glosario","parati/tips"],fuentes:["metodo","parati/tips"],glosario:["parati/tips","marco"],metodo:["fuentes","inicio"],
+ tutorial:["inicio","parati/tips"],sitio:["inicio","tutorial"],buscar:["parati/tips","inicio"]};
+function nextLab(h){const [v,sb]=h.split("/");return sb?t("v."+v)+" › "+subLabel(v,sb):t("v."+v)}
+function renderNext(view,sub){
+  $$(".nextc").forEach(n=>n.remove());
+  const sec=$("#v-"+view);if(!sec)return;
+  const nx=NEXT[view+"/"+sub]||NEXT[view];if(!nx)return;
+  const why=k=>t("nx."+k.replace("/","_"))!=="nx."+k.replace("/","_")?t("nx."+k.replace("/","_")):"";
+  sec.insertAdjacentHTML("beforeend",`<nav class="nextc" aria-labelledby="nxH"><h2 id="nxH">${esc(t("nx.h"))}</h2><div class="row"><a class="btn" href="#${nx[0]}" data-nav="${nx[0]}">${esc(nextLab(nx[0]))} <span aria-hidden="true">→</span></a>${nx[1]?`<a class="btn ghost" href="#${nx[1]}" data-nav="${nx[1]}">${esc(nextLab(nx[1]))}</a>`:""}</div>${why(nx[0])?`<p class="stx">${esc(why(nx[0]))}</p>`:""}<p class="cite">${esc(t("nx.help"))} <a href="#alertas" data-nav="alertas" data-help="1">${esc(t("ay.link"))}</a></p></nav>`);
+}
+/* E5.5: contactos de ayuda en Costa Rica (data/ayuda.json) */
+const AY=(D.ayuda&&D.ayuda.contactos)||[];
+const ayL=(c,f)=>c[f][st.lang]||c[f].es;
+function ayudaBox(){if(!AY.length)return"";const src=(D.ayuda.fuentes||{}).oij||"";
+  return `<section class="ayuda" id="ayuda" aria-labelledby="ayH" tabindex="-1"><h3 id="ayH">${esc(t("ay.h"))}</h3><p class="stx">${esc(t("ay.sub"))}</p><ul class="ayl">${AY.map(c=>`<li class="ay-${c.id}"><b>${esc(ayL(c,"quien"))}</b> <a href="tel:${c.num.replace(/[^0-9]/g,"")}" class="aynum">${esc(c.num)}</a><span>${esc(ayL(c,"cuando"))}</span></li>`).join("")}</ul><p class="cite">${esc(t("ay.src"))} <a href="${esc(src)}" rel="noopener">OIJ</a>. ${esc(t("ay.rev"))}</p></section>`}
 function go(view,sub,o){
   o=o||{};
   if(ALIAS[view]){const a=ALIAS[view];view=a[0];sub=a[1]}
@@ -790,7 +848,7 @@ function go(view,sub,o){
   if(view==="diagramas")renderDg();
   if(view==="plan")renderPlan();
   $$(`#v-${view} .subnav [role=tab]`).forEach(b=>{const on=b.dataset.nav===view+"/"+sub;b.setAttribute("aria-selected",on);b.tabIndex=on?0:-1});
-  renderSide();renderCrumb();
+  renderSide();renderCrumb();renderNext(view,sub);
   const nm=t("v."+view)+(subs.length>1?" · "+subLabel(view,sub):"");
   document.title=nm+" · Children on AI";
   const h=view+(subs.length>1?"/"+sub:"");

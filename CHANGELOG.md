@@ -2,6 +2,91 @@
 
 Formato: [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/). Versionado por etapa del `docs/PLAN_MEJORA_2026-10.md`.
 
+## v0.14.2 · 3 nov 2026 · E5.7 uso del espacio
+- Inicio: título a la izquierda y explicación a la derecha (≥ 1100 px); los 3 pasos ocupan todo el ancho (la rejilla seguía a 5 columnas); enlaces «Después…» y «Ver toda la guía» en una sola fila.
+- Encabezados de todas las vistas en dos columnas; «¿Por dónde sigo?» con botones y explicación en la misma fila; selector de rol sin saltos de línea.
+- Contenido centrado hasta 1400 px. Móvil sin cambios (una columna).
+- 10 textos más pasan a *usted* (Verá, Verifique, Active, Aprenda).
+
+## v0.14.1 · 3 nov 2026 · E5.6 auditoría tonal
+- Trato de *usted* en toda la interfaz (`i18n.e56.js`); «Para ti» → «Para usted».
+- Lenguaje inclusivo en tips, pasos y alertas (hijo/hija, estudiantado, persona docente).
+- «Esto significa que…» con voz atribuida a las fuentes; 9-1-1 unificado; léxico más preciso en señales de daño.
+- Inglés en grafía en-US (salvo citas y nombres propios).
+- Ver `docs/AUDITORIA_TONAL_E5.md`.
+
+## [0.14.0] — 2026-11-03 · E5.5 Ruta principiante y cierre de E5 (comentarios 3 nov)
+### Añadido
+- Inicio con ruta de 3 pasos (edad → consejos → plan). Tarjeta «¿Por dónde sigo?» al final de cada vista.
+- «Dónde pedir ayuda en Costa Rica» (911, PANI, OIJ) en Alertas, Tips y hoja imprimible; `data/ayuda.json`.
+### Cambiado
+- «Mecanismos» → «Cómo funciona» / «How it works». Búsqueda por inicio de palabra. `readability.py --ui` cubre los textos nuevos.
+- D2 y D4 aprobadas; S23 con enlace SINALEVI.
+### Verificado
+- `docs/E5.5_CIERRE.md`: 1 783 comprobaciones, 0 fallas; barrido EN sin restos en español.
+
+## [0.13.1] — 2026-11-03 · Auditoría integral E0–E5.4
+### Corregido
+- Hoja imprimible en 1 página (antes, 2.ª página en blanco). Referencias sin desborde por DOI largos.
+- S11 con DOI, título, editorial y fecha verificados. «Borrador v0.9» → «v0.13» en textos visibles.
+- Ejemplo de tips con `pasos`; README, CITATION.cff y versión de `tips.json` al día.
+### Añadido
+- Declaración de IA v0.11–v0.13 (sitio y `DECLARACION_IA.md`). Workflow de GitHub Pages restaurado con esquemas, legibilidad y APA.
+### Verificado
+- `docs/AUDITORIA_E0_E5.4.md`: 1 783 comprobaciones en 33 vistas, 0 fallas; 422/422 citas; 0 errores APA.
+
+## [0.13.0] — 2026-11-03 · E5.4 Acción en 12–14 y 15–18 · alertas observar–conversar–actuar (comentarios 3 nov)
+### Añadido
+- «Cómo hacerlo» en los 40 tips restantes (18 Familia, 2 transversales, 19 Docente, 1 Dirección): los 110 tips tienen ahora qué hacer · ejemplo · por dónde empezar · señal y qué hacer, ES/EN. `tools/e5_pasos_1218.py`.
+- Alertas › Advertencias de las fuentes: en cada uno de los 12 temas, guía «Observe · Converse · Actúe» (versión casa para Familia y escuela para Docente y Dirección) y enlace a los consejos del tema, ya filtrados. `data/alertas_oca.json`.
+### Cambiado
+- `validate_schemas.py`: `pasos` obligatorio en todo tip.
+### Verificado
+- `docs/E5.4_ACCION_ALERTAS.md`.
+
+## [0.12.0] — 2026-11-03 · E5.3 De la recomendación a la acción, 6–8 y 9–11 (comentarios 3 nov)
+### Añadido
+- Bloque «Cómo hacerlo» en los 70 tips que aplican a 6–8 o 9–11 (24 Familia, 4 transversales, 18 Docente, 24 Dirección): qué hacer · ejemplo en casa, en el aula o en el centro · por dónde empezar · señal de alerta y qué hacer. ES/EN. Campo `pasos` en `tips.json`, generado por `tools/e5_pasos.py`.
+- Mi plan: «Empieza por aquí: 3 acciones pequeñas» (menor esfuerzo, luego urgencia y confianza; botón «Ya lo hice» y aparece la siguiente). Con el plan vacío, propone 3 acciones para el perfil y permite guardarlas de una vez.
+- Inicio (5 tips prioritarios) y hoja imprimible muestran «Por dónde empezar».
+- La búsqueda y el filtro de texto también buscan en los pasos.
+- `readability.py --pasos`; `validate_schemas.py` exige `pasos` en todo tip de 6–8/9–11 y el selftest rechaza pasos incompletos.
+### Cambiado
+- Límite de la hoja de una página: 7 tips con «por qué» o 12 sin él (antes 8/14), por la línea nueva.
+### Verificado
+- `docs/E5.3_ACCION.md`.
+
+## [0.11.2] — 2026-11-03 · Auditoría de cierre E5.1–E5.2
+### Corregido
+- 29 tips de Docente y Dirección reescritos en lenguaje sencillo: 110/110 ≥ 70 Fernández-Huerta (media 84,1). `docs/E5.2_REESCRITURA_TIPS.csv`.
+- Estatus: el contenido de fuentes normativas hereda su fuerza; 24 ítems que describen normas de otros países y la CDN reetiquetados.
+- Hoja imprimible de Mi plan con la etiqueta de estatus.
+### Verificado
+- `docs/AUDITORIA_E5.1_E5.2.md`: 24 vistas × ES/EN × 4 temas, 0 violaciones axe, 0 gráficos sin explicación, 0 errores JS.
+
+## [0.11.1] — 2026-11-03 · E5.2 Lenguaje sencillo (comentarios 3 nov)
+### Añadido
+- «Esto significa que…» bajo 9 gráficos (regla, 5 diagramas, mapa de evidencia, marco normativo, ILIA).
+- Frases de acompañamiento en Inicio y 9 vistas. `tools/readability.py --ui`. `docs/E5.2_LENGUAJE.md`.
+### Cambiado
+- Título y subtítulo de Inicio redactados como beneficio. Explicaciones de etiquetas en registro neutro.
+- Glosario: la Guía MEP usa el ícono de directriz (★).
+### Corregido
+- Gráfico ILIA desplazable sin foco de teclado (axe `scrollable-region-focusable`, 390 px).
+### Verificado
+- Fernández-Huerta media 81,5 en textos nuevos; axe 0 violaciones en 10 vistas, ES/EN, 1366/390 px; 0 errores JS.
+
+## [0.11.0] — 2026-11-03 · E5.1 Estatus normativo (comentarios 3 nov)
+### Añadido
+- Campo `estatus` en ítems y tips (Ley en Costa Rica · Directriz del MEP · Recomendación · Norma de otro país · Propuesta · dato), con insignia ícono + texto y explicación breve. Reglas en `docs/E5.1_ESTATUS.md`; script `tools/e5_estatus.py`.
+- Leyenda «¿Cómo leer las etiquetas?» en Para ti, Lo esencial y Tutorial; filtro «Tipo de norma» en el Explorador.
+- Glosario: «Aplica / No aplica en Costa Rica» con nota en lenguaje sencillo; 8 entradas nuevas (Ley 8968, 7739, 10020, Guía MEP, MEP, PANI, OIJ, PRODHAB).
+- `docs/PLAN_E5_COMENTARIOS_3NOV.md`.
+### Cambiado
+- Esquema de tips: `estatus` obligatorio (solo ley_cr, directriz_mep, recomendacion). Los ítems de propuestas y normas extranjeras ya no se rotulan solo como «Obligación».
+### Verificado
+- validate_schemas OK; axe-core 0 violaciones (1366/390 px, también alto contraste); 0 errores JS.
+
 ## [0.10.1] — 2026-10-27 · Portada: guía de uso, regla de edades y mapa del sitio
 ### Añadido
 - «Cómo usar este sitio» en Inicio: 5 pasos (perfil → tips → Mi plan → imprimir/compartir → evidencia), cada uno con enlace; acceso a la guía completa.

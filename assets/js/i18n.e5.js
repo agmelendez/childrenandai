@@ -1,0 +1,77 @@
+/* Children on AI · E5.1 · estatus normativo (Recomendación, Directriz MEP, Ley CR, Norma de otro país, Propuesta). Cargar después de i18n.js. */
+Object.assign(window.COA_I18N.es,{
+ "es.ley_cr":"Ley en Costa Rica","es.directriz_mep":"Directriz del MEP","es.recomendacion":"Recomendación","es.ley_extranjera":"Norma de otro país","es.propuesta":"Propuesta, aún no es ley","es.dato":"Dato o hallazgo",
+ "esx.ley_cr":"Es obligatorio aquí. Lo exige o lo prohíbe una ley de Costa Rica.",
+ "esx.directriz_mep":"Lo pide el Ministerio de Educación (MEP) a escuelas y colegios. Es la guía oficial.",
+ "esx.recomendacion":"Es un buen consejo, no una obligación. Cada casa o escuela ve cómo usarlo.",
+ "esx.ley_extranjera":"Es obligatorio en otro país, no en Costa Rica. Aquí sirve como ejemplo.",
+ "esx.propuesta":"Es un proyecto que todavía se discute en otro lugar. No obliga a nadie.",
+ "esx.dato":"Describe lo que se sabe. No dice qué hacer.",
+ "esl.h":"¿Qué dice cada etiqueta?","esl.sub":"Cada consejo indica si es una ley, una directriz o una recomendación. Así no confunde un consejo con una prohibición.",
+ "ex.est":"Tipo de norma","gl.cr.si":"Aplica en Costa Rica","gl.cr.no":"No aplica en Costa Rica","gl.cr.referencia":"Referencia para Costa Rica","tg.est":"¿Es ley, directriz o recomendación?"
+});
+Object.assign(window.COA_I18N.en||(window.COA_I18N.en={}),{
+ "es.ley_cr":"Law in Costa Rica","es.directriz_mep":"MEP directive","es.recomendacion":"Recommendation","es.ley_extranjera":"Another country's rule","es.propuesta":"Proposal, not yet law","es.dato":"Data or finding",
+ "esx.ley_cr":"Mandatory here. A Costa Rican law requires or forbids it.",
+ "esx.directriz_mep":"Official guidance from the Ministry of Public Education for schools.",
+ "esx.recomendacion":"Good advice, not an obligation. You decide how to apply it.",
+ "esx.ley_extranjera":"Mandatory in another country, not in Costa Rica. Here it is an example.",
+ "esx.propuesta":"A bill still under discussion elsewhere. It binds no one.",
+ "esx.dato":"Describes what is known. It does not say what to do.",
+ "esl.h":"How to read the labels","esl.sub":"Each tip says whether it is a law, a directive or a recommendation, so you don't mistake advice for a ban.",
+ "ex.est":"Type of rule","gl.cr.si":"Applies in Costa Rica","gl.cr.no":"Does not apply in Costa Rica","gl.cr.referencia":"Reference for Costa Rica","tg.est":"Is it a law, a directive or a recommendation?"
+});
+/* E5.2 · lenguaje sencillo: títulos como beneficio, «Esto significa que…» bajo cada gráfico y frases de acompañamiento */
+Object.assign(window.COA_I18N.es,{
+ "esx.recomendacion":"Es un buen consejo, no una obligación. Cada casa o escuela ve cómo usarlo.",
+ "esl.sub":"Cada consejo indica si es una ley, una directriz o una recomendación. Así no se confunde un consejo con una prohibición.",
+ "hero.h1":"Cómo acompañar a niñas, niños y adolescentes con la IA, según su edad",
+ "hero.sub":"Consejos para familias y escuelas, basados en leyes, guías oficiales y estudios. Cada consejo dice de dónde sale y si es obligatorio en Costa Rica.",
+ "rg.sub":"Mueve el control de edad para ver qué dicen leyes, políticas y estudios. Toca una franja para leer el texto original con su página.",
+ "mean.lbl":"Esto significa que…",
+ "mean.ruler":"las edades de esta regla salen de leyes y políticas de otros países y de encuestas. En Costa Rica no hay una edad mínima legal para usar IA: lo que importa es cuánto se expone cada niño y con qué riesgos.",
+ "mean.med":"cuando en casa no hay reglas sobre la IA, niñas y niños la usan más y para más cosas. Esto no prueba que las reglas sean la causa, pero sí sugiere que vale la pena conversar y acordar reglas en casa.",
+ "mean.tut":"un tutor de IA que da las respuestas puede ayudar en el momento, pero después el estudiante rinde menos. Un tutor que guía sin resolver la tarea evita ese problema. Las alturas del dibujo no son datos.",
+ "mean.resp":"la mayor parte de la responsabilidad es de las empresas que crean la IA y de quienes las regulan. La familia y la escuela acompañan y enseñan, pero no deben cargar solas con riesgos que las empresas pueden evitar.",
+ "mean.sist":"en Europa, la mayoría de los países apenas empieza a dar reglas y formación sobre IA en las escuelas, y casi todo se dirige a estudiantes de 12 a 14 años. Muestra qué hacen los gobiernos, no si funciona.",
+ "mean.comp":"la UNESCO propone 12 cosas sobre IA que todo estudiante debe aprender. No fija edades: cada escuela ve cuándo enseñarlas. Lo básico es entender la IA y usarla bien.",
+ "mean.heat":"los números altos indican temas con mucha información para esa edad. Los números bajos o vacíos muestran temas con pocos estudios, donde conviene ser más prudente.",
+ "mean.marco":"estas leyes y políticas son de otros países y no rigen en Costa Rica. Sirven como ejemplo. Las normas que sí rigen aquí están en el Glosario y en «Costa Rica en contexto».",
+ "mean.ilia":"Costa Rica obtiene 56 de 100 y está en el grupo intermedio, el de los países «adoptantes». Tiene buena base en gobernanza, pero va más atrás en investigación y uso de la IA.",
+ "acc.inicio":"No hace falta saber de tecnología. Elige la edad, lee los consejos y prueba uno esta semana.",
+ "acc.parati":"Empieza por un solo consejo. No hace falta aplicarlos todos a la vez.",
+ "acc.plan":"Un plan pequeño que se cumple vale más que uno grande que se abandona. Elige dos o tres acciones.",
+ "acc.kit":"Puedes imprimir cualquier herramienta y usarla tal como está, o adaptarla a tu casa o escuela.",
+ "acc.alertas":"Conocer un riesgo no significa que vaya a pasar. Estas alertas te ayudan a saber qué observar.",
+ "acc.diagramas":"Bajo cada diagrama hay una explicación simple. No hace falta entender las cifras para usar los consejos.",
+ "acc.evidencia":"Esta sección es para quien quiera revisar las fuentes. Para actuar, basta con los consejos de «Para ti».",
+ "acc.marco":"Fíjate en la etiqueta de cada norma: solo las marcadas como «Ley en Costa Rica» son obligatorias aquí.",
+ "acc.contexto":"Aquí ves cómo está Costa Rica frente a otros países y qué protege ya la ley.",
+ "acc.glosario":"Busca cualquier sigla que no entiendas. También te decimos si una norma aplica en Costa Rica."
+});
+Object.assign(window.COA_I18N.en,{
+ "esx.recomendacion":"Good advice, not an obligation. Each family or school decides how to apply it.",
+ "hero.h1":"How to guide children and teenagers with AI, by age",
+ "hero.sub":"Practical advice for families and schools, based on laws, official guidance and studies. Each tip says where it comes from and whether it is mandatory in Costa Rica.",
+ "rg.sub":"Move the age control to see what laws, policies and studies say. Tap a band to read the original text with its page.",
+ "mean.lbl":"What this means:",
+ "mean.ruler":"the ages on this ruler come from other countries' laws and policies and from surveys. Costa Rica has no legal minimum age for using AI: what matters is how much each child is exposed and to what risks.",
+ "mean.med":"when there are no rules about AI at home, children use it more and for more things. This does not prove the rules are the cause, but it suggests that talking and agreeing on rules at home is worthwhile.",
+ "mean.tut":"an AI tutor that gives the answers can help in the moment, but later the student does worse. A tutor that guides without solving the task avoids this. The heights in the drawing are not data.",
+ "mean.resp":"most of the responsibility lies with the companies that build AI and with those who regulate them. Families and schools guide and teach, but should not carry alone risks that companies can prevent.",
+ "mean.sist":"in Europe, most countries are only starting to set rules and training on AI in schools, and almost all of it targets students aged 12 to 14. It shows what governments do, not whether it works.",
+ "mean.comp":"UNESCO proposes 12 AI capabilities every student should learn. It does not say at what age: each school decides when to teach them, and the basics are understanding AI and using it well.",
+ "mean.heat":"high numbers mark topics with plenty of information for that age. Low or empty cells show topics with few studies, where more caution is wise.",
+ "mean.marco":"these laws and policies are from other countries and do not apply in Costa Rica. They are examples. The rules that do apply here are in the Glossary and in «Costa Rica in context».",
+ "mean.ilia":"Costa Rica scores 56 out of 100 and sits in the middle group of «adopter» countries. It has a good base in governance but lags in research and use of AI.",
+ "acc.inicio":"You don't need to know about technology to start. Choose the age, read the tips and pick one to try this week.",
+ "acc.parati":"Start with a single tip. There is no need to apply them all at once.",
+ "acc.plan":"A small plan you keep is worth more than a big one you drop. Choose two or three actions.",
+ "acc.kit":"You can print any tool and use it as it is, or adapt it to your home or school.",
+ "acc.alertas":"Knowing about a risk does not mean it will happen. These alerts help you know what to watch for.",
+ "acc.diagramas":"Below each diagram there is a plain explanation. You don't need to understand the figures to use the tips.",
+ "acc.evidencia":"This section is for those who want to check the sources. To act, the tips in «For you» are enough.",
+ "acc.marco":"Look at each rule's label: only those marked «Law in Costa Rica» are mandatory here.",
+ "acc.contexto":"Here you can see how Costa Rica compares with other countries and what the law already protects.",
+ "acc.glosario":"Look up any acronym you don't understand. We also tell you whether a rule applies in Costa Rica."
+});
